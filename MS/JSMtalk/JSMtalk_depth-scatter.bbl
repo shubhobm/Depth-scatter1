@@ -1,0 +1,42 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Hubert et~al.(2005)Hubert, Rousseeuw, and Branden]{hubert05}
+M.~Hubert, P.~J. Rousseeuw, and K.~V. Branden.
+\newblock {ROBPCA}: {A} {N}ew {A}pproach to {R}obust {P}rincipal {C}omponent
+  {A}nalysis.
+\newblock \emph{Technometrics}, 47-1:\penalty0 64--79, 2005.
+
+\bibitem[Liu(1990)]{liu90}
+R.Y. Liu.
+\newblock On a notion of data depth based on random simplices.
+\newblock \emph{Ann. of Statist.}, 18:\penalty0 405--414, 1990.
+
+\bibitem[Locantore et~al.(1999)Locantore, Marron, Simpson, Tripoli, Zhang, and
+  Cohen]{locantore99}
+N.~Locantore, J.S. Marron, D.G. Simpson, N.~Tripoli, J.T. Zhang, and K.L.
+  Cohen.
+\newblock Robust principal components of functional data.
+\newblock \emph{TEST}, 8:\penalty0 1--73, 1999.
+
+\bibitem[Tukey(1975)]{tukey75}
+J.W. Tukey.
+\newblock Mathematics and picturing data.
+\newblock In R.D. James, editor, \emph{Proceedings of the International
+  Congress on Mathematics}, volume~2, pages 523--531, 1975.
+
+\bibitem[Zuo(2003)]{zuo03}
+Y.~Zuo.
+\newblock Projection-based depth functions and associated medians.
+\newblock \emph{Ann. Statist.}, 31:\penalty0 1460--1490, 2003.
+
+\bibitem[Zuo and Serfling(2000)]{zuo00}
+Y.~Zuo and R.~Serfling.
+\newblock General notions of statistical depth functions.
+\newblock \emph{Ann. Statist.}, 28-2:\penalty0 461--482, 2000.
+
+\end{thebibliography}

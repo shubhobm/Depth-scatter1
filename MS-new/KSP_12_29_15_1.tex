@@ -1,0 +1,699 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{authblk}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{subfigure}
+% \usepackage{tikz}
+\usepackage{verbatim}
+% \usepackage{amsmath,amssymb,amsthm}
+% \usepackage{rotating}
+\usepackage{wrapfig}
+%\usepackage{fullpage}
+\usepackage{natbib}
+\usepackage{mycommands}
+
+%\newcommand{\BE}{\mathbb{E}}
+%\newcommand{\BI}{\mathbb{I}}
+%\newcommand{\BR}{\mathbb{R}}
+%\newcommand{\BV}{\mathbb{V}}
+%
+%
+%\newcommand{\cX}{\mathcal{X}}
+
+\def\baq#1\eaq{\begin{align}#1\end{align}}
+\def\ban#1\ean{\begin{align*}#1\end{align*}}
+\def\bredbf#1\eredbf{{\color{red}{\bf ???? #1 ????}}}
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+
+%\voffset=0.5in
+\renewcommand{\baselinestretch}{1.1}
+
+\pagestyle{myheadings}
+\markboth{}{\underline{{\bf Notes: (do not circulate)} \hspace{4.5cm} {\sc  Ansu Chatterjee} \hspace{0.25cm}}}
+
+\begin{document}
+\bibliographystyle{plain}
+\makeatletter
+\def\@oddfoot{[\jobname (\today)]\hfil\thepage}
+\makeatother
+
+\title{Robust methods for Hilbert-valued (not really) data based kernel signed peripherality 
+transformations}
+
+\title{Robust methods  based on the kernel signed peripherality 
+transformations}
+
+\section{Introduction}
+
+\bredbf
+I will write this section once the rest of the work is complete
+\eredbf
+
+We consider data $X_{1}, \ldots, X_{n}$ from some set $\cX \subseteq \BR^{p}$. 
+We consider two functions defined below. First, we consider the 
+{\it sign function} $S : \BR^{p} \times \BR^{p} \rightarrow \BR^{p}$ for any 
+$p$-dimensional vector, defined as 
+\ban
+S (x; \mu_{x}) = || x - \mu_{x} ||^{-1} (x - \mu_{x}) \mathcal{I}_{ \{ x \ne 0 \}}. 
+\ean
+This sign function is defined with respect to the {\it location parameter} 
+$\mu_{x} \in \BR^{p}$. This is a direct multivariate generalization of the 
+univariate $ p = 1$ case of the indicator of whether the point $x$ is to the right, 
+left or at $\mu_{x}$. This function has been used many times in statistics, see
+\bredbf insert several references. \eredbf
+
+
+Suppose $\mathcal{F}_{p}$ is the set of all probability 
+measures on $\BR^{p}$. The second function we consider is the {\it peripherality function} 
+$ P : \BR^{p} \times \mathcal{F}_{p} \rightarrow \BR$, which, for every 
+$x \in \BR^{p}$ and every probability measure $F \in \mathcal{F}_{p}$, satisfies the 
+condition
+\ban 
+& \text{ There exists a constant $\mu_{F} \in \BR^{p}$ such that} 
+%\\
+%& \hspace{0.25cm} 
+\text{ for every $t \in [ 0, 1]$ and every } \\
+& \hspace{0.5cm} \text{$x \in \BR^{p}$  we have} \ \ 
+P \Bigl( \mu_{F} ; F \Bigr) \leq P \Bigl( \mu_{F} + t ( x - \mu_{F} ); F \Bigr). 
+\ean 
+That is, for every fixed $F$, the peripherality function achieves a minimum at 
+$\mu_{F}$, and is non-decreasing in every direction away from $\mu_{F}$. If 
+we impose the practical restriction that $\inf_{x} P ( x ; F )$ is bounded below, 
+then we may as well impose without loss of generality $P ( \mu_{F} ; F ) = 0$
+and consequently $P ( x ; F ) \geq 0$ for all $x \in \BR^{p}$ and 
+$F \in \mathcal{F}_{p}$. The peripherality function quantifies whether the point $x$ 
+is near or far from $\mu_{F}$. We will impose additional conditions on this function 
+as we proceed, but it can be seem immediately that any distance measure between 
+$x$ and $\mu_{F}$ satisfies the bare minimum requirement mentioned above. 
+
+
+In this paper, we demonstrate certain interesting applications arising from 
+composing the sign function and the peripherality function together, to form the 
+{\it signed-peripherality function} $\kappa (\cdot)$. We define this function 
+with three parameters $\mu_{x} \in \BR^{p}$, $F \in \mathcal{F}_{p}$ and  
+$\mu_{y} \in \BR^{p}$,  argument $x \in \BR^{p}$ and range $\BR^{p}$. More precisely, 
+$\kappa : \BR^{p} \times \BR^{p} \times \mathcal{F}_{p} \times \BR^{p} \times 
+\BR^{p} \rightarrow \BR^{p}$ is defined as 
+\ban 
+\kappa (x; \mu_{x}, F, \mu_{y} ) = S (x; \mu_{x}) P (x; F) + \mu_{y}. 
+\ean
+
+Notice that if we consider $\mu_{y} = \mu_{F} = \mu_{x}$ and take the very 
+simple peripherality  function $P( x; F) = || x - \mu_{F} ||$, we have 
+$\kappa (x; \mu_{x}, F, \mu_{y} ) \equiv x$ for all choices of parameters 
+$\mu_{x}, F, \mu_{y}$.  Consequently, under this choice of parameters for the 
+$\kappa$-transformation, analyzing a dataset $\{ X_{1}, \ldots, X_{n} \}$ and 
+its $\kappa$-transformed version 
+$\{ Y_{i} = \kappa (X_{i}; \ldots), \ i = 1, \ldots, n \}$ are equivalent. However,
+in this paper we illustrate how other choices of the peripherality function 
+lead to interesting robustness results. We have deliberately set the location 
+parameters $\mu_{x}, \mu_{F}, \mu_{y}$ to be potentially non-identical, this 
+additional flexibility has some advantage for robust data analysis. In many 
+applications, the value of these three parameters may be identical, which leads 
+to no conflict in our framework.
+
+A whole class of peripherality functions can be defined from {\it data - depth},  which are center-outward ranking of multivariate data. Data-depths have been extensively used in statistics also, see \bredbf multiple references. \eredbf Peripherality functions can be defined as some inverse ranking based on data depth, and the concept of {\it outlyingness} associated with data depth is essentially same as what we use in this paper. We use the term {\it peripherality} to keep track of the difference in application contexts and technical assumptions.
+
+In this paper, we consider a few illustrative cases of the use of the $\kappa$-transformation. Suppose the data at hand is $X_{1}, \ldots, X_{n}$, and we define $Y_{i} = \kappa (X_{i}; \mu_{X}, F, \mu_{Y})$ for some choice of parameters $\mu_{X}, F, \mu_{Y}$. For interpretability and convenience, we assume that $\BE S ( X_{i}; \mu_{X}) P ( X_{i}; F) = 0$, thus $\BE Y_{i} = \mu_{Y}$. We thus have 
+\ban 
+\BV Y_{i} 
+& = \BE P ( X_{i}; F)^{2} S ( X_{i}; \mu_{X}) S ( X_{i}; \mu_{X})^{T} \\
+& = \BE P ( X_{i}; F)^{2} || X_{i} - \mu_{X} ||^{-2} 
+( X_{i} - \mu_{X} ) (X_{i} - \mu_{X})^{T}.
+\ean
+
+\bredbf Need to include (a) Biman-PC idea for affine equivariance for $p \ll n$, (b) kernel versions as an example of generalization. (c) anything else? \eredbf
+
+%\section{Testing for a location parameter}
+%
+%Suppose $W \in \{ 0, 1 \}$, $Z \in \BR^{p}$ and $U \in \BR^{p}$ 
+%are independent  random variables, with 
+%$W$ having a Bernoulli distribution with parameter $\theta$, 
+%and each 
+%element of $U$ is an independent standard Cauchy random variable. 
+%The random vector $Z$ follows a mean-zero, variance matrix $\Sigma$ Normal distribution 
+%$Z \sim N_{p} (0, \Sigma)$. Our choices of $\Sigma$ in the details 
+%below include 
+%cases where $Cov (Z_{i}, Z_{j}) = \rho^{ | i - j|}$ for some $\rho \in [0, 1)$
+%which includes as special case the identity matrix $\BI_{p}$ corresponding to 
+%$\rho = 0$, and where $Cov (Z_{i}, Z_{j}) = \rho$. 
+%
+%We define $X = \mu + W Z + (1 - W) U$, and let the observed data be 
+%independent, identically distributed copies $X_{1}, \ldots, X_{n}$ copies of $X$. 
+%Note that the conditional distribution of $(X | W = 0)$ does not have finite moments.
+%Suppose our goal is to conduct inference on $\mu$, in particular, to test the hypothesis 
+%that $\mu = 0 \in \BR^{p}$. 
+%The sample mean and variance from the observed data $X_{1}, \ldots, X_{n}$, 
+%denoted respectively by $\bar{X} = n^{-1} \sum_{i = 1}^{n} X_{i}$ and
+%$S_{X} = (n - 1)^{-1} \sum_{i = 1}^{n} ( X_{i} - \bar{X} )( X_{i} - \bar{X} )^{T}$. 
+%These are 
+%well-defined quantities, even though their expectations may not exist.
+%Assume $p < n$, and thus $S_{x}$ is invertible. 
+%
+%
+%One option for inference on $\mu$ is to ignore the heavy-tailed component of 
+%the data, and to use Hotteling's $T^{2}$ statistic given by 
+%$T^{2} = n (\bar{X} - \mu_{0})^{T} S_{X}^{-1} (\bar{X} - \mu_{0})$. 
+%
+%Other, more robust options, is to use the sign function exclusively, 
+%or any variety of data-depth functions exclusively. 
+%\bredbf suggest 2 or 3 depth functions used earlier for one-sample mean 
+%testing, provide references. List details on how these methods would be implemented,
+%just do what these references do
+% \eredbf
+%
+%Another alternative is to use the $\kappa$-transformation proposed in this paper. 
+%We begin with a robust estimator of $\mu$, for example the co-ordinatewise median, 
+%to use as $\mu_{X}$ and $\mu_{F}$. As $F$, we use the $p$-dimensional Normal 
+%distribution with mean $\mu_{F}$ and identity covariance matrix. One simple
+%peripherality function is $ || x - mu_{F} ||/ (1 + || x - mu_{F} ||)$, which 
+%is bounded above and below and achieves a minima at $\mu_{F}$. We take $\mu_{Y}$ 
+%to be $\mu$ also, and we may again use the co-ordinatewise median or a different 
+%statistic as its estimator like simple sample mean of $Y_{i} = \kappa (X_{i})$.
+%(Use the sample mean: we want to sell the idea that after the kappa transformation 
+%all standard classical methods like sample moments can be used).
+%
+%
+%We should be able to show that 
+%\begin{enumerate}
+%
+%\item Classical methods like Hotteling is a disaster because of outliers.
+%
+%\item Sign and depth-based methods lack power, which becomes quite bad when $\rho$ 
+%is considerably away from zero.
+%
+%
+%\end{enumerate}
+%
+%
+%\section{Testing for equality of two location parameters}
+%
+%You know how to develop this. Do both the two sample and paired sample case.
+%
+%Show simulation results like above. 
+
+\section{Develop a robust estimator of variance}
+Simply do sample variance of the transformed variables $Y_{i} = \kappa (X_{i})$.
+
+Show simulation results like above.
+
+\section{Outlier detection}
+
+Expand and generalize what you have in the paper already, where I think this is a small 
+example. Refer to a standard method for multivariate outlier detection, and show that 
+such a method used on $Y_{i} = \kappa (X_{i})$ works. I will send you some papers for 
+referencing in this part.
+
+\section{Robust principal component analysis}
+
+This will be one of the bigger and 
+ major sections of the paper, essentially copied and pasted
+ from the previous version. Don't do anything here as of now.
+
+%\section{Robust Hawkins-regression}
+%
+%Consider the $p + 1$ dimensional data $\{ 
+%(\mathbf{X}_{i} \ Y_{i})^{T} \in \BR^{p +1}, \ i =1, \ldots, n \}$. 
+%Do the robust PCA on this, and get all the eigenvectors. The typical eigenvector looks 
+%like $( \mathbf{\gamma} \ \gamma_{0} ) \in \BR^{p +1}$. Under the condition that the 
+%joint distribution of $(\mathbf{X} \ Y)^{T}$ is absolutely continuous, we have 
+%$\gamma_{0} \ne 0$ almost surely. We implement the following for any estimated 
+%eigenvector where $|\gamma_{0} | > \epsilon$ for some fixed $\epsilon > 0$: 
+%multiply the eigenvector by  $-\gamma_{0}^{-1}$, thus consider 
+%$( -\gamma_{0}^{-1} \mathbf{\gamma} \ -1 ) \in \BR^{p +1}$, which is a 
+%"Hawkins-regression". The  variance of this linear 
+%combination of variables is given by the corresponding eigenvalue times 
+%$\gamma_{0}^{-2}$, which may be small or large in the $p + 1$ eigenvectors, so the order 
+%in which eigenvalues/vectors appear in PCA may not be maintained here. 
+%
+%Also look up what Hawkins had originally proposed, and implement those. 
+%
+%Do a simple simulation, building on the simulation you have for the previous 
+%section.
+
+\section{Robust PCA and supervised models}
+
+In the presence of a vector of univariate responses, say $\bfY = (Y_1,Y_2,...,Y_n)^T$, there is substantial literature devoted to utilizing the subspace generated by the basis of $Cov(\bfX)$ in modelling $E(Y|\bfX)$. This ranges from the simple Principal Components Regression (PCR) to Partial Least Squares (PLS) and Envelope methods \citep{Cook10}. Here we concentrate on robust inference using Sufficient Dimension Reduction (SDR) \citep{AdragniCook09}, mainly because it provides a general framework for reducing dimensionality of data directly using top eigenvectors of the covariance matrix of $X$ (albeit in a different manner than PCR) or an appropriate affine transformation of it.
+
+SDR attempts to find out a linear transformation $R$ on $\bfX$ such that $E(Y|\bfX) = E(Y|R(\bfX))$. Assuming that $R(\bfX)$ takes values in $\mathbb R^d, d \leq \min(n,p)$, this can be achieved through an inverse regression model:
+%
+\begin{equation}
+\bfX_y = \bar \bfmu + \Gamma \bfv_y + \bfepsilon
+\end{equation}
+%
+where $\bfX_y = \bfX|Y=y, \bar\bfmu = E\bfX$, $\Gamma$ is a $p \times d$ semi-orthogonal basis for $\mathcal S_\Gamma$, the spanning subspace of $\{ E \bfX_y - \bar\bfmu | y \in S _Y \}$ ($S_y$ is sample space of $Y$) and $\bfv_y = (\Gamma^T \Gamma)^{-1} \Gamma^T (E \bfX_y - \bar\bfmu) \in \mathbb R^d$. The random error term $\bfepsilon$ follows a multivariate normal distribution with mean ${\bf 0}_p$ and covariance matrix $\Delta$. This formulation is straightforward to implement when $Y$ is categorical, while for continuous responses, the vector $\bfy$ is divided into a number of slices.
+
+Under this model the minimal sufficient transformation is $R(\bfX) = \Gamma^T \Delta^{-1} \bfX$. The simplest case of this model is when $\Delta = \sigma^2 I_p$, for which the maximum likelihood estimator of $ R(\bfX)$ turns out to be the first $d$ PCs of $Cov(\bfX)$. Taking $\hat E\bfX_y = \bar\bfX_y$ and $\hat{\bar\bfmu} = \bar\bfX$, one can now estimate $\sigma^2$ as: $\hat\sigma^2 = \sum_{i=1}^p s_{ii}/p$, where $s_{ii}$ is the $i^\text{th}$ diagonal element of $\hat{Cov}_Y( \bfX_Y - \bar\bfX - \hat\Gamma \hat\bfv_Y)$. Following this, predictions for a new observation $\bfx$ is obtained as a weighted sum of the responses:
+%
+$$
+\hat E(Y|\bfX=\bfx) = \frac{\sum_{i=1}^n w_i Y_i}{\sum_{i=1}^n w_i}; \quad w_i = \exp \left[ -\frac{1}{\hat\sigma^2}  \| \hat\Gamma^T (\bfx - \bfX_i) \|^2 \right]
+$$
+%
+
+We formulate a robust version of the above procedure by estimating the quantities $\Gamma, \bar\bfmu, \bfmu_y, \sigma^2$ by robust methods. Specifically, we take:
+%
+\begin{itemize}
+\item $\tilde \Gamma = $ first $d$ eigenvectors of the sample DCM;
+%
+\item $\tilde{\bar\bfmu} = $ spatial median of the rows of $X$;
+%
+\item $\tilde \bfmu_y = $ spatial median of the rows of $(X|Y=y)$, for all $y \in S_Y$;
+%
+\item $\tilde\sigma^2 = \sum_{i=1}^p \tilde\lambda_i/p$, where $\tilde\lambda_i$ are the median-of-small-variances estimator for $X_{Y,i} - \tilde{\bar\mu}_i - \tilde\bfgamma_i^T \tilde\bfv_Y$, with $\tilde\Gamma = (\tilde\bfgamma_1, ..., \tilde\bfgamma_p)^T$.
+\end{itemize}
+%
+The following simulation study using the same setup as in \citep{AdragniCook09} compares the performance of our robust SDR with the original method with or without the presence of bad leverage points in the covariate matrix $X$. For a fixed dimension $p$, we take $n=200, d=1$, generate the responses $Y$ as independent standard normal, and the predictors as $\bfX_Y = \bfgamma^* v_Y^* + \bfepsilon$, with $\bfgamma^*_{p\times 1} = (1,...,1)^T, v_Y = Y + Y^2 + Y^3$ and $Var(\bfepsilon) = 25 I_p$. We measure performance of both SDR models by their mean squared prediction error on another set of 200 observations $(Y^*, \bfX^*)$ generated similarly, and taking the average of these errors on 100 such training-test pair of datasets. Finally we repeat the whole setup for different choices of $p = 5,10,25,50,75,100,125,150$.
+
+\begin{figure}[t]
+%\captionsetup{justification=centering, font=footnotesize}
+\begin{center}
+\subfigure[]{\epsfxsize=0.35\linewidth \epsfbox{../Codes/SDRcomparison_noout}}
+\subfigure[]{\epsfxsize=0.35\linewidth \epsfbox{../Codes/SDRcomparison_out}}
+\caption{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers}
+\label{fig:SDRfig}
+\end{center}
+\end{figure}
+
+Panel (a) of figure \ref{fig:SDRfig} compares prediction errors using robust and maximum likelihood SDR estimates when $X$ contains no outliers, and the two methods are virtually indistinguishable. We now introduce outliers in each of the 100 datasets by adding 100 to first $p/5$ coordinates of the first 10 observations in $X$, and repeat the analysis. Panel (b) of the figure shows that although our robust method performs slightly worse than the case when there were no outliers, it remains more accurate in predicting our of sample observations for all values of $p$. 
+
+\section{Robust inference with functional data}
+
+This section is to show something beyond the $p \ll n$ setting. Both robust PCA 
+and location testing are important problems for functional data. Abhirup can 
+take charge of this part once we have everything else settled. 
+
+The main idea here is to use any decent location estimator to start with (some 
+version of median is fine). Then we may test if the functional location for resting 
+and active state are identical or not. 
+
+Also do functional PCA robust version, and then maybe project the data on the first few
+principal components and then do the 2 sample (or paired sampel) testing again.
+
+(Some technical notations)
+
+We use the approach of \cite{BoenteBarrera15} for performing robust PCA on functional data. Given data on $n$ functions, say $f_1, f_2, ..., f_n \in L^2[0,1]$, each observed at a set of common design points $\{ t_1, ..., t_m \} $, we model each function as a linear combination of $p$ mutually orthogonal B-spline basis functions $\delta_1, ..., \delta_p$. Following this, we map data for each of the functions onto the coordinate system formed by the spline basis:
+%
+\begin{equation}
+\tilde x_{ij} = \sum_{l=2}^m f_i(t_l) \delta_j(t_l) (t_l - t_{l-1}); \quad 1 \leq i \leq n, 1 \leq j \leq p
+\end{equation}
+%
+We now do depth-based PCA on the transformed $n \times p$ data matrix $\tilde X$, and obtain the rank-$q$ approximation ($q \leq p$) of the $i^\text{th}$ observation using the robust $p \times q$ loading matrix $\tilde P$ and robust $q \times 1$ score vector $\tilde\bfs_i$:
+%
+$$ \widehat{\tilde\bfx_i} = \tilde\bfmu + \tilde P \tilde \bfs_i $$
+%
+with $\tilde\bfmu$ being the spatial median of $\tilde X$. Then we transform this approximation back to the original coordinates: $\hat f_i (t_l) = \sum_{j=1}^p \widehat{ \tilde x}_{ij} \delta_j (t_l)$.
+
+Detection of anomalous observations is of importance in real-life problems involving functional data analysis. We now demonstrate the utility of our robust method for detecting functional outliers through two data examples. 
+
+\textbf{(SD and OD definition, cutoffs... from previous manuscript)
+}
+
+\begin{figure}[t]
+%\captionsetup{justification=centering, font=footnotesize}
+\begin{center}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Elnino_functional1}}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Elnino_functional2}}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Elnino_functional3}}\\
+\vspace{-1em}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Octane_functional1}}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Octane_functional2}}
+\subfigure[]{\epsfxsize=.32\linewidth\epsfbox{../Codes/Octane_functional3}}
+%\subfigure[]{\epsfxsize=0.35\linewidth \epsfbox{../Codes/SDRcomparison_out}}
+\caption{Actual sample curves, their spline approximations and diagnostic plots respectively for El-Ni\~no (a-c) and Octane (d-f) datasets}
+\label{fig:fPCAfig}
+\end{center}
+\end{figure}
+
+We first look into the El-Ni\~no data, which is part of a larger dataset on potential factors behind El-Ni\~no oscillations in the tropical pacific available in \url{http://www.cpc.ncep.noaa.gov/data/indices/}. This records monthly average Sea Surface Temperatures from June 1970 to May 2004, and the yearly oscillations follow more or less the same pattern (see panel a of figure \ref{fig:fPCAfig}). Using a cubic spline basis with knots at alternate months starting in June gives a close approximation of the yearly time series data (panel b), and performing depth-based PCA with $q=1$ results in two points having their SD and OD larger than cutoff (panel c). These points correspond to the time periods June 1982 to May 1983 and June 1997 to May 1998 are marked by black curves in panels a and b), and pinpoint the two seasons with strongest El-Ni\~no events.
+
+Our second application is on the Octane data, which consists of 226 variables and 39 observations \citep{esbensen94}. Each sample is a gasoline compound with a certain octane number, and has its NIR absorbance spectra measured in 2 nm intervals between 1100 - 1550 nm. There are 6 outliers here: compounds 25, 26 and 36-39, which contain alcohol. We use the same basis structure as the one in El-Ni\~no data here, and again the top robust PC turns out to be sufficient in identifying all 6 outliers (panels d, e and f of figure \ref{fig:fPCAfig}).
+
+\section{An example with images}
+
+\section{A depth-based M estimate of scatter}
+
+\subsection{Formulation}
+The DCM is orthogonally equivariant and remains constant only under rotations of the original variables. To construct its affine equivariant counterpart, we need to follow the general framework of M-estimation with data-dependent weights \cite{HuberBook81}. Specifically, we first implicitly define the Affine-equivariant Depth Covariance Matrix (ADCM) as
+%
+\begin{equation} \label{eqn:ADCM}
+\Sigma_{Dw} = \frac{1}{Var (\tilde Z_1) } E \left[ \frac{(\tilde D_\bfX(\bfx))^2 (\bfx - \bfmu) (\bfx - \bfmu)^T}{(\bfx - \bfmu)^T \Sigma_{Dw}^{-1} (\bfx - \bfmu)} \right]
+\end{equation}
+%
+Its affine equivariance follows from the fact that the weights $(\tilde D_\bfX (\bfx))^2$ depend only on the standardized quantities $\bfz$ that depend only on the underlying spherical distribution $G$. We solve this iteratively by obtaining a sequence of positive definite matrices $\Sigma^{(k)}_{Dw}$ until convergence:
+%
+$$ \Sigma^{(k+1)}_{Dw} = \frac{1}{Var (\tilde Z_1) } E \left[ \frac{(\tilde D_\bfX(\bfx))^2 (\Sigma^{(k)}_{Dw})^{1/2} (\bfx - \bfmu) (\bfx - \bfmu)^T (\Sigma^{(k)}_{Dw})^{1/2}}{(\bfx - \bfmu)^T (\Sigma^{(k)}_{Dw})^{-1} (\bfx - \bfmu)} \right] $$
+%
+
+To ensure existence and uniqueness of the estimator in \ref{eqn:ADCM}, let us consider the class of scatter estimators $\Sigma_M$ that are obtained as solutions of the following equation:
+%
+\begin{equation}
+E_{\bfZ_M} \left[ u( \| \bfz_M \| )  \frac{\bfz_M \bfz_M^T}{\| \bfz_M \|^2}  - v( \| \bfz_M \| ) I_p \right] = 0
+\end{equation}
+%
+with $\bfz_M = \Sigma_M^{-1/2} (\bfx - \bfmu)$. Under the following assumptions on the scalar valued functions $u$ and $v$, the above equation produces a unique solution \citep{HuberBook81}:
+%
+
+\vspace{1em}
+\noindent\textbf{(M1)} The function $u(r)/r^2$ is monotone decreasing, and $u(r)>0$ for $r>0$;
+
+\noindent\textbf{(M2)}  The function $v(r)$ is monotone decreasing, and $v(r)>0$ for $r>0$;
+
+\noindent\textbf{(M3)} Both $u(r)$ and $v(r)$ are bounded and continuous;
+
+\noindent\textbf{(M4)} $u(0) / v(0) < p$;
+
+\noindent\textbf{(M5)} For any hyperplane in the sample space $\mathcal X$, (i) $P(H) = E_\bfX 1_{\bfx \in H} < 1 - p v(\infty) / u(\infty)$ and (ii) $P(H) \leq 1/p$.
+%
+
+\vspace{1em}
+\noindent In our case we take $v(r) = Var(\tilde Z_1)$, i.e. a constant, thus (M2) and (M3) are trivially satisfied. As for $u$, we notice that most well-known depth functions can be expressed as simple functions of the norm of the standardized random variable. For example, $PD_\bfZ (\bfz) = (1 - G(\| \bfz \|); MhD_\bfZ (\bfz) = (1+\| \bfz \|^2)^{-1}; HSD_\bfZ (\bfz) = (1+\| \bfz \|)^{-1}$ etc., so that we can take as $u$ square of the corresponding peripherality functions:
+% Var(Z1) breaks into two independent parts: depth and sign. So can check m4 and M5 here itself.
+$$
+u_{PD} (r) = G^2 (r); \quad u_{MhD}(r)  = \frac{r^4}{(1 + r^2)^2}; \quad u_{HSD}(r)  = \frac{r^2}{(1 + r/G^{-1}(0.75))^2}
+$$
+%
+
+It is easy to verify the above choices of $u$ satisfy (M1) and (M3). To check (M4) and (M5), first notice that $\bfZ$ has a spherically symmetric distribution, so that its norm and sign are independent. Since $D_\bfZ(\bfz)$ depends only on $\| \bfz \|$, we have
+%
+$$
+Var (\tilde Z_1) = Var \left( \tilde D_\bfZ (\bfZ) \frac{Z_1}{ \|\bfZ \|} \right) = Var (\tilde D_\bfZ (\bfZ)) Var (S_1 (\bfZ)) = \frac{1}{p} Var (\tilde D_\bfZ (\bfZ))
+$$
+%
+as $Cov(\bfS(\bfZ)) = Cov((S_1(\bfZ), S_2(\bfZ), ..., S_p(\bfZ))^T) = I_p/p$. Now for MhD and HSD $u(\infty)=1, u(0)=0$, so (M4) and (M5) are immediate. To achieve this for PD, we only need to replace $u_{PD}(r)$ with $u_{PD}^*(r) = G^2(r) - 1/4$.
+
+\subsection{Calculation}
+(Comes right after the calculations discussion of DCM)
+
+In contrast to the DCM, the issue of estimating $\bfmu$ to plug into the ADCM is easily handled by simultaneously solving for the location and scatter functionals ($\bfmu_{Dw}, \Sigma_{Dw}$):
+%
+\begin{eqnarray}
+E \left[ \tilde D_\bfX (\bfx) \frac{\Sigma_{Dw}^{-1/2} (\bfx - \bfmu_{Dw})}{ \| \Sigma_{Dw}^{-1/2}(\bfx - \bfmu_{Dw}) \|} \right] &=& {\bf 0}_p \label{eqn:AffineMedian}\\
+E \left[ \frac{(\tilde D_\bfX(\bfx))^2 \Sigma_{Dw}^{-1/2} (\bfx - \bfmu_{Dw}) (\bfx - \bfmu_{Dw})^T \Sigma_{Dw}^{-1/2}}{(\bfx - \bfmu_{Dw})^T \Sigma_{Dw}^{-1} (\bfx - \bfmu_{Dw})} \right] &=& Var (\tilde Z_1) I_p \label{eqn:AffineCov}
+\end{eqnarray}
+%
+In the framework of (\ref{eqn:ADCM}), for any fixed $\Sigma_M$ there exists a unique and fixed solution of the location problem $E_{\bfZ_M} (w(\| \bfz_M \| \bfz_M) = {\bf 0}_p $ under the following condition:
+
+\vspace{1em}
+\noindent\textbf{(M6)} The function $w(r)r$ is monotone increasing for $r>0$.
+
+\vspace{1em}
+\noindent This condition is easy to verify for our choice of the weights: $w(\| \bfz_M \| ) = \tilde D_{\bfZ_M} (\bfz_M) / \| \bfz_M \|$. Uniqueness of simultaneous fixed point solutions of \ref{eqn:AffineMedian} and \ref{eqn:AffineCov} is guaranteed when $\bfX$ has a symmetric distribution \citep{HuberBook81}.
+
+In practice it is difficult to calculate the scale multiple $Var (\tilde Z_1)$ analytically for known depth functions and an arbitrary $F$. Here we instead obtain its standardized version $\Sigma_{Dw}^* = \Sigma_{Dw} / Var(\tilde Z_1)$ (so that the determinant equals 1), alongwith $\bfmu_{Dw}$ using the following iterative algorithm:
+
+\begin{enumerate}
+\item Start from some initial estimates $(\bfmu_{Dw}^{(0)}, \Sigma_{Dw,(0)})$. Set $t=0$;
+
+\item Calculate the standardized observations $\bfz_i^{(t)} = \Sigma_{Dw,(t)}^{-1/2} (\bfx_i - \bfmu_{Dw}^{(t)})$;
+
+\item Update the location estimate:
+%
+$$
+\bfmu_{Dw}^{(t+1)} = \frac{\sum_{i=1}^n \tilde D_\bfX (\bfx_i) \bfx_i / \| \bfz_i^{(t)} \| }{\sum_{i=1}^n \tilde D_\bfX (\bfx_i) / \| \bfz_i^{(t)} \|}
+$$
+%
+\item Update the scatter estimate:
+%
+$$
+\Sigma_{Dw}^{*(t+1)} = \frac{1}{n} \sum_{i=1}^n \frac{(\tilde D_\bfX (\bfx_i))^2 (\bfx_i - \bfmu_{Dw}^{(t+1)})(\bfx_i - \bfmu_{Dw}^{(t+1)})^T}{\| \bfz_i^{(t)} \|^2}; \quad \Sigma_{Dw}^{*(t+1)} \leftarrow \frac{\Sigma_{Dw}^{*(t+1)}}{\text{det} (\Sigma_{Dw}^{*(t+1)})^{1/p}}
+$$
+%
+\item Continue until convergence.
+\end{enumerate}
+
+\subsection{Influence functions}
+The influence function of any affine equivariant estimate of scatter can be expressed as
+%
+$$
+IF(\bfx_0, C, F) = \alpha_C (\| \bfz_0 \| ) \frac{\bfz_0 \bfz_0^T}{\bfz_0^T \bfz_0} - \beta_C( \| \bfz_0 \| ) C
+$$
+%
+for scalar valued functions $\alpha_C, \beta_C$ \citep{HampelBook86}. Following this, the influence function of an eigenvector $\bfgamma_{C,i}$ of $C$ is derived:
+%
+$$
+IF(\bfx_0, \bfgamma_{C,i}, F) = \alpha_C(\| \bfz_0 \|) \sum_{k=1, k \neq i}^p \frac{\sqrt {\lambda_i \lambda_k}}{\lambda_i - \lambda_k}. \frac{z_{0i} z_{0k}}{\bfz_0^T \bfz_0} \bfgamma_k
+$$
+%
+For Tyler's estimate of scatter, we have $\alpha_C (\| \bfz_0 \|) = p+2$. Considering a more general case, when $C=\Sigma_M$, i.e. the solution to (\ref{eqn:ADCM}), then \cite{HuberBook81} shows that
+%
+$$
+\alpha_C (\| \bfz_0 \|) = \frac{p(p+2) u (\| \bfz_0 \|)}{E_{F_0} \left[ p u(\| \bfy \| ) + u'(\| \bfy \|) \| \bfy \| \right] }
+$$
+%
+Setting $u( \| \bfz_0 \|) = ( \tilde D_\bfZ (\bfz_0))^2$ ensures that the influence function of eigenvectors of the ADCM is bounded as well as increaseing in magnitude with $\| \bfz_0 \|$.
+
+\subsection{ARE calculations}
+
+Obtaining ARE of the ADCM is, in comparison to DCM, more straightforward. The asymptotic covariance matrix of an eigenvector of the affine equivariant scatter functional $C$ is given by:
+%
+$$
+AVar (\sqrt n  \hat\bfgamma_{C,j}) = ASV (C_{12}, F_0) \sum_{k=1, k \neq i}^p \frac{\lambda_i \lambda_k}{\lambda_i - \lambda_k}. \bfgamma_i \bfgamma_k^T
+$$
+%
+where $ASV (C_{12}, F_0)$ is the asymptotic variance of an off-diagonal element of $C$ when the underlying distribution is $F_0$. Following \cite{croux00} this equals
+%
+$$
+ASV (C_{12}, F_0) = E_{F_0} \left[ \alpha_c (\| \bfz \|)^2 (S_1(\bfz)S_2 (\bfz))^2 \right] = E_{F_0} \alpha_C (\| \bfz \|)^2 . E_{F_0} (S_1(\bfz)S_2 (\bfz))^2 
+$$
+% 
+again using the fact that $\|\bfZ\|$ and $\bfS(\bfZ)$ are independent with $\bfZ \sim F_0$. When $C = Cov$, i.e. the sample covariance matrix, we have $\alpha_{Cov} (\| \bfz \|) = \| \bfz \|^2$. It now follows that
+%
+\begin{equation}
+ARE (\hat\bfgamma_{\Sigma_M,i}, \hat\bfgamma_{Cov,i}) = \frac{E_{F_0} \alpha_{Cov} (\| \bfz \|)^2}{E_{F_0} \alpha_C (\| \bfz \|)^2} = \frac{E_{F_0} \| \bfz \|^4. \left[ E_{F_0} ( p u (\| \bfz\|) + u'( \| \bfz \|) \| \bfz \| ) \right]^2}{p^2 (p+2)^2 E_{F_0} (u(\| \bfz \|))^2}
+\end{equation}
+%
+
+Table \ref{table:AREtable} considers 6 different elliptic distributions (namely, bivariate $t$ with df = 5, 6, 10, 15, 25 and bivariate normal) and summarizes ARE for first eigenvectors for ADCMs corresponding to projection depth (PD-ACM) and halfspace depth (HSD-ACM). Due to difficulty of analytically obtain the AREs, we calculate them using Monte-Carlo simulation of $10^6$ samples and subsequent numerical integration. The ADCM seems to be particularly efficient in lower dimensions for distributions with heavier tails ($t_5$ and $t_6$), while for distributions with lighter tails, the AREs increase with data dimension. At higher values of $p$ the ADCM is almost as efficient as the sample covarnace matrix when the data comes from multivariate normal distribution.
+
+\begin{table}[t]
+    \begin{tabular}{c|cccc|cccc}
+    \hline
+    & \multicolumn{4}{c|}{PD-ACM} & \multicolumn{4}{c}{HSD-ACM} \\\cline{2-9}
+    Distribution & $p=2$  & $p=5$  & $p=10$ & $p=20$ & $p=2$  & $p=5$  & $p=10$ & $p=20$ \\ \hline
+    $t_5$           & 4.73 & 3.99 & 3.46 & 3.26 & 4.18 & 3.63 & 3.36 & 3.15 \\
+    $t_6$           & 2.97 & 3.28 & 2.49 & 2.36 & 2.59 & 2.45 & 2.37 & 2.32 \\
+    $t_{10}$          & 1.45 & 1.47 & 1.49 & 1.52 & 1.30 & 1.37 & 1.43 & 1.49 \\
+    $t_{15}$          & 1.15 & 1.19 & 1.23 & 1.27 & 1.01 & 1.10 & 1.17 & 1.24 \\
+    $t_{25}$          & 0.97 & 1.02 & 1.07 & 1.11 & 0.85 & 0.94 & 1.02 & 1.08 \\
+    MVN          & 0.77 & 0.84 & 0.89 & 0.93 & 0.68 & 0.77 & 0.84 & 0.91 \\ \hline
+    \end{tabular}
+    \caption{Table of AREs of the ADCM for different choices of $p$ and data-generating distributions, and two choices of depth functions}
+    \label{table:AREtable}
+\end{table}
+
+\section{The robust location problem}
+Consider the general situation of estimation or testing for the location parameter of an elliptical distribution using weighted sign vectors. For now the only condition we impose on these weights, say $w(.)$, is that they need to be scalar-valued affine equivariant and square-integrable functions of the data, or in other words functions of the norm of the standardized random variable $\bfZ$. In that sense $w(\bfX)$ can be equivalently written as $f(r)$, with $r = \| \bfZ \|$. The simplest use of weighted signs here would be to construct a robust alternative to the Hotelling's $T^2$ test using their sample mean vector and covariance matrix. Formally, this means testing for $H_0: \bfmu = {\bf 0}_p$ vs. $H_1:\bfmu \neq {\bf 0}_p$  based on the test statistic:
+%
+$$ T_{n,w} = n \bar\bfX_w^T ( Cov (X_w))^{-1} \bar\bfX_w $$
+%
+with $\bar\bfX_w = \sum_{i=1}^n \bfX_{w,i}/n$ and $\bfX_{w,i} = w(\bfX_i ) \bfS (\bfX_i)$ for $i=1,2,...,n$. However, the following holds true for this weighted sign test:
+%
+\begin{Proposition}\label{proposition:SignTest}
+Consider $n$ random variables $Z = (\bfZ_1,...,\bfZ_n)^T$ distributed independently and identically as $\mathcal{E}( \bfmu, kI_p, G); k \in \mathbb R$, and the class of hypothesis tests defined above. Then, given any $\alpha \in (0,1)$, local power at $\bfmu \neq {\bf 0}_p$ for the level-$\alpha$ test  based on $T_{n,w}$ is maximum when $w(\bfZ_1) = c$, a constant independent of $\bfZ_1$.
+\end{Proposition}
+%
+\noindent This essentially means that power-wise the (unweighted) spatial sign test \citep{OjaBook10} is optimal in the given class of hypothesis tests when the data comes from a spherically symmetric distribution. Our simulations show that this empirically holds for non-spherical but elliptic distributions as well.
+
+\subsection{The weighted spatial median} 
+
+Our weight functions are affine equivariant functions of the data, i.e. they are not affected by the population location parameter $\bfmu$. This ensures that there exists a unique solution of the following of optimization problem:
+%
+$$
+\bfmu_w = \text{arg}\min_{\bfmu_0 \in \mathbb{R}^p} E ( w(\bfX) | \bfX - \bfmu_0 |)
+$$
+%
+ This can be seen as a generalization of the Fermat-Weber location problem (which has the spatial median \citep{brown83, Chaudhuri96} as the solution) using data-dependent weights. We call its solution, $\bfmu_w$, the \textit{weighted spatial median} of $F$. In a sample setup it is estimated by iteratively solving the equation $\sum_{i=1}^n w(\bfX_i) \bfS (\bfX_i - \hat\bfmu_w)/n = {\bf 0}_p$.
+
+The following theorem shows that the sample weighted spatial median $\hat\bfmu_w$ is a $\sqrt n$-consistent estimator of $\bfmu_w$, and gives its asymptotic distribution:
+
+\begin{Theorem}
+Let $A_w, B_w$ be two matrices, dependent on the weight function $w$ such that
+%
+$$
+A_w = E \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right]; \quad B_w = E \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right]
+$$
+%
+where $\bfepsilon \sim \mathcal E({\bf 0}_p, \Sigma, G)$. Then
+%
+\begin{equation}
+\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto N_p ({\bf 0}_p, A_w^{-1} B_w A_w^{-1})
+\end{equation}
+\end{Theorem}
+%
+This theorem generalizes equivalent results for the spatial median, and can be proved using the same steps to obtain those results \citep{OjaBook10}. Setting $w(\bfepsilon)=1$ above yields the asymptotic covariance matrix for the spatial median. Following this, the asymptotic relative efficiency (ARE) of $\bfmu_w$ corresponding to some non-uniform weight function with respect to the spatial median, say $\bfmu_s$ will be:
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \left[ \frac{\text{det} (A^{-1} B A^{-1})}{\text{det} (A_w^{-1} B_w A_w^{-1})} \right]^{1/p}
+$$
+%
+with $A = E [ 1/ \| \bfepsilon \| ( I_p - \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ) ]$ and $B = E [ \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ]$. This is further simplified under spherical symmetry:
+
+\begin{Corollary}
+For the spherical distribution $\mathcal{E}(\bfmu, kI_p, G); k \in \mathbb R, \bfmu \in \mathbb R^p$, we have
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \frac{ \left[ E \left( \frac{f(r)}{r} \right) \right]^2}{Ef^2(r) \left[ E \left( \frac{1}{r} \right) \right]^2 }
+$$
+\end{Corollary}
+
+\subsection{A high-dimensional test of location}
+
+It is possible to take an alternative approach to the location testing problem by using the covariance-type U-statistic $C_{n,w} = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_{w,i}^T \bfX_{w,j}$. This class of test statistics are especially attractive since they are readily generalized to cover high-dimensional situations, i.e. when $p > n$. The Chen and Qin (CQ) high-dimensional test of location for multivariate normal $\bfX_i$ \citep{ChenQin10} is a special case of this test that uses the statistic $C_n = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_i^T \bfX_j$, and a recent paper (\citep{WangPengLi15}, from here on referred to as WPL test) shows that one can improve upon the power of the CQ test for non-gaussian elliptical distributions by using spatial signs $\bfS(\bfX_i)$ in place of the actual variables.
+
+Given these, and some mild regularity conditions, the following holds for our generalized test statistic $C_{n,w}$ under $H_0$ as $n,p \rightarrow \infty$:
+%
+\begin{equation}\label{eqn:hdtest1}
+\frac{C_{n,w}}{\sqrt{\frac{n(n-1)}{2} \text{Tr}(B_w^2)}} \leadsto N(0,1)
+\end{equation}
+%
+and under contiguous alternatives $H_1: \bfmu = \bfmu_0$,
+%
+\begin{equation}\label{eqn:hdtest2}
+\frac{C_{n,w} - \frac{n(n-1)}{2} \bfmu_0^T A_w^2 \bfmu_0 (1 + o(1)) }{\sqrt{\frac{n(n-1)}{2} \text{Tr}(B_w^2)}} \leadsto N(0,1)
+\end{equation}
+%
+we provide the details behind deriving these two results in the supplementary material, which involve modified regularity conditions and sketches of proofs along the lines of \cite{WangPengLi15}.
+
+Following this, the ARE of this test statistic with respect to its unweighted version, i.e. the WPL statistic, is expressed as:
+%
+$$
+ARE(C_{n,w}, \text{WPL}; \bfmu_0) = \frac{\bfmu_0^T A_w^2 \bfmu_0}{\bfmu_0^T A^2 \bfmu_0} \sqrt\frac{\text{Tr}(B^2)}{\text{Tr}(B_w^2)} (1 + o(1))
+$$
+%
+when $\Sigma = kI_p$, this again simplifies to $E^2(f(r)/r)/[E f^2(r). E^2(1/r)]$.
+
+\subsubsection{Robust estimation of eigenvalues, and a plug-in estimator of $\Sigma$}
+
+As we have seen in subsection 3.1, eigenvalues of the DCM are not same as the population eigenvalues, whereas the ADCM only gives back standardized eigenvalues. However, it is possible to robustly estimate the original eigenvalues by working with the individual columns of the robust score matrix. We do this using the following steps:
+
+\begin{enumerate}
+\item Randomly divide the sample indices $\{1,2,...,n\}$ into $k$ disjoint groups $\{G_1,...,G_k \}$ of size $\lfloor n/k \rfloor$ each;
+
+\item Assume the data is centered. Transform the data matrix: $S = \hat\Gamma^T_D X$;
+
+\item Calculate coordinate-wise variances for each group of indices $G_j$:
+%
+$$
+\hat\lambda_{i,j} = \frac{1}{|G_j|} \sum_{l \in G_j} (s_{li} - \bar s_{G_j,i})^2; \quad i = 1,...,p; j = 1,...,k
+$$
+where $\bar\bfs_{G_j} = (\bar s_{G_j,1}, ..., \bar s_{G_j,p})^T$ is the vector of column-wise means of $S_{G_j}$, the submatrix od $S$ with row indices in $G_j$.
+%
+\item Obtain estimates of eigenvalues by taking coordinate-wise medians of these variances:
+%
+$$
+\hat \lambda_i = \text{median} (\hat\lambda_{i,1}, ... , \hat\lambda_{i,k} ); \quad i = 1,...,p
+$$
+%
+\end{enumerate}
+%
+The number of subgroups used to calculate this median-of-small-variances estimator can be determined following \citep{Minsker15}. After this, we construct a consistent plug-in estimator of the population covariance matrix $\Sigma$:
+
+\begin{Theorem}\label{Thm:pluginSigma}
+Consider the estimates $\hat\lambda_i$ obtained from the above algorithm, and the matrix of eigenvectors $\hat\Gamma_D$ estimated using the sample DCM. Define $\hat\Sigma = \hat\Gamma_D \hat\Lambda \hat\Gamma_D^T; \hat\Lambda = \text{diag}(\hat\lambda_1, ..., \hat\lambda_p)$. Then as $n \rightarrow \infty$,
+%
+$$ \| \hat\Sigma - \Sigma \|_F \stackrel{P}{\rightarrow} 0 $$
+%
+$\|.\|_F$ being the Frobenius norm.
+\end{Theorem}
+
+{\colrbf (put in 1 or 2 sentences?)}
+
+\begin{proof}[Proof of Proposition \ref{proposition:SignTest}]
+Under contiguous alternatives $H_0: \bfmu = \bfmu_0$, the weighted sign test statistic $T_{n,w}$ has mean $E (w(\bfZ) \bfS (\bfZ))$. For spherically symmetric $\bfZ$, $w(\bfZ)$ depends on $\bfZ$ only through its norm. Since $\| \bfZ \|$ and $\bfS(\bfZ)$ are independent, we get $E (w(\bfZ) \bfS (\bfZ)) = E w(\bfZ). E \bfS (\bfZ)$. The same kind of decomposition holds for $Cov(w(\bfZ) \bfS(\bfZ))$.
+
+We can now simplify the approximate local power $\beta_{n,w}$ of the level-$\alpha$ ($0 < \alpha < 1$) test based on $T_{n,w}$:
+%
+\begin{eqnarray*}
+\beta_{n,w} &=& K_p \left( \chi^2_{p,\alpha} + n (E (w(\bfZ) \bfS (\bfZ))^T \right.\\
+&& \left. [ E (w^2(\bfZ) \bfS (\bfZ) \bfS (\bfZ)^T) ]^{-1} (E (w(\bfZ) \bfS (\bfZ)) \right)\\
+&=& K_p \left( \chi^2_{p,\alpha} + \frac{E^2 w(\bfZ)}{Ew^2(\bfZ)}. E\bfS(\bfZ)^T [Cov(\bfS(\bfZ)]^{-1} E\bfS(\bfZ) \right)
+\end{eqnarray*}
+%
+where $K_p$ and $\chi^2_{p,\alpha}$ are distribution function and upper-$\alpha$ cutoff of a $\chi^2_p$ distribution, respectively. Since $E^2 w(\bfZ) \leq Ew(\bfZ)$, $\beta_{n,w}$ the largest possible value of $\beta_{n,w}$ is $K_p ( \chi^2_{p,\alpha} + E\bfS(\bfZ)^T [Cov(\bfS(\bfZ)]^{-1} E\bfS(\bfZ) )$, the approximate power of the unweighted sign test statistic. Equality is of course achieved when $w(\bfZ)$ is a constant independent of $\bfZ$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{Thm:pluginSigma}]
+We are going to prove the following:
+%
+\begin{enumerate}
+\item $\| \hat\Gamma_D - \Gamma \|_F \stackrel{P}{\rightarrow} 0$, and
+
+\item $\| \hat\Lambda - \Lambda \|_F \stackrel{P}{\rightarrow} 0$
+\end{enumerate}
+%
+as $n \rightarrow \infty$. For (1), we notice $\sqrt n vec(\hat\Gamma_D - \Gamma)$ asymptotically has a (singular) multivariate normal distribution following Corollary \ref{Corollary:eigendist}, so that $\| \hat\Gamma_D - \Gamma \|_F = O_P(1/\sqrt n)$ using Prokhorov's theorem.
+
+It is now enough to prove convergence in probability of the individual eigenvalue estimates $\hat\lambda_i; i = 1,...,p$. For this, define estimates $\tilde\lambda_i$ as median-of-small-variances estimator of the \textit{true} score vectors $\Gamma^T X$. For this we have
+%
+\begin{equation}\label{eqn:PluginSigmaProof1}
+| \tilde\lambda_i - \lambda_i | \stackrel{P}{\rightarrow} 0
+\end{equation}
+%
+using Theorem 3.1 of \cite{Minsker15}, with $\mu = \lambda_i$. Now $ \hat\lambda_i = \text{med}_j (Var( X_{G_j}^T \hat\bfgamma_{D,i} ))$ and $\tilde\lambda_i = \text{med}_j (Var( X_{G_j}^T \bfgamma_i )) $, so that
+%
+\begin{eqnarray*}
+| \hat\lambda_i - \tilde\lambda_i | &\leq & \text{med}_j \left[ Var( X_{G_j}^T ( \hat\bfgamma_{D,i} - \bfgamma_i) ) \right]
+\\ &\leq & \| \hat\bfgamma_{D,i} - \bfgamma_i \|^2 \text{med}_j  \left[ \text{Tr} (Cov ( X_{G_j})) \right]
+\end{eqnarray*}
+%
+using Cauchy-Schwarz inequality. Combining the facts $ \| \hat\bfgamma_{D,i} - \bfgamma_i \| = O_P(1/\sqrt n)$ and $ \text{med}_j  [ \text{Tr} (Cov ( X_{G_j})) ] \stackrel{P}{\rightarrow} \text{Tr}(\Sigma)$ \citep{Minsker15} with (\ref{eqn:PluginSigmaProof1}), we get the needed.
+
+\end{proof}
+
+\begin{proof}[Sketch of proofs for statements regarding $C_{n,w}$]
+
+A first step to obtain asymptotic normality for the high-dimensional location test statistic $C_{n,w}$ is obtaining an equivalent result of Lemma 2.1 in \cite{WangPengLi15}:
+
+\begin{Lemma}\label{Lemma:HDlemma21} Under the conditions
+
+\noindent\textbf{(C1)}$\text{Tr}(\Sigma^4) = o(\text{Tr}^2(\Sigma^2)) $,
+
+\noindent\textbf{(C2)}$\text{Tr}^4(\Sigma) / \text{Tr}^2(\Sigma^2) \exp[ - \text{Tr}^2(\Sigma) / 128p \lambda^2_{\max}(\Sigma) ] = o(1)$
+\vspace{1em}
+
+\noindent when $H_0$ is true we have
+%
+\begin{eqnarray}
+E[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^4 ] &=& O(1) E^2[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^2 ]\\
+E[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ] &=& O(1) E^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ]\\
+E[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w2})^2 ] &=& o(1) E^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ]
+\end{eqnarray}
+%
+with $\bfepsilon \sim \mathcal E({\bf 0}_p, \Lambda, G)$ and $\bfepsilon_w = w(\bfepsilon) \bfS(\bfepsilon)$.
+\end{Lemma}
+%
+A proof of this lemma is derived using results in section 3 of \cite{ElKaroui09}, noticing that any-scalar valued 1-Lipschitz function of $\bfepsilon_w$ is a $M_w$-Lipschitz function of $\bfS(\bfepsilon)$, with $M_w = \sup_\bfepsilon w(\bfepsilon)$. Same steps as in the proof of Theorem 2.2 in \cite{WangPengLi15} follow now, using the lemma above in place of Lemma 2.1 therein, to establish asymptotic normality of $C_{n,w}$ under $H_0$.
+
+To derive the asymptotic distribution under contiguous alternatives we need the conditions (C3)-(C6) in \cite{WangPengLi15}, as well as slightly modified versions of Lemmas A.4 and A.5:
+
+\begin{Lemma}
+Given that condition (C3) holds, we have $\lambda_{\max} (B_w) \leq 2 \frac{\lambda_{\max}}{\text{Tr} (\Sigma)} (1+o(1))$.
+\end{Lemma}
+
+\begin{Lemma}
+Define $D_w = E \left[ \frac{w^2(\bfepsilon)}{\| \bfepsilon \|^2} (I_p - \bfS(\bfepsilon) \bfS(\bfepsilon)^T )\right] $. Then $\lambda_{\max} (A_w) \leq E( w(\bfepsilon)/\| \bfepsilon \|)$ and $\lambda_{\max} (D_w) \leq E( w(\bfepsilon)/\| \bfepsilon \|)^2$. Further, if (C3) and (C4) hold then $\lambda_{\min} (A_w) \geq E( w(\bfepsilon)/\| \bfepsilon \|)(1+o(1))/\sqrt 3$.
+\end{Lemma}
+%
+The proof now exactly follows steps in the proof of theorem 2.3 in \cite{WangPengLi15}, replacing vector signs by weighted signs, using the fact that $w(\bfepsilon)$ is bounded above by $M_w$ while applying conditions (C5)-(C6) and lemmas A.1, A.2, A.3, and finally using the above two lemmas in place of lemmas A.4 and A.5 respectively.
+
+\end{proof}
+
+\bibliographystyle{plainnat}
+\bibliography{scatterbib}
+
+\end{document}

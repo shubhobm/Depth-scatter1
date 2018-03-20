@@ -1,0 +1,62 @@
+\section{Introduction}
+
+{\colrbf (needs rewriting)}
+
+In multivariate analysis, the study of principal components is important since it provides a small number of uncorrelated variables from a potentially larger number of variables, so that these new components explain most of the underlying variability in the original data. In case of multivariate normal distribution, the sample covariance matrix provides the most asymptotically efficient estimates of eigenvectors/ principal components, but it is extremely sensitive to outliers as well as relaxations of the normality assumption. To address this issue, several robust estimators of the population covariance or correlation matrix have been proposed which can be used for Principal Components Analysis (PCA). They can be roughly put into these categories: robust, high breakdown point estimators that are computation-intensive \citep{rousseeuw85, maronna76}; M-estimators that are calculated by simple iterative algorithms but do not necessarily possess high breakdown point \citep{huber77, tyler87}; and symmetrised estomators that are highly efficient and robust to deviations from normality, but sensitive to outliers and computationally demanding \citep{dumbgen98, sirkia07}.
+
+When principal components are of interest, one can also estimate the population eigenvectors by analyzing the spatial sign of a multivariate vector: the vector divided by its magnitude, instead of the original data. The covariance matrix of these sign vectors, namely Sign Covariance Matrix (SCM) has the same set of eigenvectors as the covariance matrix of the original population, thus the multivariate sign transformation yields computationally simple and high-breakdown estimates of principal components \citep{locantore99, visuri00}. Although the SCM is not affine equivariant, its orthogonal equivariance suffices for the purpose of PCA. However, the resulting estimates are not very efficient, and are in fact asymptotically inadmissible \citep{magyar14}, in the sense that there is an estimator (Tyler's M-estimate of scatter, to be precise) that has uniformly lower asymptotic risk than the SCM.
+
+The nonparametric concept of data-depth had first been proposed by \cite{tukey75} when he introduced the halfspace depth. Given a dataset, the depth of a given point in the sample space measures how far inside the data cloud the point exists. An overview of statistical depth functions can be found in \citep{zuo00}. Depth-based methods have recently been popular for robust nonparametric classification \citep{jornsten04, ghosh05, dutta12, sguera14}. In parametric estimation, depth-weighted means \citep{ZuoCuiHe04} and covariance matrices \citep{ZuoCui05} provide high-breakdown point as well as efficient estimators, although they do involve choice of a suitable weight function and tuning parameters. In this paper we study the covariance matrix of the multivariate rank vector that is obtained from the data-depth of a point and its spatial sign, paying special attention to its eigenvectors. Specifically, we develop a robust version of principal components analysis for elliptically symmetric distributions based on the eigenvectors of this covariance matrix, and compare it with normal PCA and spherical PCA, i.e. PCA based on eigenvectors of the SCM.
+
+Given a vector $\bfx \in \mathbb{R}^p$, its spatial sign is defined as the vector valued function \citep{MottonenOja95}:
+%
+$$ \bfS(\bfx) = \begin{cases} \bfx\| \bfx \|^{-1} \quad \mbox{if }\bfx \neq \bf0\\
+\bf0 \quad \mbox{if }\bfx = \bf0 \end{cases} $$
+%
+When $\bfx$ is a random vector that follows an elliptic distribution $|\Sigma|^{-1/2} f((\bfx - \bfmu)^T \Sigma^{-1} (\bfx - \bfmu))$, with a mean vector $\bfmu$ and covariance matrix $\Sigma$, the sign vectors $\bfS(\bfx - \bfmu)$ reside on the surface of a $p$-dimensional unit ball centered at $\bfmu$. Denote by $\Sigma_S(\bfX) = E\bfS (\bfX - \bfmu)\bfS (\bfX - \bfmu)^T$ the covariance matrix of spatial signs, or the \textit{Sign Covariance Matrix} (SCM). The transformation $\bfx \mapsto \bfS(\bfx - \bfmu)$ keeps eigenvectors of population covariance matrix unchanged, and eigenvectors of the sample SCM $ \hat \Sigma_S = \sum_{i=1}^n \bfS (\bfx_i - \bfmu)\bfS (\bfx_i - \bfmu)^T/n $ are $\sqrt n$-consistent estimators of their population counterparts \citep{taskinen12}.
+
+The sign transformation is rotation equivariant, i.e. $ \bfS(P (\bfx - \bfmu)) = P(\bfx - \bfmu)/\| P (\bfx - \bfmu)\| = P(\bfx - \bfmu)/\|\bfx - \bfmu\| = P \bfS(\bfx - \bfmu)$ for any orthogonal matrix $P$, and as a result the SCM is rotation equivariant too, in the sense that $\Sigma_S(P\bfX) = P \Sigma_S(\bfX) P^T$. This is not necessarily true in general if $P$ is replaced by any non-singular matrix. An affine equivariant version of the sample SCM is obtained as the solution $\hat \Sigma_T$ of the following equation:
+%
+$$ \hat \Sigma_T(\bfX) = \frac{p}{n} \sum_{i=1}^n \frac{(\bfx - \bfmu)(\bfx - \bfmu)^T}{(\bfx - \bfmu)^T \hat\Sigma_T(\bfX)^{-1} (\bfx - \bfmu)} $$
+%
+which turns out to be Tyler's M-estimator of scatter \citep{tyler87}. In this context, one should note that for scatter matrices, affine equivariance will mean any affine transformation on the original random variable $\bfX \mapsto \bfX^* = A\bfX + \bfb$ ($A$ non-singular, $\bfb \in \mathbb{R}^p$) being carried over to the covariance matrix estimate upto a scalar multiple: $\hat\Sigma_T(\bfX^*) = k. A \hat\Sigma_T(\bfX) A^T$ for some $k>0$.
+
+For any multivariate distribution $F = F_\bfX$ belonging to a set of distributions $\mathcal F$, the depth of a point $\bfx \in \mathbb{R}^p$, say $D(\bfx, F_\bfX)$ is any real-valued function that provides a 'center outward ordering' of $\bfx$ with respect to $F$ \citep{zuo00}. \cite{liu90} outlines the desirable properties of a statistical depth function:
+
+\vspace{1em}
+\noindent\textbf{(D1)} \textit{Affine invariance}: $D(A\bfx + \bfb, F_{A\bfX+\bfb}) = D(\bfx, F_\bfX)$;
+
+\noindent\textbf{(D2)} \textit{Maximality at center}: $D(\bftheta, F_\bfX) = \sup_{\bfx\in \mathbb{R}^p} D(\bfx, F_\bfX)$ for $F_\bfX$ having center of symmetry $\bftheta$. This point is called the \textit{deepest point} of the distribution.;
+
+\noindent\textbf{(D3)} \textit{Monotonicity with respect to deepest point}: $D(\bfx; F_\bfX) \leq D(\bftheta + a(\bfx - \bftheta), F_\bfX)$, $\bftheta$ being deepest point of $F_\bfX$.;
+
+\noindent\textbf{(D4)} \textit{Vanishing at infinity}: $D(\bfx; F_\bfX) \rightarrow 0$ as $\|\bfx\| \rightarrow \infty $.
+\vspace{1em}
+
+In (D2) the types of symmetry considered can be central symmetry, angular symmetry and halfspace symmetry. Also for multimodal probability distributions, i.e. distributions with multiple local maxima in their probability density functions, properties (D2) and (D3) are actually restrictive towards the formulation of a reasonable depth function that captures the shape of the data cloud. In our derivations that follow, we replace these two by a weaker condition:
+
+\vspace{1em}
+\noindent\textbf{(D2*)} \textit{Existence of a maximal point}: The maximum depth over all distributions $F$ and points $\bfx$ is bounded above, i.e. $ \sup_{F_\bfX \in \mathcal F} \sup_{\bfx\in \mathbb{R}^p} D(\bfx, F_\bfX) < \infty $. We denote this point by $M_D(F_\bfX)$.
+\vspace{1em}
+
+We will be using the following 3 measures of data-depth to obtain our DCMs and compare their performances:
+
+\begin{itemize}
+\item \textbf{Halfspace depth} (HD) \citep{tukey75} is defined as the minimum probability of all halfspaces containing a point. In our notations,
+
+$$ HD(\bfx, F)  = \inf_{\bfu \in \mathbb{R}^p; \bfu \neq \bf0} P(\bfu^T \bfX \geq \bfu^T \bfx) $$
+
+\item \textbf{Mahalanobis depth} (MhD) \citep{LiuPareliusSingh99} is based on the Mahalanobis distance of $\bfx$ to $\bfmu$ with respect to $\Sigma$: $d_\Sigma(\bfx, \bfmu) = \sqrt{(\bfx - \bfmu)^T \Sigma^{-1} (\bfx - \bfmu)}$. It is defined as
+%
+$$ MhD(\bfX, F) = \frac{1}{1 + d^2_\Sigma (\bfx - \bfmu)} $$
+%
+note here that $d_\Sigma(\bfx,\bfmu)$ can be seen as a valid htped function of $\bfx$ with respect to $F$.
+
+\item \textbf{Projection depth} (PD) \citep{zuo03} is another depth function based on an outlyingness function. Here that function is
+%
+$$ O(\bfx, F) = \sup_{\| \bfu \| = 1} \frac{| \bfu^T\bfx - m(\bfu^T\bfX)|}{s(\bfu^T\bfX)} $$
+%
+where $m$ and $s$ are some univariate measures location and scale, respectively. Given this the depth at $\bfx$ is defined as $PD(\bfx, F) = 1/(1+O(\bfx, F))$.
+\end{itemize}
+
+Computation-wise, MhD is easy to calculate since the sample mean and covariance matrix are generally used as estimates of $\mu$ and $\Sigma$, respectively. However this makes MhD less robust with respect to outliers. PD is generally approximated by taking maximum over a number of random projections. There have been several approaches for calculating HD. A recent unpublished paper \citep{rainerArxiv} provides a general algorithm that computes exact HD in $O(n^{p-1}\log n)$ time. In this paper, we shall use inbuilt functions in the R package \texttt{fda.usc} for calculating the above depth functions.

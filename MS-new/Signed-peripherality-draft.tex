@@ -1,0 +1,100 @@
+\documentclass[11pt,letterpaper]{article}
+\pdfoutput=1
+
+\usepackage{mycommands,amssymb,amsmath,amsthm,color,pagesize,outlines,cite,subfigure,epsfig}
+\usepackage[small]{caption}
+\usepackage{hyperref} % for linking references
+\hypersetup{colorlinks = true, citecolor = blue, urlcolor = blue}
+
+\usepackage{stackrel}
+
+\usepackage[round]{natbib}
+
+% for algorithm
+%\usepackage[noend]{algpseudocode}
+%\usepackage{algorithm}
+
+% DON'T change margins - should be 1 inch all around.
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+\addtolength{\textwidth}{0.9in}
+\addtolength{\textheight}{0.9in}
+\addtolength{\topmargin}{-.4in}
+
+%% measurements for 1 inch margin
+%\addtolength{\oddsidemargin}{-.875in}
+%\addtolength{\evensidemargin}{-.875in}
+%\addtolength{\textwidth}{1.75in}
+%\addtolength{\topmargin}{-.875in}
+%\addtolength{\textheight}{1.75in}
+
+%\pagestyle{myheadings}
+%\markboth{}{\underline{{\bf Notes: (do not circulate)} \hspace{4.5cm} {\sc  Ansu Chatterjee} \hspace{0.25cm}}}
+
+\DeclareMathOperator*{\ve}{vec}
+\DeclareMathOperator*{\diag}{diag }
+\DeclareMathOperator*{\supp}{supp }
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Th}{^{\text{th}}}
+
+\makeatletter
+\newcommand{\opnorm}{\@ifstar\@opnorms\@opnorm}
+\newcommand{\@opnorms}[1]{%
+  \left|\mkern-1.5mu\left|\mkern-1.5mu\left|
+   #1
+  \right|\mkern-1.5mu\right|\mkern-1.5mu\right|
+}
+\newcommand{\@opnorm}[2][]{%
+  \mathopen{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+  #2
+  \mathclose{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+}
+\makeatother
+
+%% Appendix theorem counter
+\usepackage{chngcntr}
+\usepackage{apptools}
+\AtAppendix{\counterwithin{Theorem}{section}}
+\numberwithin{equation}{section}
+
+\begin{document}
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+
+\title{Signed Peripherality Functions for Multivariate Statistical Inference}
+\date{}
+\author{Subhabrata Majumdar, Snigdhansu Chatterjee}
+\maketitle
+
+Abstract:
+{(\colrbf will change)}Analyzing principal components for multivariate data from its spatial sign covariance matrix (SCM) has been proposed as a computationally simple and robust alternative to normal PCA, but it suffers from poor efficiency properties and is actually inadmissible with respect to the maximum likelihood estimator. Here we use data depth-based spatial ranks in place of spatial signs to obtain the orthogonally equivariant Depth Covariance Matrix (DCM) and use its eigenvector estimates for PCA. We derive asymptotic properties of the sample DCM and influence functions of its eigenvectors. The shapes of these influence functions indicate robustness of estimated principal components, and good efficiency properties compared to the SCM. Finite sample simulation studies show that principal components of the sample DCM are robust with respect to deviations from normality, as well as are more efficient than the SCM and its affine equivariant version, Tyler's shape matrix. Through two real data examples, we also show the effectiveness of DCM-based PCA in analyzing high-dimensional data and outlier detection, and compare it with other methods of robust PCA.
+\vspace{.5cm}
+
+Keywords:
+Multivariate ranking, data depth, dimension reduction, principal components analysis, robust statistics, functional data
+
+\newpage
+\input{1_Introduction}
+\input{2_Location}
+\input{3_Scale}
+\input{4_SDR}
+\input{5_Functional}
+\input{6_Conclusion}
+
+\newpage
+\input{7_Appendix}
+
+\newpage
+\input{misc}
+
+\bibliographystyle{apalike}
+\bibliography{scatterbib}
+
+\end{document}

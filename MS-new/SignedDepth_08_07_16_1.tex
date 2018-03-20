@@ -1,0 +1,817 @@
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{authblk}
+\usepackage{bibentry}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{fullpage}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{relsize}
+\usepackage{scalerel}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{slantsc}
+\usepackage{stackengine}
+\usepackage{subfigure}
+\usepackage{subfiles}
+% \usepackage{tikz}
+\usepackage{verbatim}
+% \usepackage{amsmath,amssymb,amsthm}
+% \usepackage{rotating}
+\usepackage{wrapfig}
+%\usepackage{bibentry}
+
+\usepackage{natbib}
+
+
+\newcommand{\bfa}{{\mathbf {a}}}
+\newcommand{\bfb}{{\mathbf {b}}}
+\newcommand{\bfc}{{\mathbf {c}}}
+\newcommand{\bfd}{{\mathbf {d}}}
+\newcommand{\bfe}{{\mathbf {e}}}
+\newcommand{\bff}{{\mathbf {f}}}
+\newcommand{\bfg}{{\mathbf {g}}}
+\newcommand{\bfh}{{\mathbf {h}}}
+\newcommand{\bfi}{{\mathbf {i}}}
+\newcommand{\bfj}{{\mathbf {j}}}
+\newcommand{\bfm}{{\mathbf {m}}}
+\newcommand{\bfn}{{\mathbf {n}}}
+\newcommand{\bfp}{{\mathbf {p}}}
+\newcommand{\bfr}{{\mathbf {r}}}
+\newcommand{\bfs}{{\mathbf {s}}}
+\newcommand{\bft}{{\mathbf {t}}}
+\newcommand{\bfu}{{\mathbf {u}}}
+\newcommand{\bfv}{{\mathbf {v}}}
+\newcommand{\bfw}{{\mathbf {w}}}
+\newcommand{\bfx}{{\mathbf {x}}}
+\newcommand{\bfy}{{\mathbf {y}}}
+\newcommand{\bfz}{{\mathbf {z}}}
+
+\newcommand{\bfA}{{\mathbf {A}}}
+\newcommand{\bfB}{{\mathbf {B}}}
+\newcommand{\bfC}{{\mathbf {C}}}
+\newcommand{\bfD}{{\mathbf {D}}}
+\newcommand{\bfE}{{\mathbf {E}}}
+\newcommand{\bfF}{{\mathbf {F}}}
+\newcommand{\bfG}{{\mathbf {G}}}
+\newcommand{\bfH}{{\mathbf {H}}}
+\newcommand{\bfI}{{\mathbf {I}}}
+\newcommand{\bfJ}{{\mathbf {J}}}
+\newcommand{\bfK}{{\mathbf {K}}}
+\newcommand{\bfL}{{\mathbf {L}}}
+\newcommand{\bfM}{{\mathbf {M}}}
+\newcommand{\bfP}{{\mathbf {P}}}
+\newcommand{\bfQ}{{\mathbf {Q}}}
+\newcommand{\bfR}{{\mathbf {R}}}
+\newcommand{\bfS}{{\mathbf {S}}}
+\newcommand{\bfT}{{\mathbf {T}}}
+\newcommand{\bfU}{{\mathbf {U}}}
+\newcommand{\bfV}{{\mathbf {V}}}
+\newcommand{\bfW}{{\mathbf {W}}}
+\newcommand{\bfY}{{\mathbf {Y}}}
+\newcommand{\bfX}{{\mathbf {X}}}
+\newcommand{\bfZ}{{\mathbf {Z}}}
+
+
+\newcommand{\bfalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfgamma}{{\boldsymbol{\gamma}}}
+\newcommand{\bfdelta}{{\boldsymbol{\delta}}}
+\newcommand{\bfepsilon}{{\boldsymbol{\epsilon}}}
+\newcommand{\bfeta}{{\boldsymbol{\eta}}}
+\newcommand{\bflambda}{{\boldsymbol{\lambda}}}
+\newcommand{\bfmu}{{\boldsymbol{\mu}}}
+\newcommand{\bfnu}{{\boldsymbol{\nu}}}
+\newcommand{\bfomega}{{\boldsymbol{\omega}}}
+\newcommand{\bfpi}{{\boldsymbol{\pi}}}
+\newcommand{\bfpsi}{{\boldsymbol{\psi}}}
+\newcommand{\bfsigma}{{\boldsymbol{\sigma}}}
+\newcommand{\bftheta}{{\boldsymbol{\theta}}}
+\newcommand{\bfxi}{{\boldsymbol{\xi}}}
+
+\newcommand{\bfLambda}{{\boldsymbol{\Lambda}}}
+\newcommand{\bfPi}{{\boldsymbol{\Pi}}}
+\newcommand{\bfSigma}{{\boldsymbol{\Sigma}}}
+\newcommand{\bfTau}{{\boldsymbol{T}}}
+\newcommand{\bfTheta}{{\boldsymbol{\Theta}}}
+
+
+
+
+\newcommand{\BE}{\mathbb{E}}
+\newcommand{\BF}{\mathbb{F}}
+\newcommand{\BG}{\mathbb{G}}
+\newcommand{\BI}{\mathbb{I}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BV}{\mathbb{V}}
+
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cX}{\mathcal{X}}
+
+\def\baq#1\eaq{\begin{align}#1\end{align}}
+
+\def\ban#1\ean{\begin{align*}#1\end{align*}}
+
+\def\bredbf#1\eredbf{{\color{red}{\bf ???? #1 ????}}}
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{Proposition}[section]
+\newtheorem{Corollary}{Corollary}[section]
+\newtheorem{Definition}{Definition}[section]
+\newtheorem{Algorithm}{Algorithm}[section]
+\newtheorem{Claim}{Claim}[section]
+
+
+%\voffset=0.5in
+
+
+   \newtheoremstyle{Example}{\topsep}{\topsep}%
+     {}%         Body font
+     {}%         Indent amount (empty = no indent, \parindent = para indent)
+     {\bfseries}% Thm head font
+     {:}%        Punctuation after thm head
+    {0.9mm}%     Space after thm head (\newline = linebreak)
+     {\thmname{#1}\thmnumber{ #2}\thmnote{(\it #3)}}%         Thm head spec
+		
+%	\AtEndEnvironment{Example}{\null\hfill\qed}%
+   \theoremstyle{Example}
+   \newtheorem{Example}{Example}[section]
+	\AtEndEnvironment{Example}{\null\hfill\qed}%
+
+
+
+\renewcommand{\baselinestretch}{1.1}
+
+
+%
+%\pagestyle{myheadings}
+%\markboth{}{\underline{{\bf Notes: (do not circulate)} \hspace{4.5cm} {\sc  Ansu Chatterjee} \hspace{0.25cm}}}
+
+
+
+
+
+\begin{document}
+\bibliographystyle{plain}
+
+
+
+\makeatletter
+\def\@oddfoot{[\jobname (\today)]\hfil\thepage}
+\makeatother
+
+\title{On Combinations of Sign and Peripherality Transformations for Robust Analysis
+of Hilbert-valued data}
+
+%\title{Robust methods  based on the kernel signed peripherality 
+%transformations}
+\author{SM, SC}
+
+\maketitle
+
+\section{Introduction}
+
+\bredbf
+I will write this section once the rest of the work is complete
+\eredbf
+
+The scope of Hilbert-valued data is considerable, and encompasses 
+the univariate and multivariate finite-dimensional observations traditionally 
+studied in Statistics, as well  as certain kinds of functional data. For 
+$\BR^{p}$-valued data, the classical approach is to model the joint distribution 
+of the observations using a probability distribution known up to finite dimensional
+parameters. If the correct probability distribution is used, there are often 
+theoretical optimality guarantees. However in practice, the correct distribution is 
+rarely, if ever, known; there may be aberrant observations that do not follow the 
+pattern of the bulk of the data but whose influence on parameter estimates and 
+eventual inference can be considerable; computational practicability and costs 
+and complexity of patterns in the data may limit choices of statistical methods 
+to adopt. The analysis of functional data is in a developmental stage, 
+but the above comments on practical issues are applicable for such data also.
+
+One way of circumventing the practical issues outlined above is to use 
+{\it robust} techniques of data analysis, where theoretical optimality under 
+restrictive idealized conditions is not of interest. Instead, efforts are made to 
+make the resulting estimation and inference insensitive to  technical assumptions, 
+outliers in the data, and computationally feasible. Naturally, subject to these 
+robustness guarantees, the goal is to use the most efficient techniques possible.
+The following very simple example recapitulates some very well known facts, but 
+serves to illustrate the main drive of this paper.
+
+\begin{Example}[Testing for a location parameter]
+\label{Example:TestingLocation1d}
+
+Suppose we have real valued observations $Y_{1}, \ldots, Y_{n}$, which from the 
+domain of study that gave rise to these data, are known to be distributed around 
+an unknown parameter $\mu \in \BR$, and the scientific question of interest lies in 
+evaluating  whether the hypothesis $\mu = \mu_{0}$ for some given constant 
+$\mu_{0}$ is tenable or not. 
+
+Under the assumption that the observations $Y_{1}, \ldots, Y_{n}$ are 
+independent, identically distributed (i.i.d. hereafter) as $N (\mu, \sigma^{2})$, the 
+Gaussian distribution with mean $\mu$ and variance $\sigma^{2}$, the optimal 
+procedure is to use the $t$-test based on the statistic 
+\ban 
+T_{n} = n^{1/2} (\bar{Y}_{n} - \mu_{0})/S_{n-1}
+\ean
+and the Student's $t$-distribution. Here 
+$\bar{Y}_{n} = n^{-1} \sum_{i=1}^{n} Y_{i}$ and 
+$S_{n- 1}^{2} = (n -1)^{-1} \sum_{i=1}^{n} (Y_{i} - \bar{Y}_{n})^{2}$. 
+However, note that the assumptions of the data being  independent, or identically 
+distributed, or following the Gaussian distribution, or having the same variance for 
+all observations, are rarely justified from the domain of study, and are merely choices of 
+convenience. Also, one or more outlying observations among 
+$Y_{1}, \ldots, Y_{n}$ can have extreme effect on either or both of 
+$\bar{Y}_{n}$ and $S_{n- 1}^{2}$, and result in a numeric value that  completely 
+misrepresents the nature of the data and misleading inference relating to the scientific query. 
+ 
+Alternatives to the above is to use the {\it sign}, and possibly also the 
+{\it rank} of each observation. Let $\cI_{A}$ be the indicator of  $A$, 
+that is, $\cI_{A} = 1$ if $A$ is true and is zero otherwise.
+Define the following:
+\ban 
+(a) \text{ Sign function } & S (y; \nu) 
+= | y - \nu |^{-1} (y - \nu) \cI_{\{ y \ne \nu \}}, \\
+(b) \text{ Rank function } & R (y; Y_{1}, \ldots, Y_{n}) 
+= \sum_{i=1}^{n} \cI_{ \{ y \leq Y_{i} \}}.
+\ean
+Then $S_{i} = S (Y_{i}; \mu_{0})$ indicates whether the $i^{th}$ observation is 
+greater than $\mu_{0}$ or not, and $R_{i} = R (Y_{i}; Y_{1}, \ldots, Y_{n})$ is 
+the rank that the $i^{th}$ observation takes among the entire data when sorted 
+in an ascending order. 
+
+The {\it sign test statistic} corresponding to the above location testing problem
+is given by $S = \sum_{i = 1}^{n} S_{i}$ and under the very general assumption 
+that the $Y_{i}$'s are independent with distribution function $F_{i}$, and all the 
+$F_{i}$'s have a common median $\mu_{0}$, the null distribution of 
+$S$ is Binomial $(n, 0.5)$. This testing procedure is also indeed optimal in a 
+very broad framework, see 
+\bredbf
+Need the appropriate reference from hajek, also need the conditions from there 
+\eredbf
+
+However, in many situations some additional information is known beyond the 
+extremely relaxed conditions required by the sign test, and the Wilcoxon 
+signed-rank test,  is found to be considerably more efficient than the sign test. 
+These are well known results from several decades back, see 
+\bredbf
+Standard Hollander and Wolfe type refernce
+\eredbf
+for details.
+
+\end{Example}
+
+
+Example~\ref{Example:TestingLocation1d} motivates the present paper: which is a 
+study on combinations of the equivalents of the sign function and rank function 
+in Hilbert spaces, that leads to robust statistical procedures of considerable efficiency 
+in a wide variety of problems. Very interestingly, we find that for location 
+parameters, using in conjunction with the sign function a weight function that 
+assigns {\it more} mass to observations closer to the center, results in   robust  
+and considerably efficient estimators and test statistics. On the other hand, for 
+scale or dispersion parameters, in conjunction with the sign function using a weight 
+function that assigns {\it less} mass to observations closer to the center, 
+results in  similar properties. 
+
+Notice that the robust and potentially optimal procedures outlined in 
+Example~\ref{Example:TestingLocation1d}  above are based on transformations of the 
+original data that preserved the structures of interest. In the rest of this paper we 
+study equivalent transformations on general Hilbert spaces, and use the transformed data 
+for ($i$) robust location estimation, ($ii$) testing for a location parameter in 
+high dimensions and Hilbert spaces, ($iii$) robust dispersion estimation, ($iv$) 
+robust principal component analysis (RPCA), ($v$) RPCA in dimension reduction and 
+learning, ($vi$) robust analysis of functional data. 
+
+Given the considerable breadth of these topics, we present algorithmic details, some 
+illustrative examples, and a selection of theoretical results. Considerably deeper studies 
+in any of the above topics is feasible, however we postpone deep-dives into any 
+specific application to future papers in order to make the main methodological drivers 
+of this paper more easily understandable.
+
+In Section~\ref{Section:SP} we present the {\it sign function} and the 
+{\it peripherality function} for Hilbert spaces. The former is well known, and variants of 
+the latter are also well known  in the literature. One major contribution of this 
+paper is in the proposal of combining the two in different ways to achieve 
+simultaneous robustness and efficiency targets. Then on the following sections we 
+present details on the six applications listed above.
+
+
+\section{The sign and peripherality functions}
+\label{Section:SP}
+ 
+We consider data $X_{1}, \ldots, X_{n}$ from some subset $\cX$ of 
+a real separable Hilbert $\cH$. 
+
+We consider two functions defined below. First, we consider the 
+{\it sign function} $S : \cH \times \cH \rightarrow \cH$, defined as 
+\ban
+S (x; \mu_{x}) = || x - \mu_{x} ||^{-1} (x - \mu_{x}) {\cI}_{ \{ x \ne \mu_{x} \}}. 
+\ean
+This sign function is defined with respect to the {\it location parameter} 
+$\mu_{x} \in \cH$, and the norm $|| \cdot ||$ used above is the norm of the 
+underlying Hilbert space. This is a direct  generalization of the 
+real-valued case of the indicator of whether the point $x$ is to the right, 
+left or at $\mu_{x}$, described in Example~\ref{Example:TestingLocation1d}. 
+This function has been used many times in statistics, see
+\bredbf insert several references. \eredbf
+
+We next describe the {\it peripherality function}, for which some mathematical 
+preliminaries are necessary for easier exposition. Let $(\Omega, \cA, \alpha)$ 
+be a probability space, and let $\cB$ be the Borel $\sigma$-algebra generated 
+by the norm topology of $\cH$. A $\cH$-valued random variable is a mapping 
+$X :  \Omega \rightarrow \cH$ such that for every $B \in \cB$, $X^{-1} (B) \in \cA$. 
+It is easy to see that $\alpha_{x} = \alpha ( X^{-1} (\cdot ) )$ is a probability 
+measure on the measurable space $(\cH, \cB)$. Mathematical details about 
+such probability measures on Hilbert spaces are available from a number of 
+places, including
+\bredbf
+BLSP notes (my primary reference), Gross, Segal, and what not.
+\eredbf
+
+
+Let $\cM$ be a set of probability measures on $\cH$. 
+%When $\cH$ 
+%is infinite-dimensional, we further impose the conditions that for any $\nu \in \cM$
+%\ban 
+%\int_{\cH} || x || \nu (d x) < \infty, \hspace{1 cm} 
+%\int_{\cH} || x ||^{2} \nu (d x) < \infty.
+%\ean
+A {\it peripherality function} 
+$ P : \cH \times \cM \rightarrow \BR$,  is a function that satisfies the following 
+condition:\\
+{\it For every probability measure $F \in \cM$, there exists a constant $\mu_{F} \in \cH$ 
+such that for every $t \in [ 0, 1]$ and every $x \in \cH$}
+\ban 
+P \Bigl( \mu_{F} ; F \Bigr) \leq P \Bigl( \mu_{F} + t ( x - \mu_{F} ); F \Bigr). 
+\ean 
+
+
+That is, for every fixed $F$, the peripherality function achieves a minimum at 
+$\mu_{F}$, and is non-decreasing in every direction away from $\mu_{F}$. If 
+we impose the practical restriction that $\inf_{x} P ( x ; F )$ is finite and 
+bounded below, then we may as well impose without loss of generality 
+$P ( \mu_{F} ; F ) = 0$ and consequently $P ( x ; F ) \geq 0$ for all $x \in \cH$ 
+and  $F \in \cM$. In many cases of interest, $P ( \cdot; \cdot)$ is 
+uniformly bounded above as well.
+
+
+The peripherality function quantifies whether the point $x$ is near or far from $\mu_{F}$. 
+We will impose additional conditions on this function 
+as we proceed, but it can be seem immediately that any distance measure between 
+$x$ and $\mu_{F}$ satisfies the bare minimum requirement mentioned above. 
+
+
+In this paper, we demonstrate certain interesting applications arising from 
+composing the sign function and the peripherality function together, to form the 
+{\it signed-peripherality function} $\kappa (\cdot)$. We define this function 
+with three parameters $\mu_{x} \in \cH$, $F \in \cM$ and  
+$\mu_{y} \in \cH$,  argument $x \in \cH$ and range $\cH$. More precisely,
+we use two functions $\kappa_{s} : \cH \rightarrow \cH$, 
+$\kappa_{p} : \cH \rightarrow \cH$ that are respectively 
+composed with the sign transformation and the peripherality function, and 
+then multiplied together to obtain the function
+$\kappa : \cH \times \cH \times \cM \times \cH \times \cH \rightarrow \cH$ 
+defined as 
+\ban 
+\kappa (x; \mu_{x}, F, \mu_{y} ) = k_{s} (S (x; \mu_{x})) k_{p} (P (x; F)) + \mu_{y}. 
+\ean
+Within this very generic framework, we will explore two simple choices. We consider 
+$\kappa_{s} (x) = x$, thus this is fixed to be the identity transformation. The two 
+alternatives we consider for $\kappa_{p}$ are 
+$\kappa_{p} (x) = x$ and $\kappa_{p} (x) = \exp (- x)$, thus one is linearly 
+increasing with $x$ while the other is exponentially decreasing.
+
+
+Notice that if we consider $\mu_{y} = \mu_{F} = \mu_{x}$,  
+$\kappa_{s} (x) = \kappa_{p} (x) = x$, and take the very 
+simple peripherality  function $P( x; F) = || x - \mu_{F} ||$, we have 
+$\kappa (x; \mu_{x}, F, \mu_{y} ) \equiv x$ for all choices of parameters 
+$\mu_{x}, F, \mu_{y}$.  Consequently, under this choice of parameters for the 
+$\kappa$-transformation, analyzing a dataset $\{ X_{1}, \ldots, X_{n} \}$ and 
+its $\kappa$-transformed version 
+$\{ Y_{i} = \kappa (X_{i}; \ldots), \ i = 1, \ldots, n \}$ are equivalent. However,
+in this paper we illustrate how other choices of the peripherality function 
+lead to interesting robustness results. We have deliberately set the location 
+parameters $\mu_{x}, \mu_{F}, \mu_{y}$ to be potentially non-identical, this 
+additional flexibility has some advantage for robust data analysis. In many 
+applications, the value of these three parameters may be identical, which leads 
+to no conflict in our framework.
+
+A whole class of peripherality functions can be defined from 
+ {\it data - depth},  which are center-outward ranking of multivariate data. 
+ Data-depths have been extensively used in statistics also, see 
+ \bredbf multiple references. \eredbf
+ Peripherality functions can be defined as some inverse ranking based 
+ on data depth, and the concept of {\it outlyingness} associated with data depth 
+ is essentially same as what we use in this paper. We use the term 
+ {\it peripherality} to keep track of the difference in application 
+ contexts and technical assumptions. As an additional objective of this paper, 
+ we discuss  some properties and uses of  data-depth in real, separable Hilbert spaces.
+
+ {\bf old material:}{\it
+ In this paper, we consider a few illustrative cases of the use of the 
+ $\kappa$-transformation. Suppose the data at hand is $X_{1}, \ldots, X_{n}$, 
+ and we define $Y_{i} = \kappa (X_{i}; \mu_{X}, F, \mu_{Y})$ for some 
+choice of parameters $\mu_{X}, F, \mu_{Y}$. For interpretability and 
+convenience, we assume that $\BE S ( X_{i}; \mu_{X}) P ( X_{i}; F) = 0$, thus 
+$\BE Y_{i} = \mu_{Y}$. We thus have 
+\ban 
+\BV Y_{i} 
+& = \BE P ( X_{i}; F)^{2} S ( X_{i}; \mu_{X}) S ( X_{i}; \mu_{X})^{T} \\
+& = \BE P ( X_{i}; F)^{2} || X_{i} - \mu_{X} ||^{-2} 
+( X_{i} - \mu_{X} ) (X_{i} - \mu_{X})^{T}.
+\ean
+}
+
+\bredbf Need to include (a) Biman-PC idea for affine equivariance for $p \ll n$, 
+(b) kernel versions as an example of generalization. (c) anything else? \eredbf
+
+
+
+
+\section{The robust location problem}
+
+%\bredbf
+%This section and the section following this needs to be merged and made sensible and 
+%publication-worthy. 
+%\eredbf
+
+\subsection{General approach}
+
+Here are things we need to do:
+\begin{enumerate}
+
+\item Propose robust location estimation in  a general Hilbert space $\cH$, based on 
+$\kappa_{s} (x) = x$ and $\kappa_{p} (x) = \exp (-x)$. I am using $\exp (-x)$ and not 
+$1/x$ (on which you have done some simulations successfully I think) so that we do 
+not have unboundedness issues. 
+
+\item Suggest that this may be a better location estimate than the spatial median 
+that is obtained by just minimizing the sign function. 
+
+\item Show whatever theoretical results we have. Make these completely error-free, 
+so no handwaving or loose, non-crisp arguments. 
+
+\item Do the infinite dimensional case also. Our strongest point in this paper is being 
+able to handle robustness in infinite dimensions. There may not be any useful 
+or usable definition of invariance or equivariance in infinite dimensions. So separate 
+the results for the $p \ll n$ case and the high-dimensional case, if necessary.
+
+\item Show simulation results. 
+
+\item Do one running data analysis in infinite dimensions. Working with extreme 
+precipitation or temperatures is a good idea, there is a potentially a need for robust  
+location estimation there. 
+
+\item Let us finish one section first, then move to another section.
+\end{enumerate}
+
+\subsection{The following are concrete suggestions:}
+
+\begin{enumerate}
+
+\item 
+%\bredbf 
+Describe what is being observed, ie, the main aspects of the data. For example, are 
+you assuming iid data throughout?
+%\eredbf
+
+\item 
+%\bredbf
+After you have described the data, define the parameter you are interested in. 
+The population mean, population median, 
+the population equivalent of the minimizer of the weighted sign function are not all 
+same. However, each of them can be a candidate for a {\it location parameter}. Don't skip 
+the mathematical details, include everything.
+%\eredbf
+
+\item 
+%\bredbf 
+Then propose your estimator for the parameter of your choice. 
+%\eredbf
+
+\item 
+%\bredbf
+Now explore properties of your proposed estimator. Simulate data and show that 
+your estimator is better than the (sample) mean in terms of robustness, and 
+better than the (sample) median in terms of efficiency. The following steps 
+describe what you might simulate.
+%Use curves as data, so 
+%we are justified in using the term ``Hilbert-valued''. 
+%\eredbf 
+
+\item Use the el Nino data as a template. Do your robust PCA, and extract the first 
+5 or so PCs with their loadings $\beta_{1}, \beta_{2}, \ldots, \beta_{5}$. This will form
+the foundation for the simulation. For the time index of the data, make it $t \in [0, 1)$
+to avoid technical difficulties. That is, consider June as $t = 0$, July as $t = 1/12$ and 
+so on. This simulation will also form the spine of the paper for each application (we will use this simulated data for all the sections), so do this carefully. Use {\tt set.seed}, so we can reproduce results.
+
+\item
+We will generate $n$ curves indexed by $i = 1, \ldots, n$, 
+all of which will be sampled at time points 
+%$t_{i k}$, $k =1, \ldots, T_{i}$. Scale the total 
+%time to be between $[0, 1]$, so that there are no technical difficulties. You may take 
+%$T_{1} = \ldots = T_{n} = T$ for convenience, and in fact even take 
+$t_{1}, \ldots, t_{T}$. That is, the observation times for all the curves are 
+same. You can take $T = 12$ and $t_{j} = (j -1)/12$. 
+
+\item 
+For simulation, first generate $b_{i j} \sim N ( \beta_{j}, V_{j})$ for $j = 1, \ldots, 5$, 
+and define the simulated signal for the $i^{th}$ curve as  
+\ban 
+\xi_{i}  (t) = \sum_{j = 1}^{5} b_{i j} PC_{j} (t), \ i=1, \ldots, n. 
+\ean
+Use $V_{2}$ very large, so that in different signals there is considerable variability 
+in the signal. 
+
+\item
+Add a iid high-variance noise, say $t_{2}$ or something to each observed data point 
+$t_{i k}$, $k =1, \ldots, T_{i}$, $i =1, \ldots, n$. Thus, the final simulated data is 
+\ban 
+Y_{i}  ( t_{i k} ) = \xi (t _{i k}) + \varepsilon (t_{i k}).
+\ean
+
+\item While this is supposed to be functional data, all we have really is a 
+$n \times T$  table. Get the $T$-dimensional sample mean (minimizer of squared 
+Euclidean norm), and median (ie, 
+the minimizer of the Euclidean norm,  ie, Haldane's median, ie, the quantity that 
+solves $\sum S(Y_{i} ; \theta) = 0$.) Also get your proposed weighted median.
+
+\item Show that the weighted median and original median are robust, and the weighted 
+median is closer than the median to the "population mean" 
+\ban 
+\sum_{j = 1}^{5} \beta_{j} PC_{j} (t), t = 1, \ldots, T.
+\ean
+
+\item Remember that although we are calling this FDA, this is really 12-dim data 
+analysis. 
+\end{enumerate}
+
+\subsection{Subho's write-up}
+
+
+Consider the general situation of estimating or testing for the location parameter of 
+an elliptical distribution using weighted sign vectors. 
+\bredbf
+What is an elliptical distribution? In any scientific writing, for any technical term 
+you must (a) either define it if it is brand new, (b) give the formula with proper 
+citations if somebody has already defined it (in this case, there should be a definition 
+in Fang's book, maybe in several other places), (c) prove every claim that you are making, 
+or provide a reference from a trustworthy source.
+\eredbf
+For now the only condition 
+we impose on these weights, say $w( \cdot)$, is that they need to be scalar-valued 
+affine equivariant and square-integrable functions of the data, or in other words 
+functions of the norm of the standardized random variable $\bfZ$.
+\bredbf 
+I am not sure if in FDA context, "affine equivariance" is defined. Find out. If not, then 
+what you have above is a good definition. 
+\eredbf
+ In that sense $w(\bfX)$ can be equivalently written as $f(r)$, with $r = \| \bfZ \|$. 
+ \bredbf 
+ Are we always working with square integrable functions of the data? (to begin with, what 
+ do you mean by that? Do you mean that the data is iid random variables all of which 
+ have finite second moments? What is a standardized random variable? 
+ \eredbf
+ 
+ The simplest use of weighted signs here would be to construct a robust alternative to the 
+ Hotelling's $T^2$ test \bredbf reference \eredbf using their sample mean vector and 
+ covariance matrix. \bredbf what sort of robust alternative? provide details? always 
+ provide 100\% exact mathematicalstatements \eredbf 
+ Formally, 
+ this means testing for $H_0: \bfmu = {\bf 0}_p$ vs. $H_1:\bfmu \neq {\bf 0}_p$  based 
+ on the test statistic: \bredbf are you testing for the mean? Or a different parameter? 
+ If it is the latter, then it's not the same test. Requires discussion and clarification \eredbf
+%
+$$ T_{n,w} = n \bar\bfX_w^T ( Cov (X_w))^{-1} \bar\bfX_w $$
+%
+with $\bar\bfX_w = \sum_{i=1}^n \bfX_{w,i}/n$ 
+and $\bfX_{w,i} = w(\bfX_i ) \bfS (\bfX_i)$ for $i=1,2,...,n$. 
+However, the following holds true for this weighted sign test:
+%
+\begin{Proposition}
+Consider $n$ random variables $Z = (\bfZ_1,...,\bfZ_n)^T$ distributed independently and 
+identically as $\mathcal{E}( \bfmu, kI_p, G); k \in \mathbb R$, and the class of hypothesis tests defined above. Then, given any $\alpha \in (0,1)$, local power 
+at $\bfmu \neq {\bf 0}_p$ for the level-$\alpha$ test  based on $T_{n,w}$ is maximum when $w(\bfZ_1) = c$, a constant independent of $\bfZ_1$.
+\end{Proposition}
+%
+\noindent This essentially means that power-wise the (unweighted) spatial sign test \citep{OjaBook10} is optimal in the given class of hypothesis tests when the data comes from a spherically symmetric distribution. Our simulations show that this empirically holds for non-spherical but elliptic distributions as well.
+
+\subsection{The weighted spatial median} 
+
+Our weight functions are affine equivariant functions of the data, i.e. they are not affected by the population location parameter $\bfmu$. This ensures that there exists a unique solution of the following of optimization problem:
+%
+$$
+\bfmu_w = \text{arg}\min_{\bfmu_0 \in \mathbb{R}^p} E ( w(\bfX) | \bfX - \bfmu_0 |)
+$$
+%
+ This can be seen as a generalization of the Fermat-Weber location problem (which has the spatial median \citep{brown83, Chaudhuri96} as the solution) using data-dependent weights. We call its solution, $\bfmu_w$, the \textit{weighted spatial median} of $F$. In a sample setup it is estimated by iteratively solving the equation $\sum_{i=1}^n w(\bfX_i) \bfS (\bfX_i - \hat\bfmu_w)/n = {\bf 0}_p$.
+
+The following theorem shows that the sample weighted spatial median $\hat\bfmu_w$ is a $\sqrt n$-consistent estimator of $\bfmu_w$, and gives its asymptotic distribution:
+
+\begin{Theorem}
+Let $A_w, B_w$ be two matrices, dependent on the weight function $w$ such that
+%
+$$
+A_w = E \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right]; \quad B_w = E \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right]
+$$
+%
+where $\bfepsilon \sim \mathcal E({\bf 0}_p, \Sigma, G)$. Then
+%
+\begin{equation}
+\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto N_p ({\bf 0}_p, A_w^{-1} B_w A_w^{-1})
+\end{equation}
+\end{Theorem}
+%
+
+We provide a sketch of its proof in the supplementary material, which generalizes equivalent results for the spatial median \citep{OjaBook10}. Setting $w(\bfepsilon)=1$ above yields the asymptotic covariance matrix for the spatial median. Following this, the asymptotic relative efficiency (ARE) of $\bfmu_w$ corresponding to some non-uniform weight function with respect to the spatial median, say $\bfmu_s$ will be:
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \left[ \frac{\text{det} (A^{-1} B A^{-1})}{\text{det} (A_w^{-1} B_w A_w^{-1})} \right]^{1/p}
+$$
+%
+with $A = E [ 1/ \| \bfepsilon \| ( I_p - \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ) ]$ and $B = E [ \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ]$. This is further simplified under spherical symmetry:
+
+\begin{Corollary}
+For the spherical distribution $\mathcal{E}(\bfmu, kI_p, G); k \in \mathbb R, \bfmu \in \mathbb R^p$, we have
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \frac{ \left[ E \left( \frac{f(r)}{r} \right) \right]^2}{Ef^2(r) \left[ E \left( \frac{1}{r} \right) \right]^2 }
+$$
+\end{Corollary}
+
+
+
+\section{A high-dimensional test of location}
+
+It is possible to take an alternative approach to the location testing problem by using the covariance-type U-statistic $C_{n,w} = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_{w,i}^T \bfX_{w,j}$. This class of test statistics are especially attractive since they are readily generalized to cover high-dimensional situations, i.e. when $p > n$. The Chen and Qin (CQ) high-dimensional test of location for multivariate normal $\bfX_i$ \citep{ChenQin10} is a special case of this test that uses the statistic $C_n = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_i^T \bfX_j$, and a recent paper (\citep{WangPengLi15}, from here on referred to as WPL test) shows that one can improve upon the power of the CQ test for non-gaussian elliptical distributions by using spatial signs $\bfS(\bfX_i)$ in place of the actual variables.
+
+Given these, and some mild regularity conditions, the following holds for our generalized test statistic $C_{n,w}$ under $H_0$ as $n,p \rightarrow \infty$:
+%
+\begin{equation}\label{eqn:hdtest1}
+\frac{C_{n,w}}{\sqrt{\frac{n(n-1)}{2} \text{Tr}(B_w^2)}} \leadsto N(0,1)
+\end{equation}
+%
+and under contiguous alternatives $H_1: \bfmu = \bfmu_0$,
+%
+\begin{equation}\label{eqn:hdtest2}
+\frac{C_{n,w} - \frac{n(n-1)}{2} \bfmu_0^T A_w^2 \bfmu_0 (1 + o(1)) }{\sqrt{\frac{n(n-1)}{2} \text{Tr}(B_w^2)}} \leadsto N(0,1)
+\end{equation}
+%
+we provide the details behind deriving these two results in the supplementary material, which involve modified regularity conditions and sketches of proofs along the lines of \cite{WangPengLi15}.
+
+Following this, the ARE of this test statistic with respect to its unweighted version, i.e. the WPL statistic, is expressed as:
+%
+$$
+ARE(C_{n,w}, \text{WPL}; \bfmu_0) = \frac{\bfmu_0^T A_w^2 \bfmu_0}{\bfmu_0^T A^2 \bfmu_0} \sqrt\frac{\text{Tr}(B^2)}{\text{Tr}(B_w^2)} (1 + o(1))
+$$
+%
+when $\Sigma = kI_p$, this again simplifies to $E^2(f(r)/r)/[E f^2(r). E^2(1/r)]$.
+
+{\color{red}\bf (need to write the sketch in supplementary material) }
+
+
+	
+
+\section{SC: (older material) Testing for a location parameter}
+
+Suppose $W \in \{ 0, 1 \}$, $Z \in \BR^{p}$ and $U \in \BR^{p}$ 
+are independent  random variables, with 
+$W$ having a Bernoulli distribution with parameter $\theta$, 
+and each 
+element of $U$ is an independent standard Cauchy random variable. 
+The random vector $Z$ follows a mean-zero, variance matrix $\Sigma$ Normal distribution 
+$Z \sim N_{p} (0, \Sigma)$. Our choices of $\Sigma$ in the details 
+below include 
+cases where $Cov (Z_{i}, Z_{j}) = \rho^{ | i - j|}$ for some $\rho \in [0, 1)$
+which includes as special case the identity matrix $\BI_{p}$ corresponding to 
+$\rho = 0$, and where $Cov (Z_{i}, Z_{j}) = \rho$. 
+
+We define $X = \mu + W Z + (1 - W) U$, and let the observed data be 
+independent, identically distributed copies $X_{1}, \ldots, X_{n}$ copies of $X$. 
+Note that the conditional distribution of $(X | W = 0)$ does not have finite moments.
+Suppose our goal is to conduct inference on $\mu$, in particular, to test the hypothesis 
+that $\mu = 0 \in \BR^{p}$. 
+The sample mean and variance from the observed data $X_{1}, \ldots, X_{n}$, 
+denoted respectively by $\bar{X} = n^{-1} \sum_{i = 1}^{n} X_{i}$ and
+$S_{X} = (n - 1)^{-1} \sum_{i = 1}^{n} ( X_{i} - \bar{X} )( X_{i} - \bar{X} )^{T}$. 
+These are 
+well-defined quantities, even though their expectations may not exist.
+Assume $p < n$, and thus $S_{x}$ is invertible. 
+
+
+One option for inference on $\mu$ is to ignore the heavy-tailed component of 
+the data, and to use Hotteling's $T^{2}$ statistic given by 
+$T^{2} = n (\bar{X} - \mu_{0})^{T} S_{X}^{-1} (\bar{X} - \mu_{0})$. 
+
+Other, more robust options, is to use the sign function exclusively, 
+or any variety of data-depth functions exclusively. 
+\bredbf suggest 2 or 3 depth functions used earlier for one-sample mean 
+testing, provide references. List details on how these methods would be implemented,
+just do what these references do
+ \eredbf
+
+Another alternative is to use the $\kappa$-transformation proposed in this paper. 
+We begin with a robust estimator of $\mu$, for example the co-ordinatewise median, 
+to use as $\mu_{X}$ and $\mu_{F}$. As $F$, we use the $p$-dimensional Normal 
+distribution with mean $\mu_{F}$ and identity covariance matrix. One simple
+peripherality function is $ || x - mu_{F} ||/ (1 + || x - mu_{F} ||)$, which 
+is bounded above and below and achieves a minima at $\mu_{F}$. We take $\mu_{Y}$ 
+to be $\mu$ also, and we may again use the co-ordinatewise median or a different 
+statistic as its estimator like simple sample mean of $Y_{i} = \kappa (X_{i})$.
+(Use the sample mean: we want to sell the idea that after the kappa transformation 
+all standard classical methods like sample moments can be used).
+
+
+We should be able to show that 
+\begin{enumerate}
+
+\item Classical methods like Hotteling is a disaster because of outliers.
+
+\item Sign and depth-based methods lack power, which becomes quite bad when $\rho$ 
+is considerably away from zero.
+
+
+\end{enumerate}
+
+\end{document}
+
+
+\section{Testing for equality of two location parameters}
+
+You know how to develop this. Do both the two sample and paired sample case.
+
+Show simulation results like above. 
+
+\section{Develop a robust estimator of variance}
+Simply do sample variance of the transformed variables $Y_{i} = \kappa (X_{i})$.
+
+Show simulation results like above.
+
+\section{Outlier detection}
+
+Expand and generalize what you have in the paper already, where I think this is a small 
+example. Refer to a standard method for multivariate outlier detection, and show that 
+such a method used on $Y_{i} = \kappa (X_{i})$ works. I will send you some papers for 
+referencing in this part.
+
+\section{Robust principal component analysis}
+
+This will be one of the bigger and 
+ major sections of the paper, essentially copied and pasted
+ from the previous version. Don't do anything here as of now.
+
+\section{Robust Hawkins-regression}
+
+Consider the $p + 1$ dimensional data $\{ 
+(\mathbf{X}_{i} \ Y_{i})^{T} \in \BR^{p +1}, \ i =1, \ldots, n \}$. 
+Do the robust PCA on this, and get all the eigenvectors. The typical eigenvector looks 
+like $( \mathbf{\gamma} \ \gamma_{0} ) \in \BR^{p +1}$. Under the condition that the 
+joint distribution of $(\mathbf{X} \ Y)^{T}$ is absolutely continuous, we have 
+$\gamma_{0} \ne 0$ almost surely. We implement the following for any estimated 
+eigenvector where $|\gamma_{0} | > \epsilon$ for some fixed $\epsilon > 0$: 
+multiply the eigenvector by  $-\gamma_{0}^{-1}$, thus consider 
+$( -\gamma_{0}^{-1} \mathbf{\gamma} \ -1 ) \in \BR^{p +1}$, which is a 
+"Hawkins-regression". The  variance of this linear 
+combination of variables is given by the corresponding eigenvalue times 
+$\gamma_{0}^{-2}$, which may be small or large in the $p + 1$ eigenvectors, so the order 
+in which eigenvalues/vectors appear in PCA may not be maintained here. 
+
+Also look up what Hawkins had originally proposed, and implement those. 
+
+Do a simple simulation, building on the simulation you have for the previous 
+section.
+
+
+
+
+\section{Robust inference with functional data}
+
+This section is to show something beyond the $p \ll n$ setting. Both robust PCA 
+and location testing are important problems for functional data. Abhirup can 
+take charge of this part once we have everything else settled. 
+
+The main idea here is to use any decent location estimator to start with (some 
+version of median is fine). Then we may test if the functional location for resting 
+and active state are identical or not. 
+
+Also do functional PCA robust version, and then maybe project the data on the first few
+principal components and then do the 2 sample (or paired sampel) testing again.
+
+\section{An example with images}
+\end{document}

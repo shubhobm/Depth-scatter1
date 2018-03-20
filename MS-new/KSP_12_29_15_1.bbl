@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{AdragniCook09}
+K.~P. Adragni and R.~D. Cook.
+\newblock Sufficient dimension reduction and prediction in regression.
+\newblock {\em Phil. Trans. R. Soc. A}, 367:4385--4405, 2009.
+
+\bibitem{BoenteBarrera15}
+G.~Boente and M.~Salibian-Barrera.
+\newblock {S-Estimators for Functional Principal Component Analysis}.
+\newblock {\em J. Amer. Statist. Assoc.}, 110:1100--1111, 2015.
+
+\bibitem{brown83}
+B.M. Brown.
+\newblock Statistical {U}se of the {S}patial {M}edian.
+\newblock {\em J. Royal Statist. Soc. B}, 45:25--30, 1983.
+
+\bibitem{Chaudhuri96}
+P.~Chaudhuri.
+\newblock On a geometric notion of quantiles for multivariate data.
+\newblock {\em J. Amer. Statist. Assoc.}, 91:862--872, 1996.
+
+\bibitem{ChenQin10}
+S.~X. Chen and Y.~L. Qin.
+\newblock {A Two-sample Test for High-dimensional Data with Application to
+  Gene-Set Testing}.
+\newblock {\em Ann. Statist.}, 38:808--835, 2010.
+
+\bibitem{Cook10}
+R.~D. Cook, B.~Li, and F.~Chiaromonte.
+\newblock Envelope models for parsimonious and efficient multivariate linear
+  regression.
+\newblock {\em Biometrika}, 20:927--1010, 2010.
+
+\bibitem{croux00}
+C.~Croux and G.~Haesbroeck.
+\newblock {Principal Component Analysis based on Robust Estimators of the
+  Covariance or Correlation Matrix: Influence Functions and Efficiencies}.
+\newblock {\em Biometrika}, 87:603--618, 2000.
+
+\bibitem{ElKaroui09}
+N.~El~Karoui.
+\newblock {Concentration of Measure and Spectra of Random Matrices: with
+  Applications to Correlation Matrices, Elliptical Distributions and Beyond}.
+\newblock {\em Ann. Applied Probab.}, 19:2362--2405, 2009.
+
+\bibitem{esbensen94}
+K.~H. Esbensen, S.~Sch\"{o}nkopf, and T.~Midtgaard.
+\newblock {\em Multivariate {A}nalysis in {P}ractice}.
+\newblock CAMO, Trondheim, Germany, 1994.
+
+\bibitem{HampelBook86}
+F.~R. Hampel, E.~M. Ronchetti, P.~J. Rousseeuw, and W.~A. Staehl.
+\newblock {\em {Robust Statistics: The Approach Based on Influence Functions}}.
+\newblock Wiley, 1986.
+
+\bibitem{HuberBook81}
+P.~J. Huber.
+\newblock {\em Robust Statistics}.
+\newblock Wiley series in probability and mathematical statistics. Wiley, 1981.
+
+\bibitem{Minsker15}
+S.~Minsker.
+\newblock {Geometric median and robust estimation in Banach spaces}.
+\newblock {\em Bernoulli}, 21:2308–--2335, 2015.
+
+\bibitem{OjaBook10}
+H.~Oja.
+\newblock {\em {Multivariate Nonparametric Methods with R: An Approach Based on
+  Spatial Signs and Ranks}}.
+\newblock {Lecture Notes in Statistics}. Springer, 2010.
+
+\bibitem{WangPengLi15}
+L.~Wang, B.~Peng, and R.~Li.
+\newblock {A High-Dimensional Nonparametric Multivariate Test for Mean Vector}.
+\newblock {\em J. Amer. Statist. Assoc.}, 110:1658--1669, 2015.
+
+\end{thebibliography}

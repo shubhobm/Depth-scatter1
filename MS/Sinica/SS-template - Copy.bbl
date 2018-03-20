@@ -1,0 +1,138 @@
+\begin{thebibliography}{24}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[D\"{u}mbgen(1998)]{dumbgen98}
+L.~D\"{u}mbgen.
+\newblock On {T}yler's {M}-functional of scatter in high dimension.
+\newblock \emph{Ann. Inst. Statist. Math.}, 50:\penalty0 471--491, 1998.
+
+\bibitem[Dutta and Ghosh(2012)]{dutta12}
+S.~Dutta and A.K. Ghosh.
+\newblock On robust classification using projection depth.
+\newblock \emph{Ann. Inst. Stat. Math.}, 64-3:\penalty0 657--676, 2012.
+
+\bibitem[Ghosh and Chaudhuri(2005)]{ghosh05}
+A.K. Ghosh and P.~Chaudhuri.
+\newblock On {M}aximum {D}epth and {R}elated {C}lassifiers.
+\newblock \emph{Scand. J. Statist.}, 32:\penalty0 327--350, 2005.
+
+\bibitem[Huber(1977)]{huber77}
+P.J. Huber.
+\newblock \emph{Robust {S}tatistical {P}rcedures}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, 1977.
+
+\bibitem[Jornsten(2004)]{jornsten04}
+R.~Jornsten.
+\newblock Clustering and classification based on the $l_1$ depth.
+\newblock \emph{J. Mult. Anal.}, 90-1:\penalty0 67--89, 2004.
+
+\bibitem[Liu(1990)]{liu90}
+R.Y. Liu.
+\newblock On a notion of data depth based on random simplices.
+\newblock \emph{Ann. of Statist.}, 18:\penalty0 405--414, 1990.
+
+\bibitem[Liu et~al.(1999)Liu, Parelius, and Singh]{LiuPareliusSingh99}
+R.Y. Liu, J.M. Parelius, and K.~Singh.
+\newblock Multivariate analysis by data depth: {D}escriptive statistics,
+  graphics and inference (with discussion).
+\newblock \emph{Ann. of Statist.}, 27:\penalty0 783--858, 1999.
+
+\bibitem[Locantore et~al.(1999)Locantore, Marron, Simpson, Tripoli, Zhang, and
+  Cohen]{locantore99}
+N.~Locantore, J.S. Marron, D.G. Simpson, N.~Tripoli, J.T. Zhang, and K.L.
+  Cohen.
+\newblock Robust principal components of functional data.
+\newblock \emph{TEST}, 8:\penalty0 1--73, 1999.
+
+\bibitem[Magyar and Tyler(2014)]{magyar14}
+A.F. Magyar and D.E. Tyler.
+\newblock The asymptotic inadmissibility of the spatial sign covariance matrix
+  for elliptically symmetric distributions.
+\newblock \emph{Biometrika}, 101:\penalty0 673--688, 2014.
+
+\bibitem[Maronna et~al.(1976)Maronna, Staehl, and Yohai]{maronna76}
+R.A. Maronna, W.A. Staehl, and V.Y. Yohai.
+\newblock Bias-{R}obust {E}stimators of {M}ultivariate {S}catter {B}ased on
+  {P}rojections.
+\newblock \emph{J. Mult. Anal.}, 42:\penalty0 141--161, 1976.
+
+\bibitem[Rainer and Mozharovskyi(2014)]{rainerArxiv}
+D.~Rainer and P.~Mozharovskyi.
+\newblock Exact computation of the halfspace depth.
+\newblock \url{http://arxiv.org/abs/1411.6927}, 2014.
+
+\bibitem[Rousseeuw(1985)]{rousseeuw85}
+P.~Rousseeuw.
+\newblock Multivariate estimation with high breakdown point.
+\newblock In \emph{Mathematical Statistics and Applications, Volume B (Proc.
+  4th Pannonian Symp. Math. Statist., Bad Tatzmannsdorf, 1983)}, pages 283--97,
+  Dordrecht, 1985. D. Reidel.
+
+\bibitem[Serfling(2006)]{serfling2006}
+R.~Serfling.
+\newblock Depth {F}unctions in {N}onparametric {M}ultivariate {I}nference.
+\newblock In \emph{DIMACS {S}eries in {D}iscrete {M}athematics and
+  {T}heoretical {C}omputer {S}cience}, volume~72, pages 1--16, 2006.
+
+\bibitem[Sguera et~al.(2014)Sguera, Galeano, and Lillo]{sguera14}
+C.~Sguera, P.~Galeano, and R.~Lillo.
+\newblock Spatial depth-based classification for functional data.
+\newblock \emph{TEST}, 23-4:\penalty0 725--750, 2014.
+
+\bibitem[Sirki\"{a} et~al.(2007)Sirki\"{a}, Taskinen, and Oja]{sirkia07}
+S.~Sirki\"{a}, S.~Taskinen, and H.~Oja.
+\newblock Symmetrised {M}-estimators of scatter.
+\newblock \emph{J. Mult. Anal.}, 98:\penalty0 1611--1629, 2007.
+
+\bibitem[Soloveychik and Wiesel(2014)]{soloveychik14}
+I.~Soloveychik and A.~Wiesel.
+\newblock Performance {A}nalysis of {T}yler's {C}ovariance {E}stimator.
+\newblock \emph{IEEE Trans. Sig. Process.}, 63-2:\penalty0 418--426, 2014.
+
+\bibitem[Taskinen et~al.(2012)Taskinen, Koch, and Oja]{taskinen12}
+S.~Taskinen, I.~Koch, and H.~Oja.
+\newblock Robustifying principal component analysis with spatial sign vectors.
+\newblock \emph{Statist. and Prob. Lett.}, 82:\penalty0 765--774, 2012.
+
+\bibitem[Tukey(1975)]{tukey75}
+J.W. Tukey.
+\newblock Mathematics and picturing data.
+\newblock In R.D. James, editor, \emph{Proceedings of the International
+  Congress on Mathematics}, volume~2, pages 523--531, 1975.
+
+\bibitem[Tyler(1987)]{tyler87}
+D.E. Tyler.
+\newblock A distribution-free {M}-estimator of multivariate scatter.
+\newblock \emph{Ann. Statist.}, 15:\penalty0 234--251, 1987.
+
+\bibitem[Visuri et~al.(2000)Visuri, Koivunen, and Oja]{visuri00}
+S.~Visuri, V.~Koivunen, and H.~Oja.
+\newblock Sign and rank covariance matrices.
+\newblock \emph{J. Statist. Plan. Inf.}, 91:\penalty0 557--575, 2000.
+
+\bibitem[Zuo(2003)]{zuo03}
+Y.~Zuo.
+\newblock Projection-based depth functions and associated medians.
+\newblock \emph{Ann. Statist.}, 31:\penalty0 1460--1490, 2003.
+
+\bibitem[Zuo and Cui(2005)]{ZuoCui05}
+Y.~Zuo and M.~Cui.
+\newblock Depth weighted scatter estimators.
+\newblock \emph{Ann. Statist.}, 33-1:\penalty0 381--413, 2005.
+
+\bibitem[Zuo and Serfling(2000)]{zuo00}
+Y.~Zuo and R.~Serfling.
+\newblock General notions of statistical depth functions.
+\newblock \emph{Ann. Statist.}, 28-2:\penalty0 461--482, 2000.
+
+\bibitem[Zuo et~al.(2004)Zuo, Cui, and He]{ZuoCuiHe04}
+Y.~Zuo, M.~Cui, and X.~He.
+\newblock On the {S}taehl-{D}onoho estimator and depth-weighted means of
+  multivariate data.
+\newblock \emph{Ann. Statist.}, 32-1:\penalty0 167--188, 2004.
+
+\end{thebibliography}

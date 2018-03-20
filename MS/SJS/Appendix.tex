@@ -1,0 +1,125 @@
+\section*{Appendix A: \textbf{Form of $V_{D,S}(F)$}}
+First observe that for $F$ having covariance matrix $\Sigma = \Gamma\Lambda\Gamma^T$,
+
+$$ V_{D,S}(F)  = (\Gamma \otimes \Gamma) V_{D,S}(F_\Lambda) (\Gamma \otimes \Gamma)^T$$
+where $F_\Lambda$ has the same elliptic distribution as $F$, but with covariance matrix $\Lambda$. Now,
+\begin{eqnarray*}
+V_{D,S} (F_\Lambda) &=& E \left[ \text{vec} \left\{ \frac{(\tilde D_\bfZ (\bfz))^2 \Lambda^{1/2} \bfz\bfz^T \Lambda^{1/2}}{\bfz^T\Lambda\bfz} - \Lambda_{D,S} \right\} \text{vec}^T \left\{ \frac{(\tilde D_\bfZ (\bfz))^2 \Lambda^{1/2} \bfz\bfz^T \Lambda^{1/2}}{\bfz^T\Lambda\bfz} - \Lambda_{D,S} \right\} \right]\\
+&=& E \left[ \text{vec} \left\{ (\tilde D_\bfZ (\bfz))^2 SS(\Lambda^{1/2}\bfz; \bf0) \right\} \text{vec}^T \left\{ (\tilde D_\bfZ (\bfz))^2 SS(\Lambda^{1/2}\bfz; \bf0) \right\} \right]\\
+&& - \quad \text{vec}(\Lambda_{D,S}) \text{vec}^T(\Lambda_{D,S})
+\end{eqnarray*}
+
+The matrix $\text{vec}(\Lambda_{D,S}) \text{vec}^T(\Lambda_{D,S})$ consists of elements $\lambda_i\lambda_j$ at $(i,j)^\text{th}$ position of the $(i,j)^\text{th}$ $p \times p$ block, for $1 \leq i,j \leq p$, and 0 otherwise. These positions correspond to variance and covariance components of on-diagonal elements. For the expectation matrix, all its elements are of the form $E[\sqrt{\lambda_a \lambda_b \lambda_c \lambda_d} z_a z_b z_c z_d . (\tilde D_\bfZ (\bfz))^4 / (\bfz^T \Lambda \bfz)^2]$, with $1 \leq a,b,c,d \leq p$. Since $(\tilde D_\bfZ (\bfz))^4 / (\bfz^T \Lambda \bfz)^2$ is even in $\bfz$, which has a circularly symmetric distribution, all such expectations will be 0 unless $a=b=c=d$, or they are pairwise equal. Following a similar derivation for spatial sign covariance matrices in \cite{magyar14}, we collect the non-zero elements and write the matrix of expectations:
+
+$$ (I_{p^2} + K_{p,p}) \left\{ \sum_{a=1}^p \sum_{b=1}^p \gamma^D_{ab} (\bfe_a \bfe_a^T \otimes  \bfe_b \bfe_b^T) - \sum_{a=1}^p \gamma^D_{aa} (\bfe_a \bfe_a^T \otimes  \bfe_a \bfe_a^T) \right\} + \sum_{a=1}^p \sum_{b=1}^p \gamma^D_{ab} (\bfe_a \bfe_b^T \otimes  \bfe_a \bfe_b^T) $$
+where $I_k = (\bfe_1,...,\bfe_k), K_{m,n} = \sum_{i=1}^m \sum_{j=1}^n J_{ij} \otimes J_{ij}^T$ with $J_{ij}$ the $m \times n$ matrix having 1 as $(i,j)^\text{th}$ element and 0 elsewhere, and $\gamma^D_{mn} = E[ \lambda_m \lambda_n z_m^2 z_n ^2 . (\tilde D_\bfZ (\bfz))^4 / (\bfz^T \Lambda \bfz)^2]; 1 \leq m,n \leq p$.
+
+\paragraph{}Putting everything together, denote $\hat S^D(F_\Lambda) = \sum_{i=1}^n (\tilde D^n_\bfZ (\bfz_i))^2 SS(\Lambda^{1/2}\bfz_i; \hat \bfmu_n)/n $. Then the different types of elements in the matrix $V_{D,S}(F_\Lambda)$ are as given below ($1 \leq a,b,c,d \leq p$):
+
+\begin{itemize}
+\item Variance of on-diagonal elements
+
+$$ AVar( \sqrt n \hat S^D_{aa} (F_\Lambda)) = E \left[ \frac{(\tilde D_\bfZ (\bfz))^4 \lambda_a^2 z_a^4}{(\bfz^T \Lambda \bfz)^2} \right] - \lambda_{D,S,a}^2 $$
+
+\item Variance of off-diagonal elements ($a \neq b$)
+
+$$ AVar( \sqrt n \hat S^D_{ab} (F_\Lambda)) = E \left[ \frac{(\tilde D_\bfZ (\bfz))^4 \lambda_a \lambda_b z_a^2 z_b^2}{(\bfz^T \Lambda \bfz)^2} \right] $$
+
+\item Covariance of two on-diagonal elements ($a \neq b$)
+
+$$ ACov(\sqrt n \hat S^D_{aa} (F_\Lambda), \sqrt n \hat S^D_{bb} (F_\Lambda))
+= E \left[ \frac{(\tilde D_\bfZ (\bfz))^4 \lambda_a \lambda_b z_a^2 z_b^2}{(\bfz^T \Lambda \bfz)^2} \right] - \lambda_{D,S,a} \lambda_{D,S,b} $$
+
+\item Covariance of two off-diagonal elements ($a \neq b \neq c \neq d$)
+
+$$ ACov(\sqrt n \hat S^D_{ab} (F_\Lambda), \sqrt n \hat S^D_{cd} (F_\Lambda)) = 0 $$
+
+\item Covariance of one off-diagonal and one on-diagonal element ($a \neq b \neq c$)
+
+$$ ACov(\sqrt n \hat S^D_{ab} (F_\Lambda), \sqrt n \hat S^D_{cc} (F_\Lambda)) = 0 $$
+\end{itemize}
+
+\section*{Appendix B: Proofs}
+\begin{proof}[Proof of Theorem  \ref{Theorem:covform}]
+The proof follows directly from writing out the expression of $Cov ( \tilde \bfX)$:
+
+\begin{eqnarray*}
+Cov(\tilde\bfX) &=& E(\tilde\bfX \tilde\bfX^T) - E(\tilde\bfX) E(\tilde\bfX)^T\\
+&=& \Gamma . E \left[ (\tilde D_\bfZ(\bfz))^2 \frac{\|\bfz\|^2}{\| \Lambda^{1/2}\bfz\|} \Lambda^{1/2} \bfS(\bfz) \bfS(\bfz)^T \Lambda^{1/2} \right] \Gamma^T - {\bf 0}_p {\bf 0}_p^T\\
+&=& \Gamma .E \left[ (\tilde D_\bfZ(\bfz))^2 \frac{\Lambda^{1/2} \bfz \bfz^T \Lambda^{1/2}}{\bfz^T \Lambda \bfz} \right] \Gamma^T
+\end{eqnarray*}
+\end{proof}
+
+\begin{proof}[Proof of Lemma \ref{Lemma:lemma1}]
+For two positive definite matrices $A,B$, we denote by $A>B$ that $A-B$ is positive definite. Also, denote
+
+$$ S_n = \sqrt n \left[ \frac{1}{n} \sum_{i=1}^n \left| (\tilde D^{n} _\bfX (\bfx_i))^2  - (\tilde D_\bfX (\bfx_i))^2 \right| SS(\bfx_i; \hat\bfmu_n) \right] $$
+Now, convergence in probability of $D^n_\bfX(.)$ to $D_\bfX(.)$ (hence $(\tilde D^n_\bfX(.))^2$ to $(\tilde D_\bfX(.))^2$) implies that given $\epsilon, \delta > 0$ there exists $N \in \mathbb{N}$ so that
+
+$$ P \left[ |(\tilde D^{n_1}_\bfX(\bfx))^2 - (\tilde D_\bfX(\bfx))^2| > \epsilon \right] < \delta $$
+for all $n_1 \geq N$. Now if $M$ is the largest value the square of a depth function can take, then $|(\tilde D^{n_1}_\bfX(\bfx))^2 - (\tilde D_\bfX(\bfx))^2| < \epsilon$ with probability $1-\delta$, and $< M$ with probability $\delta$. Thus we have
+
+\begin{equation}
+\label{equation:lemma1eq}
+\tilde | D^{n_1}_\bfX(\bfx))^2 - (\tilde D_\bfX(\bfx))^2 | < \min \{ \epsilon, M \}
+\end{equation}
+with probability 1. Consequently for all such $n_1$, with probability 1 we shall have
+$$ S_{n_1} \quad < \quad \min \{ \epsilon, M \} . \sqrt n_1 \left[ \frac{1}{n_1} \sum_{i=1}^{n_1} SS(\bfx_i; \hat\bfmu_{n_1}) \right] $$
+
+We now construct a sequence of positive definite matrices $\{A_k (B_k+C_k) : k \in \mathbb N\} $ so that
+
+$$ A_k = \frac{M}{k}, \quad B_k = \sqrt N_k \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} \left\{ SS(\bfx_i; \hat\bfmu_{N_k}) - SS(\bfx_i; \bfmu) \right\} \right] $$
+$$ \quad C_k = \sqrt N_k \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} SS(\bfx_i; \bfmu) \right] $$
+where $N_k \in \mathbb N$ gives the relation (\ref{equation:lemma1eq}) in place of $N$ when we take $\epsilon = \delta  =1/k$. Under conditions $ E\|\bfx - \bfmu\|^{-3/2} < \infty $ and $\sqrt n (\hat\bfmu_n - \bfmu) = O_P(1)$, the sample sign covariance matrix with unknown location parameter $\hat\bfmu_n$ has the same asymptotic distribution as the same with known location $\bfmu$ \citep{durre14}, hence $B_k \stackrel{P}{\rightarrow} 0$. Now by Slutsky's theorem, $A_k (B_k+C_k) \stackrel{P}{\rightarrow} 0$. Finally, for any $\epsilon_1 > 0$, $ P(S_{N_k} > \epsilon_1) < P(A_k (B_k + C_k) > \epsilon_1)$, hence the subsequence $\{S_{N_k}\} \stackrel{P}{\rightarrow} 0$. Since the main sequence $\{S_k\}$ is bounded below by 0, we have the needed.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{Theorem:rootn}]
+The quantity in the statement of the theorem can be broken down as:
+\begin{eqnarray*}
+\sqrt n \left[ \text{vec}\left\{ \frac{1}{n} \sum_{i=1}^n (\tilde D^n_\bfX (\bfx_i))^2 SS(\bfx_i; \hat\bfmu_n) \right\} - \text{vec}\left\{ \frac{1}{n} \sum_{i=1}^n (\tilde D_\bfX (\bfx_i))^2 SS(\bfx_i; \bfmu) \right\} \right] +\\
+\sqrt n \left[ \text{vec}\left\{ \frac{1}{n} \sum_{i=1}^n (\tilde D_\bfX (\bfx_i))^2 SS(\bfx_i; \bfmu) \right\} - E \left[ \text{vec}\left\{ (\tilde D_\bfX (\bfx))^2 SS(\bfx; \bfmu) \right\} \right] \right]
+\end{eqnarray*}
+
+The first part goes to 0 in probability by Lemma \ref{Lemma:lemma1}, and applying Slutsky's theorem we get the required convergence.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{Theorem:decomp}]
+See \cite{taskinen12}
+\end{proof}
+
+\begin{proof}[Proof of Corollary \ref{Corollary:eigendist}]
+In spirit, this corollary is similar to Theorem 13.5.1 in \cite{anderson}, and indeed, \cite{taskinen12} used it to prove Theorem \ref{Theorem:decomp}. Due to the decomposition (\ref{equation:decompEq}) we have, for the distribution $F_\Lambda$, the following relation between any off-diagonal element of $\hat S^D(F_\Lambda)$ and the corresponding element in the estimate of eigenvectors $\hat\Gamma_D (F_\Lambda)$:
+
+$$ \sqrt n \hat\gamma_{D,ij} (F_\Lambda) = \sqrt n \frac{\hat S^D_{ij} (F_\Lambda)}{\lambda_{D,S,i} - \lambda_{D,S,j}}; \quad i \neq j$$
+
+So that for eigenvector estimates of the original $F$ we have
+
+\begin{equation} \label{equation:app1}
+\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i) = \sqrt n \Gamma (\hat \bfgamma_{D,i}(F_\Lambda) - \bfe_i ) = \sqrt n \left[ \sum_{k=1; k \neq i}^p \hat \gamma_{D,ik}(F_\Lambda)\bfgamma_k + (\hat \gamma_{D,ii}(F_\Lambda) - 1)\bfgamma_i \right] \tag{A1}
+\end{equation}
+
+$\sqrt n (\hat \gamma_{D,ii}(F_\Lambda) - 1) =  o_P(1)$ and $ACov(\sqrt n \hat S^D_{ik}(F_\Lambda), \sqrt n \hat S^D_{il}(F_\Lambda)) = 0$ for $k \neq l$, so the above equation implies
+
+$$ AVar(\bfg_i) = AVar (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i)) = \sum_{k=1; k \neq i}^p \frac{AVar(\sqrt n \hat S^D_{ik}(F_\Lambda))}{(\lambda_{D,s,i} - \lambda_{D,S,k})^2} \bfgamma_k \bfgamma_k^T $$
+
+For the covariance terms, from (\ref{equation:app1}) we get, for $i \neq j$,
+
+\begin{eqnarray*}
+ACov(\bfg_i, \bfg_j) &=& ACov (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i), \sqrt n (\hat\bfgamma_{D,j} - \bfgamma_j))\\
+&=& ACov \left( \sum_{k=1; k \neq i}^p \sqrt n \hat \gamma_{D,ik}(F_\Lambda)\bfgamma_k, \sum_{k=1; k \neq j}^p \sqrt n \hat \gamma_{D,jk}(F_\Lambda)\bfgamma_k \right)\\
+&=& ACov \left( \sqrt n \hat \gamma_{D,ij}(F_\Lambda)\bfgamma_j, \sqrt n \hat \gamma_{D,ji}(F_\Lambda)\bfgamma_i \right)\\
+&=& - \frac{AVar(\sqrt n \hat S^D_{ij}(\Lambda))}{(\lambda_{D,s,i} - \lambda_{D,S,j})^2} \bfgamma_j \bfgamma_i^T
+\end{eqnarray*}
+
+The exact forms given in the statement of the corollary now follows from the  Form of $V_{D,S}$ in Appendix A.
+
+\paragraph{}For the on-diagonal elements of $\hat S^D(F_\Lambda)$ Theorem \ref{Theorem:decomp} gives us $ \sqrt n \hat\lambda_{D,s,i} (F_\Lambda) = \sqrt n \hat S^D_{ii}(F_\Lambda)$ for $i = 1,...,p$. Hence
+
+\begin{eqnarray*}
+AVar(l_i) &=& AVar(\sqrt n \hat\lambda_{D,s,i} - \sqrt n \lambda_{D,S,i})\\
+&=& AVar(\sqrt n \hat\lambda_{D,s,i} (F_\Lambda) - \sqrt n \lambda_{D,S,i}(F_\Lambda))\\
+&=& AVar(\sqrt n S^D_{ii}(F_\Lambda))
+\end{eqnarray*}
+
+A similar derivation gives the expression for $AVar(l_i,l_j); i \neq j$. Finally, since the asymptotic covariance between an on-diagonal and an off-diagonal element of $\hat S^D(F_\Lambda)$, it follows that the elements of $G$ and diagonal elements of $L$ are independent.
+\end{proof}

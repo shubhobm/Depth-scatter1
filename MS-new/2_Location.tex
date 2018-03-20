@@ -1,0 +1,144 @@
+\section{Weighted sign vectors in location problem}
+\label{section:LocSection}
+In this section, we focus on the general situation of estimating or testing for the location parameter $\bfmu \equiv \bfmu_F$ using the weighted sign vectors in \eqref{eqn:rank}. We impose the following very general conditions on the weights $w(\bfx, \BF) := \kappa_P(P(\bfx, \BF))$:
+
+\vspace{1em}
+\noindent{\bf (A1)} The weights are affine invariant, i.e.
+%
+$$
+w(\bfA \bfx + \bfb, \bfA \BF + \bfb) = w(\bfx, \BF),
+$$
+%
+for any $\bfb \in \BR^p$ and full rank matrix $\bfA \in \BR^{p \times p}$.
+
+\noindent{\bf (A2)} Given a fixed $\BF$, the weights are square-integrable:
+%
+$$
+\int [w(\bfy, \BF)]^2 d\BG(\bfy) < \infty; \BG \in \cM.
+$$
+
+\vspace{1em}
+\noindent Because of the affine invariance, it is possible to simplify the weight as a function of the norm of $\bfz = \Sigma^{-1/2} (\bfX - \bfmu)$: $w(\bfx, \BF) = f(r)$, with $r = \| \bfz \|$.
+
+A straightforward use of weighted signs in a location problem is to construct an outlier-robust alternative to the Hotelling's $T^2$ test using their sample mean vector and covariance matrix. Formally, this means testing for $H_0: \bfmu = {\bf 0}_p$ vs. $H_1:\bfmu \neq {\bf 0}_p$  based on the test statistic:
+%
+$$
+T_{n,w} = n \bar\bfX_w^T ( \BV \BX_w)^{-1} \bar\bfX_w,
+$$
+%
+({\colrbf define $\BX_w$}) with $\bar\bfX_w = \sum_{i=1}^n \bfX_{w,i}/n$ and $\bfX_{w,i} = w(\bfX_i ) \bfS (\bfX_i)$ for $i=1,2,...,n$. However, the following holds true for this weighted sign test:
+%
+\begin{Proposition}\label{proposition:SignTest}
+Consider $n$ random variables $Z = (\bfZ_1,...,\bfZ_n)^T$ distributed independently and identically as $\mathcal{E}( \bfmu, k \bfI_p, g); k \in \mathbb R$, and the class of hypothesis tests defined above. Then, given any $\alpha \in (0,1)$, local power at $\bfmu \neq {\bf 0}_p$ for the level-$\alpha$ test  based on $T_{n,w}$ is maximum when $w(\bfZ_1) = c$, a constant independent of $\bfZ_1$.
+\end{Proposition}
+%
+\noindent This essentially means that power-wise the (unweighted) spatial sign test \citep{OjaBook10} is optimal in the given class of hypothesis tests when the data comes from a spherically symmetric distribution. Our simulations show that this empirically holds for non-spherical but elliptic distributions as well.
+
+\subsection{The weighted spatial median} 
+To explore usage of weighted spatial signs in the location problem that improve upon the state-of-the-art, we concentrate on the following optimization problem:
+%
+\begin{equation}\label{eqn:WtSpMed}
+\bfmu_w = \argmin_{\bfmu_0 \in \mathbb{R}^p} \BE ( w(\bfX) | \bfX - \bfmu_0 |).
+\end{equation}
+%
+This can be seen as a generalization of the Fermat-Weber location problem (which has the spatial median \citep{brown83, Chaudhuri96} as the solution) using data-dependent weights. Using affine equivariant weights in \eqref{eqn:WtSpMed} ensures that the weights are independent of $\bfmu_0$, allowing the optimization problem to have a unique solution. We call this solution the \textit{weighted spatial median} of $\BF$, and denote it by $\bfmu_w$. In a sample setup it is estimated by iteratively solving the equation $\sum_{i=1}^n w(\bfX_i) \bfS (\bfX_i - \hat\bfmu_w)/n = {\bf 0}_p$.
+
+The sample weighted spatial median $\hat\bfmu_w$ is a $\sqrt n$-consistent estimator of $\bfmu_w$, with the following result gives its asymptotic distribution:
+%
+\begin{Theorem}
+Let $\bfA_w, \bfB_w$ be two matrices, dependent on the weight function $w$ such that
+%
+$$
+\bfA_w = \BE \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right];
+\quad
+\bfB_w = \BE \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right]
+$$
+%
+where $\bfepsilon \sim \mathcal E({\bf 0}, \Sigma, g)$. Then
+%
+\begin{equation}
+\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto \cN_p ({\bf 0}, \bfA_w^{-1} \bfB_w \bfA_w^{-1})
+\end{equation}
+\end{Theorem}
+%
+
+%We provide a sketch of its proof in the supplementary material, which generalizes equivalent results for the spatial median \citep{OjaBook10}. 
+Setting $w(\bfepsilon)=1$ above yields the asymptotic covariance matrix for the spatial median. Following this, the asymptotic relative efficiency (ARE) of $\bfmu_w$ corresponding to some non-uniform weight function with respect to the spatial median, say $\bfmu_s$ will be:
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \left[ \frac{\text{det} (\bfA^{-1} \bfB \bfA^{-1})}{\text{det} ( \bfA_w^{-1} \bfB_w \bfA_w^{-1})} \right]^{1/p}
+$$
+%
+with $\bfA = \BE [ 1/ \| \bfepsilon \| ( I_p - \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ) ]$ and $\bfB = \BE [ \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ]$. This is further simplified under spherical symmetry:
+
+\begin{Corollary}
+For the spherical distribution $\mathcal{E}(\bfmu, k \bfI_p, g); k \in \mathbb R, \bfmu \in \mathbb R^p$, we have
+%
+$$
+ARE( \bfmu_w, \bfmu_s) = \frac{ \left[ \BE \left( \frac{f(r)}{r} \right) \right]^2}{\BE f^2(r) \left[ \BE \left( \frac{1}{r} \right) \right]^2 }
+$$
+\end{Corollary}
+%
+\begin{table}[t]
+	\centering
+    \begin{tabular}{c|ccccc}
+    \hline
+    & $t_3$   & $t_5$   & $t_{10}$  & $t_{20}$  & Normal \\ \hline
+    $p=5$    & 1.28 & 1.20 & 1.16 & 1.14 & 1.13   \\
+    $p=10$   & 1.15 & 1.10 & 1.07 & 1.07 & 1.06   \\
+    $p=20$   & 1.09 & 1.05 & 1.04 & 1.03 & 1.03   \\
+    $p=50$   & 1.05 & 1.02 & 1.01 & 1.01 & 1.01   \\ \hline
+    \end{tabular}
+    \caption{Table of $ARE(\bfmu_w; \bfmu_s)$ for different spherical distributions}
+    \label{table:AREtablewsm}
+\end{table}
+%
+Table \ref{table:AREtablewsm} summarizes the AREs for several families of elliptic distributions, numerically calculated using 10,000 random samples, and taking $f(r) = 1/(1+r)$. It is evident from the table that the weighted spatial median outperforms its unweighted counterpart for all data dimensions and distribution families. While the performance is much better for small values of $p$, weighting the signs seems to have less and less effect as $p$ grows larger. Assuming a first-order autoregressive (AR(1)) covariance structure, i.e. $\sigma_{ij} = \rho^{|i-j|}$ with $ \rho \in (0,1)$, results in largely similar ARE values as those obtained in table \ref{table:AREtablewsm} that assume $\Sigma = \bfI_p$.
+
+\subsection{A high-dimensional test of location}
+
+It is possible to take an alternative approach to the location testing problem by using the covariance-type U-statistic $C_{n,w} = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_{w,i}^T \bfX_{w,j}$. This class of test statistics are especially attractive since they are readily generalized to cover high-dimensional situations, i.e. when $p > n$. The Chen and Qin (CQ) high-dimensional test of location for multivariate normal $\bfX_i$ \citep{ChenQin10} is a special case of this test that uses the statistic $C_n = \sum_{i=1}^n \sum_{j=1}^{i-1} \bfX_i^T \bfX_j$. The testing procedure of \cite{WangPengLi15} (from here on referred to as WPL test) shows that one can improve upon the power of the CQ test for non-gaussian elliptical distributions by using spatial signs $\bfS(\bfX_i)$ in place of the actual variables.
+
+Under mild regularity conditions in the lines of \cite{WangPengLi15}, the following results hold for our generalized test statistic $C_{n,w}$ under $H_0$ as $n,p \rightarrow \infty$:
+%
+\begin{equation}\label{eqn:hdtest1}
+\frac{C_{n,w}}{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\bfB_w^2)}} \leadsto N(0,1),
+\end{equation}
+%
+and under contiguous alternatives $H_1: \bfmu = \bfmu_0$,
+%
+\begin{equation}\label{eqn:hdtest2}
+\frac{C_{n,w} - \frac{n(n-1)}{2} \bfmu_0^T \bfA_w^2 \bfmu_0 (1 + o(1)) }{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\bfB_w^2)}} \leadsto N(0,1).
+\end{equation}
+%
+We provide the details behind deriving these two results in the supplementary material, which extend the results of \cite{WangPengLi15} in a weightd sign setup using modified regularity conditions.
+
+Following this, the ARE of this test statistic with respect to its unweighted version, i.e. the WPL statistic, is expressed as:
+%
+$$
+ARE(C_{n,w}, \text{WPL}; \bfmu_0) = \frac{\bfmu_0^T \bfA_w^2 \bfmu_0}{\bfmu_0^T \bfA^2 \bfmu_0} \sqrt\frac{\text{Tr}(\bfB^2)}{\text{Tr}(\bfB_w^2)} (1 + o(1)),
+$$
+%
+when $\Sigma = k \bfI_p$, this again simplifies to $\BE^2(f(r)/r)/[\BE f^2(r). \BE^2(1/r)]$. Thus the ARE values are exactly same as those in Table \ref{table:AREtablewsm}, indicating that for large data dimensions the WPL test and that based on $C_{n,w}$ are almost equivalent.
+
+However, in a practical high-dimensional setup sample sizes are often small. Thus, comparing the the two tests with respect to their \textit{finite sample} efficiencies instead gives a better idea of their practical utility. We do so in table~\ref{table:AREtablehd}, which lists empirical powers calculated from 1000 replications of each setup under an AR(1) covariance structure (with $\rho = 0.8$). While under $H_0: \bfmu = {\bf 0}_p$ all tests have similar performance, $C_{n,w}$ beats the other two under deviations from the null.
+
+\begin{table}
+\centering
+    \begin{tabular}{cc|ccc}\hline
+\multicolumn{5}{l}{$\bfmu = \text{rep}(.15,p)$}\\\hline 
+ $p$  & $n$    & CQ   & WPL  & $C_{n,w}$ \\\hline 
+  500 & 20 & 0.051 & 0.376 & 0.418 \\
+  500 & 50 & 0.060 & 0.832 & 0.866 \\
+ 1000 & 20 & 0.044 & 0.541 & 0.584 \\
+ 1000 & 50 & 0.039 & 0.973 & 0.987 \\\hline
+\multicolumn{5}{l}{$\bfmu = \text{rep}(0,p)$}\\\hline
+ $p$  & $n$    & CQ   & WPL  & $C_{n,w}$ \\\hline 
+  500 & 20 & 0.049 & 0.061 & 0.063 \\
+  500 & 50 & 0.039 & 0.061 & 0.064 \\
+ 1000 & 20 & 0.042 & 0.060 & 0.063 \\
+ 1000 & 50 & 0.043 & 0.050 & 0.050 \\\hline
+    \end{tabular}
+    \caption{Table of empirical powers of level-0.05 tests for the Chen and Qin (CQ), WPL and $C_{n,w}$ statistics}
+    \label{table:AREtablehd}
+\end{table}

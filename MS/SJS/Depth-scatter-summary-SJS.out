@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Spatial signs and sign covariance matrix}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Data depth and outlyingness}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Depth-based rank covariance matrix}{}% 5
+\BOOKMARK [1][-]{section.4}{Asymptotic results}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{The sample DCM}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Eigenvectors and eigenvalues}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Robustness and efficiency properties}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Influence functions}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Asymptotic and finite-sample efficiencies}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Examples in real data analysis}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Bus data}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Octane data}{section.6}% 14
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 15
