@@ -108,17 +108,17 @@ A\BC(l_i, l_j) &=& \BE [ (D^-_\bfZ (\bfz))^4 (\BS_{ij}( \Lambda^{1/2} \bfz; {\bf
 \label{section:appC}
 
 \begin{proof}[Proof of Proposition \ref{proposition:SignTest}]
-Under contiguous alternatives $H_0: \bfmu = \bfmu_0$, the weighted sign test statistic $T_{n,w}$ has mean $E (w(\bfZ) \bfS (\bfZ))$. For spherically symmetric $\bfZ$, $w(\bfZ)$ depends on $\bfZ$ only through its norm. Since $\| \bfZ \|$ and $\bfS(\bfZ)$ are independent, we get $E (w(\bfZ) \bfS (\bfZ)) = E w(\bfZ). E \bfS (\bfZ)$. The same kind of decomposition holds for $Cov(w(\bfZ) \bfS(\bfZ))$.
+Under contiguous alternatives $H_0: \bfmu = \bfmu_0$, the weighted sign test statistic $T_{n,w}$ has mean $\BE (w(\bfZ) \bfS (\bfZ))$. For spherically symmetric $\bfZ$, $w(\bfZ)$ depends on $\bfZ$ only through its norm. Since $\| \bfZ \|$ and $\bfS(\bfZ)$ are independent, we get $\BE (w(\bfZ) \bfS (\bfZ)) = \BE w(\bfZ). \BE \bfS (\bfZ)$. A similar decomposition holds for $\BV (w(\bfZ) \bfS(\bfZ))$.
 
-We can now simplify the approximate local power $\beta_{n,w}$ of the level-$\alpha$ ($0 < \alpha < 1$) test based on $T_{n,w}$:
+We can now simplify the approximate local power $\beta_{n,w}$ of a level-$\alpha$, $0 < \alpha < 1$, test based on $T_{n,w}$:
 %
-\begin{eqnarray*}
-\beta_{n,w} &=& K_p \left( \chi^2_{p,\alpha} + n (E (w(\bfZ) \bfS (\bfZ))^T \right.\\
-&& \left. [ E (w^2(\bfZ) \bfS (\bfZ) \bfS (\bfZ)^T) ]^{-1} (E (w(\bfZ) \bfS (\bfZ)) \right)\\
-&=& K_p \left( \chi^2_{p,\alpha} + \frac{E^2 w(\bfZ)}{Ew^2(\bfZ)}. E\bfS(\bfZ)^T [Cov(\bfS(\bfZ)]^{-1} E\bfS(\bfZ) \right)
-\end{eqnarray*}
+\begin{align*}
+\beta_{n,w} &= K_p \left( \chi^2_{p,\alpha} + n (\BE (w(\bfZ) \bfS (\bfZ))^T
+[ \BE (w^2(\bfZ) \bfS (\bfZ) \bfS (\bfZ)^T) ]^{-1} (\BE (w(\bfZ) \bfS (\bfZ)) \right)\\
+&= K_p \left( \chi^2_{p,\alpha} + \frac{\BE^2 w(\bfZ)}{\BE w^2(\bfZ)}. \BE\bfS(\bfZ)^T [\BV \bfS(\bfZ)]^{-1} \BE \bfS(\bfZ) \right),
+\end{align*}
 %
-where $K_p$ and $\chi^2_{p,\alpha}$ are distribution function and upper-$\alpha$ cutoff of a $\chi^2_p$ distribution, respectively. Since $E^2 w(\bfZ) \leq Ew(\bfZ)$, $\beta_{n,w}$ the largest possible value of $\beta_{n,w}$ is $K_p ( \chi^2_{p,\alpha} + E\bfS(\bfZ)^T [Cov(\bfS(\bfZ)]^{-1} E\bfS(\bfZ) )$, the approximate power of the unweighted sign test statistic. Equality is of course achieved when $w(\bfZ)$ is a constant independent of $\bfZ$.
+where $K_p$ and $\chi^2_{p,\alpha}$ are distribution function and upper-$\alpha$ cutoff of a $\chi^2_p$ distribution, respectively. Since $\BE^2 w(\bfZ) \leq \BE w(\bfZ)$, the largest possible value of $\beta_{n,w}$ is $K_p ( \chi^2_{p,\alpha} + \BE \bfS(\bfZ)^T [\BV \bfS(\bfZ)]^{-1} \BE \bfS(\bfZ) )$, the approximate power of the unweighted sign test statistic. Equality is achieved when $w(\bfZ)$ is a constant independent of $\bfZ$.
 \end{proof}
 
 \begin{proof}[Sketch of proofs for equations \ref{eqn:hdtest1} and \ref{eqn:hdtest2}]
@@ -292,7 +292,7 @@ A\BV(l_i) &=& A\BV(\sqrt n \hat\lambda_{D,s,i} - \sqrt n \lambda_{D,S,i})\\
 A similar derivation gives the expression for $A\BV(l_i,l_j); i \neq j$. Finally, since the asymptotic covariance between an on-diagonal and an off-diagonal element of $\hat S^D(F_\Lambda)$, it follows that the elements of $G$ and diagonal elements of $L$ are independent.
 \end{proof}
 
-\begin{table}[b]
+\begin{table}[t]
 \begin{footnotesize}
     \begin{tabular}{c|cc|ccc|ccc}
     \hline
@@ -338,7 +338,7 @@ A similar derivation gives the expression for $A\BV(l_i,l_j); i \neq j$. Finally
 \label{table:FSEtable2}
 \end{table}
 
-\begin{table}[b]
+\begin{table}[t]
 \begin{footnotesize}
    \begin{tabular}{c|cc|ccc|ccc}
     \hline

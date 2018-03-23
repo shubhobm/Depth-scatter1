@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.18)  23 MAR 2018 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.18)  23 MAR 2018 18:44
 entering extended mode
 **./Signed-peripherality-draft.tex
 (Signed-peripherality-draft.tex
@@ -604,7 +604,7 @@ Overfull \hbox (6.82506pt too wide) in paragraph at lines 284--285
  )$
  []
 
-[28]
+
 Overfull \hbox (32.16238pt too wide) in paragraph at lines 297--337
 [][]
  []
@@ -624,17 +624,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 343--383
 
  []
 
-) (Signed-peripherality-draft.bbl
+) (Signed-peripherality-draft.bbl [28] [29] [30]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ê in font cmr10!
- [29] [30]
+ [31]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
- [31])
+ [32])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
- [32] [33] [34]
+ [33]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
 
 (Signed-peripherality-draft.aux)
@@ -643,16 +643,20 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
 Package rerunfilecheck Info: File `Signed-peripherality-draft.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: 8CE9B58849BE3B8E0C197432583CF8EC;1260.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 8547 strings out of 493333
- 124990 string characters out of 3140056
- 247004 words of memory out of 3000000
+ 8546 strings out of 493333
+ 124983 string characters out of 3140056
+ 250004 words of memory out of 3000000
  11729 multiletter control sequences out of 15000+200000
  23557 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,15n,39p,1452b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,15n,39p,1452b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Stud
 y/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Study/LaTeX/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fo
@@ -678,9 +682,9 @@ udy/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Study/LaTeX/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Study/LaTeX/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Signed-peripherality-draft.pdf (34 pages, 703810 bytes).
+Output written on Signed-peripherality-draft.pdf (33 pages, 703208 bytes).
 PDF statistics:
- 758 PDF objects out of 1000 (max. 8388607)
- 180 named destinations out of 1000 (max. 500000)
+ 754 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
  187 words of extra memory for PDF output out of 10000 (max. 10000000)
 
