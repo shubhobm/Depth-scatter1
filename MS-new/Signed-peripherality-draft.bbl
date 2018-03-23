@@ -20,6 +20,20 @@ Brown, B. (1983).
 \newblock Statistical {U}se of the {S}patial {M}edian.
 \newblock {\em J. Royal Statist. Soc. B}, 45:25--30.
 
+\bibitem[Chakraborty and Chaudhuri, 1996]{ChakrabortyChaudhuri96}
+Chakraborty, B. and Chaudhuri, P. (1996).
+\newblock {On a Transformation and Re-Transformation Technique for Constructing
+  an Affine Equivariant Multivariate Median}.
+\newblock {\em Proc. Amer. Math. Soc.}, 124:2539--2547.
+\newblock doi: 10.1017/S1461145713001296.
+
+\bibitem[Chakraborty et~al., 1998]{ChakrabortyChaudhuriOja98}
+Chakraborty, B., Chaudhuri, P., and Oja, H. (1998).
+\newblock {Operating Transformation Retransformation Spatial Median and Angle
+  Test}.
+\newblock {\em Stat. Sinica}, 8:767--784.
+\newblock doi: 10.1017/S1461145713001296.
+
 \bibitem[Chaudhuri, 1996]{Chaudhuri96}
 Chaudhuri, P. (1996).
 \newblock On a geometric notion of quantiles for multivariate data.
@@ -122,6 +136,12 @@ Huber, P.~J. (1981).
 \newblock {\em Robust Statistics}.
 \newblock Wiley series in probability and mathematical statistics. Wiley.
 
+\bibitem[Hubert et~al., 2005]{hubert05}
+Hubert, M., Rousseeuw, P.~J., and Branden, K.~V. (2005).
+\newblock {ROBPCA}: {A} {N}ew {A}pproach to {R}obust {P}rincipal {C}omponent
+  {A}nalysis.
+\newblock {\em Technometrics}, 47-1:64--79.
+
 \bibitem[Jornsten, 2004]{jornsten04}
 Jornsten, R. (2004).
 \newblock Clustering and classification based on the $l_1$ depth.
@@ -188,12 +208,6 @@ Oja, H. (2010).
   Spatial Signs and Ranks}}.
 \newblock {Lecture Notes in Statistics}. Springer.
 
-\bibitem[Ollilia et~al., 2003]{ollilia03}
-Ollilia, E., Oja, H., and Croux, C. (2003).
-\newblock The affine equivariant sign covariance matrix: asymptotic behavior
-  and efficiencies.
-\newblock {\em J. Mult. Anal.}, 87:328--355.
-
 \bibitem[Puri and Sen, 1971]{PuriSenBook}
 Puri, M.~L. and Sen, P.~K. (1971).
 \newblock {\em {Nonparametric Methods in Multivariate Analysis}}.
@@ -210,12 +224,6 @@ Rousseeuw, P. (1985).
 \newblock In {\em Mathematical Statistics and Applications, Volume B (Proc. 4th
   Pannonian Symp. Math. Statist., Bad Tatzmannsdorf, 1983)}, pages 283--97,
   Dordrecht. D. Reidel.
-
-\bibitem[Serfling, 2006]{serfling2006}
-Serfling, R. (2006).
-\newblock Depth {F}unctions in {N}onparametric {M}ultivariate {I}nference.
-\newblock In {\em DIMACS {S}eries in {D}iscrete {M}athematics and {T}heoretical
-  {C}omputer {S}cience}, volume~72, pages 1--16.
 
 \bibitem[Sguera et~al., 2014]{sguera14}
 Sguera, C., Galeano, P., and Lillo, R. (2014).

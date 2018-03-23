@@ -6,7 +6,7 @@ In this section, we focus on the general situation of estimating or testing for 
 \noindent{\bf (A1)} The weights are affine invariant, i.e.
 %
 $$
-w(\bfA \bfx + \bfb, \bfA \BF + \bfb) = w(\bfx, \BF),
+w(\bfA \bfx + \bfb, \bfA \BF + \bfb) = w(\bfx, \BF)
 $$
 %
 for any $\bfb \in \BR^p$ and full rank matrix $\bfA \in \BR^{p \times p}$.
@@ -51,13 +51,13 @@ Let $\bfA_w, \bfB_w$ be two matrices, dependent on the weight function $w$ such 
 $$
 \bfA_w = \BE \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right];
 \quad
-\bfB_w = \BE \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right]
+\bfB_w = \BE \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right],
 $$
 %
 where $\bfepsilon \sim \mathcal E({\bf 0}, \Sigma, g)$. Then
 %
 \begin{equation}
-\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto \cN_p ({\bf 0}, \bfA_w^{-1} \bfB_w \bfA_w^{-1})
+\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto \cN_p ({\bf 0}, \bfA_w^{-1} \bfB_w \bfA_w^{-1}).
 \end{equation}
 \end{Theorem}
 %
@@ -75,22 +75,24 @@ with $\bfA = \BE [ 1/ \| \bfepsilon \| ( I_p - \bfepsilon \bfepsilon^T/ \| \bfep
 For the spherical distribution $\mathcal{E}(\bfmu, k \bfI_p, g); k \in \mathbb R, \bfmu \in \mathbb R^p$, we have
 %
 $$
-ARE( \bfmu_w, \bfmu_s) = \frac{ \left[ \BE \left( \frac{f(r)}{r} \right) \right]^2}{\BE f^2(r) \left[ \BE \left( \frac{1}{r} \right) \right]^2 }
+ARE( \bfmu_w, \bfmu_s) = \frac{ \left[ \BE \left( \frac{f(r)}{r} \right) \right]^2}{\BE f^2(r) \left[ \BE \left( \frac{1}{r} \right) \right]^2 }.
 $$
 \end{Corollary}
 %
 \begin{table}[t]
-	\centering
-    \begin{tabular}{c|ccccc}
+\centering
+\begin{footnotesize}
+\begin{tabular}{c|ccccc}
     \hline
     & $t_3$   & $t_5$   & $t_{10}$  & $t_{20}$  & Normal \\ \hline
     $p=5$    & 1.28 & 1.20 & 1.16 & 1.14 & 1.13   \\
     $p=10$   & 1.15 & 1.10 & 1.07 & 1.07 & 1.06   \\
     $p=20$   & 1.09 & 1.05 & 1.04 & 1.03 & 1.03   \\
     $p=50$   & 1.05 & 1.02 & 1.01 & 1.01 & 1.01   \\ \hline
-    \end{tabular}
-    \caption{Table of $ARE(\bfmu_w; \bfmu_s)$ for different spherical distributions}
-    \label{table:AREtablewsm}
+\end{tabular}
+\end{footnotesize}
+\caption{Table of $ARE(\bfmu_w; \bfmu_s)$ for different spherical distributions}
+\label{table:AREtablewsm}
 \end{table}
 %
 Table \ref{table:AREtablewsm} summarizes the AREs for several families of elliptic distributions, numerically calculated using 10,000 random samples, and taking $f(r) = 1/(1+r)$. It is evident from the table that the weighted spatial median outperforms its unweighted counterpart for all data dimensions and distribution families. While the performance is much better for small values of $p$, weighting the signs seems to have less and less effect as $p$ grows larger. Assuming a first-order autoregressive (AR(1)) covariance structure, i.e. $\sigma_{ij} = \rho^{|i-j|}$ with $ \rho \in (0,1)$, results in largely similar ARE values as those obtained in table \ref{table:AREtablewsm} that assume $\Sigma = \bfI_p$.
@@ -125,7 +127,8 @@ However, in a practical high-dimensional setup sample sizes are often small. Thu
 
 \begin{table}
 \centering
-    \begin{tabular}{cc|ccc}\hline
+\begin{footnotesize}
+\begin{tabular}{cc|ccc}\hline
 \multicolumn{5}{l}{$\bfmu = \text{rep}(.15,p)$}\\\hline 
  $p$  & $n$    & CQ   & WPL  & $C_{n,w}$ \\\hline 
   500 & 20 & 0.051 & 0.376 & 0.418 \\
@@ -138,7 +141,8 @@ However, in a practical high-dimensional setup sample sizes are often small. Thu
   500 & 50 & 0.039 & 0.061 & 0.064 \\
  1000 & 20 & 0.042 & 0.060 & 0.063 \\
  1000 & 50 & 0.043 & 0.050 & 0.050 \\\hline
-    \end{tabular}
-    \caption{Table of empirical powers of level-0.05 tests for the Chen and Qin (CQ), WPL and $C_{n,w}$ statistics}
-    \label{table:AREtablehd}
+\end{tabular}
+\end{footnotesize}
+\caption{Table of empirical powers of level-0.05 tests for the Chen and Qin (CQ), WPL and $C_{n,w}$ statistics}
+\label{table:AREtablehd}
 \end{table}

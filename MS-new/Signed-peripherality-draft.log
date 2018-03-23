@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.18)  20 MAR 2018 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.18)  23 MAR 2018 18:05
 entering extended mode
 **./Signed-peripherality-draft.tex
 (Signed-peripherality-draft.tex
@@ -425,7 +425,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[2] <../Codes/ranks.pdf, id=148, 505.89pt x 289.08pt>
+[2] <../Codes/ranks.pdf, id=144, 505.89pt x 289.08pt>
 File: ../Codes/ranks.pdf Graphic file (type pdf)
  <use ../Codes/ranks.pdf>
 Package pdftex.def Info: ../Codes/ranks.pdf used on input line 62.
@@ -440,151 +440,120 @@ mm/m/it/10.95 =\OMS/cmsy/m/n/10.95 k\OT1/cmr/m/n/10.95 []\OT1/cmr/bx/n/10.95 z
 \OMS/cmsy/m/n/10.95 k$\OT1/cmr/m/n/10.95 .
  []
 
-[8] [9]
-Overfull \hbox (16.49911pt too wide) detected at line 129
-[] [] [] \OML/cmm/m/it/10.95 N[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/n/10.95 0\OML/c
-mm/m/it/10.95 ; V[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 
-))
+[8] [9] [10]
+Overfull \hbox (4.22543pt too wide) detected at line 177
+\OT1/cmr/m/n/10.95 [] = [] [] [];  [] \OMS/cmsy/m/n/10.95   []\OML/cmm/m/it/1
+0.95 :
  []
 
-[10]
-Overfull \hbox (1.18376pt too wide) detected at line 167
-\OT1/cmr/m/n/10.95 [] = [] [] [];  [] \OMS/cmsy/m/n/10.95   []
- []
-
-[11] [12]
+[11]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 215.
+               Default added (so using `tbp') on input line 216.
 
-<../Codes/IFnorm.png, id=323, 752.8125pt x 1003.75pt>
+<../Codes/IFnorm.png, id=310, 752.8125pt x 1003.75pt>
 File: ../Codes/IFnorm.png Graphic file (type png)
 
 <use ../Codes/IFnorm.png>
-Package pdftex.def Info: ../Codes/IFnorm.png used on input line 217.
+Package pdftex.def Info: ../Codes/IFnorm.png used on input line 218.
 (pdftex.def)             Requested size: 341.43306pt x 455.25195pt.
-
-Overfull \hbox (18.30736pt too wide) in alignment at lines 242--245
- [][][] []
- []
-
-[13] [14 <../Codes/IFnorm.png>] [15]
-Overfull \hbox (32.16238pt too wide) in paragraph at lines 302--342
+ [12] [13] [14 <../Codes/IFnorm.png>] [15]
+Overfull \hbox (29.10622pt too wide) in paragraph at lines 336--376
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--342
-
- []
-
-
-Overfull \hbox (29.10622pt too wide) in paragraph at lines 348--388
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--388
-
- []
-
-
-Overfull \hbox (29.10622pt too wide) in paragraph at lines 394--434
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--434
+Underfull \hbox (badness 10000) in paragraph at lines 336--376
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 438.
+(hyperref)                removing `math shift' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Sigma' on input line 438.
+(hyperref)                removing `\Sigma' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 438.
+(hyperref)                removing `math shift' on input line 380.
 
-[16]) (4_SDR.tex [17]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
+[16] [17]) (4_SDR.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
  ("C:\Study\LaTeX\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
 
-<../Codes/SDRcomparison_noout.pdf, id=396, 361.35pt x 361.35pt>
+[18] <../Codes/SDRcomparison_noout.pdf, id=403, 361.35pt x 361.35pt>
 File: ../Codes/SDRcomparison_noout.pdf Graphic file (type pdf)
 
 <use ../Codes/SDRcomparison_noout.pdf>
-Package pdftex.def Info: ../Codes/SDRcomparison_noout.pdf used on input line 37
+Package pdftex.def Info: ../Codes/SDRcomparison_noout.pdf used on input line 45
 .
 (pdftex.def)             Requested size: 148.76749pt x 148.76648pt.
 
-<../Codes/SDRcomparison_out.pdf, id=397, 361.35pt x 361.35pt>
+<../Codes/SDRcomparison_out.pdf, id=404, 361.35pt x 361.35pt>
 File: ../Codes/SDRcomparison_out.pdf Graphic file (type pdf)
 
 <use ../Codes/SDRcomparison_out.pdf>
-Package pdftex.def Info: ../Codes/SDRcomparison_out.pdf used on input line 38.
+Package pdftex.def Info: ../Codes/SDRcomparison_out.pdf used on input line 46.
 (pdftex.def)             Requested size: 148.76749pt x 148.76648pt.
-) (5_Functional.tex [18]
-<../Codes/Elnino_functional1.pdf, id=407, 289.08pt x 289.08pt>
+) (5_Functional.tex [19 <../Codes/SDRcomparison_noout.pdf> <../Codes/SDRcompari
+son_out.pdf>]
+<../Codes/Elnino_functional1.pdf, id=431, 289.08pt x 289.08pt>
 File: ../Codes/Elnino_functional1.pdf Graphic file (type pdf)
 
 <use ../Codes/Elnino_functional1.pdf>
-Package pdftex.def Info: ../Codes/Elnino_functional1.pdf used on input line 25.
+Package pdftex.def Info: ../Codes/Elnino_functional1.pdf used on input line 28.
 
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Elnino_functional2.pdf, id=408, 289.08pt x 289.08pt>
-File: ../Codes/Elnino_functional2.pdf Graphic file (type pdf)
-
-<use ../Codes/Elnino_functional2.pdf>
-Package pdftex.def Info: ../Codes/Elnino_functional2.pdf used on input line 26.
-
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
-
-<../Codes/Elnino_functional3.pdf, id=409, 289.08pt x 289.08pt>
-File: ../Codes/Elnino_functional3.pdf Graphic file (type pdf)
-
-<use ../Codes/Elnino_functional3.pdf>
-Package pdftex.def Info: ../Codes/Elnino_functional3.pdf used on input line 27.
-
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
-
-<../Codes/Octane_functional1.pdf, id=410, 289.08pt x 289.08pt>
+<../Codes/Octane_functional1.pdf, id=432, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional1.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional1.pdf>
 Package pdftex.def Info: ../Codes/Octane_functional1.pdf used on input line 29.
 
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Octane_functional2.pdf, id=411, 289.08pt x 289.08pt>
+<../Codes/Elnino_functional2.pdf, id=433, 289.08pt x 289.08pt>
+File: ../Codes/Elnino_functional2.pdf Graphic file (type pdf)
+
+<use ../Codes/Elnino_functional2.pdf>
+Package pdftex.def Info: ../Codes/Elnino_functional2.pdf used on input line 31.
+
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
+
+<../Codes/Octane_functional2.pdf, id=434, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional2.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional2.pdf>
-Package pdftex.def Info: ../Codes/Octane_functional2.pdf used on input line 30.
+Package pdftex.def Info: ../Codes/Octane_functional2.pdf used on input line 32.
 
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Octane_functional3.pdf, id=412, 289.08pt x 289.08pt>
+<../Codes/Elnino_functional3.pdf, id=435, 289.08pt x 289.08pt>
+File: ../Codes/Elnino_functional3.pdf Graphic file (type pdf)
+
+<use ../Codes/Elnino_functional3.pdf>
+Package pdftex.def Info: ../Codes/Elnino_functional3.pdf used on input line 34.
+
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
+
+<../Codes/Octane_functional3.pdf, id=436, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional3.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional3.pdf>
-Package pdftex.def Info: ../Codes/Octane_functional3.pdf used on input line 31.
+Package pdftex.def Info: ../Codes/Octane_functional3.pdf used on input line 35.
 
-(pdftex.def)             Requested size: 136.01672pt x 136.01317pt.
-) (6_Conclusion.tex [19 <../Codes/SDRcomparison_noout.pdf> <../Codes/SDRcompari
-son_out.pdf>] [20 <../Codes/Elnino_functional1.pdf> <../Codes/Elnino_functional
-2.pdf> <../Codes/Elnino_functional3.pdf> <../Codes/Octane_functional1.pdf> <../
-Codes/Octane_functional2.pdf> <../Codes/Octane_functional3.pdf>]) [21] (7_Appen
-dix.tex
+(pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
+) (6_Conclusion.tex [20] [21 <../Codes/Elnino_functional1.pdf> <../Codes/Octane
+_functional1.pdf> <../Codes/Elnino_functional2.pdf> <../Codes/Octane_functional
+2.pdf> <../Codes/Elnino_functional3.pdf> <../Codes/Octane_functional3.pdf>]) (7
+_Appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 5.
@@ -598,27 +567,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 5.
 
 
-Overfull \hbox (34.18604pt too wide) in alignment at lines 13--17
- [][][] []
+Overfull \hbox (8.20578pt too wide) in paragraph at lines 19--19
+[] 
  []
 
-[22]
+[22] [23]
 
-LaTeX Warning: Command \l invalid in math mode on input line 74.
+LaTeX Warning: Command \l invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 74.
+LaTeX Warning: Command \l invalid in math mode on input line 93.
 
-[23]
-Overfull \hbox (6.82506pt too wide) in paragraph at lines 113--114
- [][] \OT1/cmr/m/n/10.95 For the on-diagonal el-e-ments of $[](\OML/cmm/m/it/10
-.95 F[]\OT1/cmr/m/n/10.95 )$ The-o-rem [][]B.1[][] gives us $[][](\OML/cmm/m/it
-/10.95 F[]\OT1/cmr/m/n/10.95 ) = [][](\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95
- )$
- []
-
-[24] [25]
-Overfull \hbox (36.52846pt too wide) in paragraph at lines 171--172
+[24]
+Overfull \hbox (36.52846pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/
 it/10.95 D[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 E\OT
 1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 ([])\OML/cmm/m/it/10.9
@@ -629,70 +590,97 @@ cmm/m/it/10.95 A[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.9
 t/10.95 =\OMS/cmsy/m/n/10.95 k[]k\OT1/cmr/m/n/10.95 )(1 +
  []
 
-
-Overfull \hbox (8.77065pt too wide) in paragraph at lines 178--180
+[25]
+Overfull \hbox (8.77065pt too wide) in paragraph at lines 162--164
 []\OT1/cmr/m/n/10.95 The proof fol-lows di-rectly from writ-ing out the ex-pres
 -sion of $\OML/cmm/m/it/10.95 Cov\OT1/cmr/m/n/10.95 ([])$: 
  []
 
-[26] [27]) [28] (misc.tex [29] [30]) (Signed-peripherality-draft.bbl [31]
+[26] [27]
+Overfull \hbox (6.82506pt too wide) in paragraph at lines 284--285
+ [][] \OT1/cmr/m/n/10.95 For the on-diagonal el-e-ments of $[](\OML/cmm/m/it/10
+.95 F[]\OT1/cmr/m/n/10.95 )$ The-o-rem [][]B.1[][] gives us $[][](\OML/cmm/m/it
+/10.95 F[]\OT1/cmr/m/n/10.95 ) = [][](\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95
+ )$
+ []
+
+[28]
+Overfull \hbox (32.16238pt too wide) in paragraph at lines 297--337
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--337
+
+ []
+
+
+Overfull \hbox (29.10622pt too wide) in paragraph at lines 343--383
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--383
+
+ []
+
+) (Signed-peripherality-draft.bbl
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ê in font cmr10!
-
-[32]
+ [29] [30]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
- [33])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
- [34] [35] [36] [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
- (Signed-peripherality-draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+ [31])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
+ [32] [33] [34]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+
+(Signed-peripherality-draft.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
 Package rerunfilecheck Info: File `Signed-peripherality-draft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: E674B7B400970F77A0DEE722CA350618;1312.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
+(rerunfilecheck)             Checksum: 8CE9B58849BE3B8E0C197432583CF8EC;1260.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 8533 strings out of 493333
- 124755 string characters out of 3140056
- 267768 words of memory out of 3000000
- 11712 multiletter control sequences out of 15000+200000
- 22944 words of font info for 85 fonts, out of 3000000 for 9000
+ 8547 strings out of 493333
+ 124990 string characters out of 3140056
+ 247004 words of memory out of 3000000
+ 11729 multiletter control sequences out of 15000+200000
+ 23557 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,15n,39p,1448b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,15n,39p,1452b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Stud
 y/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Study/LaTeX/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Study/LaTeX/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbxti10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Study/
-LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Study/LaTeX/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmib10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cmextra/cmmib8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Study/L
-aTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Study/LaTeX/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr9.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Study/La
-TeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Study/LaTeX/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb>
-Output written on Signed-peripherality-draft.pdf (37 pages, 725691 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Study/L
+aTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Study/LaTeX/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Study/LaTeX/MiKTeX 2.9/font
+s/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cmextra/cmmib9.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Stu
+dy/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Study/LaTeX/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Study/LaTeX/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr9.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/St
+udy/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Study/LaTeX/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Study/LaTeX/MiKTeX 2.9/
+fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Study/LaTeX/MiKTeX 2.9/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Signed-peripherality-draft.pdf (34 pages, 703810 bytes).
 PDF statistics:
- 820 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 180 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 
