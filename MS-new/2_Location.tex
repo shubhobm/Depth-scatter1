@@ -23,13 +23,13 @@ $$
 A straightforward use of weighted signs in a location problem is to construct an outlier-robust alternative to the Hotelling's $T^2$ test using their sample mean vector and covariance matrix. Formally, this means testing for $H_0: \bfmu = {\bf 0}_p$ vs. $H_1:\bfmu \neq {\bf 0}_p$  based on the test statistic:
 %
 $$
-T_{n,w} = n \bar\bfX_w^T ( \BV \BX_w)^{-1} \bar\bfX_w,
+T_{n,w} = n \bar\bfx_w^T ( \BS (\BX_w))^{-1} \bar\bfx_w,
 $$
 %
-({\colrbf define $\BX_w$}) with $\bar\bfX_w = \sum_{i=1}^n \bfX_{w,i}/n$ and $\bfX_{w,i} = w(\bfX_i ) \bfS (\bfX_i)$ for $i=1,2,...,n$. However, the following holds true for this weighted sign test:
+with $\bar\bfx_w = \sum_{i=1}^n \bfx_{w,i}/n, \bfx_{w,i} = w(\bfx_i ) \bfS (\bfx_i)$ for $i=1,2,...,n$, and $\BX_w = (\bfx_{w,1}, \ldots, \bfx_{w,n})^T$. However, the following holds true for this weighted sign test:
 %
 \begin{Proposition}\label{proposition:SignTest}
-Consider $n$ random variables $Z = (\bfZ_1,...,\bfZ_n)^T$ distributed independently and identically as $\mathcal{E}( \bfmu, k \bfI_p, g); k \in \mathbb R$, and the class of hypothesis tests defined above. Then, given any $\alpha \in (0,1)$, local power at $\bfmu \neq {\bf 0}_p$ for the level-$\alpha$ test  based on $T_{n,w}$ is maximum when $w(\bfZ_1) = c$, a constant independent of $\bfZ_1$.
+Consider $n$ random variables $\bfZ_1,...,\bfZ_n$ distributed independently and identically as $\mathcal{E}( \bfmu, k \bfI_p, g); k \in \mathbb R$, and the class of hypothesis tests defined above. Then, given any $\alpha \in (0,1)$, local power at $\bfmu \neq {\bf 0}_p$ for the level-$\alpha$ test  based on $T_{n,w}$ is maximum when $w(\bfZ_1) = c$, a constant independent of $\bfZ_1$.
 \end{Proposition}
 %
 \noindent This essentially means that power-wise the (unweighted) spatial sign test \citep{OjaBook10} is optimal in the given class of hypothesis tests when the data comes from a spherically symmetric distribution. Our simulations show that this empirically holds for non-spherical but elliptic distributions as well.
@@ -46,18 +46,18 @@ This can be seen as a generalization of the Fermat-Weber location problem (which
 The sample weighted spatial median $\hat\bfmu_w$ is a $\sqrt n$-consistent estimator of $\bfmu_w$, with the following result gives its asymptotic distribution:
 %
 \begin{Theorem}
-Let $\bfA_w, \bfB_w$ be two matrices, dependent on the weight function $w$ such that
+Let $\BA_w, \BB_w$ be two matrices, dependent on the weight function $w$ such that
 %
 $$
-\bfA_w = \BE \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right];
+\BA_w = \BE \left[ \frac{w( \bfepsilon ) }{\| \bfepsilon \|} \left( 1 - \frac{\bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right) \right];
 \quad
-\bfB_w = \BE \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right],
+\BB_w = \BE \left[ \frac{(w( \bfepsilon ))^2 \bfepsilon \bfepsilon^T}{\| \bfepsilon \|^2} \right],
 $$
 %
 where $\bfepsilon \sim \mathcal E({\bf 0}, \Sigma, g)$. Then
 %
 \begin{equation}
-\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto \cN_p ({\bf 0}, \bfA_w^{-1} \bfB_w \bfA_w^{-1}).
+\sqrt n (\hat\bfmu_w - \bfmu_w) \leadsto \cN_p ({\bf 0}, \BA_w^{-1} \BB_w \BA_w^{-1}).
 \end{equation}
 \end{Theorem}
 %
@@ -66,10 +66,10 @@ where $\bfepsilon \sim \mathcal E({\bf 0}, \Sigma, g)$. Then
 Setting $w(\bfepsilon)=1$ above yields the asymptotic covariance matrix for the spatial median. Following this, the asymptotic relative efficiency (ARE) of $\bfmu_w$ corresponding to some non-uniform weight function with respect to the spatial median, say $\bfmu_s$ will be:
 %
 $$
-ARE( \bfmu_w, \bfmu_s) = \left[ \frac{\text{det} (\bfA^{-1} \bfB \bfA^{-1})}{\text{det} ( \bfA_w^{-1} \bfB_w \bfA_w^{-1})} \right]^{1/p}
+ARE( \bfmu_w, \bfmu_s) = \left[ \frac{\text{det} ( \BA^{-1} \BB \BA^{-1})}{\text{det} ( \BA_w^{-1} \BB_w \BA_w^{-1})} \right]^{1/p}
 $$
 %
-with $\bfA = \BE [ 1/ \| \bfepsilon \| ( I_p - \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ) ]$ and $\bfB = \BE [ \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ]$. This is further simplified under spherical symmetry:
+with $\BA = \BE [ 1/ \| \bfepsilon \| ( \BI_p - \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ) ]$ and $\BB = \BE [ \bfepsilon \bfepsilon^T/ \| \bfepsilon \|^2 ]$. This is further simplified under spherical symmetry:
 
 \begin{Corollary}
 For the spherical distribution $\mathcal{E}(\bfmu, k \bfI_p, g); k \in \mathbb R, \bfmu \in \mathbb R^p$, we have
@@ -104,13 +104,13 @@ It is possible to take an alternative approach to the location testing problem b
 Under mild regularity conditions in the lines of \cite{WangPengLi15}, the following results hold for our generalized test statistic $C_{n,w}$ under $H_0$ as $n,p \rightarrow \infty$:
 %
 \begin{equation}\label{eqn:hdtest1}
-\frac{C_{n,w}}{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\bfB_w^2)}} \leadsto N(0,1),
+\frac{C_{n,w}}{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\BB_w^2)}} \leadsto N(0,1),
 \end{equation}
 %
 and under contiguous alternatives $H_1: \bfmu = \bfmu_0$,
 %
 \begin{equation}\label{eqn:hdtest2}
-\frac{C_{n,w} - \frac{n(n-1)}{2} \bfmu_0^T \bfA_w^2 \bfmu_0 (1 + o(1)) }{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\bfB_w^2)}} \leadsto N(0,1).
+\frac{C_{n,w} - \frac{n(n-1)}{2} \bfmu_0^T \BA_w^2 \bfmu_0 (1 + o(1)) }{\sqrt{\frac{n(n-1)}{2} \text{Tr}(\BB_w^2)}} \leadsto N(0,1).
 \end{equation}
 %
 We provide the details behind deriving these two results in the supplementary material, which extend the results of \cite{WangPengLi15} in a weightd sign setup using modified regularity conditions.
@@ -118,10 +118,10 @@ We provide the details behind deriving these two results in the supplementary ma
 Following this, the ARE of this test statistic with respect to its unweighted version, i.e. the WPL statistic, is expressed as:
 %
 $$
-ARE(C_{n,w}, \text{WPL}; \bfmu_0) = \frac{\bfmu_0^T \bfA_w^2 \bfmu_0}{\bfmu_0^T \bfA^2 \bfmu_0} \sqrt\frac{\text{Tr}(\bfB^2)}{\text{Tr}(\bfB_w^2)} (1 + o(1)),
+ARE(C_{n,w}, \text{WPL}; \bfmu_0) = \frac{\bfmu_0^T \BA_w^2 \bfmu_0}{\bfmu_0^T \BA^2 \bfmu_0} \sqrt\frac{\text{Tr}( \BB^2)}{\text{Tr}( \BB_w^2)} (1 + o(1)),
 $$
 %
-when $\Sigma = k \bfI_p$, this again simplifies to $\BE^2(f(r)/r)/[\BE f^2(r). \BE^2(1/r)]$. Thus the ARE values are exactly same as those in Table \ref{table:AREtablewsm}, indicating that for large data dimensions the WPL test and that based on $C_{n,w}$ are almost equivalent.
+when $\Sigma = k \BI_p$, this again simplifies to $\BE^2(f(r)/r)/[\BE f^2(r). \BE^2(1/r)]$. Thus the ARE values are exactly same as those in Table \ref{table:AREtablewsm}, indicating that for large data dimensions the WPL test and that based on $C_{n,w}$ are almost equivalent.
 
 However, in a practical high-dimensional setup sample sizes are often small. Thus, comparing the the two tests with respect to their \textit{finite sample} efficiencies instead gives a better idea of their practical utility. We do so in table~\ref{table:AREtablehd}, which lists empirical powers calculated from 1000 replications of each setup under an AR(1) covariance structure (with $\rho = 0.8$). While under $H_0: \bfmu = {\bf 0}_p$ all tests have similar performance, $C_{n,w}$ beats the other two under deviations from the null.
 

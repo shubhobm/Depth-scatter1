@@ -25,14 +25,12 @@ Chakraborty, B. and Chaudhuri, P. (1996).
 \newblock {On a Transformation and Re-Transformation Technique for Constructing
   an Affine Equivariant Multivariate Median}.
 \newblock {\em Proc. Amer. Math. Soc.}, 124:2539--2547.
-\newblock doi: 10.1017/S1461145713001296.
 
 \bibitem[Chakraborty et~al., 1998]{ChakrabortyChaudhuriOja98}
 Chakraborty, B., Chaudhuri, P., and Oja, H. (1998).
 \newblock {Operating Transformation Retransformation Spatial Median and Angle
   Test}.
 \newblock {\em Stat. Sinica}, 8:767--784.
-\newblock doi: 10.1017/S1461145713001296.
 
 \bibitem[Chaudhuri, 1996]{Chaudhuri96}
 Chaudhuri, P. (1996).
@@ -45,10 +43,10 @@ Chen, S.~X. and Qin, Y.~L. (2010).
   Gene-Set Testing}.
 \newblock {\em Ann. Statist.}, 38:808--835.
 
-\bibitem[Chernozhukov et~al., 2014]{Chernozhukov14}
-Chernozhukov, V., Galichon, A., Hallin, M., and Henry, M. (2014).
-\newblock {Monge-Kantorovich Depths, Quantiles, Ranks and Signs}.
-\newblock \url{http://arxiv.org/abs/1412.8434}.
+\bibitem[Chernozhukov et~al., 2017]{Chernozhukov17}
+Chernozhukov, V., Galichon, A., Hallin, M., and Henry, M. (2017).
+\newblock {Monge--Kantorovich depth, quantiles, ranks and signs}.
+\newblock {\em Ann. Statist.}, 45:223--256.
 
 \bibitem[Cook et~al., 2010]{Cook10}
 Cook, R.~D., Li, B., and Chiaromonte, F. (2010).
@@ -66,11 +64,6 @@ Croux, C. and Haesbroeck, G. (2000).
 D\"{u}mbgen, L. (1992).
 \newblock Limit theorems for the simplicial depth.
 \newblock {\em Statist. Probab. Lett.}, 14:119--128.
-
-\bibitem[D\"{u}mbgen, 1998]{dumbgen98}
-D\"{u}mbgen, L. (1998).
-\newblock On {T}yler's {M}-functional of scatter in high dimension.
-\newblock {\em Ann. Inst. Statist. Math.}, 50:471--491.
 
 \bibitem[D\"{u}rre et~al., 2014]{durre14}
 D\"{u}rre, A., Vogel, D., and Tyler, D. (2014).
@@ -126,11 +119,6 @@ Hampel, F.~R., Ronchetti, E.~M., Rousseeuw, P.~J., and Staehl, W.~A. (1986).
 \newblock {\em {Robust Statistics: The Approach Based on Influence Functions}}.
 \newblock Wiley.
 
-\bibitem[Huber, 1977]{huber77}
-Huber, P. (1977).
-\newblock {\em Robust {S}tatistical {P}rcedures}.
-\newblock Society for Industrial and Applied Mathematics, Philadelphia.
-
 \bibitem[Huber, 1981]{HuberBook81}
 Huber, P.~J. (1981).
 \newblock {\em Robust Statistics}.
@@ -146,17 +134,6 @@ Hubert, M., Rousseeuw, P.~J., and Branden, K.~V. (2005).
 Jornsten, R. (2004).
 \newblock Clustering and classification based on the $l_1$ depth.
 \newblock {\em J. Mult. Anal.}, 90-1:67--89.
-
-\bibitem[Liu, 1990]{liu90}
-Liu, R. (1990).
-\newblock On a notion of data depth based on random simplices.
-\newblock {\em Ann. of Statist.}, 18:405--414.
-
-\bibitem[Liu et~al., 1999]{LiuPareliusSingh99}
-Liu, R., Parelius, J., and Singh, K. (1999).
-\newblock Multivariate analysis by data depth: {D}escriptive statistics,
-  graphics and inference (with discussion).
-\newblock {\em Ann. of Statist.}, 27:783--858.
 
 \bibitem[Locantore et~al., 1999]{locantore99}
 Locantore, N., Marron, J., Simpson, D., Tripoli, N., Zhang, J., and Cohen, K.
@@ -176,16 +153,10 @@ Majumdar, S. and Chatterjee, S. (2018).
   penalties}.
 \newblock {\em Stat}, 7:e174.
 
-\bibitem[Maronna et~al., 1976]{maronna76}
-Maronna, R., Staehl, W., and Yohai, V. (1976).
-\newblock Bias-{R}obust {E}stimators of {M}ultivariate {S}catter {B}ased on
-  {P}rojections.
-\newblock {\em J. Mult. Anal.}, 42:141--161.
-
 \bibitem[Miao and Ben-Israel, 1992]{miao92}
 Miao, J. and Ben-Israel, A. (1992).
 \newblock On principal angles between subspaces in $\mathbb{R}^n$.
-\newblock {\em Lin. Algeb. Applic.}, 171:81--98.
+\newblock {\em Linear Algebra Appl.}, 171:81--98.
 
 \bibitem[Minsker, 2015]{Minsker15}
 Minsker, S. (2015).
@@ -213,18 +184,6 @@ Puri, M.~L. and Sen, P.~K. (1971).
 \newblock {\em {Nonparametric Methods in Multivariate Analysis}}.
 \newblock Wiley, New York, NY.
 
-\bibitem[Rainer and Mozharovskyi, 2014]{rainerArxiv}
-Rainer, D. and Mozharovskyi, P. (2014).
-\newblock Exact computation of the halfspace depth.
-\newblock \url{http://arxiv.org/abs/1411.6927}.
-
-\bibitem[Rousseeuw, 1985]{rousseeuw85}
-Rousseeuw, P. (1985).
-\newblock Multivariate estimation with high breakdown point.
-\newblock In {\em Mathematical Statistics and Applications, Volume B (Proc. 4th
-  Pannonian Symp. Math. Statist., Bad Tatzmannsdorf, 1983)}, pages 283--97,
-  Dordrecht. D. Reidel.
-
 \bibitem[Sguera et~al., 2014]{sguera14}
 Sguera, C., Galeano, P., and Lillo, R. (2014).
 \newblock Spatial depth-based classification for functional data.
@@ -240,21 +199,10 @@ Taskinen, S., Koch, I., and Oja, H. (2012).
 \newblock Robustifying principal component analysis with spatial sign vectors.
 \newblock {\em Statist. and Prob. Lett.}, 82:765--774.
 
-\bibitem[Tukey, 1975]{tukey75}
-Tukey, J. (1975).
-\newblock Mathematics and picturing data.
-\newblock In James, R., editor, {\em Proceedings of the International Congress
-  on Mathematics}, volume~2, pages 523--531.
-
 \bibitem[Tyler, 1987]{tyler87}
 Tyler, D. (1987).
 \newblock A distribution-free {M}-estimator of multivariate scatter.
 \newblock {\em Ann. Statist.}, 15:234--251.
-
-\bibitem[Visuri et~al., 2000]{visuri00}
-Visuri, S., Koivunen, V., and Oja, H. (2000).
-\newblock Sign and rank covariance matrices.
-\newblock {\em J. Statist. Plan. Inf.}, 91:557--575.
 
 \bibitem[Wang et~al., 2015]{WangPengLi15}
 Wang, L., Peng, B., and Li, R. (2015).

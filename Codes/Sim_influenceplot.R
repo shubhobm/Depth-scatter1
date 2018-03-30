@@ -1,6 +1,6 @@
 ## Sim_influenceplot: Plots to compare influence functions for DCM and SCM
 
-setwd("C:/Study/My projects/Depth-scatter/Codes")
+setwd("d:/Study/My projects/Depth-scatter1/Codes")
 rm(list=ls());
 source('misc_functions.R')
 
@@ -72,12 +72,16 @@ points(Xrank[1001:1003,], col='red', pch=19, cex=1)
 par(mfrow=c(1,1))
 dev.off()
 
+pdf('signs_and_ranks.pdf', width=8, height=3)
 par(mfrow=c(1,3))
-plot(X, pch=19, cex=.5)
-plot(uX, pch=19, cex=.5)
-plot(Xrank, pch=19, cex=.5)
+plot(X[1:1000,], pch=19, cex=.5)
+points(X[1001:1003,], col='red', pch=19, cex=1)
+plot(uX[1:1000,], pch=19, cex=.5)
+points(uX[1001:1003,], col='red', pch=19, cex=1)
+plot(Xrank[1:1000,], pch=19, cex=.5)
+points(Xrank[1001:1003,], col='red', pch=19, cex=1)
 par(mfrow=c(1,1))
-
+dev.off()
 
 ## Influence function plots
 lam = c(2,1)

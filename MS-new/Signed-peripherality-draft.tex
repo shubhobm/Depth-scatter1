@@ -74,11 +74,11 @@
 \maketitle
 
 Abstract:
-{(\colrbf will change)}Analyzing principal components for multivariate data from its spatial sign covariance matrix (SCM) has been proposed as a computationally simple and robust alternative to normal PCA, but it suffers from poor efficiency properties and is actually inadmissible with respect to the maximum likelihood estimator. Here we use data depth-based spatial ranks in place of spatial signs to obtain the orthogonally equivariant Depth Covariance Matrix (DCM) and use its eigenvector estimates for PCA. We derive asymptotic properties of the sample DCM and influence functions of its eigenvectors. The shapes of these influence functions indicate robustness of estimated principal components, and good efficiency properties compared to the SCM. Finite sample simulation studies show that principal components of the sample DCM are robust with respect to deviations from normality, as well as are more efficient than the SCM and its affine equivariant version, Tyler's shape matrix. Through two real data examples, we also show the effectiveness of DCM-based PCA in analyzing high-dimensional data and outlier detection, and compare it with other methods of robust PCA.
+We introduce a notion of multivariate ranking based on the composition of the multivariate sign function and data-dependent weights that are increasing or decreasing functions of a point-to-distribution distance measure in multivariate space, which we call the peripherality function. Using this weighted sign vector, we propose estimation and testing methods for the mean vector of an elliptical distribution that improve upon corresponding spatial sign-based procedures. When bounded and monotonically decreasing transformations on data depth functions are used as weights, the rank vectors can be used as proxies of the original data to estimate different components of the covariance matrix in the data-generating elliptical distribution: its eigenvectors, eigenvalues and the covariance matrix itself. Wimplement our proposed methods to perform robust Sufficient Dimension Reduction \citep{AdragniCook09} and functional outlier detection. Throughout the paper, several simulation studies and data examples outline the robustness and efficiency of our methods.
 \vspace{.5cm}
 
 Keywords:
-Multivariate ranking, data depth, dimension reduction, principal components analysis, robust statistics, functional data
+Multivariate ranking, data depth, high-dimensional location testing, principal component analysis, sufficient dimension reduction, robust PCA, outlier detection
 
 \newpage
 \input{1_Introduction}

@@ -78,7 +78,7 @@ Let $\BF_\Lambda$ be an elliptical distribution with a diagonal covariance matri
 The first matrix picks only off-diagonal elements of the LHS and the second one only diagonal elements. We now use the above result and the form of $\BV_D(\BF)$ derived in Appendix~\ref{section:appA} to obtain limiting variance and covariances of eigenvalues and eigenvectors.
 
 \begin{Corollary} \label{Corollary:eigendist}
-Consider the sample DCM $ \tilde \BS = \sum_{i=1}^n (D^{n-}_\bfX (\bfx_i))^2 \BS (\bfx_i; \hat\bfmu_n)/n $ and its spectral decomposition $\tilde \BS = \hat\Gamma_D \hat\Lambda_D \hat\Gamma_D^T $. Then the matrices $\BG_D = \sqrt n (\hat\Gamma_D - \Gamma) $ and $\BL_D = \sqrt n (\hat\Lambda_D - \Lambda_{D}) $ have independent distributions. The random variable $\ve(G)$ asymptotically has a $p^2$-variate normal distribution with mean ${\bf 0}_{p^2}$, and the asymptotic variance and covariance of different columns of $\BG_D = (\bfg_1,...,\bfg_p)$ are as follows:
+Consider the sample DCM $ \tilde \BS = \sum_{i=1}^n (D^{n-}_\bfX (\bfx_i))^2 \BS (\bfx_i; \hat\bfmu_n)/n $ and its spectral decomposition $\tilde \BS = \hat\Gamma_D \hat\Lambda_D \hat\Gamma_D^T $. Then the matrices $\BG_D = \sqrt n (\hat\Gamma_D - \Gamma) $ and $\BL_D = \sqrt n (\hat\Lambda_D - \Lambda_{D}) $ have independent distributions. The random variable $\ve(\BG_D)$ asymptotically has a $p^2$-variate normal distribution with mean ${\bf 0}_{p^2}$, and the asymptotic variance and covariance of different columns of $\BG_D = (\bfg_1,...,\bfg_p)$ are as follows:
 %
 \begin{equation} \label{equation:DevEq}
 A\BV(\bfg_i) = \sum_{k=1; k \neq i}^p \frac{\BE [ (D^-_\bfZ (\bfz))^4 (\BS_{ik}( \Lambda^{1/2} \bfz; {\bf 0}))^2 ]}
@@ -103,7 +103,6 @@ A\BC(l_i, l_j) &=& \BE [ (D^-_\bfZ (\bfz))^4 (\BS_{ij}( \Lambda^{1/2} \bfz; {\bf
 %See \cite{taskinen12}
 %\end{proof}
 
-\newpage
 \section{Proofs}
 \label{section:appC}
 
@@ -127,20 +126,20 @@ A first step to obtain asymptotic normality for the high-dimensional location te
 
 \begin{Lemma}\label{Lemma:HDlemma21} Under the conditions
 
-\noindent\textbf{(C1)}$\text{Tr}(\Sigma^4) = o(\text{Tr}^2(\Sigma^2)) $,
+\noindent\textbf{(C1)}$\Tr(\Sigma^4) = o(\Tr^2(\Sigma^2)) $,
 
-\noindent\textbf{(C2)}$\text{Tr}^4(\Sigma) / \text{Tr}^2(\Sigma^2) \exp[ - \text{Tr}^2(\Sigma) / 128p \lambda^2_{\max}(\Sigma) ] = o(1)$
+\noindent\textbf{(C2)}$\Tr^4(\Sigma) / \Tr^2(\Sigma^2) \exp[ - \Tr^2(\Sigma) / 128p \lambda^2_{\max}(\Sigma) ] = o(1)$
 \vspace{1em}
 
 \noindent when $H_0$ is true we have
 %
 \begin{eqnarray}
-E[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^4 ] &=& O(1) E^2[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^2 ]\\
-E[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ] &=& O(1) E^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ]\\
-E[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w2})^2 ] &=& o(1) E^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ]
+\BE[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^4 ] &=& O(1) \BE^2[ (\bfepsilon_{w1}^T \bfepsilon_{w2})^2 ],\\
+\BE[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ] &=& O(1) \BE^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ],\\
+\BE[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w2})^2 ] &=& o(1) \BE^2[ (\bfepsilon_{w1}^T B_w \bfepsilon_{w1})^2 ],
 \end{eqnarray}
 %
-with $\bfepsilon \sim \mathcal E({\bf 0}_p, \Lambda, G)$ and $\bfepsilon_w = w(\bfepsilon) \bfS(\bfepsilon)$.
+with $\bfepsilon \sim \mathcal E({\bf 0}_p, \Lambda, g)$ and $\bfepsilon_w = w(\bfepsilon) \bfS(\bfepsilon)$.
 \end{Lemma}
 %
 A proof of this lemma is derived using results in section 3 of \cite{ElKaroui09}, noticing that any-scalar valued 1-Lipschitz function of $\bfepsilon_w$ is a $M_w$-Lipschitz function of $\bfS(\bfepsilon)$, with $M_w = \sup_\bfepsilon w(\bfepsilon)$. Same steps as in the proof of Theorem 2.2 in \cite{WangPengLi15} follow now, using the lemma above in place of Lemma 2.1 therein, to establish asymptotic normality of $C_{n,w}$ under $H_0$.
@@ -148,11 +147,11 @@ A proof of this lemma is derived using results in section 3 of \cite{ElKaroui09}
 To derive the asymptotic distribution under contiguous alternatives we need the conditions (C3)-(C6) in \cite{WangPengLi15}, as well as slightly modified versions of Lemmas A.4 and A.5:
 
 \begin{Lemma}
-Given that condition (C3) holds, we have $\lambda_{\max} (B_w) \leq 2 \frac{\lambda_{\max}}{\text{Tr} (\Sigma)} (1+o(1))$.
+Given that condition (C3) holds, we have $\lambda_{\max} (\BB_w) \leq 2 \frac{\lambda_{\max}}{\text{Tr} (\Sigma)} (1+o(1))$.
 \end{Lemma}
 
 \begin{Lemma}
-Define $D_w = E \left[ \frac{w^2(\bfepsilon)}{\| \bfepsilon \|^2} (I_p - \bfS(\bfepsilon) \bfS(\bfepsilon)^T )\right] $. Then $\lambda_{\max} (A_w) \leq E( w(\bfepsilon)/\| \bfepsilon \|)$ and $\lambda_{\max} (D_w) \leq E( w(\bfepsilon)/\| \bfepsilon \|)^2$. Further, if (C3) and (C4) hold then $\lambda_{\min} (A_w) \geq E( w(\bfepsilon)/\| \bfepsilon \|)(1+o(1))/\sqrt 3$.
+Define $\BD_w = \BE \left[ \frac{w^2(\bfepsilon)}{\| \bfepsilon \|^2} (\BI_p - \bfS(\bfepsilon) \bfS(\bfepsilon)^T )\right] $. Then $\lambda_{\max} (\BA_w) \leq \BE( w(\bfepsilon)/\| \bfepsilon \|)$ and $\lambda_{\max} (\BD_w) \leq \BE( w(\bfepsilon)/\| \bfepsilon \|)^2$. Further, if (C3) and (C4) hold then $\lambda_{\min} (\BA_w) \geq \BE( w(\bfepsilon)/\| \bfepsilon \|)(1+o(1))/\sqrt 3$.
 \end{Lemma}
 %
 The proof now exactly follows steps in the proof of theorem 2.3 in \cite{WangPengLi15}, replacing vector signs by weighted signs, using the fact that $w(\bfepsilon)$ is bounded above by $M_w$ while applying conditions (C5)-(C6) and lemmas A.1, A.2, A.3, and finally using the above two lemmas in place of lemmas A.4 and A.5 respectively.
@@ -162,17 +161,19 @@ The proof now exactly follows steps in the proof of theorem 2.3 in \cite{WangPen
 The proof follows directly from writing out the expression of $Cov ( \tilde \bfX)$:
 %
 \begin{eqnarray*}
-Cov(\tilde\bfX) &=& E(\tilde\bfX \tilde\bfX^T) - E(\tilde\bfX) E(\tilde\bfX)^T\\
-&=& \Gamma . E \left[ (D^-_\bfZ(\bfz))^2 \frac{\|\bfz\|^2}{\| \Lambda^{1/2}\bfz\|} \Lambda^{1/2} \bfS(\bfz) \bfS(\bfz)^T \Lambda^{1/2} \right] \Gamma^T - {\bf 0}_p {\bf 0}_p^T\\
-&=& \Gamma .E \left[ (D^-_\bfZ(\bfz))^2 \frac{\Lambda^{1/2} \bfz \bfz^T \Lambda^{1/2}}{\bfz^T \Lambda \bfz} \right] \Gamma^T
+\BV \tilde\bfX &=& \BE (\tilde\bfX \tilde\bfX^T) - \BE \tilde\bfX \BE \tilde\bfX^T\\
+&=& \Gamma . \BE \left[ (D^-_\bfZ(\bfz))^2 \frac{\|\bfz\|^2}{\| \Lambda^{1/2}\bfz\|} \Lambda^{1/2} \bfS(\bfz) \bfS(\bfz)^T \Lambda^{1/2} \right] \Gamma^T - {\bf 0}_p {\bf 0}_p^T\\
+&=& \Gamma . \BE \left[ (D^-_\bfZ(\bfz))^2 \frac{\Lambda^{1/2} \bfz \bfz^T \Lambda^{1/2}}{\bfz^T \Lambda \bfz} \right] \Gamma^T
 \end{eqnarray*}
 %
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref{Lemma:lemma1}]
-For two positive definite matrices $A,B$, we denote by $A>B$ that $A-B$ is positive definite. Also, denote
+For two positive definite matrices $\BA, \BB$, we denote by $ \BA > \BB$ that $\BA-\BB$ is positive definite. Also, denote
 %
-$$ S_n = \sqrt n \left[ \frac{1}{n} \sum_{i=1}^n \left| (\tilde D^{n} _\bfX (\bfx_i))^2  - (D^-_\bfX (\bfx_i))^2 \right| SS(\bfx_i; \hat\bfmu_n) \right] $$
+$$
+\BS_n = \sqrt n \left[ \frac{1}{n} \sum_{i=1}^n \left| ( D^{n-} _\bfX (\bfx_i))^2  - (D^-_\bfX (\bfx_i))^2 \right| \BS( \bfx_i; \hat\bfmu_n) \right].
+$$
 %
 %Consider now the quantity $\bft^T S_n \bft$, where $\bft \in \mathbb{R}^p$. Now applying Cauchy-Schwarz inequality we shall have
 %%
@@ -182,35 +183,36 @@ $$ S_n = \sqrt n \left[ \frac{1}{n} \sum_{i=1}^n \left| (\tilde D^{n} _\bfX (\bf
 %\end{eqnarray}
 %%
 %with $\hat S_n = \sum_{i=1}^n SS(\bfx_i, \hat\bfmu_n)/ \sqrt n$.
-Now due to the assumption of uniform convergence, given $\epsilon>0$ we can find $N \in \mathbb{N}$ such that
+Due to assumption (D1), given $\epsilon>0$ we can find $N \in \mathbb{N}$ such that
 %
 \begin{equation}
 \label{equation:lemma1eq}
-| (\tilde D^{n_1}_\bfX(\bfx_i))^2 - (D^-_\bfX(\bfx_i))^2 | < \epsilon
+| (D^{n_1 -}_\bfX(\bfx_i))^2 - (D^-_\bfX(\bfx_i))^2 | < \epsilon
 \end{equation}
 %
 for all $n_1 \geq N; i = 1,2,...,n_1$. This implies
 %
 \begin{eqnarray}
-\label{eqn:lemma1eq2}
-S_{n_1} &< & \epsilon \sqrt{n_1} \left[ \frac{1}{n_1} \sum_{i=1}^{n_1} SS(\bfx_i; \hat\bfmu_{n_1}) \right]\notag\\
-&=& \epsilon \sqrt{n_1} \left[ \frac{1}{n_1} \sum_{i=1}^{n_1} \left\{ SS(\bfx_i; \hat\bfmu_{n_1}) - SS(\bfx_i; \bfmu) \right\} + \frac{1}{n_1} \sum_{i=1}^{n_1} SS(\bfx_i; \bfmu) \right]
+\BS_{n_1} &< & \epsilon \sqrt{n_1} \left[ \frac{1}{n_1} \sum_{i=1}^{n_1} \BS( \bfx_i; \hat\bfmu_{n_1}) \right]\notag\\
+&=& \epsilon \sqrt{n_1} \left[ \frac{1}{n_1} \sum_{i=1}^{n_1} \left\{ \BS( \bfx_i; \hat\bfmu_{n_1}) - \BS( \bfx_i; \bfmu) \right\} + \frac{1}{n_1} \sum_{i=1}^{n_1} \BS( \bfx_i; \bfmu) \right]\label{eqn:lemma1eq2}
 \end{eqnarray}
 
-We now construct a sequence of positive definite matrices $\{A_k (B_k+C_k) : k \in \mathbb N\} $ so that
+We now construct a sequence of positive definite matrices $\{a_k (B_k+C_k) : k \in \mathbb N\} $ so that
 %
-$$ A_k = \frac{1}{k}, \quad B_k = \sqrt{N_k} \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} \left\{ SS(\bfx_i; \hat\bfmu_{N_k}) - SS(\bfx_i; \bfmu) \right\} \right]$$
-$$\quad C_k = \sqrt{N_k} \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} SS(\bfx_i; \bfmu) \right] $$
+$$
+a_k = \frac{1}{k}, \quad \BB_k = \sqrt{N_k} \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} \left\{ \BS( \bfx_i; \hat\bfmu_{N_k}) - \BS(\bfx_i; \bfmu) \right\} \right],
+\quad \BC_k = \sqrt{N_k} \left[ \frac{1}{N_k} \sum_{i=1}^{N_k} \BS(\bfx_i; \bfmu) \right]
+$$
 %
-where $N_k \in \mathbb N$ gives the relation (\ref{equation:lemma1eq}) in place of $N$ when we take $\epsilon = 1/k$. Under conditions $ E\|\bfx - \bfmu\|^{-3/2} < \infty $ and $\sqrt n (\hat\bfmu_n - \bfmu) = O_P(1)$, the sample SCM with unknown location parameter $\hat\bfmu_n$ has the same asymptotic distribution as the SCM with known location $\bfmu$ \citep{durre14}, hence $B_k = o_P(1)$, thus $A_k (B_k+C_k) \stackrel{P}{\rightarrow} 0$.
+where $N_k \in \mathbb N$ gives the relation (\ref{equation:lemma1eq}) in place of $N$ when we take $\epsilon = 1/k$. Under conditions $ \BE \|\bfx - \bfmu\|^{-3/2} < \infty $ and $\sqrt n (\hat\bfmu_n - \bfmu) = O_P(1)$, the sample SCM with unknown location parameter $\hat\bfmu_n$ has the same asymptotic distribution as the SCM with known location $\bfmu$ \citep{durre14}, hence $\BB_k = o_P(1)$, thus $a_k (\BB_k + \BC_k) \stackrel{P}{\rightarrow} 0$.
 
-Now (\ref{eqn:lemma1eq2}) implies that for any $\epsilon_1 > 0$, $S_{N_k} > \epsilon_1 \Rightarrow A_k (B_k + C_k) > \epsilon_1$, which means $ P(S_{N_k} > \epsilon_1) < P(A_k (B_k + C_k) > \epsilon_1)$. Hence the subsequence $\{S_{N_k}\} \stackrel{P}{\rightarrow} 0$. Since the main sequence $\{S_k\}$ is bounded below by 0, this implies $\{S_k\} \stackrel{P}{\rightarrow} 0$. Finally, we have that
+Now \eqref{eqn:lemma1eq2} implies that for any $\epsilon_1 > 0$, $\BS_{N_k} > \epsilon_1 \Rightarrow a_k (\BB_k + \BC_k) > \epsilon_1$, which means $ P(\BS_{N_k} > \epsilon_1) < P(a_k (\BB_k + \BC_k) > \epsilon_1)$. Hence the subsequence $\{\BS_{N_k}\} \stackrel{P}{\rightarrow} 0$. Since the main sequence $\{\BS_k\}$ is bounded below by 0, this implies $\{\BS_k\} \stackrel{P}{\rightarrow} 0$. Finally, we have that
 %
 \begin{eqnarray}
 \sqrt n \left[
-\frac{1}{n} \sum_{i=1}^n (\tilde D^n_\bfX (\bfx_i))^2 SS(\bfx_i; \hat\bfmu_n) -
-\frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 SS(\bfx_i; \bfmu) \right] &\leq & \hspace{1em} \notag\\
-S_n +  \sqrt{n} \left[ \frac{1}{n} \sum_{i=1}^{n} \left\{ SS(\bfx_i; \hat\bfmu_{n}) - SS(\bfx_i; \bfmu) \right\} \right] &&
+\frac{1}{n} \sum_{i=1}^n ( D^{n-}_\bfX (\bfx_i))^2 \BS(\bfx_i; \hat\bfmu_n) -
+\frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 \BS(\bfx_i; \bfmu) \right] &\leq & \hspace{1em} \notag\\
+\BS_n +  \sqrt{n} \left[ \frac{1}{n} \sum_{i=1}^{n} \left\{ \BS(\bfx_i; \hat\bfmu_{n}) - \BS(\bfx_i; \bfmu) \right\} \right] &&
 \end{eqnarray}
 %
 Since the second summand on the right hand side is $o_P(1)$ due to \cite{durre14} as mentioned before, we have the needed.
@@ -220,8 +222,8 @@ Since the second summand on the right hand side is $o_P(1)$ due to \cite{durre14
 The quantity in the statement of the theorem can be broken down as:
 %
 \begin{eqnarray*}
-\sqrt n \left[ vec\left\{ \frac{1}{n} \sum_{i=1}^n (\tilde D^n_\bfX (\bfx_i))^2 SS(\bfx_i; \hat\bfmu_n) \right\} - vec\left\{ \frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 SS(\bfx_i; \bfmu) \right\} \right] +\\
-\sqrt n \left[ vec\left\{ \frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 SS(\bfx_i; \bfmu) \right\} - E \left[ vec\left\{ (D^-_\bfX (\bfx))^2 SS(\bfx; \bfmu) \right\} \right] \right]
+\sqrt n \left[ \ve \left\{ \frac{1}{n} \sum_{i=1}^n ( D^{n-}_\bfX (\bfx_i))^2 \BS(\bfx_i; \hat\bfmu_n) \right\} - \ve \left\{ \frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 \BS( \bfx_i; \bfmu) \right\} \right] +\\
+\sqrt n \left[ \ve \left\{ \frac{1}{n} \sum_{i=1}^n (D^-_\bfX (\bfx_i))^2 \BS( \bfx_i; \bfmu) \right\} - \BE \left[ \ve \left\{ (D^-_\bfX (\bfx))^2 \BS( \bfx; \bfmu) \right\} \right] \right]
 \end{eqnarray*}
 %
 The first part goes to 0 in probability by Lemma \ref{Lemma:lemma1}, and applying Slutsky's theorem we get the required convergence.
@@ -233,153 +235,161 @@ We are going to prove the following:
 \begin{enumerate}
 \item $\| \hat\Gamma_D - \Gamma \|_F \stackrel{P}{\rightarrow} 0$, and
 
-\item $\| \hat\Lambda - \Lambda \|_F \stackrel{P}{\rightarrow} 0$
+\item $\| \hat\Lambda - \Lambda \|_F \stackrel{P}{\rightarrow} 0$,
 \end{enumerate}
 %
-as $n \rightarrow \infty$. For (1), we notice $\sqrt n vec(\hat\Gamma_D - \Gamma)$ asymptotically has a (singular) multivariate normal distribution following Corollary \ref{Corollary:eigendist}, so that $\| \hat\Gamma_D - \Gamma \|_F = O_P(1/\sqrt n)$ using Prokhorov's theorem.
+as $n \rightarrow \infty$. For (1), we notice $\sqrt n \ve ( \hat\Gamma_D - \Gamma)$ asymptotically has a (singular) multivariate normal distribution following Corollary \ref{Corollary:eigendist}, so that $\| \hat\Gamma_D - \Gamma \|_F = O_P(1/\sqrt n)$ using Prokhorov's theorem.
 
-It is now enough to prove convergence in probability of the individual eigenvalue estimates $\hat\lambda_i; i = 1,...,p$. For this, define estimates $\tilde\lambda_i$ as median-of-small-variances estimator of the \textit{true} score vectors $\Gamma^T X$. For this we have
+It is now enough to prove convergence in probability of the individual eigenvalue estimates $\hat\lambda_i; i = 1,...,p$. For this, define estimates $\tilde\lambda_i$ as median-of-small-variances estimator of the \textit{true} score vectors $\Gamma^T \bfX$. For this we have
 %
 \begin{equation}\label{eqn:PluginSigmaProof1}
 | \tilde\lambda_i - \lambda_i | \stackrel{P}{\rightarrow} 0
 \end{equation}
 %
-using Theorem 3.1 of \cite{Minsker15}, with $\mu = \lambda_i$. Now $ \hat\lambda_i = \text{med}_j (Var( X_{G_j}^T \hat\bfgamma_{D,i} ))$ and $\tilde\lambda_i = \text{med}_j (Var( X_{G_j}^T \bfgamma_i )) $, so that
+using Theorem 3.1 of \cite{Minsker15}, with $\mu = \lambda_i$. Now $ \hat\lambda_i = \text{median}_j ( \BS ( \BX_{G_j} \hat\bfgamma_{D,i} ))$ and $\tilde\lambda_i = \text{median}_j ( \BS( \BX_{G_j} \bfgamma_i )) $, so that
 %
 \begin{eqnarray*}
-| \hat\lambda_i - \tilde\lambda_i | &\leq & \text{med}_j \left[ Var( X_{G_j}^T ( \hat\bfgamma_{D,i} - \bfgamma_i) ) \right]
-\\ &\leq & \| \hat\bfgamma_{D,i} - \bfgamma_i \|^2 \text{med}_j  \left[ \text{Tr} (Cov ( X_{G_j})) \right]
+| \hat\lambda_i - \tilde\lambda_i | &\leq & \text{median}_j \left[ \BS( \BX_{G_j} ( \hat\bfgamma_{D,i} - \bfgamma_i) ) \right]
+\\ &\leq & \| \hat\bfgamma_{D,i} - \bfgamma_i \|^2 \text{median}_j  \left[ \text{Tr} ( \BS( \BX_{G_j}) ) \right]
 \end{eqnarray*}
 %
-using Cauchy-Schwarz inequality. Combining the facts $ \| \hat\bfgamma_{D,i} - \bfgamma_i \| = O_P(1/\sqrt n)$ and $ \text{med}_j  [ \text{Tr} (Cov ( X_{G_j})) ] \stackrel{P}{\rightarrow} \text{Tr}(\Sigma)$ \citep{Minsker15} with (\ref{eqn:PluginSigmaProof1}), we get the needed.
+using Cauchy-Schwarz inequality. Combining the facts $ \| \hat\bfgamma_{D,i} - \bfgamma_i \| = O_P(1/\sqrt n)$ and $ \text{median}_j  [ \text{Tr} (\BS ( X_{G_j})) ] \stackrel{P}{\rightarrow} \text{Tr}(\Sigma)$ \citep{Minsker15} with (\ref{eqn:PluginSigmaProof1}), we get the needed.
 
 \end{proof}
 
 \begin{proof}[Proof of Corollary \ref{Corollary:eigendist}]
-In spirit, this corollary is similar to Theorem 13.5.1 in \cite{anderson}. Due to the decomposition (\ref{equation:decompEq}) we have, for the distribution $F_\Lambda$, the following relation between any off-diagonal element of $\hat S^D(F_\Lambda)$ and the corresponding element in the estimate of eigenvectors $\hat\Gamma_D (F_\Lambda)$:
+In spirit, this corollary is similar to Theorem 13.5.1 in \cite{anderson}. Due to the decomposition (\ref{equation:decompEq}) we have, for the distribution $F_\Lambda$, the following relation between any off-diagonal element of $\tilde \BS (\BF_\Lambda)$ and the corresponding element in the estimate of eigenvectors $\hat\Gamma_D (\BF_\Lambda)$:
 
-$$ \sqrt n \hat\gamma_{D,ij} (F_\Lambda) = \sqrt n \frac{\hat S^D_{ij} (F_\Lambda)}{\lambda_{D,S,i} - \lambda_{D,S,j}}; \quad i \neq j$$
+$$ \sqrt n \hat\gamma_{D,ij} (\BF_\Lambda) = \sqrt n \frac{\tilde \BS_{ij} (\BF_\Lambda)}{\lambda_{D,i} - \lambda_{D,j}}; \quad i \neq j$$
 
 So that for eigenvector estimates of the original $F$ we have
+%
+\begin{align}
+\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i) &= \sqrt n \Gamma (\hat \bfgamma_{D,i}(\BF_\Lambda) - \bfe_i )\notag\\
+&= \sqrt n \left[ \sum_{k=1; k \neq i}^p \hat \gamma_{D,ik}(\BF_\Lambda )\bfgamma_k + (\hat \gamma_{D,ii}(\BF_\Lambda) - 1)\bfgamma_i \right].\label{equation:app1}
+\end{align}
 
-\begin{equation} \label{equation:app1}
-\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i) = \sqrt n \Gamma (\hat \bfgamma_{D,i}(F_\Lambda) - \bfe_i ) = \sqrt n \left[ \sum_{k=1; k \neq i}^p \hat \gamma_{D,ik}(F_\Lambda)\bfgamma_k + (\hat \gamma_{D,ii}(F_\Lambda) - 1)\bfgamma_i \right]
-\end{equation}
-
-$\sqrt n (\hat \gamma_{D,ii}(F_\Lambda) - 1) =  o_P(1)$ and $ACov(\sqrt n \hat S^D_{ik}(F_\Lambda), \sqrt n \hat S^D_{il}(F_\Lambda)) = 0$ for $k \neq l$, so the above equation implies
-
-$$ A\BV(\bfg_i) = AVar (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i)) = \sum_{k=1; k \neq i}^p \frac{A\BV(\sqrt n \hat S^D_{ik}(F_\Lambda))}{(\lambda_{D,s,i} - \lambda_{D,S,k})^2} \bfgamma_k \bfgamma_k^T $$
+By assumption we now have $\sqrt n (\hat \gamma_{D,ii}(\BF_\Lambda) - 1) =  o_P(1)$ and $A\BV( \sqrt n \tilde \BS_{ik}(\BF_\Lambda), \sqrt n \tilde \BS_{il}(\BF_\Lambda)) = 0$ for $k \neq l$, so the above equation implies
+%
+$$
+A\BV(\bfg_i) = A\BV (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i)) =
+\sum_{k=1; k \neq i}^p \frac{A\BV(\sqrt n \tilde \BS_{ik}(\BF_\Lambda))}{(\lambda_{D,i} - \lambda_{D,k})^2} \bfgamma_k \bfgamma_k^T
+$$
 
 For the covariance terms, from (\ref{equation:app1}) we get, for $i \neq j$,
-
+%
 \begin{eqnarray*}
-ACov(\bfg_i, \bfg_j) &=& ACov (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i), \sqrt n (\hat\bfgamma_{D,j} - \bfgamma_j))\\
-&=& ACov \left( \sum_{k=1; k \neq i}^p \sqrt n \hat \gamma_{D,ik}(F_\Lambda)\bfgamma_k, \sum_{k=1; k \neq j}^p \sqrt n \hat \gamma_{D,jk}(F_\Lambda)\bfgamma_k \right)\\
-&=& ACov \left( \sqrt n \hat \gamma_{D,ij}(F_\Lambda)\bfgamma_j, \sqrt n \hat \gamma_{D,ji}(F_\Lambda)\bfgamma_i \right)\\
-&=& - \frac{A\BV(\sqrt n \hat S^D_{ij}(\Lambda))}{(\lambda_{D,s,i} - \lambda_{D,S,j})^2} \bfgamma_j \bfgamma_i^T
+A\BV( \bfg_i, \bfg_j) &=& A\BV (\sqrt n (\hat\bfgamma_{D,i} - \bfgamma_i), \sqrt n (\hat\bfgamma_{D,j} - \bfgamma_j))\\
+&=& A\BV \left( \sum_{k=1; k \neq i}^p \sqrt n \hat \gamma_{D,ik}(\BF_\Lambda)\bfgamma_k, \sum_{k=1; k \neq j}^p \sqrt n \hat \gamma_{D,jk}(\BF_\Lambda)\bfgamma_k \right)\\
+&=& A\BV \left( \sqrt n \hat \gamma_{D,ij}(\BF_\Lambda)\bfgamma_j, \sqrt n \hat \gamma_{D,ji}(\BF_\Lambda)\bfgamma_i \right)\\
+&=& - \frac{A\BV( \sqrt n \tilde \BS_{ij}(\BF_\Lambda))}{(\lambda_{D,i} - \lambda_{D,j})^2} \bfgamma_j \bfgamma_i^T.
 \end{eqnarray*}
 
-The exact forms given in the statement of the corollary now follows from the  Form of $\BV_D$ in Appendix \ref{section:appA}.
+The exact forms given in the statement of the corollary now follows from the  Form of $\BV_D (\BF)$ in Appendix \ref{section:appA}.
 
-\paragraph{}For the on-diagonal elements of $\hat S^D(F_\Lambda)$ Theorem \ref{Theorem:decomp} gives us $ \sqrt n \hat\lambda_{D,s,i} (F_\Lambda) = \sqrt n \hat S^D_{ii}(F_\Lambda)$ for $i = 1,...,p$. Hence
-
+\paragraph{}For the on-diagonal elements of $\tilde \BS(\BF_\Lambda)$, Theorem \ref{Theorem:decomp} gives us $ \sqrt n \hat\lambda_{D,i} ( \BF_\Lambda) = \sqrt n \tilde \BS_{ii}(\BF_\Lambda)$ for $i = 1,...,p$. Hence
+%
 \begin{eqnarray*}
-A\BV(l_i) &=& A\BV(\sqrt n \hat\lambda_{D,s,i} - \sqrt n \lambda_{D,S,i})\\
-&=& A\BV(\sqrt n \hat\lambda_{D,s,i} (F_\Lambda) - \sqrt n \lambda_{D,S,i}(F_\Lambda))\\
-&=& A\BV(\sqrt n S^D_{ii}(F_\Lambda))
+A\BV(l_i) &=& A\BV(\sqrt n \hat\lambda_{D,i} - \sqrt n \lambda_{D,i})\\
+&=& A\BV(\sqrt n \hat\lambda_{D,i} (\BF_\Lambda) - \sqrt n \lambda_{D,i}(\BF_\Lambda))\\
+&=& A\BV(\sqrt n \BS_{ii}(\BF_\Lambda)).
 \end{eqnarray*}
 
-A similar derivation gives the expression for $A\BV(l_i,l_j); i \neq j$. Finally, since the asymptotic covariance between an on-diagonal and an off-diagonal element of $\hat S^D(F_\Lambda)$, it follows that the elements of $G$ and diagonal elements of $L$ are independent.
+A similar derivation gives the expression for $A\BV(l_i,l_j); i \neq j$. Finally, since the asymptotic covariance between an on-diagonal and an off-diagonal element of $\tilde \BS( \BF_\Lambda)$, it follows that the elements of $\BG_D$ and diagonal elements of $\BL_D$ are independent.
 \end{proof}
 
+\section{Additional simulations}
+\label{sec:appD}
+Here we give tables of finite sample efficiencies of DCM and ADCMs for $p=2,3$.
+
 \begin{table}[t]
-\begin{footnotesize}
+\begin{scriptsize}
     \begin{tabular}{c|cc|ccc|ccc}
     \hline
-    $F$ = Bivariate $t_5$    & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = Bivariate $t_5$    & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.80 & 0.83  & 0.95   & 0.95   & 0.89  & 1.00    & 0.96    & 0.89   \\
     $n$=50                   & 0.86 & 0.90  & 1.25   & 1.10   & 1.21  & 1.32    & 1.13    & 1.25   \\
     $n$=100                  & 1.02 & 1.04  & 1.58   & 1.20   & 1.54  & 1.67    & 1.24    & 1.63   \\
     $n$=300                  & 1.24 & 1.28  & 1.81   & 1.36   & 1.82  & 1.93    & 1.44    & 1.95   \\
     $n$=500                  & 1.25 & 1.29  & 1.80   & 1.33   & 1.84  & 1.91    & 1.39    & 1.97   \\ \hline
-    $F$ = Bivariate $t_6$    & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = Bivariate $t_6$    & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.77 & 0.79  & 0.92   & 0.92   & 0.86  & 0.96    & 0.92    & 0.85   \\
     $n$=50                   & 0.76 & 0.78  & 1.11   & 1.00   & 1.08  & 1.17    & 1.03    & 1.13   \\
     $n$=100                  & 0.78 & 0.79  & 1.27   & 1.06   & 1.33  & 1.35    & 1.11    & 1.41   \\
     $n$=300                  & 0.88 & 0.91  & 1.29   & 1.09   & 1.35  & 1.38    & 1.15    & 1.45   \\
     $n$=500                  & 0.93 & 0.96  & 1.37   & 1.13   & 1.40  & 1.44    & 1.19    & 1.48   \\ \hline
-    $F$ = Bivariate $t_{10}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = Bivariate $t_{10}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.70 & 0.72  & 0.83   & 0.84   & 0.77  & 0.89    & 0.87    & 0.79   \\
     $n$=50                   & 0.58 & 0.60  & 0.90   & 0.84   & 0.86  & 0.95    & 0.88    & 0.91   \\
     $n$=100                  & 0.57 & 0.59  & 0.92   & 0.87   & 0.97  & 0.98    & 0.90    & 1.03   \\
     $n$=300                  & 0.62 & 0.64  & 0.93   & 0.85   & 0.99  & 0.99    & 0.91    & 1.06   \\
     $n$=500                  & 0.62 & 0.65  & 0.93   & 0.86   & 1.00  & 1.00    & 0.92    & 1.08   \\ \hline
-    $F$ = Bivariate $t_{15}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = Bivariate $t_{15}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.63 & 0.66  & 0.76   & 0.78   & 0.72  & 0.81    & 0.81    & 0.73   \\
     $n$=50                   & 0.52 & 0.52  & 0.79   & 0.75   & 0.80  & 0.84    & 0.79    & 0.85   \\
     $n$=100                  & 0.51 & 0.52  & 0.83   & 0.77   & 0.88  & 0.88    & 0.81    & 0.94   \\
     $n$=300                  & 0.55 & 0.56  & 0.84   & 0.79   & 0.91  & 0.89    & 0.84    & 0.98   \\
     $n$=500                  & 0.56 & 0.59  & 0.85   & 0.80   & 0.93  & 0.91    & 0.86    & 0.99   \\ \hline
-    $F$ = Bivariate $t_{25}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = Bivariate $t_{25}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.63 & 0.65  & 0.77   & 0.79   & 0.74  & 0.80    & 0.81    & 0.74   \\
     $n$=50                   & 0.49 & 0.50  & 0.73   & 0.71   & 0.76  & 0.78    & 0.75    & 0.80   \\
     $n$=100                  & 0.45 & 0.46  & 0.73   & 0.69   & 0.81  & 0.78    & 0.73    & 0.87   \\
     $n$=300                  & 0.51 & 0.52  & 0.78   & 0.75   & 0.87  & 0.83    & 0.79    & 0.94   \\
     $n$=500                  & 0.53 & 0.55  & 0.79   & 0.75   & 0.87  & 0.84    & 0.80    & 0.94   \\ \hline
-    $F$ = BVN                & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    $F$ = BVN                & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20                   & 0.56 & 0.60  & 0.69   & 0.71   & 0.67  & 0.73    & 0.74    & 0.68   \\
     $n$=50                   & 0.42 & 0.43  & 0.66   & 0.66   & 0.70  & 0.71    & 0.69    & 0.75   \\
     $n$=100                  & 0.42 & 0.43  & 0.69   & 0.66   & 0.77  & 0.74    & 0.71    & 0.83   \\
     $n$=300                  & 0.47 & 0.49  & 0.71   & 0.69   & 0.82  & 0.76    & 0.73    & 0.88   \\
     $n$=500                  & 0.48 & 0.50  & 0.73   & 0.71   & 0.83  & 0.78    & 0.76    & 0.89   \\ \hline
     \end{tabular}
-\end{footnotesize}
+\end{scriptsize}
 \caption{Finite sample efficiencies of several scatter matrices: $p=2$}
 \label{table:FSEtable2}
 \end{table}
 
 \begin{table}[t]
-\begin{footnotesize}
+\begin{scriptsize}
    \begin{tabular}{c|cc|ccc|ccc}
     \hline
-    3-variate $t_5$    & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate $t_5$    & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.96 & 0.97  & 1.06   & 1.03   & 0.99  & 1.07    & 1.06    & 0.97   \\
     $n$=50             & 1.07 & 1.08  & 1.28   & 1.20   & 1.18  & 1.33    & 1.23    & 1.20   \\
     $n$=100            & 1.12 & 1.15  & 1.49   & 1.31   & 1.40  & 1.57    & 1.38    & 1.48   \\
     $n$=300            & 1.49 & 1.54  & 2.09   & 1.82   & 2.07  & 2.19    & 1.93    & 2.18   \\
     $n$=500            & 1.60 & 1.66  & 2.18   & 1.87   & 2.21  & 2.27    & 1.95    & 2.30   \\ \hline
-    3-variate $t_6$    & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate $t_6$    & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.90 & 0.92  & 1.00   & 0.99   & 0.95  & 1.02    & 1.01    & 0.94   \\
     $n$=50             & 0.95 & 0.96  & 1.16   & 1.09   & 1.09  & 1.21    & 1.14    & 1.11   \\
     $n$=100            & 0.98 & 0.99  & 1.32   & 1.22   & 1.25  & 1.38    & 1.27    & 1.29   \\
     $n$=300            & 1.10 & 1.14  & 1.57   & 1.40   & 1.58  & 1.62    & 1.47    & 1.64   \\
     $n$=500            & 1.17 & 1.20  & 1.57   & 1.43   & 1.60  & 1.63    & 1.51    & 1.67   \\ \hline
-    3-variate $t_{10}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate $t_{10}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.87 & 0.88  & 0.95   & 0.94   & 0.90  & 0.97    & 0.98    & 0.89   \\
     $n$=50             & 0.77 & 0.79  & 0.96   & 0.92   & 0.94  & 0.99    & 0.96    & 0.95   \\
     $n$=100            & 0.75 & 0.76  & 1.02   & 0.95   & 1.01  & 1.06    & 1.00    & 1.05   \\
     $n$=300            & 0.73 & 0.75  & 1.03   & 0.98   & 1.10  & 1.08    & 1.03    & 1.15   \\
     $n$=500            & 0.73 & 0.76  & 1.02   & 0.98   & 1.09  & 1.06    & 1.02    & 1.14   \\ \hline
-    3-variate $t_{15}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate $t_{15}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.84 & 0.86  & 0.92   & 0.92   & 0.89  & 0.94    & 0.94    & 0.87   \\
     $n$=50             & 0.75 & 0.76  & 0.92   & 0.90   & 0.90  & 0.96    & 0.94    & 0.93   \\
     $n$=100            & 0.66 & 0.67  & 0.91   & 0.87   & 0.95  & 0.96    & 0.92    & 1.00   \\
     $n$=300            & 0.61 & 0.64  & 0.90   & 0.87   & 1.00  & 0.93    & 0.91    & 1.04   \\
     $n$=500            & 0.65 & 0.67  & 0.89   & 0.87   & 0.99  & 0.93    & 0.91    & 1.03   \\ \hline
-    3-variate $t_{25}$ & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate $t_{25}$ & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.78 & 0.79  & 0.87   & 0.89   & 0.87  & 0.89    & 0.92    & 0.86   \\
     $n$=50             & 0.70 & 0.71  & 0.88   & 0.86   & 0.88  & 0.91    & 0.90    & 0.90   \\
     $n$=100            & 0.61 & 0.63  & 0.86   & 0.83   & 0.89  & 0.90    & 0.88    & 0.94   \\
     $n$=300            & 0.58 & 0.59  & 0.83   & 0.80   & 0.92  & 0.87    & 0.85    & 0.98   \\
     $n$=500            & 0.62 & 0.64  & 0.83   & 0.82   & 0.94  & 0.88    & 0.87    & 0.99   \\ \hline
-    3-variate Normal   & SCM  & Tyler & HSD-CM & MhD-CM & PD-CM & HSD-wCM & MhD-wCM & PD-wCM \\ \hline
+    3-variate Normal   & SCM  & Tyler & DCM-H & DCM-M & DCM-P & ADCM-H & ADCM-M & ADCM-P \\ \hline
     $n$=20             & 0.76 & 0.78  & 0.85   & 0.87   & 0.84  & 0.87    & 0.90    & 0.83   \\
     $n$=50             & 0.66 & 0.67  & 0.82   & 0.81   & 0.84  & 0.86    & 0.86    & 0.86   \\
     $n$=100            & 0.56 & 0.58  & 0.77   & 0.75   & 0.83  & 0.82    & 0.79    & 0.87   \\
     $n$=300            & 0.53 & 0.55  & 0.75   & 0.74   & 0.85  & 0.79    & 0.78    & 0.90   \\
     $n$=500            & 0.56 & 0.58  & 0.76   & 0.76   & 0.87  & 0.80    & 0.80    & 0.92   \\ \hline
     \end{tabular}
-\end{footnotesize}
+\end{scriptsize}
 \caption{Finite sample efficiencies of several scatter matrices: $p=3$}
 \label{table:FSEtable3}
 \end{table}
