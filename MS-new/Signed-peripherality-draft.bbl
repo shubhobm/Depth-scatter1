@@ -17,8 +17,8 @@ Boente, G. and Salibian-Barrera, M. (2015).
 
 \bibitem[Brown, 1983]{brown83}
 Brown, B. (1983).
-\newblock Statistical {U}se of the {S}patial {M}edian.
-\newblock {\em J. Royal Statist. Soc. B}, 45:25--30.
+\newblock Statistical use of the spatial median.
+\newblock {\em J. R. Statist. Soc. B}, 45:25--30.
 
 \bibitem[Chakraborty and Chaudhuri, 1996]{ChakrabortyChaudhuri96}
 Chakraborty, B. and Chaudhuri, P. (1996).
@@ -85,7 +85,7 @@ Dutta, S. and Ghosh, A. (2012).
 El~Karoui, N. (2009).
 \newblock {Concentration of Measure and Spectra of Random Matrices: with
   Applications to Correlation Matrices, Elliptical Distributions and Beyond}.
-\newblock {\em Ann. Applied Probab.}, 19:2362--2405.
+\newblock {\em Ann. Appl. Probab.}, 19:2362--2405.
 
 \bibitem[Esbensen et~al., 1994]{esbensen94}
 Esbensen, K.~H., Sch\"{o}nkopf, S., and Midtgaard, T. (1994).
@@ -104,7 +104,7 @@ Ghosh, A. and Chaudhuri, P. (2005).
 \newblock {\em Scand. J. Statist.}, 32:327--350.
 
 \bibitem[Haldane, 1948]{haldane48}
-Haldane, J. (1948).
+Haldane, J. B.~S. (1948).
 \newblock Note on the {M}edian of a {M}ultivariate {D}istribution.
 \newblock {\em Biometrika}, 35:414--415.
 
@@ -166,7 +166,7 @@ Minsker, S. (2015).
 \bibitem[M\"{o}tt\"{o}nen and Oja, 1995]{MottonenOja95}
 M\"{o}tt\"{o}nen, J. and Oja, H. (1995).
 \newblock Multivariate spatial sign and rank methods.
-\newblock {\em J. Nonparametric Stat.}
+\newblock {\em J. Nonparametric Stat.}, 5:201--213.
 
 \bibitem[Oja, 1983]{oja83}
 Oja, H. (1983).
@@ -197,7 +197,7 @@ Sirki\"{a}, S., Taskinen, S., and Oja, H. (2007).
 \bibitem[Taskinen et~al., 2012]{taskinen12}
 Taskinen, S., Koch, I., and Oja, H. (2012).
 \newblock Robustifying principal component analysis with spatial sign vectors.
-\newblock {\em Statist. and Prob. Lett.}, 82:765--774.
+\newblock {\em Statist. Probab. Lett.}, 82:765--774.
 
 \bibitem[Tyler, 1987]{tyler87}
 Tyler, D. (1987).

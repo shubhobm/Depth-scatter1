@@ -13,9 +13,9 @@ $$
 \noindent\textbf{(B2)} There exists a positive constant $M(P,\BF) $ such that $P(\bfx; \BF) \rightarrow M(P,\BF)$ as $\|\bfx\| \rightarrow \infty $.
 \vspace{1em}
 
-Condition (A2) in Section~\ref{section:LocSection} is now replaced by the stronger condition (B2). Note that all the current conditions are essentially the opposite of those imposed on a traditional depth function \citep{zuo00}. Given a depth function, the peripherality functions in this section can be defined as a bounded monotonically decreasing function of it. Consequently, we use the term {\it inverse depth function} in place of peripherality functions in this section, denoting them by $D^-(\bfx,\BF)$, or equivalently $D^-_\bfX(\bfx)$.
+Condition (A2) in Section~\ref{section:LocSection} is now replaced by the stronger condition (B2). Note that all the current conditions are essentially the opposite of those imposed on a traditional depth function \citep{zuo00}. Given a depth function, the peripherality functions in this section can be defined as a bounded monotonically decreasing function of it. Consequently, we use the term {\it inverse depth function} \citep{MajumdarChatterjeeStat} in place of peripherality functions in this section, denoting them by $D^-(\bfx,\BF)$, or equivalently $D^-_\bfX(\bfx)$. For ease of exposition, we stick to the following inverse transformation: $D^-_\bfX(\bfx) = \sup_\bfy D^-_\bfX(\bfy) - D^-_\bfX(\bfx)$ from now on. The theoretical results go through with minor changes for other choices of inverse depths.
 
-Given an inverse depth function $D^-_{\bfX}(\bfx)$ we transform the original random variable as: $\tilde \bfX = D^-_\bfX(\bfx) \bfS(\bfx - \bfmu)$. We use the transformed data matrix $\tilde \BX = (\tilde \bfx_1, \ldots, \tilde \bfx_n)^T$ as proxy of the original data matrix $\BX$ for improved estimation of the components of the population covariance matrix $\Sigma$ in this section. To this end, in Section~\ref{subsec:dcm} we give some results characterizing the population covariance matrix of these vectors, i.e. $\BV \tilde \bfX$, and its affine equivariant counterpart. Section~\ref{subsec:dcm} gives asymptotic properties of their finite sample versions. In Section~\ref{subsec:robustPCA}, we use eigenvectors of these estimates for robust PCA, deriving their influence functions, as well as asymptotic and finite sample efficiencies. Finally in Section~\ref{subsec:plugin}, we calculate robust estimates of eigenvalues and propose a plug-in robust estimate of $\Sigma$.
+Given a choice of inverse depth function $D^-_{\bfX}(\bfx)$, we transform the original random variable as: $\tilde \bfX = D^-_\bfX(\bfx) \bfS(\bfx - \bfmu)$. We use the transformed data matrix $\tilde \BX = (\tilde \bfx_1, \ldots, \tilde \bfx_n)^T$ as proxy of the original data $\BX$ for improved estimation of the components of the population covariance matrix $\Sigma$ in this section. To this end, in Section~\ref{subsec:dcm} we give some results characterizing the population covariance matrix of these vectors, i.e. $\BV \tilde \bfX$, and its affine equivariant counterpart. Section~\ref{subsec:sample-DCM} gives asymptotic properties of their finite sample versions. In Section~\ref{subsec:robustPCA}, we use eigenvectors of these estimates for robust PCA, deriving their influence functions, as well as asymptotic and finite sample efficiencies. Finally in Section~\ref{subsec:plugin}, we calculate robust estimates of eigenvalues and propose a plug-in robust estimate of $\Sigma$.
 
 %Data depth is as much a property of a vector-valued random variable $\bfX \in \mathbb{R}^p$ as it is of the underlying distribution $F$, so for ease of notation while working with transformed random variables, from now on we shall be using $D_\bfX(\bfx) = D(\bfx, F)$ to denote the depth of a point $\bfx$. Now, given a depth function $D_{\bfX}(\bfx)$ (equivalently, an htped function $D^-_\bfX(\bfx) = D^-(\bfx, F)$), transform the original random variable as: $\tilde \bfx = \tilde D_\bfX(\bfx) \bfS(\bfx - \bfmu)$, $\bfS(.)$ being the spatial sign functional. The transformed random variable $\tilde \bfX$ can be seen as the multivariate rank corresponding to $\bfX$ (e.g. \cite{serfling2006}). 
 
@@ -161,14 +161,14 @@ In the M-estimation framework of \cite{HuberBook81}, for any fixed $\Sigma_M$ th
 In practice, it is difficult to calculate the scale multiple $\BV \tilde Z_1$ analytically for known depth functions and an arbitrary $\BF$. We bypass this by instead obtaining a standardized version of the scatter functional: $\Sigma_{Dw}^* = \Sigma_{Dw} / \BV \tilde Z_1$ (and $\bfmu_{Dw}$) using the following iterative algorithm:
 
 \begin{enumerate}
-\item Start from some initial estimates $(\bfmu_{Dw}^{(0)}, \Sigma_{Dw}^{(0)}$. Set $t=0$;
+\item Start from some initial estimates $(\bfmu_{Dw}^{(0)}, \Sigma_{Dw}^{(0)})$. Set $t=0$;
 
 \item Calculate the standardized observations $\bfz_i^{(t)} = (\Sigma_{Dw}^{(t)})^{-1/2} (\bfx_i - \bfmu_{Dw}^{(t)})$;
 
 \item Update the location estimate:
 %
 $$
-\bfmu_{Dw}^{(t+1)} = \frac{\sum_{i=1}^n \tilde \bfx_i / \| \bfz_i^{(t)} \| }{\sum_{i=1}^n 1 / \| \bfz_i^{(t)} \|};
+\bfmu_{Dw}^{(t+1)} = \frac{\sum_{i=1}^n \tilde \bfx_i / \| \bfz_i^{(t)} \| }{\sum_{i=1}^n \| \bfz_i^{(t)} \|^{-1} };
 $$
 %
 \item Update the scatter estimate:

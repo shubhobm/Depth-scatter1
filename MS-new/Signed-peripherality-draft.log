@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.9)  30 MAR 2018 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.9)  1 APR 2018 10:25
 entering extended mode
 **./Signed-peripherality-draft.tex
 (Signed-peripherality-draft.tex
@@ -453,7 +453,7 @@ Overfull \hbox (4.22543pt too wide) detected at line 178
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 217.
 
-<../Codes/IFnorm.png, id=344, 752.8125pt x 1003.75pt>
+<../Codes/IFnorm.png, id=346, 752.8125pt x 1003.75pt>
 File: ../Codes/IFnorm.png Graphic file (type png)
 
 <use ../Codes/IFnorm.png>
@@ -479,7 +479,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- <../Codes/SDRcomparison_noout.pdf, id=427, 361.35pt x 361.35pt>
+ <../Codes/SDRcomparison_noout.pdf, id=429, 361.35pt x 361.35pt>
 File: ../Codes/SDRcomparison_noout.pdf Graphic file (type pdf)
 
 <use ../Codes/SDRcomparison_noout.pdf>
@@ -487,7 +487,7 @@ Package pdftex.def Info: ../Codes/SDRcomparison_noout.pdf used on input line 45
 .
 (pdftex.def)             Requested size: 148.76749pt x 148.76648pt.
 
-<../Codes/SDRcomparison_out.pdf, id=428, 361.35pt x 361.35pt>
+<../Codes/SDRcomparison_out.pdf, id=430, 361.35pt x 361.35pt>
 File: ../Codes/SDRcomparison_out.pdf Graphic file (type pdf)
 
 <use ../Codes/SDRcomparison_out.pdf>
@@ -495,7 +495,7 @@ Package pdftex.def Info: ../Codes/SDRcomparison_out.pdf used on input line 46.
 (pdftex.def)             Requested size: 148.76749pt x 148.76648pt.
 ) (5_Functional.tex [19] [20 <../Codes/SDRcomparison_noout.pdf> <../Codes/SDRco
 mparison_out.pdf>]
-<../Codes/Elnino_functional1.pdf, id=463, 289.08pt x 289.08pt>
+<../Codes/Elnino_functional1.pdf, id=465, 289.08pt x 289.08pt>
 File: ../Codes/Elnino_functional1.pdf Graphic file (type pdf)
 
 <use ../Codes/Elnino_functional1.pdf>
@@ -503,7 +503,7 @@ Package pdftex.def Info: ../Codes/Elnino_functional1.pdf used on input line 28.
 
 (pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Octane_functional1.pdf, id=464, 289.08pt x 289.08pt>
+<../Codes/Octane_functional1.pdf, id=466, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional1.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional1.pdf>
@@ -511,7 +511,7 @@ Package pdftex.def Info: ../Codes/Octane_functional1.pdf used on input line 29.
 
 (pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Elnino_functional2.pdf, id=465, 289.08pt x 289.08pt>
+<../Codes/Elnino_functional2.pdf, id=467, 289.08pt x 289.08pt>
 File: ../Codes/Elnino_functional2.pdf Graphic file (type pdf)
 
 <use ../Codes/Elnino_functional2.pdf>
@@ -519,7 +519,7 @@ Package pdftex.def Info: ../Codes/Elnino_functional2.pdf used on input line 31.
 
 (pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Octane_functional2.pdf, id=466, 289.08pt x 289.08pt>
+<../Codes/Octane_functional2.pdf, id=468, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional2.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional2.pdf>
@@ -527,7 +527,7 @@ Package pdftex.def Info: ../Codes/Octane_functional2.pdf used on input line 32.
 
 (pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Elnino_functional3.pdf, id=467, 289.08pt x 289.08pt>
+<../Codes/Elnino_functional3.pdf, id=469, 289.08pt x 289.08pt>
 File: ../Codes/Elnino_functional3.pdf Graphic file (type pdf)
 
 <use ../Codes/Elnino_functional3.pdf>
@@ -535,7 +535,7 @@ Package pdftex.def Info: ../Codes/Elnino_functional3.pdf used on input line 34.
 
 (pdftex.def)             Requested size: 148.76749pt x 148.76537pt.
 
-<../Codes/Octane_functional3.pdf, id=468, 289.08pt x 289.08pt>
+<../Codes/Octane_functional3.pdf, id=470, 289.08pt x 289.08pt>
 File: ../Codes/Octane_functional3.pdf Graphic file (type pdf)
 
 <use ../Codes/Octane_functional3.pdf>
@@ -597,7 +597,7 @@ Overfull \hbox (11.85493pt too wide) in paragraph at lines 272--274
 95 ; [][]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 F[]\OT1/cmr/m/n/10.95 )) =
  []
 
-) (Signed-peripherality-draft.bbl [28] [29] [30]
+[28]) (Signed-peripherality-draft.bbl [29] [30]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
@@ -621,7 +621,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
 Here is how much of TeX's memory you used:
  8520 strings out of 493333
  125168 string characters out of 3137901
- 251235 words of memory out of 3000000
+ 243235 words of memory out of 3000000
  11712 multiletter control sequences out of 15000+200000
  23557 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -653,9 +653,9 @@ public/amsfonts/cm/cmti8.pfb><D:/Study/LaTeX/MikTeX 2.9.6161/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb><D:/Study/LaTeX/MikTeX 2.9.6161/fonts/type1/public/amsf
 onts/symbols/msam10.pfb><D:/Study/LaTeX/MikTeX 2.9.6161/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on Signed-peripherality-draft.pdf (32 pages, 712727 bytes).
+Output written on Signed-peripherality-draft.pdf (32 pages, 714100 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
+ 768 PDF objects out of 1000 (max. 8388607)
  170 named destinations out of 1000 (max. 500000)
  195 words of extra memory for PDF output out of 10000 (max. 10000000)
 
