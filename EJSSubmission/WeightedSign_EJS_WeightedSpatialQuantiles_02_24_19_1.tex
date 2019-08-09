@@ -13,12 +13,14 @@ as the minimizer $q (u, \BF) \in \cX$ of
 \label{eq:WeightedQuantile}
 \eaq
 %
-\rework{
-This is a natural generalization of the spatial median \cite{ref:JASA96862_Chaudhuri, ref:Biometrika48414_Haldane,ref:AoS97435_Koltchinskii}, or more general spatial quantiles \cite{ref:AoS17591_Cardotetal_Median_HilbertSpace, ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile, ref:Bernoulli152308_Minsker_Median_Banach}. In what follows, for brevity we elaborate only the case of the \textit{weighted spatial median} (thus 
-$\Psi (q; 0, \BF) = \BE \bigl[ W (X, \BF) | X - q | \bigr] $) for the case of finite dimensional $\cX$. Specifically, we demonstrate the utility of using the {\it weighted} spatial median as opposed to using the traditional, unweighted versions found in literature. The analysis and computation of the general weighted spatial quantiles will largely follow by extending the results of the above cited references, and we postpone details to a future study.
-}
+%\rework{
+\noindent
+This is a natural generalization of the spatial median \cite{ref:JASA96862_Chaudhuri, ref:Biometrika48414_Haldane,ref:AoS97435_Koltchinskii} ($W(X, \BF) \equiv 1$ and $u = {\bf 0}_p$), or more general spatial quantiles \cite{ref:AoS17591_Cardotetal_Median_HilbertSpace, ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile, ref:Bernoulli152308_Minsker_Median_Banach} ($W(X, \BF) \equiv 1$). 
 
-Assume that we have independent and identically distributed observations $X_{1}, \ldots, X_{n} \in \cX$, and the sample weighted spatial median is computed by minimizing $\Psi_{n} (q; 0, \BF) = \sum_{i = 1}^{n} \bigl[ W (X_{i}, \BF) | X_{i} - q | \bigr] $, and is denoted by $\hat{q}_{nW}$, the second subscript is in acknowledgement that the weight function is used. We denote the unweighted version of this estimator, ie, the case where $W (X, \BF) \equiv 1$ as $\hat{q}_{n}$. Assume the following technical conditions:
+In what follows, for brevity we elaborate only the case of the \textit{weighted spatial median} (thus $\Psi (q; 0, \BF) = \BE \bigl[ W (X, \BF) | X - q | \bigr] $) for the case of finite dimensional $\cX$. Specifically, we demonstrate the utility of using the {\it weighted} spatial median as opposed to using the traditional, unweighted versions found in literature. The analysis and computation of the general weighted spatial quantiles will largely follow by extending the results of the above cited references, and we postpone details to a future study.
+%}
+
+Assume that we have independent and identically distributed observations $X_{1}, \ldots, X_{n} \in \cX$, and the sample weighted spatial median is computed by minimizing $\Psi_{n} (q; 0, \BF) = \sum_{i = 1}^{n} W (X_{i}, \BF) | X_{i} - q | $, and is denoted by $\hat{q}_{nW}$, the second subscript is in acknowledgement that the weight function is used. We denote the unweighted version of this estimator, ie, the case where $W (X, \BF) \equiv 1$ as $\hat{q}_{n}$. Assume the following technical conditions:
 
 \begin{description}
 \item[A1:] $\Psi (q; 0, \BF)$ is finite for all $q \in \cX \subseteq \BR^{p}$ 
@@ -37,21 +39,28 @@ and has a unique minimizer $q_{0}$.
  
  \begin{Theorem}
  \label{Thm:WSMedian}
- Under assumptions \textbf{[A1] - [A3]}, we have 
+ Under assumptions [A1]-[A3], we have 
  \ban 
  n^{1/2} (\hat{q}_{nW} - q_{0}) & \draro N(0, \Psi_{2}^{-1} \Psi_{1}^{2} \Psi_{2}^{-1}), 
  \text{ where } \\
  \Psi_{2} & = 
- \BE W (X, \BF) \Bigl[  |X - q|^{-1} \BI_{p} - |X - q|^{-3/2} (X - q) (X - q)^{T}  \Bigr] 
+ \BE W (X, \BF)\Bigl[  |X - q|^{-1} \BI_{p} - |X - q|^{-3/2} (X - q) (X - q)^{T}  \Bigr] 
  \\
- \Psi_{1}  & = n \BE   W^{2} (X, \BF)  \bfS (X; q_{0}) \bfS^{T} (X; q_{0}).
+ \Psi_{1}  & = \BE   W^{2} (X, \BF)  S (X; q_{0}) S^{T} (X; q_{0}).
  \ean
  \end{Theorem}
+
+%\rework{
 Thus, under very standard regularity conditions, the sample weighted spatial median 
-is consistent and is asymptotically normal.  
-Theorem~\ref{Thm:WSMedian}  can be proved in several different ways. We have used 
-techniques following \cite{ref:AoS891631_Haberman, ref:AoS921514_Niemiro}, 
-we omit the details.  
+is consistent and is asymptotically normal. Theorem~\ref{Thm:WSMedian}  can be proved in several different ways. Here we use techniques following \cite{ref:AoS891631_Haberman, ref:AoS921514_Niemiro}. Specifically, following Theorem 4 in \cite{ref:AoS921514_Niemiro}, which traces back to \cite{ref:AoS891631_Haberman} with slightly relaxed conditions, we get
+%
+\begin{align*}
+n^{1/2} (\hat{q}_{nW} - q_{0}) =
+- \frac{\Psi_2}{\sqrt n} \sum_{i=1}^n W (X_i, \BF)  S (X_i; q_0) + o_P(1).
+\end{align*}
+%
+Theorem~\ref{Thm:WSMedian} follows by applying the central limit theorem.
+%}
 
 \subsection{Asymptotic efficiency of weighted spatial median}
 Let $V_{W} = \Psi_{2}^{-1} \Psi_{1}^{2} \Psi_{2}^{-1}$ be the asymptotic 
@@ -70,8 +79,7 @@ is always greater than one. We document this in the following corollary:
 
 \begin{Corollary}
 \label{Cor:ARE}
-Assume that $|X - q_{0}|$ and $S (X; q_{0})$ are independent, and the weight function 
-$W (X, \BF)$ is a function of  $|X - q_{0}|$. Then
+\hl{Assume that the tuning parameter of the weight function, $\BF$}, is  the distribution of $X$. Also assume $|X - q_{0}|$ and $S (X; q_{0})$ are independent, and the weight function $W (X, \BF)$ is a function of  $|X - q_{0}|$. Then
 \ban
 & ARE (\hat{q}_{nW}, \hat{q}_{n}) \\
 & = 
@@ -81,7 +89,7 @@ $W (X, \BF)$ is a function of  $|X - q_{0}|$. Then
 \ean
 Consequently, if $W (X, \BF) = k   |X - q_{0}|^{-1}$ for some $k \in (0, 1]$, 
 then this asymptotic relative efficiency is 
-$ \{k^{-1} (\BE ||X - q_{0}|^{-1} )^{2} \BE |X - q_{0}|^{-2} \}^{1/p}> 1$. 
+$ \{k^{-1} (\BE |X - q_{0}|^{-1} )^{2} \BE |X - q_{0}|^{-2} \}^{1/p}> 1$. 
 \end{Corollary}
 
 It is possible to make the above asymptotic relative efficiency to tend to infinity with 
@@ -95,11 +103,8 @@ Let us concentrate on the case of where the distribution of $X$ is
 elliptically symmetric. Following \cite{ref:Fangetal90_Book}:
 
 \begin{Definition}
-A $p$-dimensional random vector $X$ is said to elliptically distributed if 
-there exist a vector $\mu \in \BR^p$, a positive semi-definite matrix 
-$\Sigma \in \BR^{p \times p}$ and a function 
-$\phi: (0, \infty) \rightarrow \BR$ such that the characteristic function 
-of $X$ is $\exp \{ i t^{T} \mu \} \phi (\bft^T \Sigma \bft)$ for $\bft \in \BR^p$.
+A $p$-dimensional random vector $X$ is said to elliptically distributed if there exist a vector $\mu \in \BR^p$, a positive semi-definite matrix $\Sigma \in \BR^{p \times p}$ and a function 
+$\phi: (0, \infty) \rightarrow \BR$ such that the characteristic function of $X$ is $\exp \{ i t^{T} \mu \} \phi (\bft^T \Sigma \bft)$ for $\bft \in \BR^p$.
 \end{Definition}
 
 There are several alternative formulations, see the above reference and 
@@ -112,8 +117,7 @@ depends only on $|z|$, and  $\BE Z = \mathbf{0}_{p} \in \BR^{p}$ and $\BV Z = \B
 
 \begin{Corollary}
 \label{Cor:Elliptic_ARE}
-Assume that the tuning parameter of the weight function, $\BF$, is  the 
-distribution of $X$, and is an elliptically symmetric distribution, and $\mu = q_{0}$. 
+Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, and $\mu = q_{0}$. 
 Also assume that the weight function is affine invariant, that is:
 \ban
 W (A x + b, A \BF + b) = W (x, \BF),
@@ -164,7 +168,7 @@ It is easy to show that results in this paper are valid for the weight functions
 and  
 ($iii$) $W_{PD} (X) = |Z|/(1+ | Z |/MAD(\BF_{Z}))$, where $MAD$ stands for median 
 absolute deviation, derived from the \textit{projection depth}. We omit the technical 
-details. These three weight functions a center-inward partial ordering, thus essentially 
+details. These three weight functions give a center-inward partial ordering, thus essentially 
 quantifying \textit{peripherality} instead of \textit{depth}.
 Note however, that our results below are of much more general form, and 
 these three special choices of weights only serve as important illustrative examples 

@@ -13,5 +13,5 @@
 \contentsline {subsection}{\numberline {7.4}Robust sufficient dimension reduction and supervised learning}{17}{subsection.7.4}
 \contentsline {section}{\numberline {8}Real Data Applications}{19}{section.8}
 \contentsline {section}{\numberline {9}Conclusions}{20}{section.9}
-\contentsline {section}{Acknowledgements}{21}{section*.12}
-\contentsline {section}{References}{21}{section*.14}
+\contentsline {section}{Acknowledgements}{21}{section*.11}
+\contentsline {section}{References}{21}{section*.13}
