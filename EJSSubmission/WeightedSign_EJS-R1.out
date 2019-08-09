@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Weighted Spatial Quantiles}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Asymptotic efficiency of weighted spatial median}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Examples of affine invariant weights}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{A Robust Measure of Dispersion}{}% 5
+\BOOKMARK [1][-]{section.4}{An Affine Equivariant Robust Measure of Dispersion}{}% 6
+\BOOKMARK [1][-]{section.5}{Robust Estimation of Eigenvalues, and a Plug-in Estimator of }{}% 7
+\BOOKMARK [1][-]{section.6}{Influence Functions of Dispersion Measures}{}% 8
+\BOOKMARK [1][-]{section.7}{Simulation Studies}{}% 9
+\BOOKMARK [2][-]{subsection.7.1}{Efficiency of different robust estimators}{section.7}% 10
+\BOOKMARK [2][-]{subsection.7.2}{Influence function comparison}{section.7}% 11
+\BOOKMARK [2][-]{subsection.7.3}{Efficiency of affine equivariant robust estimator}{section.7}% 12
+\BOOKMARK [2][-]{subsection.7.4}{Robust sufficient dimension reduction and supervised learning}{section.7}% 13
+\BOOKMARK [1][-]{section.8}{Real Data Applications}{}% 14
+\BOOKMARK [1][-]{section.9}{Conclusions}{}% 15
+\BOOKMARK [1][-]{section*.12}{Acknowledgements}{}% 16
+\BOOKMARK [1][-]{section*.14}{References}{}% 17

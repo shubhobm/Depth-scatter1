@@ -1,0 +1,161 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\gdef\hy@title{On Weighted Multivariate Sign Functions}
+\thanksnewlabel{e1@email}{{subho@research.att.com}{0}}
+\thanksnewlabel{e2@email}{{chatt019@umn.edu}{0}}
+\thanksnewlabel{t1thanks}{{\TextOrMath  {\textasteriskcentered }{*}}{0}}
+\thanksnewlabel{t3thanks}{{\TextOrMath  {\textdagger }{\dagger }}{0}}
+\citation{ref:JNonpara95201_MottonenOja95}
+\citation{ref:Test991_Locantoreetal,ref:OjaBook10,ref:JASA151658_WangPengLi}
+\citation{ref:SPL12765_Taskinenetal}
+\citation{ref:Biometrika14673_MagyarTyler}
+\citation{ref:AoS87234_Tyler}
+\citation{ref:AoS00461_ZuoSerfling,ref:DIMACS061_Serfling}
+\gdef\hy@author{Subhabrata Majumdar and Snigdhansu Chatterjee}
+\gdef\hy@subject{Electronic Journal of Statistics 0000 Vol. 0 }
+\gdef\hy@keywords{62G35, 62H25, 62H20, 62G99Multivariate sign, Principal component analysis, Data depth, Sufficient dimension reduction}
+\gdef\author@num{2}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\newlabel{Sec:Introduction}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{eq:GSign}{{1}{1}{Introduction}{equation.1.1}{}}
+\newlabel{eqn:rank}{{2}{1}{Introduction}{equation.1.2}{}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{white}{}{yellow}{\leavevmode {\color  {yellow}o}}\  There are two unknown quantities in the generalized sign function as defined in \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:GSign}\unskip \@@italiccorr )}}: $\mu $ and ${\mathbb  {F}}$, To estimate dispersion and its eigen-structure robustly, we must start with a robust estimator for $\mu $. In Section\nobreakspace  {}\ref  {Sec:WSQuantiles} we present the case for \textit  {weighted spatial quantiles}, which can be defined and studied in very general spaces $\mathcal  {X}$. One special case of this is the {\it  weighted spatial median}. As a location estimator, it has several interesting robustness properties and can be shown to be more efficient that some existing robust location estimators, thus making it a perfect candidate to estimate $\mu $. On the other hand, setting ${\mathbb  {F}}$ as ${\mathbb  {F}}_X$, i.e. the distribution of $X$ has the clear interpretation of differentially weighting observations based on their inlyingness to the overall data distribution. This mirrors the context of how data depth has been used in the literature (refs). Due to this reason, except for two results in Section\nobreakspace  {}\ref  {Sec:WSQuantiles} (Theorem\nobreakspace  {}\ref  {Thm:WSMedian} and Corollary\nobreakspace  {}\ref  {Cor:ARE}) we assume ${\mathbb  {F}}\equiv {\mathbb  {F}}_X$ for the rest of the paper. However, other choices of ${\mathbb  {F}}$ may lead to interesting interpretations of $W(. ,{\mathbb  {F}})$ and the resulting quantities, e.g. (ref), and can potentially be explored further. }{2}{section*.4}}
+\pgfsyspdfmark {pgfid1}{20088094}{21601758}
+\citation{ref:JASA96862_Chaudhuri,ref:Biometrika48414_Haldane,ref:AoS97435_Koltchinskii}
+\citation{ref:AoS17591_Cardotetal_Median_HilbertSpace,ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile,ref:Bernoulli152308_Minsker_Median_Banach}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Weighted Spatial Quantiles}{3}{section.2}}
+\newlabel{Sec:WSQuantiles}{{2}{3}{Weighted Spatial Quantiles}{section.2}{}}
+\newlabel{eq:WeightedQuantile}{{3}{3}{Weighted Spatial Quantiles}{equation.2.3}{}}
+\@writefile{tdo}{\contentsline {todo}{\color@fb@x {}{white}{}{yellow}{\leavevmode {\color  {yellow}o}}\  This is a natural generalization of the spatial median \cite  {ref:JASA96862_Chaudhuri, ref:Biometrika48414_Haldane,ref:AoS97435_Koltchinskii}, or more general spatial quantiles \cite  {ref:AoS17591_Cardotetal_Median_HilbertSpace, ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile, ref:Bernoulli152308_Minsker_Median_Banach}. In what follows, for brevity we elaborate only the case of the \textit  {weighted spatial median} (thus $\Psi (q; 0, {\mathbb  {F}}) = {\mathbb  {E}}\mathopen {\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\nulldelimiterspace \z@ \left [\vcenter to\@ne \big@size {}\right .$}\box \z@ } W (X, {\mathbb  {F}}) | X - q | \mathclose {\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\nulldelimiterspace \z@ \left ]\vcenter to\@ne \big@size {}\right .$}\box \z@ } $) for the case of finite dimensional $\mathcal  {X}$. Specifically, we demonstrate the utility of using the {\it  weighted} spatial median as opposed to using the traditional, unweighted versions found in literature. The analysis and computation of the general weighted spatial quantiles will largely follow by extending the results of the above cited references, and we postpone details to a future study. }{3}{section*.5}}
+\pgfsyspdfmark {pgfid2}{20088094}{27281540}
+\newlabel{Thm:WSMedian}{{2.1}{3}{}{Theorem.2.1}{}}
+\citation{ref:AoS891631_Haberman,ref:AoS921514_Niemiro}
+\citation{ref:Fangetal90_Book}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Asymptotic efficiency of weighted spatial median}{4}{subsection.2.1}}
+\newlabel{Cor:ARE}{{2.2}{4}{}{Theorem.2.2}{}}
+\citation{ref:AoS00461_ZuoSerfling,ref:DIMACS061_Serfling}
+\newlabel{Cor:Elliptic_ARE}{{2.4}{5}{}{Theorem.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Examples of affine invariant weights}{5}{subsection.2.2}}
+\newlabel{eq:Peripherality}{{4}{5}{Examples of affine invariant weights}{equation.2.4}{}}
+\citation{ref:AoS112852_Balietal_PCA_Functional_Robust}
+\@writefile{toc}{\contentsline {section}{\numberline {3}A Robust Measure of Dispersion}{6}{section.3}}
+\newlabel{Sec:WSDispersion1}{{3}{6}{A Robust Measure of Dispersion}{section.3}{}}
+\newlabel{eq:tildeX}{{5}{6}{A Robust Measure of Dispersion}{equation.3.5}{}}
+\newlabel{eq:tildeSigma}{{6}{6}{A Robust Measure of Dispersion}{equation.3.6}{}}
+\citation{ref:SPL12765_Taskinenetal}
+\newlabel{Thm:WSVariance}{{3.1}{7}{}{Theorem.3.1}{}}
+\newlabel{Lemma:lemma1}{{3.2}{8}{}{Theorem.3.2}{}}
+\newlabel{Theorem:CLT1}{{3.3}{9}{}{Theorem.3.3}{}}
+\newlabel{Theorem:Eigen1}{{3.4}{9}{}{Theorem.3.4}{}}
+\citation{ref:SPL12765_Taskinenetal}
+\citation{ref:AndersonBook09}
+\citation{ref:HuberBook81}
+\newlabel{equation:DevEq}{{7}{10}{}{equation.3.7}{}}
+\newlabel{equation:covevEq}{{9}{10}{A Robust Measure of Dispersion}{equation.3.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}An Affine Equivariant Robust Measure of Dispersion}{10}{section.4}}
+\newlabel{Sec:WSDispersion2}{{4}{10}{An Affine Equivariant Robust Measure of Dispersion}{section.4}{}}
+\citation{ref:HuberBook81}
+\citation{ref:Biometrika00603_CrouxHaesbroeck}
+\newlabel{eqn:ADCM}{{10}{11}{An Affine Equivariant Robust Measure of Dispersion}{equation.4.10}{}}
+\newlabel{Thm:Eigen2}{{4.1}{11}{}{Theorem.4.1}{}}
+\citation{ref:Bernoulli152308_Minsker_Median_Banach}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Robust Estimation of Eigenvalues, and a Plug-in Estimator of $\Sigma $}{12}{section.5}}
+\newlabel{Sec:Eigen}{{5}{12}{Robust Estimation of Eigenvalues, and a Plug-in Estimator of $\Sigma $}{section.5}{}}
+\newlabel{Thm:pluginSigma}{{5.1}{12}{}{Theorem.5.1}{}}
+\citation{ref:HampelBook86}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Influence Functions of Dispersion Measures}{13}{section.6}}
+\newlabel{Sec:RE_Dispersion}{{6}{13}{Influence Functions of Dispersion Measures}{section.6}{}}
+\citation{ref:JRSSB79217_Sibson}
+\citation{ref:Biometrika00603_CrouxHaesbroeck}
+\citation{ref:Biometrika00603_CrouxHaesbroeck}
+\citation{ref:HampelBook86}
+\citation{ref:HuberBook81}
+\newlabel{Thm:IF}{{6.1}{14}{}{Theorem.6.1}{}}
+\newlabel{Thm:IF2}{{6.2}{14}{}{Theorem.6.2}{}}
+\newlabel{Thm:IF3}{{6.3}{14}{}{Theorem.6.3}{}}
+\citation{ref:AoS87234_Tyler}
+\citation{ref:LinearAlgebraApplications9281_MiaoBenIsrael}
+\citation{ref:JMVA071611_Sirkiaetal}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Simulation Studies}{15}{section.7}}
+\newlabel{Sec:Simulation}{{7}{15}{Simulation Studies}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Efficiency of different robust estimators}{15}{subsection.7.1}}
+\citation{ref:AoS87234_Tyler}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Finite sample efficiencies of estimators of the first eigenvector based on several scatter matrices in dimension $p=4$. The notation H, M or P after $\mathaccentV {tilde}07E{\Sigma }$ or ${\Sigma }_{*}$ indicates the depth function used for the weights: H = halfspace depth, M = Mahalanobis depth, P = projection depth.\relax }}{16}{table.caption.6}}
+\newlabel{table:FSEtable4}{{1}{16}{Finite sample efficiencies of estimators of the first eigenvector based on several scatter matrices in dimension $p=4$. The notation H, M or P after $\tilde {\Sigma }$ or ${\Sigma }_{*}$ indicates the depth function used for the weights: H = halfspace depth, M = Mahalanobis depth, P = projection depth.\relax }{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Influence function comparison}{16}{subsection.7.2}}
+\citation{ref:Sinica10927_Cooketal,ref:PhilTransRoyalSoc094385_AdragniCook,ref:JASA15599_CookZhang}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Efficiency of affine equivariant robust estimator}{17}{subsection.7.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Robust sufficient dimension reduction and supervised learning}{17}{subsection.7.4}}
+\citation{ref:PhilTransRoyalSoc094385_AdragniCook}
+\citation{ref:PhilTransRoyalSoc094385_AdragniCook}
+\citation{ref:PhilTransRoyalSoc094385_AdragniCook}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Table of AREs of the estimator for the first eigenvector estimation using $\Sigma _{*}$, relative to using the sample covariance matrix, for different choices of dimension $p$. The data-generating distributions are the multivariate Normal (MVN), and multivariate $t$-distributions with degrees of freedom 5, 6, 10, 15 and 25. Weights for $\Sigma _{*}$ are based on either the projection depth (PD) or the half-space depth (HSD).\relax }}{18}{table.caption.8}}
+\newlabel{table:AREtable}{{2}{18}{Table of AREs of the estimator for the first eigenvector estimation using $\Sigma _{*}$, relative to using the sample covariance matrix, for different choices of dimension $p$. The data-generating distributions are the multivariate Normal (MVN), and multivariate $t$-distributions with degrees of freedom 5, 6, 10, 15 and 25. Weights for $\Sigma _{*}$ are based on either the projection depth (PD) or the half-space depth (HSD).\relax }{table.caption.8}{}}
+\citation{ref:JASA151100_BoenteSalibianBarrera}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Real Data Applications}{19}{section.8}}
+\newlabel{Sec:DA}{{8}{19}{Real Data Applications}{section.8}{}}
+\citation{ref:Technometrics0564_Hubertetal}
+\citation{ref:EsbensenetalBook94}
+\bibstyle{apalike}
+\bibdata{WeightedSignBib_01_29_19}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{20}{section.9}}
+\newlabel{Sec:Conclusion}{{9}{20}{Conclusions}{section.9}{}}
+\bibcite{ref:PhilTransRoyalSoc094385_AdragniCook}{{1}{2009}{{Adragni and Cook}}{{}}}
+\bibcite{ref:AndersonBook09}{{2}{2009}{{Anderson}}{{}}}
+\bibcite{ref:AoS112852_Balietal_PCA_Functional_Robust}{{3}{2011}{{Bali et~al.}}{{}}}
+\bibcite{ref:JASA151100_BoenteSalibianBarrera}{{4}{2015}{{Boente and Salibian-Barrera}}{{}}}
+\bibcite{ref:AoS17591_Cardotetal_Median_HilbertSpace}{{5}{2017}{{Cardot et~al.}}{{}}}
+\bibcite{ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile}{{6}{2014}{{Chakraborty and Chaudhuri}}{{}}}
+\bibcite{ref:JASA96862_Chaudhuri}{{7}{1996}{{Chaudhuri}}{{}}}
+\bibcite{ref:Sinica10927_Cooketal}{{8}{2010}{{Cook et~al.}}{{}}}
+\bibcite{ref:JASA15599_CookZhang}{{9}{2015}{{Cook and Zhang}}{{}}}
+\bibcite{ref:Biometrika00603_CrouxHaesbroeck}{{10}{2000}{{Croux and Haesbroeck}}{{}}}
+\bibcite{ref:EsbensenetalBook94}{{11}{1994}{{Esbensen et~al.}}{{}}}
+\bibcite{ref:Fangetal90_Book}{{12}{1990}{{Fang et~al.}}{{}}}
+\bibcite{ref:AoS891631_Haberman}{{13}{1989}{{Haberman}}{{}}}
+\bibcite{ref:Biometrika48414_Haldane}{{14}{1948}{{Haldane}}{{}}}
+\bibcite{ref:HampelBook86}{{15}{1986}{{Hampel et~al.}}{{}}}
+\bibcite{ref:HuberBook81}{{16}{1981}{{Huber}}{{}}}
+\@writefile{toc}{\contentsline {section}{Acknowledgements}{21}{section*.12}}
+\@writefile{toc}{\contentsline {section}{References}{21}{section*.14}}
+\bibcite{ref:Technometrics0564_Hubertetal}{{17}{2005}{{Hubert et~al.}}{{}}}
+\bibcite{ref:AoS97435_Koltchinskii}{{18}{1997}{{Koltchinskii}}{{}}}
+\bibcite{ref:Test991_Locantoreetal}{{19}{1999}{{Locantore et~al.}}{{}}}
+\bibcite{ref:Biometrika14673_MagyarTyler}{{20}{2014}{{Magyar and Tyler}}{{}}}
+\bibcite{ref:LinearAlgebraApplications9281_MiaoBenIsrael}{{21}{1992}{{Miao and Ben-Israel}}{{}}}
+\bibcite{ref:Bernoulli152308_Minsker_Median_Banach}{{22}{2015}{{Minsker}}{{}}}
+\bibcite{ref:JNonpara95201_MottonenOja95}{{23}{1995}{{M{\"o}tt{\"o}nen and Oja}}{{}}}
+\bibcite{ref:AoS921514_Niemiro}{{24}{1992}{{Niemiro}}{{}}}
+\bibcite{ref:OjaBook10}{{25}{2010}{{Oja}}{{}}}
+\bibcite{ref:DIMACS061_Serfling}{{26}{2006}{{Serfling}}{{}}}
+\bibcite{ref:JRSSB79217_Sibson}{{27}{1979}{{Sibson}}{{}}}
+\bibcite{ref:JMVA071611_Sirkiaetal}{{28}{2007}{{Sirki{\"a} et~al.}}{{}}}
+\bibcite{ref:SPL12765_Taskinenetal}{{29}{2012}{{Taskinen et~al.}}{{}}}
+\bibcite{ref:AoS87234_Tyler}{{30}{1987}{{Tyler}}{{}}}
+\bibcite{ref:JASA151658_WangPengLi}{{31}{2015}{{Wang et~al.}}{{}}}
+\bibcite{ref:AoS00461_ZuoSerfling}{{32}{2000}{{Zuo and Serfling}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  An illustrative bivariate scatter plot in the top left panel where the outliers are identified with red circles, and generalized signs from the same data (black points on the unit radius circle, outliers are red points) in the other panels. In the top right (bottom left, bottom right) panel, weighted signs from the same data with weights obtained using Mahalanobis depth (Tukey depth, projection depth respectively) are presented as green triangles (outliers are identified by blue triangles). \relax }}{23}{figure.caption.3}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:Fig1}{{1}{23}{An illustrative bivariate scatter plot in the top left panel where the outliers are identified with red circles, and generalized signs from the same data (black points on the unit radius circle, outliers are red points) in the other panels. In the top right (bottom left, bottom right) panel, weighted signs from the same data with weights obtained using Mahalanobis depth (Tukey depth, projection depth respectively) are presented as green triangles (outliers are identified by blue triangles). \relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Plot of the norm of influence function for first eigenvector of (a) sample covariance matrix, (b) SCM, (c) Tyler's scatter matrix and $\mathaccentV {tilde}07E{\Sigma }$ for weights obtained from (d) Halfspace depth, (e) Mahalanobis depth, (f) Projection depth for a bivariate normal distribution with ${\boldsymbol  {\mu }}= {\bf  0}, \Sigma = \diag  (2,1)$\relax }}{24}{figure.caption.7}}
+\newlabel{fig:IFnorm}{{2}{24}{Plot of the norm of influence function for first eigenvector of (a) sample covariance matrix, (b) SCM, (c) Tyler's scatter matrix and $\tilde {\Sigma }$ for weights obtained from (d) Halfspace depth, (e) Mahalanobis depth, (f) Projection depth for a bivariate normal distribution with $\bfmu = {\bf 0}, \Sigma = \diag (2,1)$\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers\relax }}{25}{figure.caption.9}}
+\newlabel{fig:SDRfig}{{3}{25}{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Actual sample curves, their spline approximations and diagnostic plots respectively for El-Ni\~no (a,c,e) and Octane (b,d,f) datasets\relax }}{26}{figure.caption.10}}
+\newlabel{fig:fPCAfig}{{4}{26}{Actual sample curves, their spline approximations and diagnostic plots respectively for El-Ni\~no (a,c,e) and Octane (b,d,f) datasets\relax }{figure.caption.10}{}}
