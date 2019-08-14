@@ -116,6 +116,12 @@ Magyar, A.~F. and Tyler, D.~E. (2014).
   for elliptically symmetric distributions.
 \newblock {\em Biometrika}, 101(3):673--688.
 
+\bibitem[Majumdar and Chatterjee, 2018]{StatPaper18}
+Majumdar, S. and Chatterjee, S. (2018).
+\newblock Non-convex penalized multitask regression using data depth-based
+  penalties.
+\newblock {\em Stat}, 7:e174.
+
 \bibitem[Miao and Ben-Israel,
   1992]{ref:LinearAlgebraApplications9281_MiaoBenIsrael}
 Miao, J. and Ben-Israel, A. (1992).

@@ -37,16 +37,15 @@ and has a unique minimizer $q_{0}$.
  approach is meaningful in the population, and the third one essentially requires that the 
  weight function has a finite variance. No further restrictions are placed on the tuning parameter $\BF$ or the choice of the weight function.
  
- \begin{Theorem}
- \label{Thm:WSMedian}
+ \begin{Theorem}\label{Thm:WSMedian}
  Under assumptions [A1]-[A3], we have 
  \ban 
- n^{1/2} (\hat{q}_{nW} - q_{0}) & \draro N(0, \Psi_{2}^{-1} \Psi_{1}^{2} \Psi_{2}^{-1}), 
+ n^{1/2} (\hat{q}_{nW} - q_{0}) & \draro N(0, \Psi_{2W}^{-1} \Psi_{1W} \Psi_{2W}^{-1}), 
  \text{ where } \\
- \Psi_{2} & = 
- \BE W (X, \BF)\Bigl[  |X - q|^{-1} \BI_{p} - |X - q|^{-3/2} (X - q) (X - q)^{T}  \Bigr] 
+ \Psi_{2W} & = 
+ \BE W (X, \BF)\Bigl[  |X - q_0|^{-1} ( \BI_{p} - S (X; q_{0}) S^{T} (X; q_{0}))  \Bigr] 
  \\
- \Psi_{1}  & = \BE   W^{2} (X, \BF)  S (X; q_{0}) S^{T} (X; q_{0}).
+ \Psi_{1W}  & = \BE   W^{2} (X, \BF)  S (X; q_{0}) S^{T} (X; q_{0}).
  \ean
  \end{Theorem}
 
@@ -56,14 +55,16 @@ is consistent and is asymptotically normal. Theorem~\ref{Thm:WSMedian}  can be p
 %
 \begin{align*}
 n^{1/2} (\hat{q}_{nW} - q_{0}) =
-- \frac{\Psi_2}{\sqrt n} \sum_{i=1}^n W (X_i, \BF)  S (X_i; q_0) + o_P(1).
+- \frac{\Psi_{2W}}{\sqrt n} \sum_{i=1}^n W (X_i, \BF)  S (X_i; q_0) + o_P(1).
 \end{align*}
 %
 Theorem~\ref{Thm:WSMedian} follows by applying the central limit theorem.
+
+\paragraph{Remark.} Note that for the result in Theorem~\ref{Thm:WSMedian} to go through, it is not necessary for $\BF$ to be the distribution of $X$. Other choices of $\BF$, e.g. \cite{StatPaper18},  may lead to interesting interpretations of $W(. ,\BF)$ and the resulting location estimator and can be explored further.
 %}
 
 \subsection{Asymptotic efficiency of weighted spatial median}
-Let $V_{W} = \Psi_{2}^{-1} \Psi_{1}^{2} \Psi_{2}^{-1}$ be the asymptotic 
+Let $V_{W} = \Psi_{2W}^{-1} \Psi_{1W} \Psi_{2W}^{-1}$ be the asymptotic 
 variance of \hl{$\hat{q}_{n,W}$} from Theorem~\ref{Thm:WSMedian}, where we use the 
 subscript ``${}_{W}$'' to denote that this depends on the weight function. 
 We use the notation 
@@ -79,18 +80,28 @@ is always greater than one. We document this in the following corollary:
 
 \begin{Corollary}
 \label{Cor:ARE}
-\hl{Assume that the tuning parameter of the weight function, $\BF$}, is  the distribution of $X$. Also assume $|X - q_{0}|$ and $S (X; q_{0})$ are independent, and the weight function $W (X, \BF)$ is a function of  $|X - q_{0}|$. Then
+Assume that the weight function $W (X, \BF)$ is bounded above by $k$ for some $k > 0$, and the matrices $\Psi_1 = \BE S(X; q_0) S^T(X; q_0)$ and $\Psi_{1W}$ are positive definite. Then
+%
 \ban
-& ARE (\hat{q}_{nW}, \hat{q}_{n}) \\
-& = 
-\Bigl[ \BE \bigg(  |X - q_{0}|^{-1} \bigg) \Bigr]^{-2}
-\Bigl[ \BE W^{2} (X, \BF) \Bigr]^{-1}
-\Bigl[ \BE \bigg(  |X - q_{0}|^{-1} W (X, \BF) \bigg) \Bigr]^{2}.
+ARE (\hat{q}_{nW}, \hat{q}_{n}) \geq
+\frac{ \lambda_{\min} (\Psi_1) \lambda_{\min}^2 (\Psi_{2W})}
+{k \lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2)}
 \ean
-Consequently, if $W (X, \BF) = k   |X - q_{0}|^{-1}$ for some $k \in (0, 1]$, 
-then this asymptotic relative efficiency is 
-$ \{k^{-1} (\BE |X - q_{0}|^{-1} )^{2} \BE |X - q_{0}|^{-2} \}^{1/p}> 1$. 
+%
+Consequently, if $k < r \equiv \lambda_{\min} (\Psi_1) \lambda_{\min}^2 (\Psi_{2W})/(\lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
 \end{Corollary}
+
+\begin{proof}[Proof of Corollary~\ref{Cor:ARE}]
+Using the facts that $det (AB) = det(A) det(B)$ for square matrices $A,B$ and $det (A^{-1}) = 1/det(A)$ for non-singular $A$, we write
+%
+\ban
+\frac{det (V_1)}{det (V_W)} &= det( \Psi_2^{-1} \Psi_1 \Psi_2^{-1} )
+det( \Psi_{2 W} \Psi_{1 W}^{-1} \Psi_{2 W} )\\
+&= det (\Psi_1) det (\Psi_{1 W}^{-1}) [ det(\Psi_2^{-1}) det(\Psi_{2 W}) ]^2
+\ean
+%
+The result follows, using the facts that $\det(A) \geq \lambda_{\min} (A)$ and $\det(A^{-1}) \geq 1/\lambda_{\max} (A)$, and the upper bound on $W$.
+\end{proof}
 
 It is possible to make the above asymptotic relative efficiency to tend to infinity with 
 $p$, for example by choosing $k = \exp\{- p^{2} \}$. Such tending to infinity efficiencies 
@@ -99,46 +110,37 @@ variable with shape parameter $ = 2 + \exp\{- p^{2} \}$. We leave it to future w
 study such efficiencies more generally. 
 
 We may wish to further explore the conditions of Corollary~\ref{Cor:ARE}. 
-Let us concentrate on the case of where the distribution of $X$ is 
-elliptically symmetric. Following \cite{ref:Fangetal90_Book}:
+Let us concentrate on the case of where the distribution of $X$ is spherically symmetric. Following \cite{ref:Fangetal90_Book}:
 
 \begin{Definition}
 A $p$-dimensional random vector $X$ is said to elliptically distributed if there exist a vector $\mu \in \BR^p$, a positive semi-definite matrix $\Sigma \in \BR^{p \times p}$ and a function 
 $\phi: (0, \infty) \rightarrow \BR$ such that the characteristic function of $X$ is $\exp \{ i t^{T} \mu \} \phi (\bft^T \Sigma \bft)$ for $\bft \in \BR^p$.
 \end{Definition}
 
-There are several alternative formulations, see the above reference and 
-citations within it for details. 
-%The spherically symmetric case is realized with $\Sigma = \sigma^{2} \BI_{p}$ for some 
-%$\sigma^{2} > 0$. 
+There are several alternative formulations, see the above reference and citations within it for details. The spherically symmetric case is realized with $\Sigma = \sigma^{2} \BI_{p}$ for some 
+$\sigma^{2} > 0$. 
 We fix the notation $Z = \Sigma^{-1/2} (X - \mu)$, and let 
 $Z \sim \BF_{Z}$. Note that $\BF_{Z}$ is a spherically symmetric distribution and hence
 depends only on $|z|$, and  $\BE Z = \mathbf{0}_{p} \in \BR^{p}$ and $\BV Z = \BI_{p}$.
 
 \begin{Corollary}
 \label{Cor:Elliptic_ARE}
-Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, and $\mu = q_{0}$. 
-Also assume that the weight function is affine invariant, that is:
+Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, with location parameter $\mu = q_{0}$, $\Sigma$ positive definite. Also assume that the weight function is affine invariant, that is:
 \ban
 W (A x + b, A \BF + b) = W (x, \BF),
 \ean
-Then  the weight function satisfies $W (X, \BF) = W (Z, \BF_{Z})$, and 
-hence may be further restricted to be a function of $|Z|$. Then 
-$S (X; q_{0})$ is uniform on the unit ball 
-in $\BR^{p}$, and is independent of $|X - q_{0}|$, while 
-$W (X, \BF)$ is a function of  $|X - q_{0}|$. That is, the conditions of 
-Corollary~\ref{Cor:ARE} are satisfied. 
+Then  the weight function satisfies $W (X, \BF) = W (Z, \BF_{Z})$, and hence may be further restricted to be a function of $|Z|$. Then $S (X; q_0)$ is uniform on the $\sqrt c$-radius ball 
+in $\BR^{p}$ centered at the origin, and is independent of $|X - q_{0}|$, while $W (X, \BF)$ is a function of  $|X - q_{0}|$. That is, the conditions of Corollary~\ref{Cor:ARE} are satisfied. 
 \end{Corollary}
 
 Obtaining affine invariant weight functions is not challenging, in fact, most 
 such functions arising in the context of data-depths are affine invariant. 
-Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and 
-choices of weight functions where there is a benefit to considering weighted spatial 
-quantiles. In actual computations, in place of $W (x, \BF)$ we propose 
-using $W (x, \BF_{n})$ where 
-$\BF_{n} = n^{-1} \sum_{i = 1}^{n} \cI (X_{i} \leq x )$ is the empirical distribution 
-function. Up to first order asymptotics, the analysis remain unchanged from the above 
-for this modified weight function.
+%Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and  choices of weight functions where there is a benefit to considering weighted spatial quantiles.
+In actual computations, in place of $W (x, \BF)$ we propose 
+using $W (x, \BF_{n})$ where
+$ \BF_{n}(z) = (np)^{-1} \sum_{i = 1}^{n} \sum_{j=1}^p
+\cI (X_{ij} \leq z_j ), z \in \BR^p
+$ is the empirical distribution function. Up to first order asymptotics, the analysis remain unchanged from the above for this modified weight function.
 
 \subsection{Examples of affine invariant weights}
 
@@ -158,9 +160,7 @@ That is, for every fixed $\BF$, the data-depth function achieves a supremum at
 $\mu_{F}$, and is non-decreasing in every direction away from $\mu_{F}$, thus providing 
 a  center-outward partial ordering of points in $\cX$. There are generally several 
 algebraic and analytic properties assumed for data-depth functions to elicit interesting 
-mathematical properties, see for example 
-\cite{ref:AoS00461_ZuoSerfling, ref:DIMACS061_Serfling} 
-for details.
+mathematical properties, see for example \cite{ref:DIMACS061_Serfling, ref:AoS00461_ZuoSerfling} for details.
 
 It is easy to show that results in this paper are valid for the weight functions
 ($i$) $W_{HSD} (X) = \BF_{Z} (| Z |)$ derived from the \textit{half-space depth},  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  9 AUG 2019 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  14 AUG 2019 19:10
 entering extended mode
 **./WeightedSign_EJS-R1.tex
 (WeightedSign_EJS-R1.tex
@@ -369,354 +369,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen133
 \SOUL@ulht=\dimen134
 )
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
-Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
-Package: todonotes 2018/11/22
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
-)
-\XKV@depth=\count124
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
-x"
-\pgfutil@everybye=\toks36
-\pgfutil@tempdima=\dimen135
-\pgfutil@tempdimb=\dimen136
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
-sts.tex"))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
-"
-\pgfutil@abb=\box31
- ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\pgf.revision.tex")
-Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
-))
-Package: pgf 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
-"
-Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
-"
-\pgfkeys@pathtoks=\toks37
-\pgfkeys@temptoks=\toks38
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
-ode.tex"
-\pgfkeys@tmptoks=\toks39
-))
-\pgf@x=\dimen137
-\pgf@y=\dimen138
-\pgf@xa=\dimen139
-\pgf@ya=\dimen140
-\pgf@xb=\dimen141
-\pgf@yb=\dimen142
-\pgf@xc=\dimen143
-\pgf@yc=\dimen144
-\w@pgf@writea=\write4
-\r@pgf@reada=\read1
-\c@pgf@counta=\count125
-\c@pgf@countb=\count126
-\c@pgf@countc=\count127
-\c@pgf@countd=\count128
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count129
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
-File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
-ef"
-File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
-df.def"
-File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
-)))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
-code.tex"
-File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfsyssoftpath@smallbuffer@items=\count130
-\pgfsyssoftpath@bigbuffer@items=\count131
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
-code.tex"
-File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
-"
-Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
-"
-\pgfmath@dimen=\dimen145
-\pgfmath@count=\count132
-\pgfmath@box=\box32
-\pgfmath@toks=\toks43
-\pgfmath@stack@operand=\toks44
-\pgfmath@stack@operation=\toks45
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
-tex"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
-.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
-nometric.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
-m.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
-rison.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
-code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
-.code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
-code.tex")
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
-erarithmetics.code.tex")))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count133
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
-de.tex"
-File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@picminx=\dimen146
-\pgf@picmaxx=\dimen147
-\pgf@picminy=\dimen148
-\pgf@picmaxy=\dimen149
-\pgf@pathminx=\dimen150
-\pgf@pathmaxx=\dimen151
-\pgf@pathminy=\dimen152
-\pgf@pathmaxy=\dimen153
-\pgf@xx=\dimen154
-\pgf@xy=\dimen155
-\pgf@yx=\dimen156
-\pgf@yy=\dimen157
-\pgf@zx=\dimen158
-\pgf@zy=\dimen159
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
-ruct.code.tex"
-File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@path@lastx=\dimen160
-\pgf@path@lasty=\dimen161
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
-.code.tex"
-File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@shorten@end@additional=\dimen162
-\pgf@shorten@start@additional=\dimen163
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
-de.tex"
-File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfpic=\box33
-\pgf@hbox=\box34
-\pgf@layerbox@main=\box35
-\pgf@picture@serial@count=\count134
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
-ate.code.tex"
-File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgflinewidth=\dimen164
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
-ations.code.tex"
-File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@pt@x=\dimen165
-\pgf@pt@y=\dimen166
-\pgf@pt@temp=\dimen167
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
-e.tex"
-File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
-ode.tex"
-File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
-ssing.code.tex"
-File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
-de.tex"
-File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfarrowsep=\dimen168
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
-e.tex"
-File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@max=\dimen169
-\pgf@sys@shading@range@num=\count135
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
-e.tex"
-File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
-code.tex"
-File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfexternal@startupbox=\box36
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
-de.tex"
-File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
-ncy.code.tex"
-File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
-code.tex"
-File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorerdf.code.
-tex"
-File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
-e.tex"
-File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfnodeparttextbox=\box37
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
-tex"
-File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--0-65.sty"
-Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
-\pgf@nodesepstart=\dimen170
-\pgf@nodesepend=\dimen171
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--1-18.sty"
-Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-)) ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
-Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen172
-\pgffor@skip=\dimen173
-\pgffor@stack=\toks46
-\pgffor@toks=\toks47
-))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
-e.tex"
-Package: tikz 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
-dlers.code.tex"
-File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@plot@mark@count=\count136
-\pgfplotmarksize=\dimen174
-)
-\tikz@lastx=\dimen175
-\tikz@lasty=\dimen176
-\tikz@lastxsaved=\dimen177
-\tikz@lastysaved=\dimen178
-\tikzleveldistance=\dimen179
-\tikzsiblingdistance=\dimen180
-\tikz@figbox=\box38
-\tikz@figbox@bg=\box39
-\tikz@tempbox=\box40
-\tikz@tempbox@bg=\box41
-\tikztreelevel=\count137
-\tikznumberofchildren=\count138
-\tikznumberofcurrentchild=\count139
-\tikz@fig@count=\count140
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
-e.tex"
-File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfmatrixcurrentrow=\count141
-\pgfmatrixcurrentcolumn=\count142
-\pgf@matrix@numberofcolumns=\count143
-)
-\tikz@expandcount=\count144
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)))
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarypositioning.code.tex"
-File: tikzlibrarypositioning.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibraryshadows.code.tex"
-File: tikzlibraryshadows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibraryfadings.code.tex"
-File: tikzlibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
-
-("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings
-.code.tex"
-File: pgflibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count145
-\calc@Bcount=\count146
-\calc@Adimen=\dimen181
-\calc@Bdimen=\dimen182
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count147
-\calc@Cskip=\skip61
-)
-\c@@todonotes@numberoftodonotes=\count148
-)
-\c@Theorem=\count149
+\c@Theorem=\count124
 
 (WeightedSign_EJS-R1.aux)
 \openout1 = `WeightedSign_EJS-R1.aux'.
@@ -735,7 +388,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
 LaTeX Font Info:    ... okay on input line 191.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
 LaTeX Font Info:    ... okay on input line 191.
-\AtBeginShipoutBox=\box42
+\AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring ON on input line 191.
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
@@ -744,30 +397,30 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count150
+\c@section@level=\count125
 )
 LaTeX Info: Redefining \ref on input line 191.
 LaTeX Info: Redefining \pageref on input line 191.
 LaTeX Info: Redefining \nameref on input line 191.
 
 (WeightedSign_EJS-R1.out) (WeightedSign_EJS-R1.out)
-\@outlinefile=\write5
-\openout5 = `WeightedSign_EJS-R1.out'.
+\@outlinefile=\write4
+\openout4 = `WeightedSign_EJS-R1.out'.
 
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen183
-\scratchbox=\box43
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen184
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count126
+\scratchdimen=\dimen135
+\scratchbox=\box32
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen136
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks35
 ) ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -783,8 +436,6 @@ G,.JBIG2,.JB2,.eps]
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-ABD: EveryShipout initializing macros
 LaTeX Font Info:    Try loading font information for U+msa on input line 199.
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -807,39 +458,37 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 256.
 
 (WeightedSign_EJS-R1.toc)
-\tf@toc=\write6
-\openout6 = `WeightedSign_EJS-R1.toc'.
+\tf@toc=\write5
+\openout5 = `WeightedSign_EJS-R1.toc'.
 
  [0{C:/Users/subho/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] (WeightedSign_EJS_Introduction_02_24_19_1.tex [1]
-<./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf, id=174, 505.89pt x 505.89pt>
+<./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf, id=147, 505.89pt x 505.89pt>
 
 File: ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf Graphic file (type pdf)
 <use ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf>
 Package pdftex.def Info: ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf  used
- on input line 86.
+ on input line 75.
 (pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_MD_700_02_27_19.pdf, id=175, 505.89pt x 505.89pt>
+<./Plots_SC/WeightedSign_MD_700_02_27_19.pdf, id=148, 505.89pt x 505.89pt>
 File: ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf Graphic file (type pdf)
 <use ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf>
 Package pdftex.def Info: ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf  used on i
-nput line 87.
+nput line 76.
 (pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_TD_700_02_27_19.pdf, id=176, 505.89pt x 505.89pt>
+<./Plots_SC/WeightedSign_TD_700_02_27_19.pdf, id=149, 505.89pt x 505.89pt>
 File: ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf Graphic file (type pdf)
 <use ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf>
 Package pdftex.def Info: ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf  used on i
-nput line 88.
+nput line 77.
 (pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_PD_700_02_27_19.pdf, id=177, 505.89pt x 505.89pt>
+<./Plots_SC/WeightedSign_PD_700_02_27_19.pdf, id=150, 505.89pt x 505.89pt>
 File: ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf Graphic file (type pdf)
 <use ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf>
 Package pdftex.def Info: ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf  used on i
-nput line 89.
+nput line 78.
 (pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 135.
  [2])
 (WeightedSign_EJS_WeightedSpatialQuantiles_02_24_19_1.tex [3] [4] [5])
 (WeightedSign_EJS_Dispersion_02_24_19_1.tex [6] [7] [8] [9]
@@ -872,56 +521,56 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 116.
 
-<./Plots/IFnorm.png, id=363, 752.8125pt x 1003.75pt>
+<./Plots/IFnorm.png, id=337, 752.8125pt x 1003.75pt>
 File: ./Plots/IFnorm.png Graphic file (type png)
 <use ./Plots/IFnorm.png>
 Package pdftex.def Info: ./Plots/IFnorm.png  used on input line 118.
 (pdftex.def)             Requested size: 276.00105pt x 368.01218pt.
 [16] [17] [18]
-<./Plots/SDRcomparison_noout.pdf, id=397, 361.35pt x 361.35pt>
+<./Plots/SDRcomparison_noout.pdf, id=371, 361.35pt x 361.35pt>
 File: ./Plots/SDRcomparison_noout.pdf Graphic file (type pdf)
 <use ./Plots/SDRcomparison_noout.pdf>
 Package pdftex.def Info: ./Plots/SDRcomparison_noout.pdf  used on input line 28
 9.
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/SDRcomparison_out.pdf, id=398, 361.35pt x 361.35pt>
+<./Plots/SDRcomparison_out.pdf, id=372, 361.35pt x 361.35pt>
 File: ./Plots/SDRcomparison_out.pdf Graphic file (type pdf)
 <use ./Plots/SDRcomparison_out.pdf>
 Package pdftex.def Info: ./Plots/SDRcomparison_out.pdf  used on input line 290.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
 ) (WeightedSign_EJS_DA_02_24_19_1.tex [19]
-<./Plots/Elnino_functional1.pdf, id=409, 289.08pt x 289.08pt>
+<./Plots/Elnino_functional1.pdf, id=383, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional1.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional1.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional1.pdf  used on input line 56.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional1.pdf, id=410, 289.08pt x 289.08pt>
+<./Plots/Octane_functional1.pdf, id=384, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional1.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional1.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional1.pdf  used on input line 57.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional2.pdf, id=411, 289.08pt x 289.08pt>
+<./Plots/Elnino_functional2.pdf, id=385, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional2.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional2.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional2.pdf  used on input line 58.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional2.pdf, id=412, 289.08pt x 289.08pt>
+<./Plots/Octane_functional2.pdf, id=386, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional2.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional2.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional2.pdf  used on input line 59.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional3.pdf, id=413, 289.08pt x 289.08pt>
+<./Plots/Elnino_functional3.pdf, id=387, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional3.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional3.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional3.pdf  used on input line 60.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional3.pdf, id=414, 289.08pt x 289.08pt>
+<./Plots/Octane_functional3.pdf, id=388, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional3.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional3.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional3.pdf  used on input line 61.
@@ -929,11 +578,11 @@ Package pdftex.def Info: ./Plots/Octane_functional3.pdf  used on input line 61.
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
 )
 (WeightedSign_EJS_Conclusion_02_24_19_1.tex) (WeightedSign_EJS-R1.bbl [20]
-[21]) [22]
+[21])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 702.
- [23 <./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf> <./Plots_SC/WeightedSig
-n_MD_700_02_27_19.pdf> <./Plots_SC/WeightedSign_TD_700_02_27_19.pdf> <./Plots_S
-C/WeightedSign_PD_700_02_27_19.pdf>] [24 <./Plots/IFnorm.png>]
+ [22] [23 <./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf> <./Plots_SC/Weight
+edSign_MD_700_02_27_19.pdf> <./Plots_SC/WeightedSign_TD_700_02_27_19.pdf> <./Pl
+ots_SC/WeightedSign_PD_700_02_27_19.pdf>] [24 <./Plots/IFnorm.png>]
 [25 <./Plots/SDRcomparison_noout.pdf> <./Plots/SDRcomparison_out.pdf>] [26 <./P
 lots/Elnino_functional1.pdf> <./Plots/Octane_functional1.pdf> <./Plots/Elnino_f
 unctional2.pdf> <./Plots/Octane_functional2.pdf> <./Plots/Elnino_functional3.pd
@@ -944,17 +593,21 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 702.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 702.
 Package rerunfilecheck Info: File `WeightedSign_EJS-R1.out' has not changed.
 (rerunfilecheck)             Checksum: FE832A5C10614E4929D1EB7785B25EFF;1270.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 702.
  )
 (\end occurred when \ifnum on line 256 was incomplete) 
 Here is how much of TeX's memory you used:
- 19890 strings out of 492973
- 366341 string characters out of 3133292
- 446225 words of memory out of 3000000
- 23221 multiletter control sequences out of 15000+200000
+ 9189 strings out of 492973
+ 135588 string characters out of 3133292
+ 241527 words of memory out of 3000000
+ 12764 multiletter control sequences out of 15000+200000
  18864 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,81p,1684b,846s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,39p,899b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/LaTeX/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/LaTeX/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/MiKTe
@@ -985,9 +638,9 @@ m Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program
 Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Fil
 es/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program 
 Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on WeightedSign_EJS-R1.pdf (27 pages, 16166818 bytes).
+Output written on WeightedSign_EJS-R1.pdf (27 pages, 16160243 bytes).
 PDF statistics:
- 12049 PDF objects out of 12825 (max. 8388607)
- 126 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12024 PDF objects out of 12825 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

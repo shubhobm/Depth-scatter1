@@ -1,5 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {section}{\numberline {2}Weighted Spatial Quantiles}{3}{section.2}
+\contentsline {paragraph}{Remark.}{4}{section*.4}
 \contentsline {subsection}{\numberline {2.1}Asymptotic efficiency of weighted spatial median}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Examples of affine invariant weights}{5}{subsection.2.2}
 \contentsline {section}{\numberline {3}A Robust Measure of Dispersion}{6}{section.3}
