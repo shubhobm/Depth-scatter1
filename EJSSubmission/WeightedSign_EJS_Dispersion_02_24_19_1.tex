@@ -1,6 +1,5 @@
-\section{A Robust Measure of  Dispersion} 
+\section{A robust measure of dispersion} 
 \label{Sec:WSDispersion1}
-
 From this section onwards, we assume that $\cX = \BR^{p}$, that is, the support of the 
 random variable under study is the $p$-dimensional Euclidean plane, and the data 
 $X_{1}, \ldots, X_{n}$ are independent and identically distributed from an 
@@ -14,7 +13,7 @@ $\cX$ is a separable Hilbert space, however additional technicalities are involv
 \cite{ref:AoS112852_Balietal_PCA_Functional_Robust}, and will be considered 
 in a future project. 
 
-
+\subsection{The Weighted Sign Covariance Matrix}
 Consider the spectral decomposition of $\Sigma$ given by
  $\Sigma = \Gamma\Lambda\Gamma^T$, where $\Gamma$ is an orthogonal matrix 
  and $\Lambda$ is diagonal with positive diagonal elements $\lambda_1 \geq \ldots \geq 
@@ -61,15 +60,13 @@ The rest of this paper is built on the following transformed random variable:
 | \Lambda^{1/2} Z|^{-1} \Gamma \Lambda^{1/2}  Z. 
 \label{eq:tildeX}
 \eaq
-We define the notation $\BS (X; \mu) =  S (X; \mu) S( X; \mu)^T$.
-Then, we define the following dispersion  parameter:
+We fix the notation $\BS (X; \mu) =  S (X; \mu) S( X; \mu)^T$, and define the following dispersion  parameter:
 \baq
 \tilde{\Sigma} = \BE \tilde{X} \tilde{X}^{T}
 =  \BE W^{2} (X, \BF) \BS (X; \mu). 
 \label{eq:tildeSigma}
 \eaq
- In the following Theorem, we establish that the eigenvectors of ${\Sigma}$ and 
- $\tilde{\Sigma}$ are identical, although their eigenvalues may be different.
+In the following Theorem, we establish that the eigenvectors of ${\Sigma}$ and $\tilde{\Sigma}$ are identical, although their eigenvalues may be different.
   
 \begin{Theorem}
 \label{Thm:WSVariance}
@@ -118,43 +115,34 @@ independent of $S (X; \mu)$. Consequently, we have
 = \Gamma \Lambda_{W} \Gamma^{T}, 
 \ean
 where $\Lambda_{W}$ is a diagonal matrix.
-
 \end{proof}
 
+\subsection{Sample version of $\tilde \Sigma$}
+We now discuss the properties of the sample version of $\tilde \Sigma$, say $\widehat{\tilde{\Sigma}}$ computed from $\bfX$. In practice, we cannot obtain $W (x) \equiv W (x, \BF)$, and consequently use  $W (x, \BF_{n})$ instead. We assume the following conditions:
 
-We now discuss the properties of the sample version $\widehat{\tilde{\Sigma}}$ 
-computed from $\bfX$. 
-In practice, we cannot obtain $W (x) \equiv W (x, \BF)$, 
-and consequently use  $W (x, \BF_{n})$ instead. We assume the following conditions:
-\begin{enumerate}
-\item \textbf{Bounded weights:} The weights $W (\cdot, \cdot)$ are bounded functions. 
+\begin{description}
+\item[(B1)]{\it Bounded weights}: The weights $W (\cdot, \cdot)$ are bounded functions. 
 
-\item \textbf{Uniform convergence:} 
+\item[(B2)]{\it Uniform convergence}:
 \ban 
 \sup_{x \in \cX} | W (x, \BF_{n}) - W (x, \BF) | \rightarrow 0 
 \ean 
 almost surely as $n \rightarrow \infty $.
 
-\item \textbf{Smoothness under perturbation:}
-For all $\BF \in \cF$, there exists a $\delta > 0$, possibly depending on $\BF$, such that 
+\item[(B3)]
+{\it Smoothness under perturbation:} For all $\BF \in \cF$, there exists a $\delta > 0$, possibly depending on $\BF$, such that 
 for any $\epsilon \in (0, \delta)$ 
 \ban 
 \sup_{x \in \cX} \Bigl| W \bigl( x, \BF \bigr) - 
 W \bigl( x, (1 - \epsilon)\BF + \epsilon \delta_{x} \bigr) \Bigr| \leq 
 \epsilon.
 \ean 
- \end{enumerate}
- In the above, $\delta_{x}$ denotes point mass at $x$. 
-These property are easily satisfied under for  weight functions  derived 
-from standard depth functions, for example, $W_{HSD} (\cdot)$, 
-$W_{MhD} (\cdot)$ and $W_{PD} (\cdot)$ discussed earlier.
+\end{description}
+%
+In the above, $\delta_{x}$ denotes point mass at $x$. 
+These properties are easily satisfied under for  weight functions  derived from standard depth functions, for example, $W_{HSD} (\cdot)$, $W_{MhD} (\cdot)$ and $W_{PD} (\cdot)$ discussed earlier.
 
-
-
-The following result allows us to use the empirical, plug-in weights and an 
-estimated location parameter in the 
-weighted dispersion estimator. A natural choice for the location parameter estimator 
-is the solution to $\sum_{i = 1}^{n} \tilde{X}_{i} = 0$. 
+The following result allows us to use the empirical, plug-in weights and an estimated location parameter in the weighted dispersion estimator. A natural choice for the location parameter estimator is the solution to $\sum_{i = 1}^{n} \tilde{X}_{i} = 0$, which is the same as the sample version of the weighted spatial median discussed in Section~\ref{Sec:WSQuantiles}.
 
 \begin{Lemma} \label{Lemma:lemma1}
 Assume that $\BE \| X - \mu \|^{-4} < \infty$. Also assume that 
@@ -197,7 +185,9 @@ n^{-1} \sum_{i=1}^{n}  | X_{i} - \mu |^{-2}
 \bigl\{ W_{n}^{2} (X_{i}, \BF_{n})  -   W^{2} (X_{i}, \BF) \bigr\} 
 (X_{i, j} - \mu_{j}) (X_{i, k} - \mu_{k}), 
 \ean
+%
 and hence 
+%
 \ban 
 & c^{T} T_{2} c  = \sum_{j, k} c_{j} c_{k}T_{2, j, k} \\
 & = n^{-1} \sum_{i=1}^{n}  | X_{i} - \mu |^{-2}
@@ -219,6 +209,7 @@ M n^{-1} \sum_{i=1}^{n}  | X_{i} - \mu |^{-2}
 & =  M n^{-1} \sum_{i=1}^{n}  T_{2 1 i}  + M n^{-1} \sum_{i=1}^{n}   T_{2 2 i} \\
 & = T_{21} + T_{22}.
 \ean
+%
 Let $H (X_{i}) = | X_{i} - \mu |^{-2} \bigl( c^{T} (X_{i} - \mu) \bigr)^{2}$, and notice 
 that $H (X_{i}) \leq 1$ almost surely for $|c| = 1$.  
 Now notice that conditional on $X_{i}$ except for a null set $A_{i}$ (possibly depending 
@@ -233,7 +224,7 @@ The argument for $T_{22}$ follows a similar argument.
 
 
 
-Let $vec~(\BS (X; \mu))$ be the vectorized version of  $\BS (X; \mu)$.
+Let $vec(\BS (X; \mu))$ be the vectorized version of  $\BS (X; \mu)$.
 We are now in a position to state the result for consistency of the sample 
 version of $\tilde{\Sigma}$,
 
@@ -241,20 +232,18 @@ version of $\tilde{\Sigma}$,
 Assume the conditions of Lemma~\ref{Lemma:lemma1}. Then
 \ban
 & n^{1/2} \sum_{i = 1}^{n} \Bigl( 
-W_{n}^{2} (X_{i}, \BF_{n}) ~vec~(\BS (X_{i}; \hat{\mu}_{n})) 
-- \BE W^{2} (X_{i}) ~vec~(\BS (X_{i}; \mu)) \Bigr)\\
+W_{n}^{2} (X_{i}, \BF_{n}) vec(\BS (X_{i}; \hat{\mu}_{n})) 
+- \BE W^{2} (X_{i}) vec(\BS (X_{i}; \mu)) \Bigr)\\
 & \hspace{0.5cm} \draro
 N_{p^2} \bigl( 0, V_{W} \bigr),
 \ean
-where $V_{W} = \BV [W^{2} (X, \BF) ~vec~(\BS (X; {\mu})) ] $.
+where $V_{W} = \BV [W^{2} (X, \BF) vec(\BS (X; {\mu})) ] $.
 \end{Theorem}
 
 The asymptotic normality  follows from our assumptions and as a direct consequence 
 of Lemma~\ref{Lemma:lemma1}. Incidentally, an expression for $V_{W}$
 can be explicitly obtained in terms of $\Gamma$, $\Lambda$ and $\BF$, but is 
-algebraic in nature and hence omitted here. 
-
-
+algebraic in nature and hence omitted here.
 
 We now use Theorem~\ref{Theorem:CLT1} to obtain consistency results for 
 the eigenvectors obtained from $\widehat{\tilde{\Sigma}} = n^{-1} 
@@ -352,10 +341,8 @@ W^4 (Z, \BF_{Z}) \big(
 The proof of this Corollary is immediate.
 
 
-\section{An Affine Equivariant Robust Measure of Dispersion}
+\section{An affine equivariant robust measure of dispersion}
 \label{Sec:WSDispersion2}
-
-
 A desirable invariance property of any dispersion parameter $T_{X}$ corresponding to 
 a random variable $X$ is that under affine transformation $Y = AX + b$ the dispersion 
 parameter scales to $T_{Y} = A T_{X} A^{T}$. It is clear that $\tilde{\Sigma}$ does 
@@ -383,24 +370,23 @@ dispersion parameters $\Sigma_M$ that are obtained as solutions of the following
 with $Z_M = \Sigma_M^{-1/2} (X - \mu)$. Under the following assumptions on the scalar valued functions $u$ and $v$, the above equation produces a unique solution \citep{ref:HuberBook81}:
 %
 
-\vspace{1em}
-\noindent\textbf{(C1)} The function $u(r)/r^2$ is monotone decreasing, 
+\begin{description}
+\item[(C1)] The function $u(r)/r^2$ is monotone decreasing, 
 and $u(r)>0$ for $r > 0$;
 
-\noindent\textbf{(C2)}  The function $v(r)$ is monotone decreasing, and 
+\item[(C2)]  The function $v(r)$ is monotone decreasing, and 
 $v(r) > 0$ for $r > 0$;
 
-\noindent\textbf{(C3)} Both $u(r)$ and $v(r)$ are bounded and continuous;
+\item[(C3)] Both $u(r)$ and $v(r)$ are bounded and continuous,
 
-\noindent\textbf{(C4)} $u(0) / v(0) < p$;
+\item[(C4)] $u(0) / v(0) < p$,
 
-\noindent\textbf{(C5)} For any hyperplane in the sample space $\mathcal X$, 
+\item[(C5)] For any hyperplane in the sample space $\mathcal X$, 
 (i) $P(H) = \BE \{ \cI_{\{X \in H \}} \} < 1 - p v(\infty) / u(\infty)$ and 
 (ii) $P(H) \leq 1/p$.
-%
+\end{description}
 
-\vspace{1em}
-\noindent Putting things into context, in our case we have 
+Putting things into context, in our case we have 
 $v (\cdot) = p^{-1}\BV W (X)$, 
 $u (\cdot) = W^{2}(X)$. 
 %We use the notation $\BF_{|Z|}$ for the cumulative distribution function of $|Z|$.
@@ -415,9 +401,7 @@ and (C2) and (C3) are also easily satisfied.
 Since $u (0) = 0$ in all the above cases, (C4) is also easy to check. Since $X$ is 
 absolutely continuous, (C5) holds trivially.
 
-
-
-In order to compute the sample version of $\Sigma_{*}$, we solve (\ref{eqn:ADCM}) 
+To compute the sample version of $\Sigma_{*}$, we solve (\ref{eqn:ADCM}) 
 iteratively by obtaining a sequence of positive definite matrices 
 $\hat{\Sigma}^{(k)}_{*}$ until convergence. Thus, using the location 
 estimator $\hat{\mu}_{n}$, we may iterate
@@ -455,11 +439,8 @@ ARE (\hat{\bfgamma}_{*, i}, \hat\bfgamma_{i}; \BF) = V_{12}^{-1} =
 %
 \end{Theorem}
 
-
-\section{Robust Estimation of Eigenvalues, and a Plug-in Estimator of $\Sigma$}
+\section{Robust estimation of eigenvalues, and a plug-in estimator of $\Sigma$}
 \label{Sec:Eigen}
-
-
 As seen in Theorem~\ref{Thm:WSVariance}, eigenvalues of the $\tilde{\Sigma}$ 
 are not same as the population eigenvalues. In this section, we discuss on robust 
 estimation of $\lambda_{i}$'s using $\tilde{\Sigma}$. Assume the data 
@@ -535,19 +516,13 @@ Then we have
 
 \begin{proof}[Proof of Theorem \ref{Thm:pluginSigma}]
 This proof has many algebraic steps, and we sketch the main arguments below.
-Suppose $\hat{A} = \widehat{{\Gamma}}^{T}  \Sigma \widehat{{\Gamma}}$. 
 
-Owing to the fact that the Frobenius norm is invariant under rotations and 
-that $p$ is finite and fixed, it suffices to show that the off-diagonal elements of 
-$\hat{A}$ converge in probability to zero, and that the difference between 
-the $i$-th diagonal element of $\hat{A}$ and ${\lambda}^{\dagger}_{i}$ converges to 
-zero for any $i = 1, \ldots, p$.
+
+Suppose $\hat{A} = \widehat{{\Gamma}}^{T}  \Sigma \widehat{{\Gamma}}$.  Owing to the fact that the Frobenius norm is invariant under rotations and that $p$ is finite and fixed, it suffices to show that the off-diagonal elements of $\hat{A}$ converge in probability to zero, and that the difference between the $i$-th diagonal element of $\hat{A}$ and ${\lambda}^{\dagger}_{i}$ converges to zero for any $i = 1, \ldots, p$.
 
 Now notice that from Theorem~\ref{Theorem:Eigen1} we have that $\widehat{{\Gamma}} 
 = {{\Gamma}} + R_{n1}$, where the $(i, j)$-th element of the remainder 
-$R_{n1, i, j}$ satisfies $\BE  R_{n1, i, j}^{2} = O(n^{-1})$. 
-
-We can show, using standard algebra, that 
+$R_{n1, i, j}$ satisfies $\BE  R_{n1, i, j}^{2} = O(n^{-1})$. We can show, using standard algebra, that 
 \ban
 \hat{A} = \Lambda + R_{n2}, 
 \ean

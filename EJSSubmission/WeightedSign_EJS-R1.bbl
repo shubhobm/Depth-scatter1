@@ -102,11 +102,14 @@ Koltchinskii, V.~I. (1997).
 \newblock \textit{M}-estimation, convexity and quantiles.
 \newblock {\em The Annals of Statistics}, 25(2):435 -- 477.
 
+\bibitem[Liu et~al., 1999]{LiuPareliusSingh99}
+Liu, R., Parelius, J.~M., and Singh, K. (1999).
+\newblock Multivariate analysis by data depth: descriptive statistics, graphics
+  and inference.
+\newblock {\em The Annals of Statistics}, 27(3):783--858.
+
 \bibitem[Locantore et~al., 1999]{ref:Test991_Locantoreetal}
-Locantore, N., Marron, J.~S., Simpson, D.~G., Tripoli, N., Zhang, J.~T., Cohen,
-  K.~L., Boente, G., Fraiman, R., Brumback, B., Croux, C., Fan, J., Kneip, A.,
-  Marden, J.~I., Pena, D., Prieto, J., Ramsay, J.~O., Valderrama, M.~J., and
-  Aguilera, A.~M. (1999).
+Locantore, N., Marron, J.~S., Simpson, D.~G., et~al. (1999).
 \newblock Robust principal component analysis for functional data.
 \newblock {\em Test}, 8(1):1 -- 73.
 

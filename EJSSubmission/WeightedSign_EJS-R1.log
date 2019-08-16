@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  14 AUG 2019 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  15 AUG 2019 15:21
 entering extended mode
 **./WeightedSign_EJS-R1.tex
 (WeightedSign_EJS-R1.tex
@@ -455,7 +455,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 256.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 250.
 
 (WeightedSign_EJS-R1.toc)
 \tf@toc=\write5
@@ -464,150 +464,145 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
  [0{C:/Users/subho/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] (WeightedSign_EJS_Introduction_02_24_19_1.tex [1]
-<./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf, id=147, 505.89pt x 505.89pt>
+<./Plots_SC/WeightedSignAll.png, id=156, 939.00812pt x 896.85063pt>
+File: ./Plots_SC/WeightedSignAll.png Graphic file (type png)
+<use ./Plots_SC/WeightedSignAll.png>
+Package pdftex.def Info: ./Plots_SC/WeightedSignAll.png  used on input line 75.
 
-File: ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf Graphic file (type pdf)
-<use ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf>
-Package pdftex.def Info: ./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf  used
- on input line 75.
-(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_MD_700_02_27_19.pdf, id=148, 505.89pt x 505.89pt>
-File: ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf Graphic file (type pdf)
-<use ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf>
-Package pdftex.def Info: ./Plots_SC/WeightedSign_MD_700_02_27_19.pdf  used on i
-nput line 76.
-(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_TD_700_02_27_19.pdf, id=149, 505.89pt x 505.89pt>
-File: ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf Graphic file (type pdf)
-<use ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf>
-Package pdftex.def Info: ./Plots_SC/WeightedSign_TD_700_02_27_19.pdf  used on i
-nput line 77.
-(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
-<./Plots_SC/WeightedSign_PD_700_02_27_19.pdf, id=150, 505.89pt x 505.89pt>
-File: ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf Graphic file (type pdf)
-<use ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf>
-Package pdftex.def Info: ./Plots_SC/WeightedSign_PD_700_02_27_19.pdf  used on i
-nput line 78.
-(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
- [2])
-(WeightedSign_EJS_WeightedSpatialQuantiles_02_24_19_1.tex [3] [4] [5])
-(WeightedSign_EJS_Dispersion_02_24_19_1.tex [6] [7] [8] [9]
-Overfull \hbox (2.81398pt too wide) detected at line 349
+(pdftex.def)             Requested size: 345.0pt x 329.50311pt.
+)
+(WeightedSign_EJS_WeightedSpatialQuantiles_02_24_19_1.tex [2] [3]
+Overfull \hbox (5.87605pt too wide) in paragraph at lines 87--90
+\OT1/cmr/m/it/10 Consequently, if $\OML/cmm/m/it/10 k=[]\OT1/cmr/m/n/10 (	[]) 
+\OML/cmm/m/it/10 < []\OT1/cmr/m/n/10 (	[])\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (	[])\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (	[
+]))$ \OT1/cmr/m/it/10 then this asymp-
+ []
+
+[4] [5]) (WeightedSign_EJS_Dispersion_02_24_19_1.tex [6] [7]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 120.
+
+[8] [9] [10]
+Overfull \hbox (2.81398pt too wide) detected at line 338
 []
  []
 
 
-Overfull \hbox (3.02835pt too wide) in paragraph at lines 365--369
+Overfull \hbox (3.02835pt too wide) in paragraph at lines 352--356
 []\OT1/cmr/m/n/10 We fol-low the gen-eral frame-work of M-estimation with data-
 dependent weights
  []
 
-[10] [11]
+[11] [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 459.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Sigma' on input line 459.
+(hyperref)                removing `math shift' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 459.
+(hyperref)                removing `\Sigma' on input line 442.
 
-[12]) (WeightedSign_EJS_IF_02_24_19_1.tex [13])
-(WeightedSign_EJS_Simulations_02_24_19_1.tex [14] [15]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 442.
+
+[13]) (WeightedSign_EJS_IF_02_24_19_1.tex [14] [15])
+(WeightedSign_EJS_Simulations_02_24_19_1.tex [16]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 116.
 
-<./Plots/IFnorm.png, id=337, 752.8125pt x 1003.75pt>
+<./Plots/IFnorm.png, id=364, 752.8125pt x 1003.75pt>
 File: ./Plots/IFnorm.png Graphic file (type png)
 <use ./Plots/IFnorm.png>
 Package pdftex.def Info: ./Plots/IFnorm.png  used on input line 118.
 (pdftex.def)             Requested size: 276.00105pt x 368.01218pt.
-[16] [17] [18]
-<./Plots/SDRcomparison_noout.pdf, id=371, 361.35pt x 361.35pt>
+[17] [18] [19]
+<./Plots/SDRcomparison_noout.pdf, id=398, 361.35pt x 361.35pt>
 File: ./Plots/SDRcomparison_noout.pdf Graphic file (type pdf)
 <use ./Plots/SDRcomparison_noout.pdf>
 Package pdftex.def Info: ./Plots/SDRcomparison_noout.pdf  used on input line 28
 9.
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/SDRcomparison_out.pdf, id=372, 361.35pt x 361.35pt>
+<./Plots/SDRcomparison_out.pdf, id=399, 361.35pt x 361.35pt>
 File: ./Plots/SDRcomparison_out.pdf Graphic file (type pdf)
 <use ./Plots/SDRcomparison_out.pdf>
 Package pdftex.def Info: ./Plots/SDRcomparison_out.pdf  used on input line 290.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-) (WeightedSign_EJS_DA_02_24_19_1.tex [19]
-<./Plots/Elnino_functional1.pdf, id=383, 289.08pt x 289.08pt>
+) (WeightedSign_EJS_DA_02_24_19_1.tex [20]
+<./Plots/Elnino_functional1.pdf, id=410, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional1.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional1.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional1.pdf  used on input line 56.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional1.pdf, id=384, 289.08pt x 289.08pt>
+<./Plots/Octane_functional1.pdf, id=411, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional1.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional1.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional1.pdf  used on input line 57.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional2.pdf, id=385, 289.08pt x 289.08pt>
+<./Plots/Elnino_functional2.pdf, id=412, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional2.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional2.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional2.pdf  used on input line 58.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional2.pdf, id=386, 289.08pt x 289.08pt>
+<./Plots/Octane_functional2.pdf, id=413, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional2.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional2.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional2.pdf  used on input line 59.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional3.pdf, id=387, 289.08pt x 289.08pt>
+<./Plots/Elnino_functional3.pdf, id=414, 289.08pt x 289.08pt>
 File: ./Plots/Elnino_functional3.pdf Graphic file (type pdf)
 <use ./Plots/Elnino_functional3.pdf>
 Package pdftex.def Info: ./Plots/Elnino_functional3.pdf  used on input line 60.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional3.pdf, id=388, 289.08pt x 289.08pt>
+<./Plots/Octane_functional3.pdf, id=415, 289.08pt x 289.08pt>
 File: ./Plots/Octane_functional3.pdf Graphic file (type pdf)
 <use ./Plots/Octane_functional3.pdf>
 Package pdftex.def Info: ./Plots/Octane_functional3.pdf  used on input line 61.
 
 (pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
 )
-(WeightedSign_EJS_Conclusion_02_24_19_1.tex) (WeightedSign_EJS-R1.bbl [20]
-[21])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 702.
- [22] [23 <./Plots_SC/WeightedSign_Scatter_700_02_27_19.pdf> <./Plots_SC/Weight
-edSign_MD_700_02_27_19.pdf> <./Plots_SC/WeightedSign_TD_700_02_27_19.pdf> <./Pl
-ots_SC/WeightedSign_PD_700_02_27_19.pdf>] [24 <./Plots/IFnorm.png>]
-[25 <./Plots/SDRcomparison_noout.pdf> <./Plots/SDRcomparison_out.pdf>] [26 <./P
+(WeightedSign_EJS_Conclusion_02_24_19_1.tex) (WeightedSign_EJS-R1.bbl [21]
+[22])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 696.
+ [23] [24 <./Plots_SC/WeightedSignAll.png>] [25 <./Plots/IFnorm.png>]
+[26 <./Plots/SDRcomparison_noout.pdf> <./Plots/SDRcomparison_out.pdf>] [27 <./P
 lots/Elnino_functional1.pdf> <./Plots/Octane_functional1.pdf> <./Plots/Elnino_f
 unctional2.pdf> <./Plots/Octane_functional2.pdf> <./Plots/Elnino_functional3.pd
 f> <./Plots/Octane_functional3.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 702.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 696.
  (WeightedSign_EJS-R1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 702.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 702.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 696.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 696.
 Package rerunfilecheck Info: File `WeightedSign_EJS-R1.out' has not changed.
-(rerunfilecheck)             Checksum: FE832A5C10614E4929D1EB7785B25EFF;1270.
+(rerunfilecheck)             Checksum: B491260D63A4ABBD776D74746A4C3BDB;1426.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 702.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 696.
  )
-(\end occurred when \ifnum on line 256 was incomplete) 
+(\end occurred when \ifnum on line 250 was incomplete) 
 Here is how much of TeX's memory you used:
- 9189 strings out of 492973
- 135588 string characters out of 3133292
- 241527 words of memory out of 3000000
- 12764 multiletter control sequences out of 15000+200000
+ 9186 strings out of 492973
+ 134945 string characters out of 3133292
+ 241592 words of memory out of 3000000
+ 12758 multiletter control sequences out of 15000+200000
  18864 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,39p,899b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,39p,981b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/LaTeX/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/LaTeX/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/MiKTe
@@ -638,9 +633,9 @@ m Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program
 Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Fil
 es/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program 
 Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on WeightedSign_EJS-R1.pdf (27 pages, 16160243 bytes).
+Output written on WeightedSign_EJS-R1.pdf (28 pages, 1050009 bytes).
 PDF statistics:
- 12024 PDF objects out of 12825 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

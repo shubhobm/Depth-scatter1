@@ -1,4 +1,4 @@
-\section{Weighted Spatial Quantiles}
+\section{The Weighted Spatial Median}
 \label{Sec:WSQuantiles}
 
 Suppose the open unit sphere in $\cX$ is given by 
@@ -23,15 +23,13 @@ In what follows, for brevity we elaborate only the case of the \textit{weighted 
 Assume that we have independent and identically distributed observations $X_{1}, \ldots, X_{n} \in \cX$, and the sample weighted spatial median is computed by minimizing $\Psi_{n} (q; 0, \BF) = \sum_{i = 1}^{n} W (X_{i}, \BF) | X_{i} - q | $, and is denoted by $\hat{q}_{nW}$, the second subscript is in acknowledgement that the weight function is used. We denote the unweighted version of this estimator, ie, the case where $W (X, \BF) \equiv 1$ as $\hat{q}_{n}$. Assume the following technical conditions:
 
 \begin{description}
-\item[A1:] $\Psi (q; 0, \BF)$ is finite for all $q \in \cX \subseteq \BR^{p}$ 
+\item[(A1)] $\Psi (q; 0, \BF)$ is finite for all $q \in \cX \subseteq \BR^{p}$ 
 and has a unique minimizer $q_{0}$. 
 
- \item[A2:] $\Psi (q; 0, \BF)$ is twice differentiable at $q_{0}$ and the second 
- derivative is positive definite. 
+\item[(A2)] $\Psi (q; 0, \BF)$ is twice differentiable at $q_{0}$ and the second derivative is positive definite. 
  
- \item[A3:] $\BE W^{2} (X, \BF)  S (X; q) S^{T} (X; q)$ exists for all 
- $q$ in a neighborhood of $q_{0}$. 
- \end{description}
+\item[(A3)] $\BE W^{2} (X, \BF)  S (X; q) S^{T} (X; q)$ exists for all $q$ in a neighborhood of $q_{0}$. 
+\end{description}
  These assumptions are very broad-based and general. The first one essentially requires 
  the existence of a population parameter, the second one requires that the minimization 
  approach is meaningful in the population, and the third one essentially requires that the 
@@ -65,7 +63,7 @@ Theorem~\ref{Thm:WSMedian} follows by applying the central limit theorem.
 
 \subsection{Asymptotic efficiency of weighted spatial median}
 Let $V_{W} = \Psi_{2W}^{-1} \Psi_{1W} \Psi_{2W}^{-1}$ be the asymptotic 
-variance of \hl{$\hat{q}_{n,W}$} from Theorem~\ref{Thm:WSMedian}, where we use the 
+variance of $\hat{q}_{n,W}$ from Theorem~\ref{Thm:WSMedian}, where we use the 
 subscript ``${}_{W}$'' to denote that this depends on the weight function. 
 We use the notation 
 $V_{1}$ for the case where $W (x, \BF) \equiv 1$, that is, all weights are one.
@@ -88,7 +86,7 @@ ARE (\hat{q}_{nW}, \hat{q}_{n}) \geq
 {k \lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2)}
 \ean
 %
-Consequently, if $k < r \equiv \lambda_{\min} (\Psi_1) \lambda_{\min}^2 (\Psi_{2W})/(\lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
+Consequently, if $k / \lambda_{\min}^2 (\Psi_{2W}) < \lambda_{\min} (\Psi_1) /(\lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
 \end{Corollary}
 
 \begin{proof}[Proof of Corollary~\ref{Cor:ARE}]
@@ -117,27 +115,39 @@ A $p$-dimensional random vector $X$ is said to elliptically distributed if there
 $\phi: (0, \infty) \rightarrow \BR$ such that the characteristic function of $X$ is $\exp \{ i t^{T} \mu \} \phi (\bft^T \Sigma \bft)$ for $\bft \in \BR^p$.
 \end{Definition}
 
-There are several alternative formulations, see the above reference and citations within it for details. The spherically symmetric case is realized with $\Sigma = \sigma^{2} \BI_{p}$ for some 
-$\sigma^{2} > 0$. 
-We fix the notation $Z = \Sigma^{-1/2} (X - \mu)$, and let 
-$Z \sim \BF_{Z}$. Note that $\BF_{Z}$ is a spherically symmetric distribution and hence
-depends only on $|z|$, and  $\BE Z = \mathbf{0}_{p} \in \BR^{p}$ and $\BV Z = \BI_{p}$.
+There are several alternative formulations, see the above reference and citations within it for details.
 
-\begin{Corollary}
-\label{Cor:Elliptic_ARE}
-Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, with location parameter $\mu = q_{0}$, $\Sigma$ positive definite. Also assume that the weight function is affine invariant, that is:
-\ban
-W (A x + b, A \BF + b) = W (x, \BF),
-\ean
-Then  the weight function satisfies $W (X, \BF) = W (Z, \BF_{Z})$, and hence may be further restricted to be a function of $|Z|$. Then $S (X; q_0)$ is uniform on the $\sqrt c$-radius ball 
-in $\BR^{p}$ centered at the origin, and is independent of $|X - q_{0}|$, while $W (X, \BF)$ is a function of  $|X - q_{0}|$. That is, the conditions of Corollary~\ref{Cor:ARE} are satisfied. 
+\begin{Corollary}\label{Cor:Elliptic_ARE}
+Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, with location parameter $\mu = q_{0}$ and the covariance matrix $\Sigma$ satisfies the following conditions:
+%
+\begin{enumerate}
+\item $Tr(\Sigma^4) = o( Tr^2 (\Sigma^2) )$,
+
+\item $\frac{Tr^4(\Sigma)}{ Tr^2 (\Sigma^2)} \exp \left\{ - \frac{Tr^2 (\Sigma)}
+{ 128 \lambda_{\max}^2 (\Sigma)} \right\} = o(1)$,
+
+\item $\exp \left\{ - \frac{Tr^2 (\Sigma)}{ 256 \lambda_{\max}^2 (\Sigma)} \right\} = 
+o\left( \min\left( \frac{\lambda_{\max}(\Sigma) }{Tr( \Sigma)},
+\frac{\lambda_{\min}(\Sigma)}{\lambda_{\max}(\Sigma)} \right) \right)$,
+
+\item $\lambda_{\max}(\Sigma) = o( Tr(\Sigma))$.
+\end{enumerate}
+
+Also assume that the weight function is (a) bounded above by some $W_{\max} > 0$, (b) affine invariant, i.e. $ W (Ax + b, A\BF + b) = W (x, \BF)$ for $A \in \BR^{p \times p}, b \in \BR^p$, and (c) satisfies the following:
+%
+\begin{equation}\label{eqn:CorElliptic_ARE_eqn}
+\frac{W_{\max}}{[ \BE | X - q_0|^{-1} W(X, \BF)]^2 } <
+\frac{\lambda_{\min} (\Psi_1)}{\lambda_{\max} (\Psi_1) [ \BE | X - q_0|^{-1}]^2]}.
+\end{equation}
+%
+Then we have $ARE( \hat q_{n,W}, \hat q_n) > 1$.
 \end{Corollary}
 
-Obtaining affine invariant weight functions is not challenging, in fact, most 
-such functions arising in the context of data-depths are affine invariant. 
-%Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and  choices of weight functions where there is a benefit to considering weighted spatial quantiles.
-In actual computations, in place of $W (x, \BF)$ we propose 
-using $W (x, \BF_{n})$ where
+The conditions 1-4 in Corollary~\ref{Cor:Elliptic_ARE} are due to \cite{ref:JASA151658_WangPengLi}, and ensure that the eigenvalues of $\Sigma$ are bounded away from 0 and $\infty$. Corollary~\ref{Cor:Elliptic_ARE} can be proved using Corollary~\ref{Cor:ARE}, the fact that for elliptical distributions $\Psi_1$ is non-singular \cite{ref:SPL12765_Taskinenetal}, then using and expanding upon Lemma A.5 in \cite{ref:JASA151658_WangPengLi}. We give the technical details in the supplementary material.
+
+Obtaining affine invariant weight functions is not challenging. Most functions arising in the context of data depths are affine invariant. Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and  choices of weight functions where there is a benefit to considering weighted spatial medians. In fact, the choice of weight functions is even broader: only location invariance is required for Corollary~\ref{Cor:Elliptic_ARE} to hold. We only choose to restrict ourselves here because the subsequent analysis uses weights based on affine invariant data depth functions. Also note that in case \eqref{eqn:CorElliptic_ARE_eqn} does not hold for the original form of a weight function, one can scale all weights by an appropriate constant to reduce the value in the left hand side of \eqref{eqn:CorElliptic_ARE_eqn} to satisfy the condition.
+
+In actual computations, in place of $W (x, \BF)$ we propose using $W (x, \BF_{n})$ where
 $ \BF_{n}(z) = (np)^{-1} \sum_{i = 1}^{n} \sum_{j=1}^p
 \cI (X_{ij} \leq z_j ), z \in \BR^p
 $ is the empirical distribution function. Up to first order asymptotics, the analysis remain unchanged from the above for this modified weight function.
@@ -162,11 +172,12 @@ a  center-outward partial ordering of points in $\cX$. There are generally sever
 algebraic and analytic properties assumed for data-depth functions to elicit interesting 
 mathematical properties, see for example \cite{ref:DIMACS061_Serfling, ref:AoS00461_ZuoSerfling} for details.
 
-It is easy to show that results in this paper are valid for the weight functions
+The spherically symmetric case of an elliptical distribution is realized with $\Sigma = \sigma^{2} \BI_{p}$ for some $\sigma^{2} > 0$. We fix the notation $Z = \Sigma^{-1/2} (X - \mu)$, and let 
+$Z \sim \BF_{Z}$. Note that $\BF_{Z}$ is a spherically symmetric distribution and hence
+depends only on $|z|$, and $\BE Z = \mathbf{0}_{p} \in \BR^{p}$ and $\BV Z = \BI_{p}$. Taking affine invariant data depth functions as weights ensures that $W(X, \BF) = W(Z, \BF_Z)$. It is now easy to show that results in this paper are valid for the weight functions (with appropriate scaling to satisfy \eqref{eqn:CorElliptic_ARE_eqn})
 ($i$) $W_{HSD} (X) = \BF_{Z} (| Z |)$ derived from the \textit{half-space depth},  
 ($ii$) $W_{MhD} (X) = |Z|^{2}/(1 + | Z |^2)$ derived from the \textit{Mahalanobis depth}, 
-and  
-($iii$) $W_{PD} (X) = |Z|/(1+ | Z |/MAD(\BF_{Z}))$, where $MAD$ stands for median 
+and ($iii$) $W_{PD} (X) = |Z|/(1+ | Z |/MAD(\BF_{Z}))$, where $MAD$ stands for median 
 absolute deviation, derived from the \textit{projection depth}. We omit the technical 
 details. These three weight functions give a center-inward partial ordering, thus essentially 
 quantifying \textit{peripherality} instead of \textit{depth}.

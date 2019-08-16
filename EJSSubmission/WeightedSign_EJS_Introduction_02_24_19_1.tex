@@ -47,7 +47,7 @@ a data-driven weight $W_{i}$ with the generalized sign $S_{i}$, that can be used
 to adaptively trade-off between efficiency and robustness considerations in any given 
 application. We demonstrate the utility of using the proposed \textit{weighted generalized sign} functions in a number of problems of current interest, including robust estimation of location and scatter.
 
-Specifically, we propose using product of the generalized sign function and a weight function derived as a transformation of a data-depth function \citep{ref:AoS00461_ZuoSerfling, ref:DIMACS061_Serfling}. Like data-depth functions, the weight functions used in this paper are non-negative reals defined over $\cX \times \cF$, where $\cF$ is a fixed family of probability measures. For every choice of parameters $\mu \in \cX$ and $\BF \in \cF$, in this paper
+Specifically, we propose using product of the generalized sign function and a weight function derived as a transformation of a data-depth function \citep{ref:DIMACS061_Serfling, ref:AoS00461_ZuoSerfling}. Like data-depth functions, the weight functions used in this paper are non-negative reals defined over $\cX \times \cF$, where $\cF$ is a fixed family of probability measures. For every choice of parameters $\mu \in \cX$ and $\BF \in \cF$, in this paper
 %
 \begin{align}
 R (X_{i}; \mu, \BF) = \mu +  S( X_{i}, \mu) W( X_{i}, \BF).
@@ -70,12 +70,13 @@ Notice that for the trivial choice $W( x, \BF) = | x - \mu_{\BF} |$,
 \begin{figure}[t]
 %\captionsetup{justification=centering, font=footnotesize}
 \begin{center}
-\begin{tabular}{ll}
+%\begin{tabular}{ll}
 %%% These ones have sample size = 700, just right  for EJS
-\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_Scatter_700_02_27_19} &
-\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_MD_700_02_27_19} \\
-\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_TD_700_02_27_19} &
-\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_PD_700_02_27_19} \\
+\includegraphics[width=\textwidth]{./Plots_SC/WeightedSignAll}
+%\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_Scatter_700_02_27_19} &
+%\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_MD_700_02_27_19} \\
+%\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_TD_700_02_27_19} &
+%\includegraphics[width=0.45\textwidth]{./Plots_SC/WeightedSign_PD_700_02_27_19} \\
 
 %%% These ones have sample size = 300, OK but too small file for EJS
 %\includegraphics[width=0.45\textwidth]{../Plots_SC/WeightedSign_Scatter_02_27_19} &
@@ -88,7 +89,7 @@ Notice that for the trivial choice $W( x, \BF) = | x - \mu_{\BF} |$,
 %\includegraphics[width=0.45\textwidth]{../Plots_SC/WeightedSign_MD_02_24_19} \\
 %\includegraphics[width=0.45\textwidth]{../Plots_SC/WeightedSign_TD_02_24_19} &
 %\includegraphics[width=0.45\textwidth]{../Plots_SC/WeightedSign_PD_02_24_19} \\
-\end{tabular}
+%\end{tabular}
 \caption{
 An illustrative bivariate scatter plot in the top left panel where the outliers are 
 identified with red circles, 
@@ -119,23 +120,8 @@ from the weighted signs also capture the pattern from the original data without 
 outliers.
 
 There are two unknown quantities in the generalized sign function as defined in \eqref{eq:GSign}: $\mu$ and $\BF$, To estimate dispersion and its eigen-structure robustly, we must start with a robust estimator for $\mu$. In Section~\ref{Sec:WSQuantiles} we present the case for \textit{weighted spatial quantiles}, which can be defined and studied in very general spaces 
-$\cX$. One special case of this is the {\it weighted spatial median}. As a location estimator, it has several interesting robustness properties and can be shown to be more efficient that some existing robust location estimators, thus making it a perfect candidate to estimate $\mu$. On the other hand, setting $\BF$ as $\BF_X$, i.e. the distribution of $X$ has the clear interpretation of differentially weighting observations based on their inlyingness to the overall data distribution. This mirrors the context of how data depth has been used in the literature (refs). Due to this reason, we assume $\BF \equiv \BF_X$ for the rest of the paper. As and when required, we shall use sample versions of these quantities, stating the theoretical conditions for the corresponding approximation results to hold.
+$\cX$. One special case of this is the {\it weighted spatial median}. As a location estimator, it has several interesting robustness properties and can be shown to be more efficient that some existing robust location estimators, thus making it a perfect candidate to estimate $\mu$. On the other hand, setting $\BF$ as $\BF_X$, i.e. the distribution of $X$ has the clear interpretation of differentially weighting observations based on their inlyingness to the overall data distribution. This mirrors the context of how data depth has been used in the literature \cite{LiuPareliusSingh99, ref:DIMACS061_Serfling}. Due to this reason, we assume $\BF \equiv \BF_X$ for the rest of the paper. As and when required, we shall use sample versions of these quantities, stating the theoretical conditions for the corresponding approximation results to hold.
 
-Following that, we restrict to the $\BR^{p}$ for fixed $p$, and present detailed 
-discussions on our primary proposal for a  robust measure of dispersion in 
-Section~\ref{Sec:WSDispersion1}, followed by a proposed 
-\textit{ affine equivariant version} of 
-it in Section~\ref{Sec:WSDispersion2}, robust estimation of eigenvalues and a third 
-robust estimator for dispersion in Section~\ref{Sec:Eigen}, and a thorough study of 
-robustness and efficiency using influence functions in Section~\ref{Sec:RE_Dispersion}.
-We then report multiple simulation-based numeric studies in Section~\ref{Sec:Simulation}, 
-present several real data examples in Section~\ref{Sec:DA}, and concluding remarks in 
-Section~\ref{Sec:Conclusion}.
+Following that, we restrict to the $\BR^{p}$ for fixed $p$, and present detailed discussions on our primary proposal for a  robust measure of dispersion in Section~\ref{Sec:WSDispersion1}, followed by a proposed \textit{ affine equivariant version} of it in Section~\ref{Sec:WSDispersion2}, robust estimation of eigenvalues and a third robust estimator for dispersion in Section~\ref{Sec:Eigen}, and a thorough study of robustness and efficiency using influence functions in Section~\ref{Sec:RE_Dispersion}. We then report multiple simulation-based numeric studies in Section~\ref{Sec:Simulation}, present several real data examples in Section~\ref{Sec:DA}, and concluding remarks in Section~\ref{Sec:Conclusion}.
 
-In the rest of this paper, all finite-dimensional vectors are 
-column vectors, and for a vector or matrix $a$, the notation $a^{T}$ stands for 
-its transpose. The Gaussian distribution with mean $\mu$ and variance $\Sigma$ is denoted
-by $N (\mu, \Sigma)$. The identity matrix  is denoted by $\BI$, with or without a 
-subscript to denote its dimension. The notations $A^{-1}$ and $det (A)$ respectively 
-stand for the inverse and determinant of matrix $A$, whenever these are well-defined.
-
+In the rest of this paper, all finite-dimensional vectors are column vectors, and for a vector or matrix $a$, the notation $a^{T}$ stands for its transpose. The Gaussian distribution with mean $\mu$ and variance $\Sigma$ is denoted by $N (\mu, \Sigma)$. The identity matrix  is denoted by $\BI$, with or without a subscript to denote its dimension. The notations $A^{-1}, det (A), \lambda_{\min} (A), \lambda_{\max} (A)$ respectively stand for the inverse, determinant, minimum and maximum eigenvalues of a matrix $A$, whenever these are well-defined. For a scalar or vector valued random variable $Y$, $\BE Y$ denotes its expected value, while $\BV Y$ denotes its variance or covariance matrix.
