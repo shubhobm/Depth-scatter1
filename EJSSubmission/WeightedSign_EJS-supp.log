@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  13 SEP 2019 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.9.26)  13 SEP 2019 15:24
 entering extended mode
-**./WeightedSign_EJS-R1.tex
-(WeightedSign_EJS-R1.tex
+**./WeightedSign_EJS-supp.tex
+(WeightedSign_EJS-supp.tex
 LaTeX2e <2018-04-01> patch level 5
 (imsart.cls
 Document Class: imsart 2010/04/27 driver class for package imsart.sty
@@ -371,25 +371,25 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 )
 \c@Theorem=\count124
 
-(WeightedSign_EJS-R1.aux)
-\openout1 = `WeightedSign_EJS-R1.aux'.
+(WeightedSign_EJS-supp.aux)
+\openout1 = `WeightedSign_EJS-supp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 191.
+Package hyperref Info: Link coloring ON on input line 132.
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -399,13 +399,13 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count125
 )
-LaTeX Info: Redefining \ref on input line 191.
-LaTeX Info: Redefining \pageref on input line 191.
-LaTeX Info: Redefining \nameref on input line 191.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
-(WeightedSign_EJS-R1.out) (WeightedSign_EJS-R1.out)
+(WeightedSign_EJS-supp.out) (WeightedSign_EJS-supp.out)
 \@outlinefile=\write4
-\openout4 = `WeightedSign_EJS-R1.out'.
+\openout4 = `WeightedSign_EJS-supp.out'.
 
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -436,202 +436,145 @@ G,.JBIG2,.JB2,.eps]
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 199.
+LaTeX Font Info:    Try loading font information for U+msa on input line 140.
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 199.
+LaTeX Font Info:    Try loading font information for U+msb on input line 140.
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 199.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
 
 
 ("C:\Program Files\LaTeX\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 250.
-
-(WeightedSign_EJS-R1.toc)
-\tf@toc=\write5
-\openout5 = `WeightedSign_EJS-R1.toc'.
-
- [0{C:/Users/subho/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-] (WeightedSign_EJS_Introduction_02_24_19_1.tex [1]
-<./Plots_SC/WeightedSignAll.png, id=156, 939.00812pt x 896.85063pt>
-File: ./Plots_SC/WeightedSignAll.png Graphic file (type png)
-<use ./Plots_SC/WeightedSignAll.png>
-Package pdftex.def Info: ./Plots_SC/WeightedSignAll.png  used on input line 75.
-
-(pdftex.def)             Requested size: 345.0pt x 329.50311pt.
-)
-(WeightedSign_EJS_WeightedSpatialQuantiles_02_24_19_1.tex [2] [3]
-Overfull \hbox (14.4733pt too wide) in paragraph at lines 87--90
-\OT1/cmr/m/it/10 Consequently, if $\OML/cmm/m/it/10 k=[]\OT1/cmr/m/n/10 (	[]) 
-\OML/cmm/m/it/10 < []\OT1/cmr/m/n/10 (	[])\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (	[])\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (	[
-]))$ \OT1/cmr/m/it/10 then this asymp-
- []
-
-[4] [5]) (WeightedSign_EJS_Dispersion_02_24_19_1.tex [6] [7]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 120.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 120.
+(hyperref)                removing `math shift' on input line 176.
 
-[8] [9] [10]
-Overfull \hbox (2.81398pt too wide) detected at line 336
-[]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 176.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 176.
+
+
+Overfull \hbox (52.00737pt too wide) in alignment at lines 185--189
+ [][][] []
  []
 
 
-Overfull \hbox (3.02835pt too wide) in paragraph at lines 350--354
-[]\OT1/cmr/m/n/10 We fol-low the gen-eral frame-work of M-estimation with data-
-dependent weights
+Overfull \hbox (39.10437pt too wide) detected at line 193
+\OT1/cmr/m/n/10 (\U/msb/m/n/10 I[] \OT1/cmr/m/n/10 + \U/msb/m/n/10 K[]\OT1/cmr/
+m/n/10 ) [] + [] [] [](\OML/cmm/m/it/10 e[]e[] \OMS/cmsy/m/n/10 
+ \OML/cmm/m/it/10 e[]e[]\OT1/cmr/m/n/10 )
  []
 
-[11] [12]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 440.
+Overfull \hbox (26.39223pt too wide) in paragraph at lines 193--196
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; j\OT1/cmr/m/n/10 )$-th el-e-ment and 0 els
+e-where, and $[] = \U/msb/m/n/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 [][]Z[]Z[
+]:W[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Z; \U/msb/m/n/10 F[]\OT1/cmr/m/n/10 )\OM
+L/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 \OML/cmm/m
+/it/10 Z\OT1/cmr/m/n/10 )[]]; 1 \OMS/cmsy/m/n/10 
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Sigma' on input line 440.
+Overfull \hbox (0.88945pt too wide) in paragraph at lines 197--198
+ [][] \OT1/cmr/m/n/10 Putting ev-ery-thing to-gether, de-note by $[]$ the sam-
+ple ver-sion of $[]$, the weighted
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 440.
+Overfull \hbox (4.06386pt too wide) in paragraph at lines 197--198
+\OT1/cmr/m/n/10 co-vari-ance ma-trix ob-tained from $\U/msb/m/n/10 F[]$\OT1/cmr
+/m/n/10 , i.e. $[] = [][] \OML/cmm/m/it/10 W[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 Z[]; \U/msb/m/n/10 F[]\OT1/cmr/m/n/10 )\U/msb/m/n/10 S\OT1/cmr/m/n/10 ([]\OM
+L/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 ; [])\OML/cmm/m/it/10 =n$\OT1/cmr/m/n/10 .
+ []
 
-[13]) (WeightedSign_EJS_IF_02_24_19_1.tex [14] [15])
-(WeightedSign_EJS_Simulations_02_24_19_1.tex [16]
+[0{C:/Users/subho/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 116.
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 200.
 
-<./Plots/IFnorm.png, id=362, 752.8125pt x 1003.75pt>
-File: ./Plots/IFnorm.png Graphic file (type png)
-<use ./Plots/IFnorm.png>
-Package pdftex.def Info: ./Plots/IFnorm.png  used on input line 118.
-(pdftex.def)             Requested size: 276.00105pt x 368.01218pt.
-[17] [18] [19]
-<./Plots/SDRcomparison_noout.pdf, id=396, 361.35pt x 361.35pt>
-File: ./Plots/SDRcomparison_noout.pdf Graphic file (type pdf)
-<use ./Plots/SDRcomparison_noout.pdf>
-Package pdftex.def Info: ./Plots/SDRcomparison_noout.pdf  used on input line 28
-9.
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/SDRcomparison_out.pdf, id=397, 361.35pt x 361.35pt>
-File: ./Plots/SDRcomparison_out.pdf Graphic file (type pdf)
-<use ./Plots/SDRcomparison_out.pdf>
-Package pdftex.def Info: ./Plots/SDRcomparison_out.pdf  used on input line 290.
+Overfull \hbox (10.96085pt too wide) in paragraph at lines 246--247
+[][]\OT1/cmr/bx/n/10 Lemma B.1. []\OT1/cmr/m/it/10 Given that con-di-tion 1 in 
+Corol-lary 2.4 holds, we have $\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (	[]) \OMS/c
+msy/m/n/10 
+ []
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-) (WeightedSign_EJS_DA_02_24_19_1.tex [20]
-<./Plots/Elnino_functional1.pdf, id=408, 289.08pt x 289.08pt>
-File: ./Plots/Elnino_functional1.pdf Graphic file (type pdf)
-<use ./Plots/Elnino_functional1.pdf>
-Package pdftex.def Info: ./Plots/Elnino_functional1.pdf  used on input line 56.
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional1.pdf, id=409, 289.08pt x 289.08pt>
-File: ./Plots/Octane_functional1.pdf Graphic file (type pdf)
-<use ./Plots/Octane_functional1.pdf>
-Package pdftex.def Info: ./Plots/Octane_functional1.pdf  used on input line 57.
+Overfull \hbox (7.75507pt too wide) has occurred while \output is active
+ []
+ []
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional2.pdf, id=410, 289.08pt x 289.08pt>
-File: ./Plots/Elnino_functional2.pdf Graphic file (type pdf)
-<use ./Plots/Elnino_functional2.pdf>
-Package pdftex.def Info: ./Plots/Elnino_functional2.pdf  used on input line 58.
+[1]
+Overfull \hbox (7.75507pt too wide) has occurred while \output is active
+ []
+ []
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional2.pdf, id=411, 289.08pt x 289.08pt>
-File: ./Plots/Octane_functional2.pdf Graphic file (type pdf)
-<use ./Plots/Octane_functional2.pdf>
-Package pdftex.def Info: ./Plots/Octane_functional2.pdf  used on input line 59.
+[2] (WeightedSign_EJS-supp.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Elnino_functional3.pdf, id=412, 289.08pt x 289.08pt>
-File: ./Plots/Elnino_functional3.pdf Graphic file (type pdf)
-<use ./Plots/Elnino_functional3.pdf>
-Package pdftex.def Info: ./Plots/Elnino_functional3.pdf  used on input line 60.
+Overfull \hbox (7.75507pt too wide) has occurred while \output is active
+ []
+ []
 
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-<./Plots/Octane_functional3.pdf, id=413, 289.08pt x 289.08pt>
-File: ./Plots/Octane_functional3.pdf Graphic file (type pdf)
-<use ./Plots/Octane_functional3.pdf>
-Package pdftex.def Info: ./Plots/Octane_functional3.pdf  used on input line 61.
-
-(pdftex.def)             Requested size: 137.9979pt x 137.99812pt.
-)
-(WeightedSign_EJS_Conclusion_02_24_19_1.tex) (WeightedSign_EJS-R1.bbl [21]
-[22])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 696.
- [23] [24 <./Plots_SC/WeightedSignAll.png>] [25 <./Plots/IFnorm.png>]
-[26 <./Plots/SDRcomparison_noout.pdf> <./Plots/SDRcomparison_out.pdf>] [27 <./P
-lots/Elnino_functional1.pdf> <./Plots/Octane_functional1.pdf> <./Plots/Elnino_f
-unctional2.pdf> <./Plots/Octane_functional2.pdf> <./Plots/Elnino_functional3.pd
-f> <./Plots/Octane_functional3.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 696.
- (WeightedSign_EJS-R1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 696.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 696.
-Package rerunfilecheck Info: File `WeightedSign_EJS-R1.out' has not changed.
-(rerunfilecheck)             Checksum: B491260D63A4ABBD776D74746A4C3BDB;1426.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 696.
- )
-(\end occurred when \ifnum on line 250 was incomplete) 
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
+ (WeightedSign_EJS-supp.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
+Package rerunfilecheck Info: File `WeightedSign_EJS-supp.out' has not changed.
+(rerunfilecheck)             Checksum: 061CB1F29CF5F274121FBD83427D66DC;137.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
+ ) 
 Here is how much of TeX's memory you used:
- 9184 strings out of 492973
- 134933 string characters out of 3133292
- 241593 words of memory out of 3000000
- 12758 multiletter control sequences out of 15000+200000
- 18864 words of font info for 69 fonts, out of 3000000 for 9000
+ 8775 strings out of 492973
+ 125868 string characters out of 3133292
+ 224027 words of memory out of 3000000
+ 12505 multiletter control sequences out of 15000+200000
+ 14347 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,39p,981b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/LaTeX/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/LaTeX/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/LaTeX/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmib10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cmextra/cmmib9.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr5.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr7.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-9.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb
-><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
-:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
-rogram Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pro
-gram Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Progra
-m Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program 
-Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Fil
-es/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program 
-Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on WeightedSign_EJS-R1.pdf (28 pages, 1049454 bytes).
+ 36i,11n,38p,900b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
+rogram Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
+gram Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
+am Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program 
+Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+es/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program File
+s/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program F
+iles/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
+s/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/La
+TeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/LaTeX/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/LaTeX/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/LaTeX/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/LaTeX/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/symbols/msbm7.pfb>
+Output written on WeightedSign_EJS-supp.pdf (4 pages, 271431 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

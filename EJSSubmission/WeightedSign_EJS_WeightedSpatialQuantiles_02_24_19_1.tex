@@ -83,10 +83,10 @@ Assume that the weight function $W (X, \BF)$ is bounded above by $k$ for some $k
 \ban
 ARE (\hat{q}_{nW}, \hat{q}_{n}) \geq
 \frac{ \lambda_{\min} (\Psi_1) \lambda_{\min}^2 (\Psi_{2W})}
-{k \lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2)}
+{k \lambda_{\max} (\Psi_{1W}) \lambda_{\max}^2 (\Psi_2)}
 \ean
 %
-Consequently, if $k / \lambda_{\min}^2 (\Psi_{2W}) < \lambda_{\min} (\Psi_1) /(\lambda_{\max} (\Psi_1) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
+Consequently, if $k / \lambda_{\min}^2 (\Psi_{2W}) < \lambda_{\min} (\Psi_1) /(\lambda_{\max} (\Psi_{1W}) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
 \end{Corollary}
 
 \begin{proof}[Proof of Corollary~\ref{Cor:ARE}]
@@ -121,10 +121,10 @@ There are several alternative formulations, see the above reference and citation
 Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, with location parameter $\mu = q_{0}$ and the covariance matrix $\Sigma$ satisfies the following conditions:
 %
 \begin{enumerate}
-\item $Tr(\Sigma^4) = o( Tr^2 (\Sigma^2) )$,
+%\item $Tr(\Sigma^4) = o( Tr^2 (\Sigma^2) )$,
 
-\item $\frac{Tr^4(\Sigma)}{ Tr^2 (\Sigma^2)} \exp \left\{ - \frac{Tr^2 (\Sigma)}
-{ 128 \lambda_{\max}^2 (\Sigma)} \right\} = o(1)$,
+%\item $\frac{Tr^4(\Sigma)}{ Tr^2 (\Sigma^2)} \exp \left\{ - \frac{Tr^2 (\Sigma)}
+%{ 128 \lambda_{\max}^2 (\Sigma)} \right\} = o(1)$,
 
 \item $\exp \left\{ - \frac{Tr^2 (\Sigma)}{ 256 \lambda_{\max}^2 (\Sigma)} \right\} = 
 o\left( \min\left( \frac{\lambda_{\max}(\Sigma) }{Tr( \Sigma)},
@@ -143,7 +143,7 @@ Also assume that the weight function is (a) bounded above by some $W_{\max} > 0$
 Then we have $ARE( \hat q_{n,W}, \hat q_n) > 1$.
 \end{Corollary}
 
-The conditions 1-4 in Corollary~\ref{Cor:Elliptic_ARE} are due to \cite{ref:JASA151658_WangPengLi}, and ensure that the eigenvalues of $\Sigma$ are bounded away from 0 and $\infty$. Corollary~\ref{Cor:Elliptic_ARE} can be proved using Corollary~\ref{Cor:ARE}, the fact that for elliptical distributions $\Psi_1$ is non-singular \cite{ref:SPL12765_Taskinenetal}, then using and expanding upon Lemma A.5 in \cite{ref:JASA151658_WangPengLi}. We give the technical details in the supplementary material.
+The conditions 1 and 2 in Corollary~\ref{Cor:Elliptic_ARE} are due to \cite{ref:JASA151658_WangPengLi}, and ensure that the eigenvalues of $\Sigma$ are bounded away from 0 and $\infty$. Corollary~\ref{Cor:Elliptic_ARE} can be proved using Corollary~\ref{Cor:ARE}, the fact that for elliptical distributions $\Psi_1$ is non-singular \cite{ref:SPL12765_Taskinenetal}, then using and expanding upon Lemma A.5 in \cite{ref:JASA151658_WangPengLi}. We give the technical details in the supplementary material.
 
 Obtaining affine invariant weight functions is not challenging. Most functions arising in the context of data depths are affine invariant. Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and  choices of weight functions where there is a benefit to considering weighted spatial medians. In fact, the choice of weight functions is even broader: only location invariance is required for Corollary~\ref{Cor:Elliptic_ARE} to hold. We only choose to restrict ourselves here because the subsequent analysis uses weights based on affine invariant data depth functions. Also note that in case \eqref{eqn:CorElliptic_ARE_eqn} does not hold for the original form of a weight function, one can scale all weights by an appropriate constant to reduce the value in the left hand side of \eqref{eqn:CorElliptic_ARE_eqn} to satisfy the condition.
 

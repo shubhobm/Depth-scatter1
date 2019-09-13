@@ -1,0 +1,25 @@
+\begin{thebibliography}{}
+
+\bibitem[Anderson, 2009]{ref:AndersonBook09}
+Anderson, T. (2009).
+\newblock {\em An Introduction to Multivariate Statistical Analysis}.
+\newblock Wiley, Hoboken, NJ, 3 edition.
+
+\bibitem[Magyar and Tyler, 2014]{ref:Biometrika14673_MagyarTyler}
+Magyar, A.~F. and Tyler, D.~E. (2014).
+\newblock The asymptotic inadmissibility of the spatial sign covariance matrix
+  for elliptically symmetric distributions.
+\newblock {\em Biometrika}, 101(3):673--688.
+
+\bibitem[Taskinen et~al., 2012]{ref:SPL12765_Taskinenetal}
+Taskinen, S., Koch, I., and Oja, H. (2012).
+\newblock Robustifying principal component analysis with spatial sign vectors.
+\newblock {\em Statistics \& Probability Letters}, 82(4):765 -- 774.
+
+\bibitem[Wang et~al., 2015]{ref:JASA151658_WangPengLi}
+Wang, L., Peng, B., and Li, R. (2015).
+\newblock A high-dimensional nonparametric multivariate test for mean vector.
+\newblock {\em Journal of the American Statistical Association}, 110(512):1658
+  -- 1669.
+
+\end{thebibliography}
