@@ -1,0 +1,264 @@
+%\documentclass[ejs]{imsart}
+\documentclass[11pt,letterpaper]{article}
+\pdfoutput=1
+
+\RequirePackage[OT1]{fontenc}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{amssymb,amsmath,amsthm,color,outlines,subfigure,comment}
+\usepackage[small]{caption}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{stackrel}
+\usepackage[round]{natbib}
+
+% DON'T change margins - should be 1 inch all around.
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+\addtolength{\textwidth}{0.9in}
+\addtolength{\textheight}{0.9in}
+\addtolength{\topmargin}{-.4in}
+
+%%%%%% put your definitions there:
+%\startlocaldefs
+\newcommand{\bfa}{{\bf{a}}}
+\newcommand{\bfb}{{\bf{b}}}
+\newcommand{\bfc}{{\bf{c}}}
+\newcommand{\bfd}{{\bf{d}}}
+\newcommand{\bfe}{{\bf{e}}}
+\newcommand{\bff}{{\bf{f}}}
+\newcommand{\bfg}{{\bf{g}}}
+\newcommand{\bfl}{{\bf{l}}}
+\newcommand{\bfp}{{\bf{p}}}
+\newcommand{\bfq}{{\bf{q}}}
+\newcommand{\bfr}{{\bf{r}}}
+\newcommand{\bfs}{{\bf{s}}}
+\newcommand{\bft}{{\bf{t}}}
+\newcommand{\bfu}{{\bf{u}}}
+\newcommand{\bfv}{{\bf{v}}}
+\newcommand{\bfw}{{\bf{w}}}
+\newcommand{\bfx}{{\bf{x}}}
+\newcommand{\bfy}{{\bf{y}}}
+\newcommand{\bfz}{{\bf{z}}}
+
+\newcommand{\bfA}{{\mathbf{A}}}
+\newcommand{\bfB}{{\mathbf{B}}}
+\newcommand{\bfC}{{\mathbf{C}}}
+\newcommand{\bfD}{{\mathbf{D}}}
+\newcommand{\bfE}{{\mathbf{E}}}
+\newcommand{\bfF}{{\mathbf{F}}}
+\newcommand{\bfG}{{\mathbf{G}}}
+\newcommand{\bfH}{{\mathbf{H}}}
+\newcommand{\bfI}{{\mathbf{I}}}
+\newcommand{\bfL}{{\mathbf{L}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\bfR}{{\mathbf{R}}}
+\newcommand{\bfS}{{\mathbf{S}}}
+\newcommand{\bfT}{{\mathbf{T}}}
+\newcommand{\bfU}{{\mathbf{U}}}
+\newcommand{\bfV}{{\mathbf{V}}}
+\newcommand{\bfW}{{\mathbf{W}}}
+\newcommand{\bfX}{{\mathbf{X}}}
+\newcommand{\bfY}{{\mathbf{Y}}}
+\newcommand{\bfZ}{{\mathbf{Z}}}
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+
+\newcommand{\BCOV}{{\mathbb{COV}}}
+
+\newcommand{\colrit}{\color{red} \it}
+\newcommand{\colrbf}{\color{red} \bf}
+\newcommand{\colbit}{\color{blue} \it}
+\newcommand{\colbbf}{\color{blue} \bf}
+\newcommand{\colmit}{\colm \it}
+\newcommand{\colmbf}{\colm \bf}
+
+
+\newcommand{\bfalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfepsilon}{{\boldsymbol{\epsilon}}}
+\newcommand{\bftheta}{{\boldsymbol{\theta}}}
+\newcommand{\bfgamma}{{\boldsymbol{\gamma}}}
+\newcommand{\bfmu}{{\boldsymbol{\mu}}}
+\newcommand{\bfpi}{{\boldsymbol{\pi}}}
+
+
+\newcommand{\bfBeta}{{\boldsymbol{\Beta}}}
+\newcommand{\bfGamma}{{\boldsymbol{\Gamma}}}
+\newcommand{\bfOmega}{{\boldsymbol{\Omega}}}
+\newcommand{\bfSigma}{{\boldsymbol{\Sigma}}}
+\newcommand{\bfPhi}{{\boldsymbol{\Phi}}}
+
+
+\newcommand{\bfZero}{\bf 0}
+\newcommand{\bfOne}{\bf 1}
+\newcommand{\iid}{\stackrel{i.i.d.}{\sim}}
+\newcommand{\raro}{\rightarrow}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+
+\def\baq#1\eaq{\begin{align}#1\end{align}}
+\def\ban#1\ean{\begin{align*}#1\end{align*}}
+\newcommand{\draro}{ \stackrel{{\mathcal D}}{\Rightarrow} }
+
+\def\bredbf#1\eredbf{{\color{red}{\bf ???? #1 ????}}}
+\def\BeginRedComment#1\EndRedComment{({\color{red}{\bf Comment:} {\it #1}}) }
+\def\BeginBlueComment#1\EndBlueComment{({\color{blue}{\bf Comment:} {\it #1}}) }
+
+\DeclareMathOperator*{\ve}{vec}
+\DeclareMathOperator*{\diag}{diag }
+\DeclareMathOperator*{\supp}{supp }
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Th}{^{\text{th}}}
+
+\makeatletter
+\newcommand{\opnorm}{\@ifstar\@opnorms\@opnorm}
+\newcommand{\@opnorms}[1]{%
+  \left|\mkern-1.5mu\left|\mkern-1.5mu\left|
+   #1
+  \right|\mkern-1.5mu\right|\mkern-1.5mu\right|
+}
+\newcommand{\@opnorm}[2][]{%
+  \mathopen{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+  #2
+  \mathclose{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+}
+\makeatother
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+
+%\endlocaldefs
+
+\begin{document}
+
+\title{On Weighted Multivariate Sign Functions}
+\date{}
+\author{
+Subhabrata Majumdar and Snigdhansu Chatterjee
+}
+\maketitle
+
+\section*{Response to referee comments}
+
+\paragraph{Referee:}
+Do I understand correctly that your weights are not allowed to depend on $q$? Then your claim on top of page 3 that this is the same object that has been studied before (e.g., in \cite{ref:AoS97435_Koltchinskii}) is incorrect. If it is allowed to depend on $q$, then please explain how your results
+are different from the existing literature.
+
+\paragraph{Authors:} 
+We think this ambiguity was a result of assuming $\BF$ as a general distribution in the beginning, but later having $\BF \equiv \BF_X$ in all our applications. In that case, $W(X,\BF)$ shall depend on $q$ implicitly since $q$ is a parameter of $\BF$. To bypass this confusion, we now assume $X \sim \BF$ from the beginning (highlighted in the introduction, page 2), and then add a remark after theorem 2.1 saying it still goes through if $\BF$ is not $\BF_X$.
+
+While theoretical properties of related quantities have been established in papers like \cite{ref:AoS97435_Koltchinskii}, sometimes under different formulations (e.g. the weight function in \cite{ref:AoS97435_Koltchinskii} is a convex non-decreasing function of $|x - \mu|$), we start off from a broad-based formulation of the weights and then concentrate on the more practical aspects of how weights affect robustness and efficiency. We add a discussion on this in the introduction {\color{red} (have to add that)}.
+
+\subsection*{Comment (b)}
+
+\paragraph{Referee:}
+Regarding the proof of Theorem 2.1: if you claim that this is a new result, the proof can not be omitted completely: please include it in the supplementary material. If it is not new please give a precise reference.
+
+\paragraph{Authors:}
+We have included a proof sketch of the theorem, following arguments from \cite{ref:AoS921514_Niemiro} and \cite{ref:AoS891631_Haberman}. Please see highlighted text in page 4.
+
+\subsection*{Comment (c)}
+\paragraph{Referee:}
+I could not understand Corollary 2.2: is $q_0$ still a minimizer of $\Psi(q; 0; \BF)$? If so, how can the weight depend on this unknown quantity? Even if $q_0$ is a fixed vector, this still does not make sense to me. Additionally, please show that conditions A1-A3 hold in your examples.
+
+\paragraph{Authors:}
+This ambiguity was also the result of not assuming $X \sim \BF$ from the beginning. In any case, under the present setup we replace this with a more general result that does not need the assumption on $W(X,\BF)$. Please see the response to comment (e) for more detail on the new Corollary 2.2.
+
+\subsection*{Comment (d)}
+\paragraph{Referee:}
+Page 3 states “We report only the case of the weighted spatial median for brevity..” In this case, it could be better to focus on the median everywhere and avoid mentioning general quantiles.
+
+\paragraph{Authors:}
+We indeed do not elaborate on weighted spatial quantiles in this paper. Following the referee's suggestion, now we only give their general definition in Section 2, and then discuss the weighted spatial median in detail. The modifications are highlighted in page 3.
+
+\subsection*{Comment (e)}
+\paragraph{Referee:}
+Corollary 2.4 states “then $S(X; q_0)$ is uniform on the unit ball in $\BR^p$..” – do you mean $S(Z; q_0)$? If $X$ has arbitrary elliptically symmetric distribution, this is not true. Moreover, why is it interesting in this case to consider the case when $\BF$ is the (unknown) distribution of $X$?
+
+\paragraph{Authors:}
+The referee is right, the spatial sign is indeed not independent of the norm for non-spherical but elliptical distributions. Fortunately, with a few weak conditions on $\Sigma$ from \cite{ref:JASA151658_WangPengLi} we were able to prove that the ARE is larger than 1 for general elliptical distributions. To accommodate this we have changed Corollary 2.2 to make it more general, and then changed Corollary 2.4 to accommodate this (highlighted in pages 4-6).
+
+We thank the referee for this comment, which led to a rigorous revision of the theoretical conditions for the weighted spatial median.
+
+\subsection*{Comment (f)}
+\paragraph{Referee:}
+Page 5: “..we propose using $W(x; \BF_n)$: please define what you mean by an empirical distribution function here, as $X$ is a vector.
+
+\paragraph{Authors:}
+This was a typo. We have corrected it.
+
+\subsection*{Comment (g)}
+\paragraph{Referee:}
+The weight functions discussed in section 2.1 can only be computed if the distribution of $X$ is known. Why would such functions be of any use in statistical context? If the unknown distribution is replaced by its empirical version, why would all the useful properties be
+preserved? I suggest explaining these points clearly in the beginning.
+
+\paragraph{Authors:}
+We have added a paragraph in the Introduction to motivate the use of weighted signs, emphasizing on the unknown quantities $\mu$ and $\BF$, and that they need to be replaced by their empirical version in a practical scenario. Please see the highlighted part in Page 2 for this discussion.
+
+\subsection*{Comment (h)}
+\paragraph{Referee:}
+Equation (5): is $\tilde X$ a statistic?
+
+\paragraph{Authors:}
+$\tilde X$ is a random variable obtained by replacing the magnitude of $X$ with its weight. We mention this in page 7 (highlighted).
+
+\subsection*{Comment (i)}
+\paragraph{Referee:} On page 7, it is stated that “We now discuss the properties of the sample version $\tilde \Sigma$ computed from $X$. In practice, we cannot obtain $W(x)?W(x; F)$, and consequently use $W(x; \BF_n)$ instead..” – this is a good point, but I suggest discussing it earlier in the paper, as it affects many assumptions made prior to this statement.
+
+\paragraph{Authors:}
+The added paragraph in Page 2 (please see response to comment (g)) clarifies this earlier now.
+
+\subsection*{Minor comment (a)}
+\paragraph{Referee:}
+Last paragraph of page 3: should $\hat q_n$ be $\hat q_{n W}$?
+
+\paragraph{Authors:}
+This was a typo. We have corrected it.
+
+%\newpage
+%\input{misc}
+
+\bibliographystyle{apalike}
+\bibliography{WeightedSignBib_01_29_19}
+
+\end{document}

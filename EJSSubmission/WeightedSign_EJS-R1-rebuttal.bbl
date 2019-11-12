@@ -1,0 +1,24 @@
+\begin{thebibliography}{}
+
+\bibitem[Haberman, 1989]{ref:AoS891631_Haberman}
+Haberman, S.~J. (1989).
+\newblock Concavity and estimation.
+\newblock {\em The Annals of Statistics}, 17(4):1631 -- 1661.
+
+\bibitem[Koltchinskii, 1997]{ref:AoS97435_Koltchinskii}
+Koltchinskii, V.~I. (1997).
+\newblock \textit{M}-estimation, convexity and quantiles.
+\newblock {\em The Annals of Statistics}, 25(2):435 -- 477.
+
+\bibitem[Niemiro, 1992]{ref:AoS921514_Niemiro}
+Niemiro, W. (1992).
+\newblock Asymptotics for {M}-estimators defined by convex minimization.
+\newblock {\em The Annals of Statistics}, 20(3):1514--1533.
+
+\bibitem[Wang et~al., 2015]{ref:JASA151658_WangPengLi}
+Wang, L., Peng, B., and Li, R. (2015).
+\newblock A high-dimensional nonparametric multivariate test for mean vector.
+\newblock {\em Journal of the American Statistical Association}, 110(512):1658
+  -- 1669.
+
+\end{thebibliography}
