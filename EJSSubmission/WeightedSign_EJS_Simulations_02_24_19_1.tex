@@ -46,17 +46,8 @@ from the sample covariance matrix, i.e. $\hat\bfgamma_{1}$ is obtained as:
  FSE ( \hat\bfgamma_{1}, \hat\bfgamma_{1}) = 
  \frac{ MSPA(\hat\bfgamma_{0, 1})}{MSPA(\hat\bfgamma_{1})}.
  \ean
-
-The results from this simulation exercise are presented in Table~\ref{table:FSEtable4}.
-It can be seem that  $\tilde{\Sigma}$-based estimators (columns 3-5) 
-outperform SCM and Tyler's $M$-estimator of scatter. Among the 3 depth functions 
-considered, projection depth gives the best results. Its finite sample performances are 
-better than Tyler's and Huber's M-estimators of scatter, as well as their symmetrized 
-counterparts that are much more computationally intensive (see Table 4 in 
-\cite{ref:JMVA071611_Sirkiaetal}). The affine equivariant ${\Sigma}_{*}$-based estimators
- (columns 6-8) are even more efficient.
-
-\begin{table}[t]
+ 
+ \begin{table}[t]
 \begin{scriptsize}
     \begin{tabular}{c|cc|ccc|ccc}
     \hline
@@ -105,15 +96,17 @@ several scatter matrices in dimension $p=4$. The notation
 \label{table:FSEtable4}
 \end{table}
 
-
-
-
+The results from this simulation exercise are presented in Table~\ref{table:FSEtable4}.
+It can be seem that  $\tilde{\Sigma}$-based estimators (columns 3-5) 
+outperform SCM and Tyler's $M$-estimator of scatter. Among the 3 depth functions 
+considered, projection depth gives the best results. Its finite sample performances are 
+better than Tyler's and Huber's M-estimators of scatter, as well as their symmetrized 
+counterparts that are much more computationally intensive (see Table 4 in 
+\cite{ref:JMVA071611_Sirkiaetal}). The affine equivariant ${\Sigma}_{*}$-based estimators (columns 6-8) are even more efficient.
 
 \subsection{Influence function comparison}
 
-%\begin{comment}
-
-\begin{figure}[]
+\begin{figure}[t!]
 	\centering
 		\includegraphics[width=0.8\textwidth]{./Plots/IFnorm.png}
 	\caption{Plot of the norm of influence function for first eigenvector of (a) sample 
@@ -266,8 +259,19 @@ parameters corresponding to the distributions of $X$ and $X | Y$, and using the 
 eigenvectors of $\tilde{\Sigma}$ as $\hat\Gamma_{1}$. A robust location estimator for 
 the distribution of $X | Y$ is required for the estimation of $\sigma^2$. 
 Details are available in \cite{ref:PhilTransRoyalSoc094385_AdragniCook}.
-
-Ina non-linear regression model, we compare the performance of the robust version of 
+%
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{ll}
+\includegraphics[width=0.4\textwidth]{./Plots/SDRcomparison_noout} &
+\includegraphics[width=0.4\textwidth]{./Plots/SDRcomparison_out}
+\end{tabular}
+\caption{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers}
+\label{fig:SDRfig}
+\end{center}
+\end{figure}
+%
+In a non-linear regression model, we compare the performance of the robust version of 
 SDR with the original method of 
 \cite{ref:PhilTransRoyalSoc094385_AdragniCook} 
 with or without the presence of bad leverage points in $\Sigma$. 
@@ -280,20 +284,6 @@ We measure performances of the SDR models by their mean squared prediction error
 another set of 200 observations  generated similarly, and taking the average of these 
 errors on 100 such training-test pairs of datasets. The above steps 
 are repeated for the choices of $p = 5, 10, 25, 50, 75, 100, 125, 150$.
-
-%\begin{comment}
-\begin{figure}[t]
-%\captionsetup{justification=centering, font=footnotesize}
-\begin{center}
-\begin{tabular}{ll}
-\includegraphics[width=0.4\textwidth]{./Plots/SDRcomparison_noout} &
-\includegraphics[width=0.4\textwidth]{./Plots/SDRcomparison_out}
-\end{tabular}
-\caption{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers}
-\label{fig:SDRfig}
-\end{center}
-\end{figure}
-%\end{comment}
 
 Panel (a) of figure \ref{fig:SDRfig} compares prediction errors using both robust and 
 maximum likelihood SDR estimates when the covariates contain no outliers: here the two 
