@@ -1,0 +1,133 @@
+\section{Influence Functions of Dispersion Measures}
+\label{Sec:RE_Dispersion}
+
+
+We retain the framework adopted in Section~\ref{Sec:WSDispersion1}, and discuss in this 
+section the robustness and efficiency properties associated with $\tilde{\Sigma}$ 
+and $\Sigma_{*}$, and principal components derived therefrom. 
+We do not discuss $\Sigma^{\dagger}$ here, since  the 
+properties of that approach follow from those of  $\tilde{\Sigma}$. 
+We additionally assume that the eigenvalues of $\Sigma$ are 
+distinct, and given by  $\lambda_1 > \lambda_2 > \ldots > \lambda_p$, to avoid 
+several additional technical conditions for the theoretical results to follow. 
+The case where the eigenvalues of $\Sigma$ can have multiplicity greater than one 
+requires no additional conceptual development, but does require considerable algebraic 
+manipulations.
+
+For studying 
+the robustness aspect, we first present some results relating to influence functions 
+in the current context. 
+ Influence functions quantify how much influence a sample point, especially 
+an infinitesimal contamination, has on any functional of a probability 
+distribution \citep{ref:HampelBook86}. Given any probability distribution 
+$\BH \in \cM$, the influence function of any point $x_0 \in \mathcal{X}$ for 
+some functional $T(\BH)$ on the distribution is defined as
+%
+\ban
+IF(x_0; T,\BH) =
+\lim_{\epsilon \rightarrow 0} \frac{1}{\epsilon} (T(\BH_\epsilon) - T(\BH)),
+\ean
+%
+where 
+$\BH_\epsilon = (1-\epsilon)\BH + \epsilon \delta_{x_0}$; $\delta_{x_0}$ being 
+the distribution with point mass at $x_0$. When $T(\BH) = E_\BH f$ for some 
+$\BH$-integrable function $f$, $IF(x_0; T,\BH) = f(x_0) - T(\BH)$.
+
+It now follows that
+%
+\ban
+IF (x_0; \tilde{\Sigma}, \BF) =
+W^{2} (x_{0}) \BS(x_0; \mu) - \tilde \Sigma.
+\ean
+%
+Recall that $\tilde{\lambda}_{1} > \tilde{\lambda}_{2} > \ldots > \tilde{\lambda}_{p}$
+are the eigenvalues of $\tilde{\Sigma}$, which we assume are all distinct values. 
+
+\begin{Proposition}\label{Thm:IF}
+The influence function of $\bfgamma_{i}$ as follows: 
+\ban
+IF(x_0; \bfgamma_{i}, \BF)  & = 
+\sum_{k = 1; k \neq i}^p \frac{1}{\tilde{\lambda}_{i} - \tilde{\lambda}_{k}} 
+\left\{ \bfgamma^T_k IF(x_0; \tilde \Sigma,\BF)  \bfgamma_{i} \right\} 
+\bfgamma_k \notag \\
+& =  \sum_{k=1; k \neq i}^p \frac{1}{\tilde{\lambda}_{i} - \tilde{\lambda}_{k}}
+W^{2} (x_{0}) \left\{  \bfgamma^T_{k} \BS (x_0; \mu) \bfgamma_{i} \right\} 
+\bfgamma_{k}.
+\ean
+\end{Proposition}
+
+The proof of Proposition~\ref{Thm:IF} follows from \cite{ref:JRSSB79217_Sibson} and 
+\cite{ref:Biometrika00603_CrouxHaesbroeck}, we omit the details. 
+
+If the weight function $W (\cdot)$ is a bounded function, as is the case of $W_{HSD}$, 
+$W_{MhD}$, and $W_{PD}$, 
+the influence function given in  Proposition~\ref{Thm:IF} is bounded, indicating good 
+robustness properties of the principal component analysis.
+
+
+
+We now derive the influence function for $\Sigma_{*}$. 
+\begin{Proposition}\label{Thm:IF2}
+The influence function of $\Sigma_{*}$ is given by
+\ban 
+IF ( x_{0}, \Sigma_{*}, \BF) = 
+\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) 
+\BS( x_0; \mu) 
+- \beta_{\Sigma_{*}} (| x_{0} |; \BF_{Z} ) \Sigma_{*}.
+\ean
+\end{Proposition}
+
+\begin{proof}[Proof of Proposition~\ref{Thm:IF2}]
+Let $z_{0} = \Lambda^{-1/2} \Gamma^T  (x_0 - \mu) = (z_{0 1}, \ldots, z_{0 p})^T$.
+As a first step, since $\Sigma_{*}$ is affine equivariant, we obtain from 
+\cite{ref:Biometrika00603_CrouxHaesbroeck} 
+that 
+\ban 
+IF ( x_{0}, \Sigma_{*}, \BF) = \Sigma_{*}^{1/2} 
+IF ( z_{0}, \Sigma_{*}, \BF_{Z})  \Sigma_{*}^{1/2}.
+\ean
+From Lemma 1 of \citep{ref:HampelBook86}, page 276, we obtain that there exist 
+scalar valued functions $\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} )$ and 
+$\beta_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) $ such  that 
+\ban
+IF ( z_{0}, \Sigma_{*}, \BF_{Z}) = \alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) 
+\BS( z_0; {\mathbf 0}) 
+- \beta_{\Sigma_{*}} (| x_{0} |; \BF_{Z} ) \BI_{p}, 
+\ean
+consequently we obtain
+\ban 
+IF ( x_{0}, \Sigma_{*}, \BF) = 
+\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) 
+\BS( x_0; \mu) 
+- \beta_{\Sigma_{*}} (| x_{0} |; \BF_{Z} ) \Sigma_{*}.
+\ean
+\end{proof}
+
+Suppose ${\lambda}_{* 1} > {\lambda}_{* 2} > \ldots > {\lambda}_{* p}$
+are the eigenvalues of ${\Sigma}_{*}$, which we assume are all distinct values. 
+Also denote the $i$-th eigenvector of $\Sigma_{*}$ by 
+$\bfgamma_{* i} = (\gamma_{* i 1}, \ldots, \gamma_{* i p})^T$ for $1 \leq i \leq p$.
+
+\begin{Proposition}\label{Thm:IF3}
+The influence function of $\bfgamma_{* i} $ may be obtained as 
+\ban
+IF(x_0; \bfgamma_{*i}, \BF)  & = 
+\sum_{k = 1; k \neq i}^p \frac{1}{{\lambda}_{*i} - {\lambda}_{*k}} 
+\left\{ \bfgamma^T_{* k} IF(x_0; \tilde \Sigma,\BF)  \bfgamma_{* i} \right\} 
+\bfgamma_{* k} \notag \\
+& =  
+\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) \sum_{k=1; k \neq i}^p 
+\frac{1}{{\lambda}_{*i} - {\lambda}_{*k}}
+\left\{ \bfgamma^T_{* k} \BS (x_0; \mu) \bfgamma_{* i} \right\} 
+\bfgamma_{* k}.
+\ean
+\end{Proposition}
+
+We omit the proof of Proposition~\ref{Thm:IF3}, which follows along similar lines to 
+to rest of the computations of this section.
+It can be shown that when $W (\cdot)$ is a bounded function, 
+$\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} )$ is also bounded, along the lines of 
+\cite{ref:HuberBook81}, which in turn implies that the influence function for a 
+principal component based on $\Sigma_{*}$ is also bounded.
+
+
