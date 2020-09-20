@@ -1,0 +1,364 @@
+%\documentclass[ejs]{imsart}
+\documentclass[11pt,letterpaper]{article}
+\pdfoutput=1
+
+\RequirePackage[OT1]{fontenc}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{amssymb,amsmath,amsthm,color,outlines,subfigure,comment}
+\usepackage[small]{caption}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{stackrel}
+\usepackage[round]{natbib}
+
+% DON'T change margins - should be 1 inch all around.
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+\addtolength{\textwidth}{0.9in}
+\addtolength{\textheight}{0.9in}
+\addtolength{\topmargin}{-.4in}
+
+%%%%%% put your definitions there:
+%\startlocaldefs
+\newcommand{\bfa}{{\bf{a}}}
+\newcommand{\bfb}{{\bf{b}}}
+\newcommand{\bfc}{{\bf{c}}}
+\newcommand{\bfd}{{\bf{d}}}
+\newcommand{\bfe}{{\bf{e}}}
+\newcommand{\bff}{{\bf{f}}}
+\newcommand{\bfg}{{\bf{g}}}
+\newcommand{\bfl}{{\bf{l}}}
+\newcommand{\bfp}{{\bf{p}}}
+\newcommand{\bfq}{{\bf{q}}}
+\newcommand{\bfr}{{\bf{r}}}
+\newcommand{\bfs}{{\bf{s}}}
+\newcommand{\bft}{{\bf{t}}}
+\newcommand{\bfu}{{\bf{u}}}
+\newcommand{\bfv}{{\bf{v}}}
+\newcommand{\bfw}{{\bf{w}}}
+\newcommand{\bfx}{{\bf{x}}}
+\newcommand{\bfy}{{\bf{y}}}
+\newcommand{\bfz}{{\bf{z}}}
+
+\newcommand{\bfA}{{\mathbf{A}}}
+\newcommand{\bfB}{{\mathbf{B}}}
+\newcommand{\bfC}{{\mathbf{C}}}
+\newcommand{\bfD}{{\mathbf{D}}}
+\newcommand{\bfE}{{\mathbf{E}}}
+\newcommand{\bfF}{{\mathbf{F}}}
+\newcommand{\bfG}{{\mathbf{G}}}
+\newcommand{\bfH}{{\mathbf{H}}}
+\newcommand{\bfI}{{\mathbf{I}}}
+\newcommand{\bfL}{{\mathbf{L}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\bfR}{{\mathbf{R}}}
+\newcommand{\bfS}{{\mathbf{S}}}
+\newcommand{\bfT}{{\mathbf{T}}}
+\newcommand{\bfU}{{\mathbf{U}}}
+\newcommand{\bfV}{{\mathbf{V}}}
+\newcommand{\bfW}{{\mathbf{W}}}
+\newcommand{\bfX}{{\mathbf{X}}}
+\newcommand{\bfY}{{\mathbf{Y}}}
+\newcommand{\bfZ}{{\mathbf{Z}}}
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+
+\newcommand{\BCOV}{{\mathbb{COV}}}
+
+\newcommand{\colrit}{\color{red} \it}
+\newcommand{\colrbf}{\color{red} \bf}
+\newcommand{\colbit}{\color{blue} \it}
+\newcommand{\colbbf}{\color{blue} \bf}
+\newcommand{\colmit}{\colm \it}
+\newcommand{\colmbf}{\colm \bf}
+
+
+\newcommand{\bfalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfepsilon}{{\boldsymbol{\epsilon}}}
+\newcommand{\bftheta}{{\boldsymbol{\theta}}}
+\newcommand{\bfgamma}{{\boldsymbol{\gamma}}}
+\newcommand{\bfmu}{{\boldsymbol{\mu}}}
+\newcommand{\bfpi}{{\boldsymbol{\pi}}}
+
+
+\newcommand{\bfBeta}{{\boldsymbol{\Beta}}}
+\newcommand{\bfGamma}{{\boldsymbol{\Gamma}}}
+\newcommand{\bfOmega}{{\boldsymbol{\Omega}}}
+\newcommand{\bfSigma}{{\boldsymbol{\Sigma}}}
+\newcommand{\bfPhi}{{\boldsymbol{\Phi}}}
+
+
+\newcommand{\bfZero}{\bf 0}
+\newcommand{\bfOne}{\bf 1}
+\newcommand{\iid}{\stackrel{i.i.d.}{\sim}}
+\newcommand{\raro}{\rightarrow}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+
+\def\baq#1\eaq{\begin{align}#1\end{align}}
+\def\ban#1\ean{\begin{align*}#1\end{align*}}
+\newcommand{\draro}{ \stackrel{{\mathcal D}}{\Rightarrow} }
+
+\def\bredbf#1\eredbf{{\color{red}{\bf ???? #1 ????}}}
+\def\BeginRedComment#1\EndRedComment{({\color{red}{\bf Comment:} {\it #1}}) }
+\def\BeginBlueComment#1\EndBlueComment{({\color{blue}{\bf Comment:} {\it #1}}) }
+
+\DeclareMathOperator*{\ve}{vec}
+\DeclareMathOperator*{\diag}{diag }
+\DeclareMathOperator*{\supp}{supp }
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Th}{^{\text{th}}}
+
+\makeatletter
+\newcommand{\opnorm}{\@ifstar\@opnorms\@opnorm}
+\newcommand{\@opnorms}[1]{%
+  \left|\mkern-1.5mu\left|\mkern-1.5mu\left|
+   #1
+  \right|\mkern-1.5mu\right|\mkern-1.5mu\right|
+}
+\newcommand{\@opnorm}[2][]{%
+  \mathopen{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+  #2
+  \mathclose{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+}
+\makeatother
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+
+%\endlocaldefs
+
+\begin{document}
+
+\title{On Weighted Multivariate Sign Functions}
+\date{}
+\author{
+Subhabrata Majumdar and Snigdhansu Chatterjee
+}
+\maketitle
+
+\section*{Response to Comments by the Reviewer}
+
+We thank the reviewer for their considered comments, and apologize for the delay in 
+preparing the response. We had some personal emergencies, followed by the pandemic, which greatly delayed the revision of our paper. Again, we apologize. The comments by the reviewer led to a substantial revision of the manuscript, primarily in Section~2 of the paper. We address the reviewer's comments in detail below. 
+
+
+\paragraph{Reviewer comment:}
+\textit{The paper introduces generalizations to the spatial median that employ data-dependent weights, and applies proposed methods to robust scatter estimation of elliptically symmetric distributions as well as closely related problems. Presented ideas certainly deserve attention, however, I feel that the manuscript requires significant work. In particular, it was not clear to me that proposed estimators can be actually computed without knowledge of parameters of the distribution that are not available. I suggest that authors clarify this point early on.}
+
+\paragraph{Author response:} We thank the reviewer for finding that the ideas 
+presented in this paper deserve attention. Based on the comments by the reviewer, we made significant changes in the paper, primarily in Section~2. 
+
+The proposed estimators can indeed be estimated without knowing the parameters, otherwise 
+this would have been a meaningless exercise. It was our fault in not making the writing of the previous version of the paper clear enough: with the help of the reviewer's comments we hope that the present version is very transparent on this matter. In the previous version of this paper, there were three significant confusing issues, which we have now fixed. 
+
+First, as the reviewer commented in her/his detailed comment (a), there was the question of whether the weights depend on $q$, the parameter we wish to estimate 
+in Section~2 of the paper. We make a detailed response to this comment below, but in short, we have now restricted the parameter $\BF$ (the distribution parameter in the weight function) to match $\BF_{X}$ (the distribution from where the data is generated), 
+and we substantially revised Theorem~2.1, Corollary~2.2, Corollary~2.4, to make sure that our results are valid even if the weights depend on $q$. More details on this are given in response to the reviewer's comment (a) below. 
+
+Second, there was the issue of how to compute the weights since $\BF$ is unknown. We have used the reviewer's suggestion in their detailed comment (i), and introduced the computation of weights based on the empirical distribution function $\BF_{n}$ early on, in 
+Section~1. We hope this step will greatly alleviate the reviewer's concerns about the usability and computation of the proposed estimators without knowing the underlying distribution (or its parameters). 
+
+Third, we have now changed completely the technical conditions and proofs of Corolloary~2.2 and Corollary~2.4, so that these no longer have any part that assumes that the value of $q_{0}$ is known. Our previous manuscript was partially written keeping hypothesis tests in mind (and hence the presence of a known value in the earlier incarnation of the corollaries), but these were both incompletely developed as well as poorly presented. In the revised version of the manuscript, the new corollaries have a different set of technical conditions that broadens their appeal, and completely different proofs. 
+
+We trust these changes will address the major concern of the reviewer. We address their specific detailed and minor comments point-by-point below.
+
+
+
+
+\paragraph{Reviewer detailed comment (a):}
+\textit{Do I understand correctly that your weights are not allowed to depend on $q$? Then your claim on top of page 3 that this is the same object that has been studied before (e.g., in \cite{ref:AoS97435_Koltchinskii}) is incorrect. If it is allowed to depend on $q$, then please explain how your results are different from the existing literature.}
+
+
+
+\paragraph{Author response:}
+The framework of our paper is somewhat different that that of \cite{ref:AoS97435_Koltchinskii} (and related papers). 
+In principle, the idea of of replacing an observation with a weighted version of its (generalized) sign can be used in numerous ways, only some of which may need the theoretical machinery developed in \cite{ref:AoS97435_Koltchinskii} or related papers. 
+For example, in a testing context (not presented in the current manuscript), 
+under the null hypothesis, $\BF$ may be entirely known, hence the weights may not 
+depend at all on $\BF_{X}$ or its related parameter $q$. 
+ However, in many other contexts, there may be implicit dependence between the
+weights $W (\cdot, \BF)$ and a multivariate quantile $q$. For example, if 
+$\BF = \BF_{X} = N( \mu, \Sigma)$, both the quantile  and the weight depend on the 
+parameters $\mu$ and $\Sigma$, so there may be implicit dependence between the two. 
+
+We thought deeply about this issue and decided that the best course of action for the present paper is restrict our attention to the case of $\BF = \BF_{X}$, and 
+make explicit the fact that the weights $W (\cdot, \BF)$ may implicitly depend on 
+$q$. That way, we are not only able to stay within the paradigm developed in the elegant paper by Koltchinskii (\cite{ref:AoS97435_Koltchinskii} and elsewhere) and leverage the 
+theoretical understandings developed in these papers and related literature, we are actually able to bring those results into the application domain. 
+Also, with the assumption that $\BF = \BF_{X}$, there is no room for ambiguity whether
+$W (\cdot, \BF)$ and $q$ may be related: they are indeed related (except for  
+perhaps simple instances).
+ 
+With this assumption, our Theorem~2.1 does indeed strongly relate to existing literature, 
+and we present a brief sketch of how that result is established following 
+\cite{ref:AoS921514_Niemiro} and \cite{ref:AoS891631_Haberman}. 
+\textbf{\textit{However,
+all other results in our manuscript are new}}, and relate to issues that have not been discussed in the the literature before, to the best of our knowledge. Following Theorem~2.1, we present two corollaries that show the efficiencies that may be achieved
+by careful choice of weights. Section~3 onwards, the discussion is on the robust dispersion measures, eigenvalues and principal components, influence functions in the context of robust estimators of dispersion, and numerical results. To the best our 
+knowledge, the theoretical results from these sections are completely new. Also, the methodological parts of these sections typically compare favorably to the \textit{ad hoc}
+or otherwise robust dispersion estimators that may be found in statistics literature, as demonstrated by the numerical results in our paper.
+
+As mentioned in the introduction, our focus is primarily on robust dispersion and principal component analysis. We believe we have been able to build a bridge between the 
+elegant theoretical development on $M$-quantiles and the methodological aspects of robust dispersion estimation. 
+
+
+
+ 
+%We think this ambiguity was a result of assuming $\BF$ as a general distribution in the beginning, but later having $\BF \equiv \BF_X$ in all our applications. In that case, $W(X,\BF)$ shall depend on $q$ implicitly since $q$ is a parameter of $\BF$. To bypass this confusion, we now assume $X \sim \BF$ from the beginning (highlighted in the introduction, page 2), and then add a remark after theorem 2.1 saying it still goes through if $\BF$ is not $\BF_X$.
+%
+%While theoretical properties of related quantities have been established in papers like \cite{ref:AoS97435_Koltchinskii}, sometimes under different formulations (e.g. the weight function in \cite{ref:AoS97435_Koltchinskii} is a convex non-decreasing function of $|x - \mu|$), we start off from a broad-based formulation of the weights and then concentrate on the more practical aspects of how weights affect robustness and efficiency. We add a discussion on this in the introduction {\color{red} (have to add that)}.
+
+\paragraph{Reviewer detailed comment (b):}
+\textit{Regarding the proof of Theorem 2.1: if you claim that this is a new result, the proof can not be omitted completely: please include it in the supplementary material. If it is not new please give a precise reference.}
+
+\paragraph{Author response:}
+We do not claim that this result is substantially new (see detailed comments above). Consequently, in the present manuscript we have included a proof sketch of the theorem, that follows the arguments presented in \cite{ref:AoS921514_Niemiro} and \cite{ref:AoS891631_Haberman}. Please find this sketch of proof right after Theorem~2.1. If needed, we can present a complete proof of this in the supplementary material. 
+
+
+\paragraph{Reviewer detailed comment (c):}
+\textit{I could not understand Corollary 2.2: is $q_0$ still a minimizer of $\Psi(q; 0; \BF)$? If so, how can the weight depend on this unknown quantity? Even if $q_0$ is a fixed vector, this still does not make sense to me. Additionally, please show that conditions A1-A3 hold in your examples.
+}
+
+\paragraph{Author response:}
+We have now completely changed this corollary. Thus, this issue is no longer present in the current manuscript. 
+
+
+\paragraph{Reviewer detailed comment (d):}
+\textit{Page 3 states “We report only the case of the weighted spatial median for brevity..” In this case, it could be better to focus on the median everywhere and avoid mentioning general quantiles.
+}
+
+\paragraph{Author response:}
+We thank the reviewer for this suggestion, and have adopted it, and do not elaborate on weighted spatial quantiles in this paper. Following the referee's suggestion, in the present manuscript we only mention their general definition in Section~2, and then discuss the weighted spatial median in detail. 
+
+\paragraph{Reviewer detailed comment (e):}
+\textit{Corollary 2.4 states “then $S(X; q_0)$ is uniform on the unit ball in $\BR^p$..” – do you mean $S(Z; q_0)$? If $X$ has arbitrary elliptically symmetric distribution, this is not true. Moreover, why is it interesting in this case to consider the case when $\BF$ is the (unknown) distribution of $X$?
+}
+
+\paragraph{Author response:}
+The reviewer is absolutely correct, the spatial sign is indeed not independent of the norm for non-spherical but elliptical distributions. We have now completely changed this corollary. 
+
+With a few weak conditions on $\Sigma$ from \cite{ref:JASA151658_WangPengLi} 
+we are able to prove that the ARE is larger than 1 for general elliptical distributions. 
+
+We thank the referee for this comment, which led to a rigorous revision in this part.
+
+
+
+\paragraph{Reviewer detailed comment (f):}
+\textit{Page 5: “..we propose using $W(x; \BF_n)$: please define what you mean by an empirical distribution function here, as $X$ is a vector.
+}
+
+\paragraph{Author response:}
+Thank you for pointing this out, we have now put in the proper definition. Please see 
+page 7 of the current manuscript.
+
+\paragraph{Reviewer detailed comment (g):}
+\textit{The weight functions discussed in section 2.1 can only be computed if the distribution of $X$ is known. Why would such functions be of any use in statistical context? If the unknown distribution is replaced by its empirical version, why would all the useful properties be
+preserved? I suggest explaining these points clearly in the beginning.
+}
+
+\paragraph{Author response:}
+This is an excellent suggestion and we are happy to accept it.
+We have now put a brief discussion on this in the Introduction, where we explain that 
+in practice $\BF$ is replaced by its empirical version $\BF_{n}$, and mention a set of 
+conditions presented later in the paper, that allows such plug-in estimators to be used 
+while retaining asymptotic properties. See the top part of page 2. 
+
+
+\paragraph{Reviewer detailed comment (h):}
+\textit{
+Equation (5): is $\tilde X$ a statistic?
+}
+
+\paragraph{Author response:}
+No. The quantity $\tilde X$ is a random variable that acts as a robust counterpart of 
+$X - \mu$ in the population, and involves the unknown parameters $\mu$ and $\BF$. 
+However, with standard plug-in estimators for $\mu$ and $\BF$, we can get a 
+sample equivalent of $\tilde{X}$, and the theoretical aspects of using  such plug-in 
+estimators in place of the true parameters is considered in the results that follow, see 
+for example Lemma~3.2 or Theorem 3.3.  
+
+
+To make the discussion on this transparent, in page 8 of the manuscript, we have now 
+rewritten this part to say:
+\textit{
+As a robust surrogate for $X - \mu$, we consider the  following  random variable 
+\ban
+\tilde{X} = W (X, \BF) S(X; \mu) \equiv W (Z, \BF_{Z})  
+| \Lambda^{1/2} Z|^{-1} \Gamma \Lambda^{1/2}  Z. 
+%\label{eq:tildeX}
+\ean
+In samples, the equivalent for $\tilde{X} $ is 
+$\hat{\tilde{X}} = W (X, \BF_{n}) S(X; \hat{\mu})$ for a suitable location estimator 
+$\hat{\mu}$, for example, the weighted spatial median. 
+}
+
+
+
+\paragraph{Reviewer detailed comment (i):}
+\textit{
+On page 7, it is stated that “We now discuss the properties of the sample version $\tilde \Sigma$ computed from $X$. In practice, we cannot obtain $W(x)?W(x; F)$, and consequently use $W(x; \BF_n)$ instead..” – this is a good point, but I suggest discussing it earlier in the paper, as it affects many assumptions made prior to this statement.}
+
+\paragraph{Author response:}
+We thank the reviewer for this excellent suggestion, this greatly helps in bringing clarity to our paper. We have now stated this right upfront in the introduction, see 
+page 2. 
+
+
+
+\paragraph{Reviewer minor comment (a):}
+\textit{
+Last paragraph of page 3: should $\hat q_n$ be $\hat q_{n W}$?}
+
+\paragraph{Author response:}
+Thank you for pointing, we have now corrected this typo. 
+
+
+%\newpage
+%\input{misc}
+
+\bibliographystyle{apalike}
+\bibliography{WeightedSignBib_09_17_20}
+
+\end{document}

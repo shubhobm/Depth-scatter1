@@ -1,0 +1,212 @@
+\section{The Weighted Spatial Median}
+\label{Sec:WSQuantiles}
+
+Suppose the open unit sphere in $\cX$ is given by 
+$\textrm{int} {\cX}_{0; 1} = \{ x \in \cX: | x | < 1 \}$, and let
+ $u \in \textrm{int} {\cX}_{0; 1}$. We also fix the set of probability measures $\cM$, 
+ and select $\BF \in \cM$. Consider a random element $X \in \cX$, and define the 
+ function $\Phi (q; X, u, \BF) = W (X, \BF) \bigl\{ | X - q | 
++ \langle u, X - q \rangle \bigr\}$. 
+We define the $(u, \BF)$-th \textit{weighted spatial quantile} of $\cX$ 
+as the minimizer $q (u, \BF) \in \cX$ of the expectation of $\Phi (q; X, u, \BF)$, 
+that is
+\baq
+\Psi (q; u, \BF) = \BE \Bigl[ W (X, \BF) \bigl\{ | X - q | 
++ \langle u, X - q \rangle \bigr\} \Bigr] = \BE \Phi (q; X, u, \BF).
+\label{eq:WeightedQuantile}
+\eaq
+%
+%\rework{
+\noindent
+This is a natural generalization of the spatial median \cite{ref:JASA96862_Chaudhuri, ref:Biometrika48414_Haldane,ref:AoS97435_Koltchinskii} ($W(X, \BF) \equiv 1$ and $u = {\bf 0}_p$), or more general spatial quantiles \cite{ref:AoS17591_Cardotetal_Median_HilbertSpace, ref:AoS141203_ChakrabortyChaudhuri_Banach_Quantile, ref:Bernoulli152308_Minsker_Median_Banach} ($W(X, \BF) \equiv 1$). We assume that 
+$\Phi (q; X, u, \BF)$ is convex in $q$ for $\BF$-almost all values of $x \in \cX$. 
+ 
+
+In what follows, for brevity we elaborate only the case of the \textit{weighted spatial median} (thus $\Psi (q; 0, \BF) = \BE \bigl[ W (X, \BF) | X - q | \bigr] $) for the case of finite dimensional $\cX$. Specifically, we demonstrate the utility of using the {\it weighted} spatial median as opposed to using the traditional, unweighted versions found in literature. The analysis and computation of the general weighted spatial quantiles will largely follow by extending the results of the above cited references, and we postpone details to a future study.
+%}
+
+Assume that we have independent and identically distributed observations $X_{1}, \ldots, X_{n} \in \cX$, and the sample weighted spatial median is computed by minimizing $\Psi_{n} (q; 0, \BF) = \sum_{i = 1}^{n} W (X_{i}, \BF) | X_{i} - q | $, and is denoted by $\hat{q}_{nW}$, the second subscript is in acknowledgement that the weight function is used. We denote the unweighted version of this estimator, ie, the case where $W (X, \BF) \equiv 1$ as $\hat{q}_{n}$. Assume the following technical conditions:
+
+\begin{description}
+\item[(A1)] $\Psi (q; 0, \BF)$ is finite for all $q \in \cX \subseteq \BR^{p}$ 
+and has a unique minimizer $q_{0}$. 
+
+\item[(A2)] $\Psi (q; 0, \BF)$ is twice differentiable at $q_{0}$ and the second derivative is positive definite. 
+ 
+\item[(A3)] $ {\frac{\partial^{2}} {\partial q^{2}}} \Psi (q; 0, \BF)$
+exists for all $q$ in a neighborhood of $q_{0}$, and we use the notations
+\ban
+\Psi_{1W}   & = 
+\Bigl( {\frac{\partial} {\partial q}} \Psi (q_{0}; 0, \BF) \Bigr)
+ \Bigl( {\frac{\partial} {\partial q}} \Psi (q_{0}; 0, \BF) \Bigr)^{T}, \\
+\Psi_{2W}   & = {\frac{\partial^{2}} {\partial q^{2}}} \Psi (q_{0}; 0, \BF). 
+\ean
+ \end{description}
+ These assumptions are very broad-based and general. The first one essentially requires 
+ the existence of a population parameter, the second one requires that the minimization 
+ approach is meaningful in the population, and the third one essentially requires that the 
+ weight function has a finite variance. No further restrictions are placed on the tuning parameter $\BF$ or the choice of the weight function. 
+ 
+ \begin{Theorem}\label{Thm:WSMedian}
+ Under assumptions [A1]-[A3], we have 
+ \ban 
+ n^{1/2} (\hat{q}_{nW} - q_{0}) & \draro N(0, \Psi_{2W}^{-1} \Psi_{1W} \Psi_{2W}^{-1}).
+ \ean
+ \end{Theorem}
+
+%\rework{
+Thus, under very standard regularity conditions, the sample weighted spatial median 
+is consistent and is asymptotically normal. Theorem~\ref{Thm:WSMedian}  can be proved in several different ways. Here we use techniques following \cite{ref:AoS891631_Haberman, ref:AoS921514_Niemiro}. Specifically, following Theorem 4 in \cite{ref:AoS921514_Niemiro}, which traces back to \cite{ref:AoS891631_Haberman} with slightly relaxed conditions, we get
+%
+\begin{align*}
+n^{1/2} (\hat{q}_{nW} - q_{0}) =
+- \frac{\Psi_{2W}}{\sqrt n} 
+\sum_{i=1}^n \nabla \Phi (q; X_{i}, u, \BF)
++ o_P(1),
+\end{align*}
+%
+where $\nabla \Phi (q; X_{i}, u, \BF)$ is any measurable subgradient of 
+$\Phi (q; X_{i}, u, \BF)$. 
+Theorem~\ref{Thm:WSMedian} follows by applying the central limit theorem.
+
+\paragraph{Remark.} Note that the technical conditions for the result presented in Theorem~\ref{Thm:WSMedian} is one of several alternatives that can conceived, and the scope of this result is broader than what is presented above. First, note that if $\BF$ 
+and $\BF_{X}$ are different and the weights are not a function of $q$, 
+a situation that may arise in hypothesis testing problems where the weights are based 
+on the null distribution, the convexity of $\Phi (q; X_{i}, u, \BF)$ follows automatically 
+and is not an assumption. Second, even if $\Phi (q; X_{i}, u, \BF)$ is not convex but sufficiently smooth, we can have a central limit theorem, for example, by using techniques similar to \cite{ref:CBose_AoS05414}. 
+Choices of $\BF$ other than $\BF_{X}$, e.g. \cite{StatPaper18},  may lead to interesting interpretations of $W(. ,\BF)$ and the resulting location estimator and will be explored further in future.
+
+
+\subsection{Asymptotic efficiency of weighted spatial median}
+Let $V_{W} = \Psi_{2W}^{-1} \Psi_{1W} \Psi_{2W}^{-1}$ be the asymptotic 
+variance of $\hat{q}_{n,W}$ from Theorem~\ref{Thm:WSMedian}, where we use the 
+subscript ``${}_{W}$'' to denote that this depends on the weight function. 
+We use the notation 
+$V_{1}$ for the case where $W (x, \BF) \equiv 1$, that is, all weights are one.
+The asymptotic relative efficiency of two statistics is the $p$-th root of 
+the reciprocals of their determinants. That is, 
+\ban 
+ARE (\hat{q}_{nW}, \hat{q}_{n}) = \Bigl\{\frac{det(V_{1})}{det(V_{W})} \Bigr\}^{1/p}.
+\ean
+One easy result from Theorem~\ref{Thm:WSMedian} is that under reasonable conditions the
+asymptotic relative efficiency of the weighted spatial median over the unweighted version
+is always greater than one. We document this in the following corollary:
+
+\begin{Corollary}
+\label{Cor:ARE}
+Assume that the weight function $W (X, \BF)$ is bounded above by $k$ for some $k > 0$, and the matrices $\Psi_1 = \BE S(X; q_0) S^T(X; q_0)$ and $\Psi_{1W}$ are positive definite. Then
+%
+\ban
+ARE (\hat{q}_{nW}, \hat{q}_{n}) \geq
+\frac{ \lambda_{\min} (\Psi_1) \lambda_{\min}^2 (\Psi_{2W})}
+{k \lambda_{\max} (\Psi_{1W}) \lambda_{\max}^2 (\Psi_2)}
+\ean
+%
+Consequently, if $k / \lambda_{\min}^2 (\Psi_{2W}) < \lambda_{\min} (\Psi_1) /(\lambda_{\max} (\Psi_{1W}) \lambda_{\max}^2 (\Psi_2))$ then this asymptotic relative efficiency is larger than 1. 
+\end{Corollary}
+
+\begin{proof}[Proof of Corollary~\ref{Cor:ARE}]
+Using the facts that $det (AB) = det(A) det(B)$ for square matrices $A,B$ and $det (A^{-1}) = 1/det(A)$ for non-singular $A$, we write
+%
+\ban
+\frac{det (V_1)}{det (V_W)} &= det( \Psi_2^{-1} \Psi_1 \Psi_2^{-1} )
+det( \Psi_{2 W} \Psi_{1 W}^{-1} \Psi_{2 W} )\\
+&= det (\Psi_1) det (\Psi_{1 W}^{-1}) [ det(\Psi_2^{-1}) det(\Psi_{2 W}) ]^2
+\ean
+%
+The result follows, using the facts that $\det(A) \geq \lambda_{\min} (A)$ and $\det(A^{-1}) \geq 1/\lambda_{\max} (A)$, and the upper bound on $W$.
+\end{proof}
+
+%A context where 
+It is possible to make the above asymptotic relative efficiency to tend to infinity with 
+$p$, for example by choosing $k = \exp\{- p^{2} \}$. Such tending to infinity efficiencies 
+are also achievable for fixed $k$,  for example, in the context of some hypothesis tests.
+%ing problems.
+%f $|X - q_{0}|^{2}$ is a Gamma random 
+%variable with shape parameter $ = 2 + \exp\{- p^{2} \}$. 
+We leave it to future work to 
+study such efficiencies more generally. 
+
+We may wish to further explore the conditions of Corollary~\ref{Cor:ARE}. 
+Let us concentrate on the case of where the distribution of $X$ is spherically symmetric. Following \cite{ref:Fangetal90_Book}:
+
+\begin{Definition}
+A $p$-dimensional random vector $X$ is said to elliptically distributed if there exist a vector $\mu \in \BR^p$, a positive semi-definite matrix $\Sigma \in \BR^{p \times p}$ and a function 
+$\phi: (0, \infty) \rightarrow \BR$ such that the characteristic function of $X$ is $\exp \{ i t^{T} \mu \} \phi (\bft^T \Sigma \bft)$ for $\bft \in \BR^p$.
+\end{Definition}
+
+There are several alternative formulations, see the above reference and citations within it for details.
+
+\begin{Corollary}\label{Cor:Elliptic_ARE}
+Assume that $\BF \equiv \BF_X$ is an elliptically symmetric distribution, with location parameter $\mu = q_{0}$ and the covariance matrix $\Sigma$ satisfies the following conditions:
+%
+\begin{enumerate}
+%\item $Tr(\Sigma^4) = o( Tr^2 (\Sigma^2) )$,
+
+%\item $\frac{Tr^4(\Sigma)}{ Tr^2 (\Sigma^2)} \exp \left\{ - \frac{Tr^2 (\Sigma)}
+%{ 128 \lambda_{\max}^2 (\Sigma)} \right\} = o(1)$,
+
+\item $\exp \left\{ - \frac{Tr^2 (\Sigma)}{ 256 \lambda_{\max}^2 (\Sigma)} \right\} = 
+o\left( \min\left( \frac{\lambda_{\max}(\Sigma) }{Tr( \Sigma)},
+\frac{\lambda_{\min}(\Sigma)}{\lambda_{\max}(\Sigma)} \right) \right)$,
+
+\item $\lambda_{\max}(\Sigma) = o( Tr(\Sigma))$.
+\end{enumerate}
+
+Also assume that the weight function is (a) bounded above by some $W_{\max} > 0$, (b) affine invariant, i.e. $ W (Ax + b, A\BF + b) = W (x, \BF)$ for $A \in \BR^{p \times p}, b \in \BR^p$, and (c) satisfies the following:
+%
+\begin{equation}\label{eqn:CorElliptic_ARE_eqn}
+\frac{W_{\max}}{[ \BE | X - q_0|^{-1} W(X, \BF)]^2 } <
+\frac{\lambda_{\min} (\Psi_1)}{\lambda_{\max} (\Psi_1) [ \BE | X - q_0|^{-1}]^2]}.
+\end{equation}
+%
+Then we have $ARE( \hat q_{n,W}, \hat q_n) > 1$.
+\end{Corollary}
+
+The conditions 1 and 2 in Corollary~\ref{Cor:Elliptic_ARE} are due to \cite{ref:JASA151658_WangPengLi}, and ensure that the eigenvalues of $\Sigma$ are bounded away from 0 and $\infty$. Corollary~\ref{Cor:Elliptic_ARE} can be proved using Corollary~\ref{Cor:ARE}, the fact that for elliptical distributions $\Psi_1$ is non-singular \cite{ref:SPL12765_Taskinenetal}, then using and expanding upon Lemma A.5 in \cite{ref:JASA151658_WangPengLi}. We give the technical details in the supplementary material.
+
+Obtaining affine invariant weight functions is not challenging. Most functions arising in the context of data depths are affine invariant. Corollary~\ref{Cor:Elliptic_ARE} implies that there is a wide frame of distributions and  choices of weight functions where there is a benefit to considering weighted spatial medians. In fact, Corollary~\ref{Cor:Elliptic_ARE} can be established under just 
+location invariance condition on weights, we use the stronger affine invariance condition
+here only because the subsequent sections use weights based on affine invariant 
+data depth functions. Also note that in case \eqref{eqn:CorElliptic_ARE_eqn} does not hold for the original form of a weight function, one can scale all weights by an appropriate constant to reduce the value in the left hand side of \eqref{eqn:CorElliptic_ARE_eqn} to satisfy the condition.
+
+In actual computations, in place of $W (x, \BF)$ we propose using $W (x, \BF_{n})$ where
+$ \BF_{n}(z) = n^{-1} \sum_{i = 1}^{n} \prod_{j=1}^{p}
+\cI (X_{ij} \leq z_j ), z \in \BR^p
+$ is the empirical distribution function. Up to first order asymptotics, the analysis remain unchanged from the above for this modified weight function.
+
+\subsection{Examples of affine invariant weights}
+
+We now illustrate some specific choices of weight functions that are compatible with the 
+conditions of Corollary~\ref{Cor:Elliptic_ARE} and the results in the rest of this paper.
+ These arise as easy transformations 
+of \textit{data-depth functions}. A data depth function 
+is defined on $\cX \times \cF$, where $\cF$ is  a fixed set of probability measures.
+The main property of a data-depth function is that for every probability measure 
+$\BF \in \cF$, there exists a constant 
+$\mu_{\BF} \in  \cX$ such that for any $t \in [ 0, 1]$ and $x \in \cX$,
+\baq 
+D ( \mu_{\BF} ; \BF ) \geq D ( \mu_{\BF} + t ( \bfx - \mu_{\BF} ); \BF ). 
+\label{eq:Peripherality}
+\eaq
+That is, for every fixed $\BF$, the data-depth function achieves a supremum at 
+$\mu_{F}$, and is non-decreasing in every direction away from $\mu_{F}$, thus providing 
+a  center-outward partial ordering of points in $\cX$. There are generally several 
+algebraic and analytic properties assumed for data-depth functions to elicit interesting 
+mathematical properties, see for example \cite{ref:DIMACS061_Serfling, ref:AoS00461_ZuoSerfling} for details. 
+
+
+The spherically symmetric case of an elliptical distribution is realized with $\Sigma = \sigma^{2} \BI_{p}$ for some $\sigma^{2} > 0$. We fix the notation $Z = \Sigma^{-1/2} (X - \mu)$, and let 
+$Z \sim \BF_{Z}$. Note that $\BF_{Z}$ is a spherically symmetric distribution and hence
+depends only on $|z|$, and $\BE Z = \mathbf{0}_{p} \in \BR^{p}$ and $\BV Z = \BI_{p}$. Taking affine invariant data depth functions as weights ensures that $W(X, \BF) = W(Z, \BF_Z)$. It is now easy to show that results in this paper are valid for the weight functions (with appropriate scaling to satisfy \eqref{eqn:CorElliptic_ARE_eqn})
+($i$) $W_{HSD} (X) = \BF_{Z} (| Z |)$ derived from the \textit{half-space depth},  
+($ii$) $W_{MhD} (X) = |Z|^{2}/(1 + | Z |^2)$ derived from the \textit{Mahalanobis depth}, 
+and ($iii$) $W_{PD} (X) = |Z|/(1+ | Z |/MAD(\BF_{Z}))$, where $MAD$ stands for median 
+absolute deviation, derived from the \textit{projection depth}. We omit the technical 
+details. These three weight functions give a center-inward partial ordering, thus essentially 
+quantifying \textit{peripherality} instead of \textit{depth}.
+Note however, that our results below are of much more general form, and 
+these three special choices of weights only serve as important illustrative examples 
+to achieve desirable robustness and efficiency balance in data analysis.
+
+
