@@ -37,6 +37,11 @@ Chakraborty, A. and Chaudhuri, P. (2014).
   quantiles and depths.
 \newblock {\em The Annals of Statistics}, 42(3):1203 -- 1231.
 
+\bibitem[Chatterjee and Bose, 2005]{ref:CBose_AoS05414}
+Chatterjee, S. and Bose, A. (2005).
+\newblock Generalized bootstrap for estimating equations.
+\newblock {\em The Annals of Statistics}, 33(1):414 -- 436.
+
 \bibitem[Chaudhuri, 1996]{ref:JASA96862_Chaudhuri}
 Chaudhuri, P. (1996).
 \newblock On a geometric notion of quantiles for multivariate data.
@@ -102,11 +107,14 @@ Koltchinskii, V.~I. (1997).
 \newblock \textit{M}-estimation, convexity and quantiles.
 \newblock {\em The Annals of Statistics}, 25(2):435 -- 477.
 
+\bibitem[Liu et~al., 1999]{LiuPareliusSingh99}
+Liu, R., Parelius, J.~M., and Singh, K. (1999).
+\newblock Multivariate analysis by data depth: descriptive statistics, graphics
+  and inference.
+\newblock {\em The Annals of Statistics}, 27(3):783--858.
+
 \bibitem[Locantore et~al., 1999]{ref:Test991_Locantoreetal}
-Locantore, N., Marron, J.~S., Simpson, D.~G., Tripoli, N., Zhang, J.~T., Cohen,
-  K.~L., Boente, G., Fraiman, R., Brumback, B., Croux, C., Fan, J., Kneip, A.,
-  Marden, J.~I., Pena, D., Prieto, J., Ramsay, J.~O., Valderrama, M.~J., and
-  Aguilera, A.~M. (1999).
+Locantore, N., Marron, J.~S., Simpson, D.~G., et~al. (1999).
 \newblock Robust principal component analysis for functional data.
 \newblock {\em Test}, 8(1):1 -- 73.
 
@@ -115,6 +123,12 @@ Magyar, A.~F. and Tyler, D.~E. (2014).
 \newblock The asymptotic inadmissibility of the spatial sign covariance matrix
   for elliptically symmetric distributions.
 \newblock {\em Biometrika}, 101(3):673--688.
+
+\bibitem[Majumdar and Chatterjee, 2018]{StatPaper18}
+Majumdar, S. and Chatterjee, S. (2018).
+\newblock Non-convex penalized multitask regression using data depth-based
+  penalties.
+\newblock {\em Stat}, 7:e174.
 
 \bibitem[Miao and Ben-Israel,
   1992]{ref:LinearAlgebraApplications9281_MiaoBenIsrael}

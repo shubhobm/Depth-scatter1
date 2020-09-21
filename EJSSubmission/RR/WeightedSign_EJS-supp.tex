@@ -1,0 +1,322 @@
+\documentclass[ejs]{imsart}
+
+\RequirePackage[OT1]{fontenc}
+%\RequirePackage{amsthm,amsmath}
+\RequirePackage[numbers]{natbib}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{amssymb,amsmath,amsthm,color,outlines,subfigure,comment}
+\usepackage[small]{caption}
+%\usepackage{hyperref} % for linking references
+%\hypersetup{colorlinks = true, citecolor = blue, urlcolor = blue}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{stackrel}
+\usepackage{natbib}
+\usepackage{soul}
+%\usepackage[bordercolor=white,backgroundcolor=gray!30,linecolor=black,colorinlistoftodos]{todonotes}
+%\newcommand{\rework}[1]{\todo[color=yellow,inline]{#1}}
+
+% will be filled by editor:
+\doi{10.1214/154957804100000000}
+\pubyear{0000}
+\volume{0}
+\firstpage{0}
+\lastpage{0}
+%\arxiv{}
+
+%%%settings
+%\pubyear{2006}
+%\volume{0}
+%\issue{0}
+%\firstpage{1}
+%\lastpage{8}
+
+%%%%%% put your definitions there:
+\startlocaldefs
+%\numberwithin{equation}{section}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}[section]
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+
+\newcommand{\BCOV}{{\mathbb{COV}}}
+
+\newcommand{\colrit}{\color{red} \it}
+\newcommand{\colrbf}{\color{red} \bf}
+\newcommand{\colbit}{\color{blue} \it}
+\newcommand{\colbbf}{\color{blue} \bf}
+\newcommand{\colmit}{\colm \it}
+\newcommand{\colmbf}{\colm \bf}
+
+\newcommand{\bfOne}{\bf 1}
+\newcommand{\iid}{\stackrel{i.i.d.}{\sim}}
+\newcommand{\raro}{\rightarrow}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+
+\def\baq#1\eaq{\begin{align}#1\end{align}}
+\def\ban#1\ean{\begin{align*}#1\end{align*}}
+\newcommand{\draro}{ \stackrel{{\mathcal D}}{\Rightarrow} }
+
+\def\bredbf#1\eredbf{{\color{red}{\bf ???? #1 ????}}}
+\def\BeginRedComment#1\EndRedComment{({\color{red}{\bf Comment:} {\it #1}}) }
+\def\BeginBlueComment#1\EndBlueComment{({\color{blue}{\bf Comment:} {\it #1}}) }
+
+\DeclareMathOperator*{\ve}{vec}
+\DeclareMathOperator*{\diag}{diag }
+\DeclareMathOperator*{\supp}{supp }
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Th}{^{\text{th}}}
+
+\makeatletter
+\newcommand{\opnorm}{\@ifstar\@opnorms\@opnorm}
+\newcommand{\@opnorms}[1]{%
+  \left|\mkern-1.5mu\left|\mkern-1.5mu\left|
+   #1
+  \right|\mkern-1.5mu\right|\mkern-1.5mu\right|
+}
+\newcommand{\@opnorm}[2][]{%
+  \mathopen{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+  #2
+  \mathclose{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
+}
+\makeatother
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Conjecture}[Theorem]{Conjecture}
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+
+\endlocaldefs
+
+
+
+\begin{document}
+
+\begin{frontmatter}
+\title{On Weighted Multivariate Sign Functions: Supplementary Material}
+\runtitle{Weighted Sign Functions}
+%\thankstext{T1}{Footnote to the title with the `thankstext' command.}
+
+\begin{aug}
+\author{\fnms{Subhabrata} \snm{Majumdar}\thanksref{t1}\ead[label=e1]{subho@research.att.com}}
+\and
+\author{\fnms{Snigdhansu} \snm{Chatterjee}\thanksref{t3}\ead[label=e2]{chatt019@umn.edu}}
+
+\address{School of Statistics,\\
+University of Minnesota,\\
+313 Ford Hall,\\
+224 Church Street S.E., \\
+Minneapolis 55455, USA\\
+%usually few lines long\\
+\printead{e1,e2}}
+
+%\author{\fnms{Third} \snm{Author}
+%\ead[label=e3]{third@somewhere.com}
+%\ead[label=u1,url]{www.foo.com}}
+%
+%\address{Address of the Third author\\
+%usually few lines long\\
+%usually few lines long\\
+%\printead{e3}\\
+%\printead{u1}}
+
+\thankstext{t1}{Currently at AT\&T Labs Research}
+%\thankstext{t2}{First supporter of the project}
+\thankstext{t3}{Corresponding author}
+\runauthor{Majumdar and Chatterjee}
+
+\affiliation{University of Minnesota and University of Minnesota}
+
+\end{aug}
+
+
+\end{frontmatter}
+
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section{Form of $V_W$}\label{sec:appA}
+First observe that for $F$ having covariance matrix $\Sigma = \Gamma\Lambda\Gamma^T$,
+%
+\begin{align}\label{eqn:VWeqn}
+V_W  = (\Gamma \otimes \Gamma) V_{W, \Lambda} (\Gamma \otimes \Gamma)^T
+\end{align}
+%
+where $V_{W, \Lambda}$ is the covariance matrix of $\BF_\Lambda$, the elliptic distribution with mean $\mu$ and covariance matrix $\Lambda$. Now,
+%
+\begin{eqnarray*}
+V_{W, \Lambda} &=& \BE \left[ \ve \left\{ \frac{W^2 (Z, \BF_Z) \Lambda^{1/2} ZZ^T \Lambda^{1/2} }{ Z^T \Lambda Z} - \tilde \Lambda \right\} {\ve}^T \left\{ \frac{ W^2(Z, \BF_Z) \Lambda^{1/2} ZZ^T \Lambda^{1/2} }{ Z^T \Lambda Z} - \tilde \Lambda \right\} \right]\\
+&=& \BE \left[ \ve \left\{ W^2 (Z, \BF_Z) \BS( \Lambda^{1/2} z; {\bf 0} ) \right\} {\ve}^T \left\{ W^2(Z, \BF_Z) \BS( \Lambda^{1/2}Z; \bf0) \right\} \right]\\
+&& - \quad \ve( \tilde \Lambda) {\ve}^T( \tilde \Lambda )
+\end{eqnarray*}
+
+The matrix $\ve( \tilde\Lambda) \ve^T(\tilde\Lambda)$ consists of elements $\lambda_i\lambda_j$ at $(i,j)^\text{th}$ position of the $(i,j)^\text{th}$ block, and 0 otherwise. These positions correspond to variance and covariance components of on-diagonal elements. For the expectation matrix, all its elements are of the form $ \BE[ \sqrt{\lambda_a \lambda_b \lambda_c \lambda_d} Z_a Z_b Z_c Z_d . W^4 (Z, \BF_Z) / (Z^T \Lambda Z)^2]$, with $1 \leq a,b,c,d \leq p$. Since $W^4 (Z, \BF_Z) / (Z^T \Lambda Z)^2$ is even in $Z$, which has a spherically symmetric distribution, all such expectations will be 0 unless $a,b,c,d$ are all equal or pairwise equal. Following a similar derivation for spatial sign covariance matrices in \cite{ref:Biometrika14673_MagyarTyler}, we collect the non-zero elements and write the matrix of expectations:
+%
+$$ (\BI_{p^2} + \BK_{p,p}) \left\{ \sum_{a=1}^p \sum_{b=1}^p \tilde\gamma_{ab} (e_a e_a^T \otimes  e_b e_b^T) - \sum_{a=1}^p \tilde\gamma_{aa} (e_a e_a^T \otimes  e_a e_a^T) \right\} + \sum_{a=1}^p \sum_{b=1}^p \tilde\gamma_{ab} (e_a e_b^T \otimes  e_a e_b^T) $$
+%
+where $\BI_k = (e_1,...,e_k), \BK_{m,n} = \sum_{i=1}^m \sum_{j=1}^n \BJ_{ij} \otimes \BJ_{ij}^T$ with $\BJ_{ij} \in \BR^{m \times n}$ having 1 as $(i,j)$-th element and 0 elsewhere, and $\tilde\gamma_{mn} = \BE[ \lambda_m \lambda_n Z_m^2 Z_n ^2 . W^4 (Z, \BF_Z) / (Z^T \Lambda Z)^2]; 1 \leq m,n \leq p$.
+
+\paragraph{}Putting everything together, denote by $\hat {\tilde \Lambda}$ the sample version of $\tilde \Lambda$, the weighted covariance matrix obtained from $\BF_\Lambda$, i.e. $\hat {\tilde \Lambda} = \sum_{i=1}^n W_n^2 (Z_i, \BF_{Z,n}) \BS( \Lambda^{1/2} Z_i; \hat \mu_n)/n $. Then the different types of elements in the matrix $\hat {\tilde \Lambda}$ are as given below ($1 \leq a,b,c,d \leq p$):
+
+\begin{itemize}
+\item Variance of on-diagonal elements
+%
+$$ A\BV( \sqrt n \hat {\tilde \Lambda} (a,a) ) = \BE \left[ \frac{ W^4(Z, \BF_Z) \lambda_a^2 Z_a^4}{(Z^T \Lambda Z)^2} \right] - \tilde\lambda_a^2 $$
+
+\item Variance of off-diagonal elements ($a \neq b$)
+%
+$$ A\BV( \sqrt n \hat {\tilde \Lambda} (a,b) ) = \BE \left[ \frac{W^4 (Z, \BF_Z) \lambda_a \lambda_b Z_a^2 Z_b^2}{(Z^T \Lambda Z)^2} \right] $$
+
+\item Covariance of two on-diagonal elements ($a \neq b$)
+%
+$$ A\BV(\sqrt n \hat {\tilde \Lambda} (a,a), \sqrt n \hat {\tilde \Lambda} (b,b) )
+= \BE \left[ \frac{W^4 (Z, \BF_Z) \lambda_a \lambda_b Z_a^2 Z_b^2}{(Z^T \Lambda Z)^2} \right] - \tilde\lambda_{a} \tilde\lambda_{b} $$
+
+\item Covariance of two off-diagonal elements ($a \neq b, c \neq d$)
+%
+$$ A\BV(\sqrt n \hat {\tilde \Lambda} (a,b), \sqrt n \hat {\tilde \Lambda} (c,d) ) = 0 $$
+
+\item Covariance of one off-diagonal and one on-diagonal element ($a \neq b \neq c$)
+%
+$$ A\BV(\sqrt n \hat {\tilde \Lambda} (a,b), \sqrt n \hat {\tilde \Lambda} (c,c) ) = 0 $$
+\end{itemize}
+
+\noindent The above give all the elements of $V_{W,\Lambda}$. We plug these in \eqref{eqn:VWeqn} to recover $V_W$.
+
+\section{Proofs}\label{section:appB}
+
+\begin{proof}[Proof sketch of Corollary 2.4]
+%A first step to obtain asymptotic normality for the high-dimensional location test statistic $C_{n,w}$ is obtaining an equivalent result of Lemma 2.1 in \cite{ref:JASA151658_WangPengLi}:
+%
+%\begin{Lemma}\label{Lemma:HDlemma21} Consider a random variable $\epsilon$ having an elliptical distribution with mean ${\bf 0}$ and covariance matrix $\Lambda$. Then, under the conditions 1-2 in Corollary 2.4, we have
+%%
+%\begin{eqnarray}
+%\BE[ (\epsilon_{W1}^T \epsilon_{W2})^4 ] &=& O(1) \BE^2[ (\epsilon_{W1}^T \epsilon_{W2})^2 ]\\
+%\BE[ (\epsilon_{W1}^T \Psi_{1W} \epsilon_{W1})^2 ] &=& O(1) \BE^2[ (\epsilon_{W1}^T \Psi_{1W} \epsilon_{W1})^2 ]\\
+%\BE[ (\epsilon_{W1}^T \Psi_{1W} \epsilon_{W2})^2 ] &=& o(1) \BE^2[ (\epsilon_{W1}^T \Psi_{1W} \epsilon_{W1})^2 ]
+%\end{eqnarray}
+%%
+%with $\epsilon_W = W(\epsilon, \BF_\epsilon) S(\epsilon)$ where $\BF_\epsilon$ is the distribution of $\epsilon$.
+%\end{Lemma}
+%%
+%A proof of this lemma is derived using results in section 3 of \cite{ElKaroui09}, noticing that any-scalar valued 1-Lipschitz function of $\epsilon_W$ is a $W_\max$-Lipschitz function of $S(\epsilon)$.
+
+%To derive the asymptotic distribution under contiguous alternatives we need the conditions (C3)-(C6) in \cite{ref:JASA151658_WangPengLi}, as well as
+We start with slightly modified versions of Lemmas A.4 and A.5 in \cite{ref:JASA151658_WangPengLi}:
+
+\begin{Lemma}\label{lemma:lemmaB1}
+Given that condition 1 in Corollary 2.4 holds, we have $\lambda_{\max} (\Psi_{1W}) \leq 2 W_{\max} \frac{\lambda_{\max} (\Sigma) }{\text{Tr} (\Sigma)} (1+o(1))$.
+\end{Lemma}
+
+\begin{Lemma}\label{lemma:lemmaB2}
+Define $\Psi_{3W} = \BE \left[ \frac{W^2(\epsilon, \BF_\epsilon)}{| \epsilon |^2} (\BI_p - S(\epsilon) S(\epsilon)^T )\right] $. Then $\lambda_{\max} (\Psi_{2W}) \leq W_{\max} \BE(| \epsilon |^{-1})$ and $\lambda_{\max} (\Psi_{3W}) \leq (W_{\max})^2 \BE( | \epsilon|^{-2})$. Further, if conditions 1 and 2 of Corollary 2.4 hold then $\lambda_{\min} (\Psi_{2W}) \geq \BE( W(\epsilon, \BF_\epsilon)/ | \epsilon |)(1+o(1))/\sqrt 3$.
+\end{Lemma}
+%
+The lemmas can be proved using similar steps as the proofs of the original lemmas in \cite{ref:JASA151658_WangPengLi} and using the upper bound on the weight function. Corollary 2.4 is now proved by applying Corollary 2.2, plugging in upper bound of $\lambda_{\max} (\Psi_{1W})$ from Lemma~\ref{lemma:lemmaB1} and lower bound of $\lambda_{\max} (\Psi_{1W})$ from Lemma~\ref{lemma:lemmaB2} into the ARE expression.
+\end{proof}
+
+\begin{proof}[Proof of Theorem 3.4]
+We suppose $G_n = (g_1, \ldots, g_p), L_n = \diag(l_1, \ldots, l_p)$. In spirit, this corollary is similar to Theorem 13.5.1 in \cite{ref:AndersonBook09}. We start with the following result, due to \citep{ref:SPL12765_Taskinenetal}, allows us to obtain asymptotic joint distributions of eigenvectors and eigenvalues of $\hat{\tilde \Sigma}$, provided we know the limiting distribution of $\hat{\tilde \Sigma}$ itself:
+
+\begin{Theorem} \label{Theorem:decomp} 
+Let $\BF_\Lambda$ be defined as before, and $\hat C$ be any positive definite symmetric $p \times p$ matrix such that at $F_\Lambda$ the limiting distribution of $\sqrt n \ve(\hat C - \Lambda)$ is a $p^2$-variate (singular) normal distribution with mean zero. Write the spectral decomposition of $\hat C$ as $\hat C = \hat P \hat\Lambda \hat P^T$. Then the limiting distributions of $\sqrt n \ve(\hat P - \BI_p)$ and $\sqrt n \ve( \hat\Lambda - \Lambda)$ are multivariate (singular) normal and
+%
+\begin{equation} \label{equation:decompEq}
+\sqrt n \ve (\hat C - \Lambda)  = \left[ (\Lambda \otimes \BI_p) - (\BI_p \otimes \Lambda) \right] \sqrt n \ve (\hat P - \BI_p) + \sqrt n \ve (\hat \Lambda - \Lambda) + o_P(1)
+\end{equation}
+\end{Theorem}
+
+The first matrix picks only off-diagonal elements of the left-hand side and the second one only diagonal elements. We shall now use this as well as the form of the asymptotic covariance matrix of the vectorized $\hat {\tilde \Sigma}$, i.e. $V_W$ to obtain limiting variance and covariances of eigenvalues and eigenvectors.
+
+Due to the decomposition \eqref{equation:decompEq} we have, for $\BF_\Lambda$, the following relation between any off-diagonal element of $\hat{\tilde \Lambda}$ and the corresponding element in the estimate of eigenvectors, say $\hat {\tilde \Gamma}_\Lambda$:
+
+$$ \sqrt n \hat {\tilde \gamma}_{\Lambda, ij} = \sqrt n \frac{\hat {\tilde \Lambda} (i,j) }{\tilde \lambda_i - \tilde \lambda_j}; \quad i \neq j$$
+
+So that for eigenvector estimates of the original $\BF$ we have
+%
+\begin{equation}\label{equation:app1}
+\sqrt n ( \hat{\tilde \gamma}_{i} - \gamma_i) =
+\sqrt n \Gamma ( \hat {\tilde \gamma}_{\Lambda, i} - e_i ) =
+\sqrt n \left[ \sum_{k=1; k \neq i}^p \hat {\tilde \gamma}_{\Lambda,i,k} \gamma_k + (\hat {\tilde \gamma}_{\Lambda,i,i} - 1) \gamma_i \right]
+\end{equation}
+%
+Now $\sqrt n (\hat {\tilde \gamma}_{\Lambda,i,i} - 1) =  o_P(1)$ and $A\BV(\sqrt n \hat {\tilde \Lambda} (i,k), \sqrt n \hat {\tilde \Lambda} (i,l) ) = 0$ for $k \neq l$, so the above equation implies
+%
+$$ A\BV(g_i) = A \BV (\sqrt n ( \hat{\tilde \gamma}_{i} - \gamma_i)) = \sum_{k=1; k \neq i}^p \frac{A\BV(\sqrt n \hat {\tilde \Lambda} (i,k))}{(\tilde \lambda_i - \tilde \lambda_k)^2} \gamma_k \gamma_k^T $$
+%
+
+For the covariance terms, from \eqref{equation:app1} we get, for $i \neq j$,
+%
+\begin{eqnarray*}
+A\BV(g_i, g_j) &=&
+A\BV(\sqrt n ( \hat{\tilde \gamma}_{i} - \gamma_i),
+\sqrt n ( \hat{\tilde \gamma}_{j} - \gamma_j))\\
+&=& A\BV \left(
+\sum_{k=1; k \neq i}^p \sqrt n \hat {\tilde \gamma}_{\Lambda,ik} \gamma_k,
+\sum_{k=1; k \neq j}^p \sqrt n \hat {\tilde \gamma}_{\Lambda,jk} \gamma_k \right)\\
+&=& A\BV \left(
+\sqrt n \hat {\tilde \gamma}_{\Lambda,ik} \gamma_j,
+\sqrt n \hat {\tilde \gamma}_{\Lambda,ik} \gamma_i \right)\\
+&=& - \frac{A\BV(\sqrt n \hat {\tilde \Lambda} (i,j))}
+{(\tilde \lambda_i - \tilde \lambda_j)^2} \gamma_j \gamma_i^T
+\end{eqnarray*}
+%
+The exact forms given in the statement of the corollary now follows from the  Form of $V_W$ in Section~\ref{sec:appA}.
+
+\paragraph{}For the on-diagonal elements of $\hat {\tilde \Lambda}$, using Theorem \ref{Theorem:decomp} we have for the $i^\text{th}$ eigenvalue of $\hat {\tilde \Lambda}$, say $\lambda_{\Lambda,i}$,
+%
+$$ \sqrt n \hat {\tilde \lambda}_{\Lambda,i} = \sqrt n \hat {\tilde \Lambda} (i,i), $$
+%
+for $i = 1,...,p$. Hence
+
+\begin{eqnarray*}
+A\BV(l_i) &=& A\BV( \sqrt n (\hat {\tilde \lambda}_{\Lambda,i} - \tilde \lambda_i) )\\
+&=& A\BV( \sqrt n (\hat {\tilde \lambda}_{\Lambda,i} - \tilde \lambda_{\Lambda,i}) )\\
+&=& A\BV(\sqrt n \hat {\tilde \Lambda} (i,i))
+\end{eqnarray*}
+
+A similar derivation gives the expression for $A\BV(l_i,l_j); i \neq j$. Finally, since the asymptotic covariance between an on-diagonal and an off-diagonal element of $\hat {\tilde \Lambda}$, it follows that the elements of $G_n$ and diagonal elements of $L_n$ are independent.
+\end{proof}
+
+\bibliographystyle{apalike}
+\bibliography{WeightedSignBib_09_17_20}
+
+\end{document}

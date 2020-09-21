@@ -30,7 +30,7 @@ IF(x_0; T,\BH) =
 %
 where 
 $\BH_\epsilon = (1-\epsilon)\BH + \epsilon \delta_{x_0}$; $\delta_{x_0}$ being 
-the distribution with point mass at $x_0$. When $T(\BH) = \BE_\BH f$ for some 
+the distribution with point mass at $x_0$. When $T(\BH) = E_\BH f$ for some 
 $\BH$-integrable function $f$, $IF(x_0; T,\BH) = f(x_0) - T(\BH)$.
 
 It now follows that
@@ -77,8 +77,7 @@ IF ( x_{0}, \Sigma_{*}, \BF) =
 \ean
 \end{Proposition}
 
-\begin{proof}[Proof of Proposition~\ref{Thm:IF2}:]
-
+\begin{proof}[Proof of Proposition~\ref{Thm:IF2}]
 Let $z_{0} = \Lambda^{-1/2} \Gamma^T  (x_0 - \mu) = (z_{0 1}, \ldots, z_{0 p})^T$.
 As a first step, since $\Sigma_{*}$ is affine equivariant, we obtain from 
 \cite{ref:Biometrika00603_CrouxHaesbroeck} 
@@ -95,7 +94,7 @@ IF ( z_{0}, \Sigma_{*}, \BF_{Z}) = \alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} )
 \BS( z_0; {\mathbf 0}) 
 - \beta_{\Sigma_{*}} (| x_{0} |; \BF_{Z} ) \BI_{p}, 
 \ean
-consequently
+consequently we obtain
 \ban 
 IF ( x_{0}, \Sigma_{*}, \BF) = 
 \alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} ) 
@@ -104,7 +103,10 @@ IF ( x_{0}, \Sigma_{*}, \BF) =
 \ean
 \end{proof}
 
-Suppose ${\lambda}_{* 1} > {\lambda}_{* 2} > \ldots > {\lambda}_{* p}$ are the eigenvalues of ${\Sigma}_{*}$, which we assume are all distinct. Also denote the $i$-th eigenvector of $\Sigma_{*}$ by $\bfgamma_{* i} = (\gamma_{* i 1}, \ldots, \gamma_{* i p})^T$ for $1 \leq i \leq p$.
+Suppose ${\lambda}_{* 1} > {\lambda}_{* 2} > \ldots > {\lambda}_{* p}$
+are the eigenvalues of ${\Sigma}_{*}$, which we assume are all distinct values. 
+Also denote the $i$-th eigenvector of $\Sigma_{*}$ by 
+$\bfgamma_{* i} = (\gamma_{* i 1}, \ldots, \gamma_{* i p})^T$ for $1 \leq i \leq p$.
 
 \begin{Proposition}\label{Thm:IF3}
 The influence function of $\bfgamma_{* i} $ may be obtained as 
@@ -122,6 +124,10 @@ IF(x_0; \bfgamma_{*i}, \BF)  & =
 \end{Proposition}
 
 We omit the proof of Proposition~\ref{Thm:IF3}, which follows along similar lines to 
-to rest of the computations of this section. It can be shown that when $W (\cdot)$ is a bounded function, $\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} )$ is also bounded, along the lines of \cite{ref:HuberBook81}, which in turn implies that the influence function for a principal component based on $\Sigma_{*}$ is bounded as well.
+to rest of the computations of this section.
+It can be shown that when $W (\cdot)$ is a bounded function, 
+$\alpha_{\Sigma_{*}} ( | x_{0} |; \BF_{Z} )$ is also bounded, along the lines of 
+\cite{ref:HuberBook81}, which in turn implies that the influence function for a 
+principal component based on $\Sigma_{*}$ is also bounded.
 
 

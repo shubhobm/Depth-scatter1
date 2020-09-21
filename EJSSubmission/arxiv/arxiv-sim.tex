@@ -1,14 +1,26 @@
 \section{Simulation Studies}
 \label{Sec:Simulation}
 
-We report numerical simulation studies on several properties relating to $\tilde{\Sigma}$ and  $\Sigma_{*}$, and their eigenvalues and eigenvectors, on datasets with or without influential points, to illustrate the finite sample efficiency and robustness properties of the proposed weighted estimators. We compare these proposed estimators with techniques that exists in literature, specifically, the Sign Covariance Matrix (SCM) and Tyler's shape matrix \citep{ref:AoS87234_Tyler}.
+We report a number of numerical simulation studies on several properties relating to 
+$\tilde{\Sigma}$ and  $\Sigma_{*}$, and their eigenvalues and eigenvectors, 
+on datasets with or without influential points, to illustrate the finite sample 
+efficiency and robustness properties of the proposed weighted estimators. We compare 
+these proposed estimators with techniques that exists in literature, specifically, 
+the Sign Covariance Matrix (SCM) and Tyler's shape matrix \citep{ref:AoS87234_Tyler}.
 
 \subsection{Efficiency of different robust estimators}
 
-For this study, we fix the dimension $p = 4$. We consider six elliptical distributions, and from every distribution draw 10000 samples each for sample sizes $n = 20, 50, 100, 300$ and $500$. All distributions are centered at ${\bf 0}_p$, and have covariance matrix $\Sigma = \diag(4, 3, 2, 1)$. 
+We compare the performance of $\tilde{\Sigma}$ and $\Sigma_{*}$ with that of the 
+SCM and Tyler's scatter matrix. For this study, we fix the dimension $p = 4$.
+We consider six elliptical distributions, 
+and from every distribution draw 10000 samples each for sample sizes $n = 20, 50, 100, 
+300$ and $500$. All distributions are centered at ${\bf 0}_p$, and have covariance matrix 
+$\Sigma = \diag(4, 3, 2, 1)$. 
 
-We use the concept of principal angles \citep{ref:LinearAlgebraApplications9281_MiaoBenIsrael} 
-to find out error estimates for the first eigenvector of a scatter matrix. In our case, the first eigenvector is
+We use the concept of principal angles 
+\citep{ref:LinearAlgebraApplications9281_MiaoBenIsrael} 
+to find out error estimates for the 
+first eigenvector of a scatter matrix. In our case, the first eigenvector is
 %
 \ban
 \bfgamma_1 = (1, \overbrace{0, \ldots, 0}^{p - 1})^T.
@@ -28,24 +40,15 @@ MSPA(\hat \bfgamma_{1}) =
 %
 where $\tilde\bfgamma^{(m)}_{1}$ is the value of $\tilde\bfgamma_{1}$ in the 
 $m$-th replication, $m = 1, \ldots, 10,000$. 
-The finite sample efficiency (FSE) of $\tilde\bfgamma_{1}$ relative to that 
+The finite sample efficiency of $\tilde\bfgamma_{1}$ relative to that 
 from the sample covariance matrix, i.e. $\hat\bfgamma_{1}$ is obtained as:
 \ban
  FSE ( \hat\bfgamma_{1}, \hat\bfgamma_{1}) = 
  \frac{ MSPA(\hat\bfgamma_{0, 1})}{MSPA(\hat\bfgamma_{1})}.
  \ean
-
-The results from this simulation exercise are presented in Table~\ref{table:FSEtable4}.
-It can be seen that  $\tilde{\Sigma}$-based estimators (columns 3-5) 
-outperform SCM and Tyler's $M$-estimator of scatter. Among the 3 depth functions 
-considered, projection depth gives the best results. Its finite sample performances are 
-better than Tyler's and Huber's M-estimators of scatter, as well as their symmetrized 
-counterparts that are much more computationally intensive (see Table 4 in 
-\cite{ref:JMVA071611_Sirkiaetal}). The affine equivariant ${\Sigma}_{*}$-based estimators
- (columns 6-8) are even more efficient.
-
-\begin{table}[t]
-\begin{center}
+ 
+ \begin{table}[t]
+ \centering
 \begin{scriptsize}
     \begin{tabular}{c|cc|ccc|ccc}
     \hline
@@ -92,20 +95,28 @@ several scatter matrices in dimension $p=4$. The notation
  H, M or P after $\tilde{\Sigma}$ or ${\Sigma}_{*}$ indicates the depth function 
  used for the weights: H = halfspace depth, M = Mahalanobis depth, P = projection depth.}
 \label{table:FSEtable4}
-\end{center}
 \end{table}
+
+The results from this simulation exercise are presented in Table~\ref{table:FSEtable4}.
+It can be seem that  $\tilde{\Sigma}$-based estimators (columns 3-5) 
+outperform SCM and Tyler's $M$-estimator of scatter. Among the 3 depth functions 
+considered, projection depth gives the best results. Its finite sample performances are 
+better than Tyler's and Huber's M-estimators of scatter, as well as their symmetrized 
+counterparts that are much more computationally intensive (see Table 4 in 
+\cite{ref:JMVA071611_Sirkiaetal}). The affine equivariant ${\Sigma}_{*}$-based estimators (columns 6-8) are even more efficient.
 
 \subsection{Influence function comparison}
 
-\begin{figure}[t]
+\begin{figure}[t!]
 	\centering
-		\includegraphics[width=0.9\textwidth]{IFnorm}
+		\includegraphics[width=0.8\textwidth]{IFnorm}
 	\caption{Plot of the norm of influence function for first eigenvector of (a) sample 
 	covariance matrix, (b) SCM, (c) Tyler's scatter matrix and $\tilde{\Sigma}$ for 
 	weights obtained from (d) Halfspace depth, (e) Mahalanobis depth, (f) Projection depth 
 	for a bivariate normal distribution with $\bfmu = {\bf 0}, \Sigma = \diag(2,1)$}
 	\label{fig:IFnorm}
 \end{figure}
+
 
 In Figure \ref{fig:IFnorm} we consider first eigenvectors of $\tilde{\Sigma}$, 
 the Sign Covariance Matrix (SCM) 
@@ -182,16 +193,11 @@ depth (HSD).}
 \label{table:AREtable}
 \end{table}
 
-\subsection{Robust sufficient dimension reduction and supervised learning}
+%\end{comment}
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.4\textwidth]{SDRcomparison_noout}
-\includegraphics[width=0.4\textwidth]{SDRcomparison_out}
-\caption{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers}
-\label{fig:SDRfig}
-\end{center}
-\end{figure}
+
+
+\subsection{Robust sufficient dimension reduction and supervised learning}
 
 One of the main usages of obtaining dispersion estimators and their eigenvalues and 
 eigenvectors is in \textit{dimension reduction} techniques. Examples of such uses are in 
@@ -254,7 +260,18 @@ parameters corresponding to the distributions of $X$ and $X | Y$, and using the 
 eigenvectors of $\tilde{\Sigma}$ as $\hat\Gamma_{1}$. A robust location estimator for 
 the distribution of $X | Y$ is required for the estimation of $\sigma^2$. 
 Details are available in \cite{ref:PhilTransRoyalSoc094385_AdragniCook}.
-
+%
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{ll}
+\includegraphics[width=0.4\textwidth]{SDRcomparison_noout} &
+\includegraphics[width=0.4\textwidth]{SDRcomparison_out}
+\end{tabular}
+\caption{Average prediction errors for two methods of SDR (a) in absence and (b) in presence of outliers}
+\label{fig:SDRfig}
+\end{center}
+\end{figure}
+%
 In a non-linear regression model, we compare the performance of the robust version of 
 SDR with the original method of 
 \cite{ref:PhilTransRoyalSoc094385_AdragniCook} 
@@ -273,7 +290,8 @@ Panel (a) of figure \ref{fig:SDRfig} compares prediction errors using both robus
 maximum likelihood SDR estimates when the covariates contain no outliers: here the two 
 methods are virtually indistinguishable. We then introduce outliers in each of the 100 
 datasets by adding 100 to first $p/5$ coordinates of the first 10 observed covariate 
-values, and repeat the analysis. Panel (b) of the figure shows that in this case, the robust SDR method remains more accurate in predicting out of sample observations for all values of $p$ than 
+values, and repeat the analysis. Panel (b) of the figure shows that the robust SDR method 
+remains more accurate in predicting out of sample observations for all values of $p$ than 
 the standard SDR.
 
 
