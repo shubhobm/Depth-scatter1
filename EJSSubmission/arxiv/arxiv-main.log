@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.27)  21 SEP 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.9.25)  24 DEC 2020 15:31
 entering extended mode
 **./arxiv-main.tex
 (arxiv-main.tex
@@ -417,7 +417,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
  (arxiv-intro.tex [1
 
 {C:/Users/subho/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<WeightedSignAll.png, id=131, 939.00812pt x 896.85063pt>
+<WeightedSignAll.png, id=127, 939.00812pt x 896.85063pt>
 File: WeightedSignAll.png Graphic file (type png)
 <use WeightedSignAll.png>
 Package pdftex.def Info: WeightedSignAll.png  used on input line 79.
@@ -433,14 +433,14 @@ ributed ob-ser-va-tions $\OML/cmm/m/it/10.95 X[]; [] ; X[] \OMS/cmsy/m/n/10.95
 [4] [5] [6] [7]) (arxiv-disp.tex [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 123.
+(hyperref)                removing `math shift' on input line 122.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 123.
+(hyperref)                removing `math shift' on input line 122.
 
 [9] [10] [11] [12]
-Overfull \hbox (6.5446pt too wide) in paragraph at lines 385--388
+Overfull \hbox (6.5446pt too wide) in paragraph at lines 384--387
 []\OT1/cmr/m/n/10.95 For any hy-per-plane in the sam-ple space $\OMS/cmsy/m/n/1
 0.95 X$\OT1/cmr/m/n/10.95 , (i) $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/
 cmm/m/it/10.95 H\OT1/cmr/m/n/10.95 ) = \U/msb/m/n/10.95 E\OMS/cmsy/m/n/10.95 fI
@@ -452,42 +452,42 @@ mm/m/it/10.95 =u\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 )$
 [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 443.
+(hyperref)                removing `math shift' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Sigma' on input line 443.
+(hyperref)                removing `\Sigma' on input line 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 443.
+(hyperref)                removing `math shift' on input line 442.
 
 [14]) (arxiv-if.tex [15] [16]) (arxiv-sim.tex [17]
-<IFnorm.png, id=384, 752.8125pt x 1003.75pt>
+<IFnorm.png, id=382, 752.8125pt x 1003.75pt>
 File: IFnorm.png Graphic file (type png)
 <use IFnorm.png>
 Package pdftex.def Info: IFnorm.png  used on input line 112.
 (pdftex.def)             Requested size: 340.03534pt x 453.3834pt.
  [18] [19] [20 <./IFnorm.png>] [21]
-<SDRcomparison_noout.pdf, id=430, 361.35pt x 361.35pt>
+<SDRcomparison_noout.pdf, id=428, 361.35pt x 361.35pt>
 File: SDRcomparison_noout.pdf Graphic file (type pdf)
 <use SDRcomparison_noout.pdf>
 Package pdftex.def Info: SDRcomparison_noout.pdf  used on input line 267.
 (pdftex.def)             Requested size: 170.01442pt x 170.01648pt.
-<SDRcomparison_out.pdf, id=431, 361.35pt x 361.35pt>
+<SDRcomparison_out.pdf, id=429, 361.35pt x 361.35pt>
 File: SDRcomparison_out.pdf Graphic file (type pdf)
 <use SDRcomparison_out.pdf>
 Package pdftex.def Info: SDRcomparison_out.pdf  used on input line 268.
 (pdftex.def)             Requested size: 170.01442pt x 170.01648pt.
  [22 <./SDRcomparison_noout.pdf> <./SDRcomparison_out.pdf>])
 (arxiv-da.tex
-<plot2.png, id=456, 601.24625pt x 806.01125pt>
+<plot2.png, id=454, 601.24625pt x 806.01125pt>
 File: plot2.png Graphic file (type png)
 <use plot2.png>
 Package pdftex.def Info: plot2.png  used on input line 55.
 (pdftex.def)             Requested size: 382.5357pt x 512.83224pt.
  [23] [24 <./plot2.png>]) (arxiv-conc.tex) (arxiv-main.bbl
-[25] [26]) (arxiv-supp.tex
+[25] [26] [27]) (arxiv-supp.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 4.
@@ -500,7 +500,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 4.
 
-[27]
+
 Overfull \hbox (6.73825pt too wide) in alignment at lines 13--17
  [][][] []
  []
@@ -528,13 +528,13 @@ Package rerunfilecheck Info: File `arxiv-main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 8797 strings out of 492448
- 130662 string characters out of 3126939
- 236457 words of memory out of 3000000
- 12827 multiletter control sequences out of 15000+200000
+ 8802 strings out of 492448
+ 130727 string characters out of 3126939
+ 236492 words of memory out of 3000000
+ 12831 multiletter control sequences out of 15000+200000
  22752 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,42p,908b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,16n,42p,908b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
@@ -559,9 +559,9 @@ c/amsfonts/cm/cmti8.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmtt9.pfb><C:/Program Files/LaTeX/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on arxiv-main.pdf (31 pages, 1121616 bytes).
+Output written on arxiv-main.pdf (31 pages, 1120324 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

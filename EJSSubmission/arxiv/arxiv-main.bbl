@@ -66,6 +66,11 @@ Croux, C. and Haesbroeck, G. (2000).
   covariance or correlation matrix: Influence functions and efficiencies.
 \newblock {\em Biometrika}, 87(3):603--618.
 
+\bibitem[D\"{u}rre et~al., 2014]{durre14}
+D\"{u}rre, A., Vogel, D., and Tyler, D. (2014).
+\newblock The spatial sign covariance matrix with unknown location.
+\newblock {\em J. Mult. Anal.}, 130:107--117.
+
 \bibitem[Esbensen et~al., 1994]{ref:EsbensenetalBook94}
 Esbensen, K.~H., Sch\"{o}nkopf, S., and Midtgaard, T. (1994).
 \newblock {\em Multivariate Analysis in Practice}.

@@ -5,10 +5,9 @@ random variable under study is the $p$-dimensional Euclidean plane, and the data
 $X_{1}, \ldots, X_{n}$ are independent and identically distributed from an 
 elliptical distribution $\BF$ with parameters $\mu$ and $\Sigma$.  We also 
 assume that $X_{1}$ is absolutely continuous, with $\BP [ | X_{1}| = 0] = 0$, 
-and that $\Sigma$ is positive definite. This  eliminates technicalities arising from
- rank deficient cases, and makes the weight functions  affine invariant.
-Thus, we essentially restrict the rest of this paper to the same  framework as in 
-Corollary~\ref{Cor:Elliptic_ARE}. Most of the results below generalize to the case where 
+and that $\Sigma$ is positive definite. This eliminates technicalities arising from rank deficient cases, and makes the weight functions affine invariant.
+Thus, we essentially restrict the rest of this paper to the same  framework as in Corollary~\ref{Cor:Elliptic_ARE}. 
+Most of the results below generalize to the case where 
 $\cX$ is a separable Hilbert space, however additional technicalities are involved, as in 
 \cite{ref:AoS112852_Balietal_PCA_Functional_Robust}, and will be considered 
 in a future project. 
@@ -36,7 +35,7 @@ Also, as noted in  Corollary~\ref{Cor:Elliptic_ARE},
  
 It is convenient to write 
 \ban
-X = \mu + R \Gamma \Lambda^{1/2}  U
+X = \mu + R \Gamma \Lambda^{1/2}  U,
 \ean
 where $U$  is a random variable uniformly distributed on the unit sphere 
 ${\cS}_{0; 1} = \{ x \in \cX: | x | = 1 \}$ and $R$ is another random variable independent 
@@ -50,9 +49,9 @@ S (X; \mu) & = |X - \mu|^{-1} (X - \mu)
 & =  | \Lambda^{1/2} U|^{-1} \Gamma \Lambda^{1/2}  U 
 %\\
 %& 
-=  | \Lambda^{1/2} Z|^{-1} \Gamma \Lambda^{1/2}  Z
+=  | \Lambda^{1/2} Z|^{-1} \Gamma \Lambda^{1/2}  Z.
 \ean
-
+%
 
 As a robust surrogate for $X - \mu$, we consider the  following  random variable 
 \baq
@@ -76,7 +75,7 @@ In the following Theorem, we establish that the eigenvectors of ${\Sigma}$ and $
 Under the conditions listed above, we have
 $\tilde{\Sigma} = \Gamma \tilde{\Lambda} \Gamma^{T}$, where 
 $\tilde{\Lambda} = \Lambda^{1/2} \BE W^{2} (X) 
-	\BE UU^{T}/(U^{T}\Lambda U) \Lambda^{1/2}$
+	\BE [UU^{T}/(U^{T}\Lambda U)] \Lambda^{1/2}$
 is a diagonal matrix.  Thus, the eigenvectors of ${\Sigma}$ and 
  $\tilde{\Sigma}$ are identical.
 \end{Theorem}
@@ -128,7 +127,7 @@ We now discuss the properties of the sample version of $\tilde \Sigma$, say $\wi
 
 \item[(B2)]{\it Uniform convergence}:
 \ban 
-\sup_{x \in \cX} | W (x, \BF_{n}) - W (x, \BF) | \rightarrow 0 
+\sup_{x \in \cX} | W (x, \BF_{n}) - W (x, \BF) | \rightarrow 0
 \ean 
 almost surely as $n \rightarrow \infty $.
 
@@ -162,7 +161,7 @@ $\BE  c^{T} R_{n} c = o (n^{-1})$.
 \end{Lemma}
 
 \begin{proof}[Proof of Lemma~\ref{Lemma:lemma1}]
-This proof is mostly algebra, and we provide a sketch of the main arguments.
+Note that the moment condition above is satisfied by default since $X$ has an elliptical distribution \citep{durre14}. The proof is mostly algebra, and we provide a sketch of the main arguments.
 We have
 \ban 
 & \frac{1}{n} \sum_{i=1}^{n} W_{n}^{2} (X_{i}, \BF_{n}) \BS (X_{i}; \hat{\mu}_{n}) \\
@@ -265,7 +264,7 @@ independent distributions. The distribution of the random variable $vec~(G_{n})$
 weakly to a $p^2$-variate normal distribution with mean ${\bf 0}_{p^2}$ and the
 variance matrix whose $(i, j)$-th block of $p \times p$ entries are given by
 \baq
-& \sum_{k=1, {}_{k \neq i}}^{p} 
+& \sum_{k=1, {k \neq i}}^{p} 
 \Bigl[ \tilde{\Lambda}_{i} -  \tilde{\Lambda}_{k} \Bigr]^{-2}
 \BE \Bigl[ 
 W^4 (Z, \BF_{Z}) \big( 
@@ -328,7 +327,7 @@ relative to $\hat{\bfgamma}_i$, is given by
 & =  
 \Bigl[ \sum_{k=1; k \neq i}^p \frac{\lambda_i \lambda_k}{(\lambda_i - \lambda_k)^2} \Bigr]
  \Bigl[
-\sum_{k=1, {}_{k \neq i}}^{p} 
+\sum_{k=1, {k \neq i}}^{p} 
 \biggl[ \tilde{\Lambda}_{i} -  \tilde{\Lambda}_{k} \biggr]^{-2}
 \BE \biggl[ 
 W^4 (Z, \BF_{Z}) \big( 
@@ -365,7 +364,7 @@ To ensure existence and uniqueness of $\Sigma_{*}$, consider the class of
 dispersion parameters $\Sigma_M$ that are obtained as solutions of the following equation:
 %
 \begin{equation}
-\BE \left[ u( | Z_{M} | )  \frac{Z_{M} Z_{M}^T}{| Z_{M} |^2}  - v( | Z_{M} | ) \BI_p \right] = 0
+\BE \left[ u( | Z_{M} | )  \frac{Z_{M} Z_{M}^T}{| Z_{M} |^2}  - v( | Z_{M} | ) \BI_p \right] = 0,
 \end{equation}
 %
 with $Z_M = \Sigma_M^{-1/2} (X - \mu)$. Under the following assumptions on the scalar valued functions $u$ and $v$, the above equation produces a unique solution \citep{ref:HuberBook81}:
@@ -450,7 +449,7 @@ We start by computing
 the sample version $\widehat{\tilde{\Sigma}}$ and its spectral decomposition:
 \ban 
 \widehat{\tilde{\Sigma}} = \widehat{{\Gamma}} \widehat{\tilde{\Lambda}}
-\widehat{{\Gamma}}^{T}
+\widehat{{\Gamma}}^{T}.
 \ean 
 We then use the following steps:
 

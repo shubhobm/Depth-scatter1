@@ -29,16 +29,15 @@ that we collect together in
 the $n \times p$ matrix $\bfX = ( X_{1}: \ldots : X_{n} )^{T}$,
 an approach for robust estimation and inference in multivariate data starts by evaluating  
 \eqref{eq:GSign} on each observation, thus defining 
-$S_{i} = S ( X_{i}; \mu_x)$ with respect to some suitable center 
-$ \mu_x \in \BR^{p}$, and then using these for robust location and scale estimation and 
-inference, including inference for $ \mu_x$ 
-\citep{ref:Test991_Locantoreetal, ref:OjaBook10, ref:JASA151658_WangPengLi}.
+$S_{i} = S ( X_{i}; \mu_i)$ with respect to some suitable center 
+$ \mu_i \in \BR^{p}$, and then using these for robust location and scale estimation and 
+inference, including inference for $ \mu_i$ \citep{ref:Test991_Locantoreetal, ref:OjaBook10, ref:JASA151658_WangPengLi}.
 Suppose $\bfS = ( S_{1}: \ldots : S_{n} )^{T} \in \BR^{n \times p}$. 
 If the data $\{ X_{i} \in \BR^{p}: i =1, \ldots, n \}$ are independent, identically 
 distributed (hereafter, i.i.d.) from an elliptically symmetric distribution, then the 
 eigenvectors of $\BE ( X_{1} - \tilde{\mu}) ( X_{1} - \tilde{\mu})^{T}$
 and of $\BE S_{1} S_{1}^{T}$ are the same for suitable centering 
-parameters $\tilde{\mu}$ and $ \mu_x$, that is, the population principal components 
+parameter $\tilde{\mu} \equiv \mu_i$, that is, the population principal components 
 from the original data and from its sign transformations are the same 
 \citep{ref:SPL12765_Taskinenetal}. However, valuable information is lost in the form of magnitudes of sample points. As a result, spatial sign-based procedures suffer from low efficiency. For example, eigenvector estimates obtained from the covariance matrix of $S$ are asymptotically inadmissible \citep{ref:Biometrika14673_MagyarTyler} and  Tyler's M-estimate of scatter \citep{ref:AoS87234_Tyler} has uniformly lower asymptotic risk. 
 
@@ -50,13 +49,14 @@ application. We demonstrate the utility of using the proposed \textit{weighted g
 Specifically, we propose using product of the generalized sign function and a weight function derived as a transformation of a data-depth function \citep{ref:DIMACS061_Serfling, ref:AoS00461_ZuoSerfling}. Like data-depth functions, the weight functions used in this paper are non-negative reals defined over $\cX \times \cF$, where $\cF$ is a fixed family of probability measures. For every choice of parameters $\mu \in \cX$ and $\BF \in \cF$, in this paper
 %
 \begin{align}
-R (X_{i}; \mu, \BF) = \mu +  S( X_{i}, \mu) W( X_{i}, \BF).
+%R (X_{i}; \mu, \BF) = \mu + S( X_{i}, \mu) W( X_{i}, \BF).
+R (X_{i}; \mu, \BF) = S( X_{i}, \mu) W( X_{i}, \BF).
 \label{eqn:rank}
 \end{align}
 %
 is used as a robust surrogate for observation $X_{i}$.
 Notice that for the trivial choice $W( x, \BF) = | x - \mu_{\BF} |$, 
- $\mu = \mu_{\BF}$,  we get $R (X_{i}; \mu, \BF) = X_{i}$, the original observations. 
+ $\mu = \mu_{\BF}$,  we get $R (X_{i}; \mu, \BF) = X_{i}-\mu_{\BF}$, the original centered observations. 
  With the other trivial choice of  $W( x, \BF) \equiv 1$, we get the 
  generalized  sign $R (X_{i}; \mu, \BF) = S(X_{i}, \mu) = S_{i}$. 
  However, in this paper we illustrate how using other weight functions
