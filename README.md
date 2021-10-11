@@ -16,4 +16,4 @@ A previous version of the work, focusing only on the PCA aspect, is available at
 ### Owner
 Subho Majumdar
 
-<subho@research.att.com>
+<smajumdar@splunk.com>
