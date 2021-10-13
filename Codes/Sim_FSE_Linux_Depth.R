@@ -78,9 +78,9 @@ FSE.norm = function(n, p, iter=1e3, ncores=detectCores()){
     }
     
     # parallel code: compute MSE elements iter times
-    #system.time(eff.v <- foreach(j=1:iter) %dopar% loopfun(j))
+    system.time(eff.v <- foreach(j=1:iter) %dopar% loopfun(j))
     #system.time(eff.v <- mclapply(1:iter, loopfun, mc.cores=ncores))
-    system.time(eff.v <- lapply(1:iter, loopfun))
+    #system.time(eff.v <- lapply(1:iter, loopfun))
         
     # get MSE and return
     eff.v = matrix(unlist(eff.v), ncol=9, byrow=T)
