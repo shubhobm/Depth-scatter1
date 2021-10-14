@@ -2,7 +2,7 @@
 ## comparison with sign covariance matrix (SCM)
 
 setwd("C:/Users/smajumdar/Documents/Depth-scatter1/Codes")
-Required.Packages <- c("parallel","doSNOW", "fastM","ddalpha","data.table")
+Required.Packages <- c("mvtnorm","parallel","doSNOW", "fastM","ddalpha","data.table")
 sapply(Required.Packages, FUN = function(x) {suppressMessages(require(x, character.only = TRUE))})
 source('misc_functions.R')
 
@@ -13,29 +13,47 @@ i=3
 ncores=6
 
 ## Functions
+add_contamination = function(X, eps=eps, M=1e3){
+    N = nrow(X)
+    Nc = ceiling(N*eps)
+    Xnew = X
+    if(Nc>0){
+        set.seed(Nc)
+        eps_rows = sample(1:N, Nc)
+        for(row in eps_rows){
+            Xnew[row,1] = X[row,1] + max(abs(X))*M
+        }
+    }
+    Xnew
+}
 
 ## simulate for normal dist
-FSE.norm = function(n, p, iter=1e3, ncores=detectCores()){
+FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCores()){
     set.seed(12182014)
     v = c(rep(0,p-1), 1)
     lam = 1:p
     Sigma = diag(lam)
     nn = length(n)
     ones = rep(1,p)
-    MSE.mat = matrix(0, nrow=nn, ncol=8)
-    time.mat = matrix(0, nrow=nn, ncol=8)
+    MSE.mat = matrix(0, nrow=nn, ncol=9)
+    time.mat = matrix(0, nrow=nn, ncol=9)
     
     # generate data for largest n
     X_list = lapply(1:iter, function(j){
         set.seed(1e3*j)
-        matrix(rnorm(p*max(n)), ncol=p) %*% sqrt(Sigma)
+        if(dist=="norm"){
+            matrix(rnorm(p*max(n)), ncol=p) %*% sqrt(Sigma)
+        } else{
+            rmvt(max(n), sigma=Sigma, df=df)
+        }
     })
     
     for(i in 1:nn){
         
         ni = n[i]
         cat("Doing n =",ni,"-> ")
-        iX_list = lapply(X_list, function(x) x[1:ni,])
+        # create data matrices, add contamination if needed
+        iX_list = lapply(X_list, function(x) add_contamination(x[1:ni,], eps=eps))
         iv_list = vector("list",9)
         it = rep(0,9)
         
@@ -116,100 +134,23 @@ FSE.norm = function(n, p, iter=1e3, ncores=detectCores()){
         # get MSE and return
         eff.v = matrix(unlist(iv_list), ncol=9, byrow=F)
         (MSE.vec = apply(eff.v, 2, function(x) mean(acos(x)^2)))
-        MSE.mat[i,] = MSE.vec[1]/MSE.vec[-1]
-        time.mat[i,] = it[-1]
+        MSE.mat[i,] = MSE.vec
+        time.mat[i,] = it
         cat("done\n")
     }
     
     list(MSE.mat, time.mat)
 }
 
-## simulate for t-distn
-FSE.t = function(n, p, df, iter=1e3, ncores=detectCores()){
-  set.seed(12182014)
-  v = c(rep(0,p-1), 1)
-  lam = 1:p
-  Sigma = diag(lam)
-  
-  MSE.mat = matrix(0, nrow=length(n), ncol=8)
-  for(i in 1:length(n)){
-    
-    # function to compute stuff 1000 times for a given n
-    loopfun = function(j){
-      source('misc_functions.R')
-      require(fastM)
-      require(fda.usc)
-      require(mvtnorm)
-      iv = rep(0,9)
-      
-      # get sample and construct sign matrix
-      iX = rmvt(n[i], sigma=Sigma, df=df)
-      iXnorm = sqrt(iX^2 %*% rep(1,p))
-      iS = iX / (iXnorm %*% rep(1,p))
-      
-      # PCA on original sample
-      iP = princomp(iX)
-      iv[1] = abs(sum(v * iP$loadings[,1]))
-      
-      # PCA on SCM
-      iPsign = princomp(iS)
-      iv[2] = abs(sum(v * iPsign$loadings[,1]))
-      
-      # PCA on Tyler's cov matrix
-      T = TYLERshape(iX)$Sigma
-      iv[3] = abs(sum(v * eigen(T)$vectors[,1]))
-      
-      # PCA on DCM and depth-weighted tyler's scatter
-      # Tukey's depth
-      idep = mdepth.HS(iX,iX)$dep
-      #idep = EPQD(iX,iX)[,p+1]
-      idep = max(idep) - idep
-      iXd = iS * idep
-      iPdepth = princomp(iXd)
-      iv[4] = abs(sum(v * iPdepth$loadings[,1]))
-      
-      Td = TylerSig(iX, weight=idep)
-      iv[5] = abs(sum(v * eigen(Td)$vectors[,1]))
-      
-      # Mahalanobis depth
-      idep = mdepth.MhD(iX,iX)$dep
-      idep = max(idep) - idep
-      iXd = iS * idep
-      iPdepth = princomp(iXd)
-      iv[6] = abs(sum(v * iPdepth$loadings[,1]))
-      
-      Td = TylerSig(iX, weight=idep)
-      iv[7] = abs(sum(v * eigen(Td)$vectors[,1]))
-      
-      # Projection depth
-      idep = mdepth.RP(iX,iX)$dep
-      idep = max(idep) - idep
-      iXd = iS * idep
-      iPdepth = princomp(iXd)
-      iv[8] = abs(sum(v * iPdepth$loadings[,1]))
-      
-      Td = TylerSig(iX, weight=idep)
-      iv[9] = abs(sum(v * eigen(Td)$vectors[,1]))
-      
-      iv
-    }
-    
-    # parallel code: compute MSE elements iter times
-    cl = makeCluster(ncores)
-    registerDoSNOW(cl)
-    system.time(eff.v <- foreach(j=1:iter) %dopar% loopfun(j))
-    stopCluster(cl)
-    
-    # get MSE and return
-    eff.v = matrix(unlist(eff.v), ncol=9, byrow=T)
-    (MSE.vec = apply(eff.v, 2, function(x) mean(acos(x)^2)))
-    MSE.mat[i,] = MSE.vec[1]/MSE.vec[-1]
-  }
-  
-  MSE.mat
-}
-
 # For p=4
 n.vec = seq(50,500,by=50)
-norm.table <- FSE.norm(n.vec, 4, 1e3, ncores=8)
-saveRDS(norm.table, file="norm4.rds")
+norm.table <- FSE.sim(n=n.vec, p=4, iter=1e3, ncores=7)
+t3.table <- FSE.sim(n=n.vec, p=4, dist="t", df=3, iter=1e3, ncores=7)
+t10.table <- FSE.sim(n=n.vec, p=4, dist="t", df=10, iter=1e3, ncores=7)
+t20.table <- FSE.sim(n=n.vec, p=4, dist="t", df=20, iter=1e3, ncores=7)
+saveRDS(list(norm.table, t3.table, t10.table, t20.table), file="normt4.rds")
+
+# contamination added
+c1.table = FSE.sim(n=n.vec, p=4, eps=.1, iter=1e3, ncores=7)
+c3.table = FSE.sim(n=n.vec, p=4, eps=.3, iter=1e3, ncores=7)
+saveRDS(list(c1.table, c3.table), file="normcont4.rds")
