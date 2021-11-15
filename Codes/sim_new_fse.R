@@ -45,7 +45,42 @@ add_contamination = function(X, eps=eps, M=1e3){
     Xnew
 }
 
-## simulate for normal dist
+# weighted_sign_pca(X){
+#     Xc = X - spatial.median(X)$mu # center
+#     Xcnorm = sqrt(Xc^2 %*% ones)
+#     S = Xc / (Xcnorm %*% ones)
+#     list(S, princomp(S))
+# }
+
+weighted_sign_pca = function(X, depth=c("h","m","p",NULL), ...){
+
+    # calculate depth
+    if(depth=="h"){
+        idep = depth.halfspace(X, X, ...)
+    } else if(depth=="m"){
+        idep = depth.Mahalanobis(X, X, ...)
+    } else if(depth=="p"){
+        idep = depth.projection(X, X, ...)
+    } else{
+        idep = 1
+    }
+    
+    # center
+    if(is.null(depth)){
+        Xc = iX - spatial.median(X)$mu
+        mult = 1
+    } else{
+        Xc = iX - depth.median(X, d=dep)$mu
+        mult = max(dep) - dep
+    }
+    Xcnorm = sqrt(Xc^2 %*% ones)
+    S = Xc / (Xcnorm %*% ones)
+    
+    # return
+    list(dep, princomp(S*mult))
+}
+
+## simulation function
 FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCores()){
 
     # initialize
@@ -62,7 +97,7 @@ FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCor
     if(dist=="copula"){
         X_list = readRDS("../Data/copula_data.rds")
     } else{
-        X_list = generate_data(n=max(n), p=p, Sigma=Sigma, dist=dist)
+        X_list = generate_data(n=max(n), p=p, Sigma=Sigma, dist=dist, df=df, iter=1e3)
     }
     
     # run loop
@@ -83,47 +118,26 @@ FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCor
         # SCM
         cl = makeCluster(ncores)
         registerDoSNOW(cl)
-        scm_fun = function(j){
-            iX = iX_list[[j]]
-            iXnorm = sqrt(iX^2 %*% ones)
-            iS = iX / (iXnorm %*% ones)
-            iPsign = princomp(iS)
-            list(iS, iPsign)
-        }
-        it[2] = system.time(scm_list <- foreach(j=1:iter) %dopar% scm_fun(j))[3]
-        iS_list = lapply(scm_list, function(x) x[[1]])
+        it[2] = system.time(scm_list <- foreach(j=1:iter) %dopar% weighted_sign_pca(iX_list[[j]], depth=NULL))[3]
         iv_list[[2]] = sapply(scm_list, function(x) abs(sum(v * x[[2]]$loadings[,1])))
         
         # Tyler's scatter
         tyl_fun = function(j){
             require(fastM)
-            eigen(TYLERshape(iX_list[[j]])$Sigma)
+            iX = iX_list[[j]]
+            eigen(TYLERshape(iX-spatial.median(iX)$mu)$Sigma)
         }
         it[3] = system.time(tyl_list <- foreach(j=1:iter) %dopar% tyl_fun(j))[3]
         iv_list[[3]] = sapply(tyl_list, function(x) abs(sum(v * x$vectors[,1])))
         
         # Halfspace depth
-        dep_fun = function(j, depth=c("h","m","p")){
-            require(ddalpha)
-            iX = iX_list[[j]]
-            if(depth=="h"){
-                idep = depth.halfspace(iX,iX)
-            } else if(depth=="m"){
-                idep = depth.Mahalanobis(iX,iX)
-            } else{
-                idep = depth.projection(iX,iX)
-            }
-            idep = max(idep) - idep
-            iXd = iS_list[[j]] * idep
-            list(idep, princomp(iXd))
-        }
         it[4] = system.time({
-            dep_list <- foreach(j=1:iter) %dopar% dep_fun(j, depth="h")
+            dep_list <- foreach(j=1:iter) %dopar% weighted_sign_pca(iX_list[[j]], depth="h")
         })[3]
         iv_list[[4]] = sapply(dep_list, function(x) abs(sum(v * x[[2]]$loadings[,1])))
         
         idepTyler = function(j){
-            source('misc_functions.R')
+            source('utils.R')
             eigen(TylerSig(iX_list[[j]], weight=dep_list[[j]][[1]]))
         }
         it[5] = system.time(dep_list2 <- foreach(j=1:iter) %dopar% idepTyler(j))[3]
@@ -131,7 +145,7 @@ FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCor
         
         # mahalanobis depth
         it[6] = system.time({
-            dep_list <- foreach(j=1:iter) %dopar% dep_fun(j, depth="m")
+            dep_list <- foreach(j=1:iter) %dopar% weighted_sign_pca(iX_list[[j]], depth="m")
         })[3]
         iv_list[[6]] = sapply(dep_list, function(x) abs(sum(v * x[[2]]$loadings[,1])))
         
@@ -140,7 +154,7 @@ FSE.sim = function(n, p, eps=0, iter=1e3, dist="norm", df=NULL, ncores=detectCor
         
         # projection depth
         it[8] = system.time({
-            dep_list <- foreach(j=1:iter) %dopar% dep_fun(j, depth="p")
+            dep_list <- foreach(j=1:iter) %dopar% weighted_sign_pca(iX_list[[j]], depth="p")
         })[3]
         iv_list[[8]] = sapply(dep_list, function(x) abs(sum(v * x[[2]]$loadings[,1])))
         
@@ -166,12 +180,11 @@ norm.table <- FSE.sim(n=n.vec, p=4, iter=1e3, ncores=7)
 t3.table <- FSE.sim(n=n.vec, p=4, dist="t", df=3, iter=1e3, ncores=7)
 t10.table <- FSE.sim(n=n.vec, p=4, dist="t", df=10, iter=1e3, ncores=7)
 t20.table <- FSE.sim(n=n.vec, p=4, dist="t", df=20, iter=1e3, ncores=7)
-saveRDS(list(norm.table, t3.table, t10.table, t20.table), file="elliptic_results.rds")
+saveRDS(list(norm.table, t3.table, t10.table, t20.table), file="elliptic_results2.rds")
 
 # contamination added
 c1.table = FSE.sim(n=n.vec, p=4, eps=.1, iter=1e3, ncores=7)
 c3.table = FSE.sim(n=n.vec, p=4, eps=.3, iter=1e3, ncores=7)
-cop.table <- FSE.sim(n=n.vec, p=4, dist="copula", iter=1e3, ncores=7)
-saveRDS(list(c1.table, c3.table, cop.table), file="nonelliptic_results.rds")
-
 # normal copula, Beta(3,3) marginals
+cop.table <- FSE.sim(n=n.vec, p=4, dist="copula", iter=1e3, ncores=7)
+saveRDS(list(c1.table, c3.table, cop.table), file="nonelliptic_results2.rds")

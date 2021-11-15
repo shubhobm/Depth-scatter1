@@ -3,6 +3,43 @@ setwd("C:/Users/smajumdar/Documents/Depth-scatter1/Codes")
 Required.Packages <- c("data.table","tidyverse","patchwork","reshape2","latex2exp")
 sapply(Required.Packages, FUN = function(x) {suppressMessages(require(x, character.only = TRUE))})
 
+# plotting function
+plot_table = function(plotmat, line_width=.5, point_size=1, ylabel="FSE"){
+    # plot(plotmat[,1], type='b', ylim=c(0,1))
+    # for(i in 2:8){
+    #     lines(plotmat[,i], type='b', col=i)
+    # }
+    # legend("bottomright", col=1:6, lty=1, legend=TeX(method_names))
+    # ggplot
+    eff_melt = melt(data.table(plotmat), id.vars="n", measure.vars=colnames(plotmat)[-1])
+    names(eff_melt) = c("n","Method","FSE")
+    # eff_melt$Color = rep(1:4, rep(20,4))
+    eff_melt$Type = rep(c("solid","dashed"), rep(10,2))
+    p1 = ggplot(eff_melt, aes(x=n, y=FSE, colour=Method, linetype=Method)) +
+        geom_line(size=line_width) +
+        geom_point(size=point_size) +
+        theme_bw() +
+        theme(axis.text.x = element_text(angle = 90)) +
+        # theme(legend.position = c(.82,.4)) +
+        xlab(expression(n)) +
+        ylab(ylabel) +
+        scale_x_continuous(breaks=n) +
+        # guide(label=F, colour = guide_legend(override.aes = list(
+        #     col = rep(1:4, each=2),
+        #     linetype = rep(c('solid', 'dashed'),4))))
+        # scale_linetype_manual(values=rep(c('solid', 'dashed'),4)) +
+        # scale_color_manual(values=rep(1:4, each=2))
+        # scale_linetype_manual(labels = TeX(method_names), values=rep(c('solid', 'dashed'),4)) +
+        scale_color_manual(
+            labels = TeX(method_names),
+            values = rep(1:4, each=2),
+            guide = guide_legend(override.aes = list(
+                linetype = rep(c('solid', 'dashed'),4)))) +
+        scale_linetype_manual(values=rep(c('solid', 'dashed'),4), guide="none")
+    p1
+}
+
+
 # load files
 normt4 = readRDS("elliptic_results.rds")
 normcont4 = readRDS("nonelliptic_results.rds")
@@ -23,45 +60,34 @@ eff_list = lapply(err_list, function(x){
 })
 
 # FSE in presence of contamination: divide by uncontaminated error
-eff_list2 = lapply(normcont4[1:2], function(x) cbind(n, matrix(err_list[[1]][,1], nrow=10, ncol=8, byrow=F)/x[[1]][,-1]))
+eff_list2 = lapply(normcont4, function(x) cbind(n, matrix(err_list[[1]][,1], nrow=10, ncol=8, byrow=F)/x[[1]][,-1]))
 cop.table = normcont4[[3]][[1]]
 eff_list2[[3]] = cbind(n, matrix(cop.table[,1], nrow=10, ncol=8, byrow=F)/cop.table[,-1])
 for(i in 1:3){
     colnames(eff_list2[[i]])[-1] = method_names
 }
 
+# computation time
+time.table = normt4[[1]][[2]][,-1]
+time.table[,-(1:2)] = time.table[,-(1:2)]+time.table[,1]
+time.table[,c(4,6,8)] = time.table[,c(4,6,8)]+time.table[,c(3,5,7)]
+time.table = cbind(n, log(time.table))
+colnames(time.table)[-1] = method_names
+time_plot = plot_table(time.table, ylabel="log(time)")
+
 # plot
-plot_table = function(plotmat, line_width=.5, point_size=1){
-    # plot(plotmat[,1], type='b', ylim=c(0,1))
-    # for(i in 2:8){
-    #     lines(plotmat[,i], type='b', col=i)
-    # }
-    # legend("bottomright", col=1:6, lty=1, legend=TeX(method_names))
-    # ggplot
-    eff_melt = melt(data.table(plotmat), id.vars="n", measure.vars=colnames(plotmat)[-1])
-    names(eff_melt) = c("n","Method","FSE")
-    p1 = ggplot(eff_melt, aes(x=n, y=FSE, colour=Method)) +
-        geom_line(size=line_width) +
-        geom_point(size=point_size) +
-        theme_bw() +
-        theme(axis.text.x = element_text(angle = 90)) +
-        # theme(legend.position = c(.82,.4)) +
-        xlab(expression(n)) +
-        scale_x_continuous(breaks=n) +
-        scale_color_manual(labels = TeX(method_names), values=1:8)
-    p1
-}
 plot_list = lapply(eff_list, plot_table)
 plot_list2 = lapply(eff_list2, plot_table)
-plot_list2[[2]] = NULL
 dist_names = c("Normal", sprintf(r'($t_3$)'),sprintf(r'($t_{10}$)'),sprintf(r'($t_{20}$)'),
-               "Contaminated normal","Copula")
+               "Normal + 10% outliers","Normal + 30% outliers","Copula")
 plot_list = lapply(1:4, function(i) plot_list[[i]]+ggtitle(TeX(dist_names[i])))
-plot_list2 = lapply(1:2, function(i) plot_list2[[i]]+ggtitle(TeX(dist_names[i+4])))
-combined <- plot_list[[2]] + plot_list[[3]] + plot_list[[4]] + plot_list[[1]] +
-    plot_list2[[1]] + plot_list2[[2]] & theme(legend.position = "bottom")
+plot_list2 = lapply(1:3, function(i) plot_list2[[i]]+ggtitle(dist_names[i+4]))
+combined <- plot_list[[2]] + plot_list[[3]] + plot_list[[4]] + 
+    plot_list[[1]] + plot_list2[[1]] + plot_list2[[2]] + 
+    plot_list2[[3]] + time_plot+ggtitle("Computation load") + guide_area() +
+    plot_layout(ncol=3, nrow=3, guides = "collect")
 
 # save plot
-pdf("simplot.pdf", width=8, height=6)
-combined + plot_layout(ncol=3, nrow=2, guides = "collect")
+pdf("simplot.pdf", width=9, height=9)
+combined
 dev.off()
